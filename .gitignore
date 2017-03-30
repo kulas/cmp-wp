@@ -118,7 +118,7 @@ tests/_output/*
 # WP plugins
 wp-content/plugins/*
 
-# Sage 
+# Sage
 dist
 bower_components
 node_modules

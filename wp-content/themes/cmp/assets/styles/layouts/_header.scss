@@ -1,0 +1,43 @@
+// SITE HEADER LAYOUT STYLES
+////////////////////////////////////////////////////////////////
+
+
+// signup header
+.sign-up-header {
+  background: $light-gray;
+}
+
+// main header
+.site-header {
+  padding-top: $base-spacing;
+  text-align: center;
+}
+
+.site-header--logo {
+  width: 300px;
+
+}
+
+.nav-primary {
+  ul {
+    display: flex;
+    margin: $small-spacing 0;
+    padding: 0;
+    justify-content: center;
+    border-top: $base-border;
+  }
+
+  li {
+    display: block;
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+
+  a {
+    display: block;
+    padding: $small-spacing;
+    text-transform: uppercase;
+    color: $base-font-color;
+  }
+}

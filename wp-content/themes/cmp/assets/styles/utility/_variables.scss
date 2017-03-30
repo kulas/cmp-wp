@@ -1,0 +1,34 @@
+// GLOBAL VARIABLES
+////////////////////////////////////////////////////////////////
+
+// Typography
+$base-font-family:'Roboto', sans-serif;
+$alt-font-family: 'Lora', serif;
+$base-font-size: 1em;
+
+// Sizes
+$max-width: 1300px;
+$base-spacing: 2rem;
+$small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
+
+// Colors
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ccc;
+$base-color: #88B04B;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $base-color ;
+$inverse-font-color: #fff;
+$inverse-action-color: $base-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: $dark-gray;
+
+// Borders
+$base-border-color: $light-gray;
+$base-border-radius: 3px;
+$base-border: 1px solid $base-border-color;

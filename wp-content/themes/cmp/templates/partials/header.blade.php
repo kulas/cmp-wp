@@ -13,13 +13,26 @@
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
-      <ul>
+
+      <ul class="mobile--nav">
+        <p>Plan your visit</p>
         <li><a href="#">Things to do</a></li>
         <li><a href="#">Plan a visit</a></li>
         <li><a href="#">Join and support</a></li>
         <li><a href="#">Great event spaces</a></li>
-
+        <li><a href="#">Carnegie Magazine</a></li>
+        <li><a href="#">About Us</a></li>
       </ul>
+      <ul class="nav">
+        <li><a href="#">Things to do</a></li>
+        <li><a href="#">Plan a visit</a></li>
+        <li><a href="#">Join and support</a></li>
+        <li><a href="#">Great event spaces</a></li>
+        <li><a href="#">Carnegie Magazine</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+
+
     </nav>
   </div>
 </header>

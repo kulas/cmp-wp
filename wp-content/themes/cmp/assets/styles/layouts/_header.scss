@@ -19,12 +19,16 @@
 }
 
 .nav-primary {
+
   ul {
     display: flex;
     margin: $small-spacing 0;
     padding: 0;
     justify-content: center;
     border-top: $base-border;
+    @include grid-media($nav-break){
+      display: none;
+    }
   }
 
   li {
@@ -32,6 +36,9 @@
     padding: 0;
     margin: 0;
     float: left;
+    &:hover {
+      background: #96a061;
+    }
   }
 
   a {
@@ -39,5 +46,33 @@
     padding: $small-spacing;
     text-transform: uppercase;
     color: $base-font-color;
+    &:hover {
+      color: white;
+    }
   }
+}
+
+ul.mobile--nav {
+  @include grid-media($nav-break){
+    display: block;
+  }
+  background: black;
+  display: none;
+
+  li {
+    width: 100%;
+    background: #535353;
+
+  }
+
+  a {
+    color: white;
+  }
+
+  p {
+    color: white;
+
+
+  }
+
 }

@@ -18,9 +18,9 @@
 
 }
 
+//nav
 .nav-primary {
-
-  ul {
+  ul.nav {
     display: flex;
     margin: $small-spacing 0;
     padding: 0;
@@ -35,7 +35,7 @@
     display: block;
     padding: 0;
     margin: 0;
-    float: left;
+    //float: left;
     &:hover {
       background: #96a061;
     }
@@ -54,10 +54,53 @@
 
 ul.mobile--nav {
   @include grid-media($nav-break){
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   background: black;
   display: none;
+
+  .mobile__symbols {
+    display: flex;
+    align-items: center;
+    li {
+      display: inline-block;
+      padding: 20px;
+    }
+  }
+
+  .mobile__plan {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: white;
+
+    & > li {
+      color: white;
+      background: black;
+      text-align: left;
+      padding: 10px;
+      font-family: $alt-font-family;
+      text-transform: uppercase;
+    }
+    li {
+      width: auto;
+    }
+
+    .mobile__hamburger {
+      background: #96a061;
+    }
+
+    .mobile__search {
+      background: #535353;
+    }
+
+    .mobile__down {
+      background: black;
+    }
+  }
 
   li {
     width: 100%;
@@ -69,10 +112,6 @@ ul.mobile--nav {
     color: white;
   }
 
-  p {
-    color: white;
 
-
-  }
 
 }

@@ -18,12 +18,24 @@
       @endif
 
       <ul class="nav">
-        <li><a href="#">Things to do</a></li>
-        <li><a href="#">Plan a visit</a></li>
-        <li><a href="#">Join and support</a></li>
-        <li><a href="#">Great event spaces</a></li>
-        <li><a href="#">Carnegie Magazine</a></li>
-        <li><a href="#">About Us</a></li>
+        <li class="nav__link">
+          <a href="#">Things to do</a>
+          <div class="nav__dropdown">
+            <ul>
+              <li><a href="#">Nights at the Museum</a></li>
+              <li><a href="#">Learn with Us</a></li>
+              <li><a href="#">View our Exhibitions</a></li>
+              <li><a href="#">Explore our Collections</a></li>
+              <li><a href="#">Travel with Us</a></li>
+              <li><a href="#">Member Events</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav__link"><a href="#">Plan a visit</a></li>
+        <li class="nav__link"><a href="#">Join and support</a></li>
+        <li class="nav__link"><a href="#">Great event spaces</a></li>
+        <li class="nav__link"><a href="#">Carnegie Magazine</a></li>
+        <li class="nav__link"><a href="#">About Us</a></li>
       </ul>
 
 

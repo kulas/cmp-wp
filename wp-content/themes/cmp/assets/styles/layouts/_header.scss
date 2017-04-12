@@ -107,25 +107,22 @@ ul.mobile--nav {
     a {
       color: white;
     }
-
     i {
       position: absolute;
       right: 21px;
     }
-
   }
 
   .mobile-nav--sub__items {
     padding-left: 0px;
+    display: none;
     li.mobile-sub__link {
       background: #a9a9a9;
       text-align: left;
       a {
         color: #3c3c3c;
       }
-
     }
-
   }
 
   .mobile__symbols {
@@ -171,8 +168,4 @@ ul.mobile--nav {
   .mobile__expanded {
     display: none;
   }
-}
-
-.show {
-  display: bloc;
 }

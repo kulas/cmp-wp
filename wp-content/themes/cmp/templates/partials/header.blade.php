@@ -47,29 +47,25 @@
             <li class="mobile__search"> <i class="fa fa-search" aria-hidden="true"></i> </li>
             <li class="mobile__hamburger"> <i class="fa fa-bars" aria-hidden="true"></i> </li>
           </div>
-
         </ul>
+        <div class="mobile__expanded">
+          <li class="mobile--nav_link"><a href="#">Things to do</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
+            <ul class="mobile-nav--sub__items">
+              <li class="mobile-sub__link"><a href="#">Nights at the Museum</a></li>
+              <li class="mobile-sub__link"><a href="#">Learn With Us</a></li>
+              <li class="mobile-sub__link"><a href="#">View Our Exhibitions</a></li>
+              <li class="mobile-sub__link"><a href="#">Explore Our Collections</a></li>
+              <li class="mobile-sub__link"><a href="#">Travel With Us</a></li>
+              <li class="mobile-sub__link"><a href="#">Member Events</a></li>
+            </ul>
+          <li class="mobile--nav_link"><a href="#">Plan a visit</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
+          <li class="mobile--nav_link"><a href="#">Join and support</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
+          <li class="mobile--nav_link"><a href="#">Great event spaces</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
+          <li class="mobile--nav_link"><a href="#">Carnegie Magazine</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
+          <li class="mobile--nav_link"><a href="#">About Us</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
+        </div>
 
-
-
-
-        <li class="mobile--nav_link"><a href="#">Things to do</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
-          <ul class="mobile-nav--sub__items">
-            <li class="mobile-sub__link"><a href="#">Nights at the Museum</a></li>
-            <li class="mobile-sub__link"><a href="#">Learn With Us</a></li>
-            <li class="mobile-sub__link"><a href="#">View Our Exhibitions</a></li>
-            <li class="mobile-sub__link"><a href="#">Explore Our Collections</a></li>
-            <li class="mobile-sub__link"><a href="#">Travel With Us</a></li>
-            <li class="mobile-sub__link"><a href="#">Member Events</a></li>
-          </ul>
-        <li class="mobile--nav_link"><a href="#">Plan a visit</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
-        <li class="mobile--nav_link"><a href="#">Join and support</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
-        <li class="mobile--nav_link"><a href="#">Great event spaces</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
-        <li class="mobile--nav_link"><a href="#">Carnegie Magazine</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
-        <li class="mobile--nav_link"><a href="#">About Us</a> <i class="fa fa-chevron-down" aria-hidden="true"></i> </li>
       </ul>
-
-
     </nav>
 
 

@@ -1,7 +1,6 @@
 // SITE HEADER LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
 
-
 // signup header
 .sign-up-header {
   background: $light-gray;
@@ -15,8 +14,9 @@
 
 .site-header--logo {
   width: 300px;
-
 }
+
+
 
 //nav bar
 .nav-primary {
@@ -42,7 +42,7 @@
         left: 0;
         z-index: 2;
         width: 250px;
-        //display: none;
+        display: none;
 
         ul {
           padding: 0;
@@ -52,6 +52,7 @@
           color: white;
           font-size: 0.9em;
         }
+
       }
     }
 
@@ -149,7 +150,7 @@ ul.mobile--nav {
       background: black;
       text-align: left;
       font-family: $alt-font-family;
-      m: uppercase;
+      text-transform: uppercase;
       width: auto;
     }
 
@@ -166,4 +167,12 @@ ul.mobile--nav {
       background: black;
     }
   }
+
+  .mobile__expanded {
+    display: none;
+  }
+}
+
+.show {
+  display: bloc;
 }

@@ -3,40 +3,50 @@ export default {
     // JavaScript to be fired on all pages
 
     $('.nav__link').on('click', function(){
-      $('.nav__dropdown', this).toggle(
-        function(){$('.nav__dropdown', this).css({"display": "block"});
-      })
+      $('.nav__dropdown', this).slideToggle();
     });
 
     $('.mobile__plan').on('click', function(){
-      if( $('.mobile__expanded').css('display') == 'none' ) {
-        $('.mobile__expanded').css('display', 'block')
-      }
-      else {
-        $('.mobile__expanded').css('display', 'none')
-      }
+       $('.mobile__expanded').slideToggle();
     });
 
     $('.mobile--nav_link').on('click', function(){
-      if( $(this).next().css('display') == 'block' ) {
-        $(this).next().css('display', 'none');
+
+      $(this).next().slideToggle();
+
+      if( $(this).next().css('display') == 'none' ) {
         $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-down" aria-hidden="true">')
+        console.log($(this).next().css('display'))
       }
+
       else {
-        $(this).next().css('display', 'block');
         $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-up" aria-hidden="true">');
+        console.log($(this).next().css('display'))
       }
+
+      $('.mobile--nav_link').click(function() {
+        var clicked = $(this);
+        $('.mobile--nav_link').not(clicked).next().css('display', 'none')
+        clicked.next().css('display', 'block')
+      });
+
 
     })
 
+    // $('.mobile--nav_link').on('click', function(){
+    //   if( $(this).next().css('display') == 'block' ) {
+    //     $(this).next().css('display', 'none');
+    //     $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-down" aria-hidden="true">')
+    //   }
+    //   else {
+    //     $('.mobile--nav_link').css('display', 'none');
+    //     $(this).next().css('display', 'block');
+    //     $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-up" aria-hidden="true">');
+    //   }
+    // })
 
 
-    // if( $('.mobile-nav--sub__items').css('display') == 'block' ) {
-    //   alert('block!')
-    // }
-    // else {
-    //   alert($('.mobile-nav--sub__items').css('display'));
-    // }
+
 
 
   },

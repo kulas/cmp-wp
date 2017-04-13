@@ -1,7 +1,6 @@
 // SITE HEADER LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
 
-
 // signup header
 .sign-up-header {
   background: $light-gray;
@@ -15,29 +14,146 @@
 
 .site-header--logo {
   width: 300px;
-
 }
 
+
+
+//nav bar
 .nav-primary {
-  ul {
+  ul.nav {
     display: flex;
+    position: relative;
     margin: $small-spacing 0;
     padding: 0;
     justify-content: center;
     border-top: $base-border;
+    @include grid-media($nav-break){
+      display: none;
+    }
+    .nav__link {
+      position: relative;
+      .nav__dropdown {
+        background: #707847;
+        text-align: left;
+        color: white;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        width: 250px;
+        display: none;
+        ul {
+          padding: 0;
+        }
+        a {
+          color: white;
+          font-size: 0.9em;
+        }
+      }
+    }
+    li {
+      display: block;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      &:hover {
+        background: #96a061;
+      }
+      a {
+        display: block;
+        padding: $small-spacing;
+        color: $base-font-color;
+        &:hover {
+          color: white;
+        }
+      }
+    }
   }
+}
 
+//mobile nav bar
+ul.mobile--nav {
+  @include grid-media($nav-break){
+    display: flex;
+    flex-direction: column;
+    //align-items: stretch;
+    width: 100%;
+    padding-left: 0px;
+  }
+  background: black;
+  display: none;
   li {
-    display: block;
-    padding: 0;
-    margin: 0;
-    float: left;
+    width: 100%;
+    background: #535353;
+    border-bottom: 1px solid #d5d5d5;
+    padding: $small-spacing;
   }
 
-  a {
-    display: block;
-    padding: $small-spacing;
-    text-transform: uppercase;
-    color: $base-font-color;
+  .mobile--nav_link {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    color: white;
+    a {
+      color: white;
+    }
+    i {
+      position: absolute;
+      right: 21px;
+    }
+  }
+
+  .mobile-nav--sub__items {
+    padding-left: 0px;
+    display: none;
+    li.mobile-sub__link {
+      background: #a9a9a9;
+      text-align: left;
+      a {
+        color: #3c3c3c;
+      }
+    }
+  }
+  .mobile__symbols {
+    display: flex;
+    align-items: stretch;
+    li {
+      display: inline-block;
+      padding: 15px;
+    }
+  }
+
+  .mobile__plan {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    color: white;
+    padding-left: 0;
+
+    & > li {
+      color: white;
+      background: black;
+      text-align: left;
+      font-family: $alt-font-family;
+      text-transform: uppercase;
+      width: auto;
+    }
+
+
+    .mobile__hamburger {
+      background: #96a061;
+    }
+
+    .mobile__search {
+      background: #535353;
+    }
+
+    .mobile__down {
+      background: black;
+    }
+  }
+
+  .mobile__expanded {
+    display: none;
   }
 }

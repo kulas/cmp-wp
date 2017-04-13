@@ -41,6 +41,10 @@
         z-index: 2;
         width: 250px;
         display: none;
+        &.active {
+          display: block;
+          transition: all 0.3s ease-in;
+        }
         ul {
           padding: 0;
         }
@@ -81,6 +85,10 @@ ul.mobile--nav {
   }
   background: black;
   display: none;
+  &.active {
+    display: block;
+    transition: all 0.3s ease-in;
+  }
   li {
     width: 100%;
     background: #535353;
@@ -105,6 +113,10 @@ ul.mobile--nav {
   .mobile-nav--sub__items {
     padding-left: 0px;
     display: none;
+    &.active {
+      display: block;
+      transition: all 0.3s ease-in;
+    }
     li.mobile-sub__link {
       background: #a9a9a9;
       text-align: left;
@@ -155,5 +167,10 @@ ul.mobile--nav {
 
   .mobile__expanded {
     display: none;
+
+    &.active {
+      display: block;
+      transition: all 0.3s ease-in;
+    }
   }
 }

@@ -112,10 +112,14 @@ ul.mobile--nav {
 
   .mobile-nav--sub__items {
     padding-left: 0px;
-    display: none;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+
     &.active {
       display: block;
-      transition: all 0.3s ease-in;
+      max-height: 1000px;
     }
     li.mobile-sub__link {
       background: #a9a9a9;

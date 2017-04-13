@@ -27,17 +27,6 @@ export default {
       }
 
 
-
-      //if you click on the arrow while it's up and this.next.hasClass('.active')
-
-        //clicked.find.mobilearrow.contianer.html(down)
-
-
-      // clicked.next().slideToggle(function(){
-      //   console.log($(this));
-      //   $(this).toggleClass('active');
-      // })
-
       clicked.next().toggleClass('active')
 
     });

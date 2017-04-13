@@ -3,49 +3,44 @@ export default {
     // JavaScript to be fired on all pages
 
     $('.nav__link').on('click', function(){
-      $('.nav__dropdown', this).slideToggle();
+      $('.nav__dropdown', this).toggleClass('active')
     });
 
     $('.mobile__plan').on('click', function(){
-       $('.mobile__expanded').slideToggle();
+      $('.mobile__expanded').toggleClass('active');
     });
 
-    $('.mobile--nav_link').on('click', function(){
 
-      $(this).next().slideToggle();
+    $('.mobile--nav_link').click(function() {
+      var clicked = $(this);
+      var upArrow = '<i class="fa fa-chevron-up" aria-hidden="true">';
+      var downArrow = '<i class="fa fa-chevron-down" aria-hidden="true">'
 
-      if( $(this).next().css('display') == 'none' ) {
-        $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-down" aria-hidden="true">')
-        console.log($(this).next().css('display'))
+      if( clicked && clicked.next().hasClass('active') ) {
+        clicked.find('.mobile--arrow__container').html(downArrow);
       }
 
       else {
-        $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-up" aria-hidden="true">');
-        console.log($(this).next().css('display'))
+        $('.mobile--nav_link').not(clicked).next().removeClass('active');
+        clicked.find('.mobile--arrow__container').html(upArrow);
+        $('.mobile--nav_link').not(clicked).find('.mobile--arrow__container').html(downArrow);
       }
 
-      $('.mobile--nav_link').click(function() {
-        var clicked = $(this);
-        $('.mobile--nav_link').not(clicked).next().css('display', 'none')
-        clicked.next().css('display', 'block')
-      });
 
 
-    })
+      //if you click on the arrow while it's up and this.next.hasClass('.active')
 
-    // $('.mobile--nav_link').on('click', function(){
-    //   if( $(this).next().css('display') == 'block' ) {
-    //     $(this).next().css('display', 'none');
-    //     $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-down" aria-hidden="true">')
-    //   }
-    //   else {
-    //     $('.mobile--nav_link').css('display', 'none');
-    //     $(this).next().css('display', 'block');
-    //     $('.mobile--arrow__container', this).html('<i class="fa fa-chevron-up" aria-hidden="true">');
-    //   }
-    // })
+        //clicked.find.mobilearrow.contianer.html(down)
 
 
+      clicked.next().slideToggle(function(){
+        console.log($(this));
+        $(this).toggleClass('active');
+      })
+
+
+
+    });
 
 
 

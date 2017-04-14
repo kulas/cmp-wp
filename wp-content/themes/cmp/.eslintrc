@@ -32,6 +32,7 @@
     ]
   },
   "rules": {
+    "no-console": 0,
     "comma-dangle": ["error", {
       "arrays": "always-multiline",
       "objects": "always-multiline",

@@ -17,62 +17,176 @@
 }
 
 
-
 //nav bar
-.nav-primary {
-  ul.nav {
-    display: flex;
-    position: relative;
-    margin: $small-spacing 0;
-    padding: 0;
-    justify-content: center;
-    border-top: $base-border;
-    @include grid-media($nav-break){
-      display: none;
-    }
-    .nav__link {
-      position: relative;
-      .nav__dropdown {
-        background: #707847;
-        text-align: left;
-        color: white;
-        position: absolute;
-        left: 0;
-        z-index: 2;
-        width: 250px;
-        display: none;
-        &.active {
-          display: block;
-          transition: all 0.3s ease-in;
-        }
-        ul {
-          padding: 0;
-        }
-        a {
-          color: white;
-          font-size: 0.9em;
-        }
-      }
-    }
-    li {
-      display: block;
-      padding: 0;
-      margin: 0;
-      text-transform: uppercase;
-      &:hover {
-        background: #96a061;
-      }
-      a {
-        display: block;
-        padding: $small-spacing;
-        color: $base-font-color;
-        &:hover {
-          color: white;
-        }
-      }
+.menu-primary_navigation-container {
+  font-family: $base-font-family;
+
+  a {
+    color: black;
+  }
+}
+
+ul.nav {
+  display: flex;
+  position: relative;
+  margin: $small-spacing 0;
+  padding: 0;
+  justify-content: space-between;
+  border-top: $base-border;
+  @include grid-media($nav-break){
+    display: none;
+  }
+}
+
+li.menu-item {
+  padding: $small-spacing;
+  position: relative;
+  list-style-type: none;
+  color: black;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.3s all;
+  &:active, &:hover {
+    background: $nav-hover;
+    color: white;
+  }
+
+}
+
+ul.sub-menu {
+  margin-top: $small-spacing;
+  padding-left: 0;
+  position: absolute;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in;
+  z-index: 1;
+  &.active {
+    display: block;
+    max-height: 1000px;
+  }
+  li {
+    background: #6F774A;
+    width: 300px;
+    color: white;
+    padding: $small-spacing/2 $small-spacing;
+    a {
+      color: white;
+      letter-spacing: 0.5px;
+      font-size: 0.9em;
     }
   }
 }
+
+//mobile nav
+.nav-mobile--toggle {
+  display: none;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  padding-left: 0;
+  background: black;
+  margin-bottom: 0;
+  border-bottom: 1px solid white;
+  @include grid-media($nav-break) {
+    display: flex;
+  }
+
+  li {
+    color: white;
+    align-self: center;
+    padding-left: $small-spacing;
+    font-family: $alt-font-family;
+    text-transform: uppercase;
+  }
+  .nav-mobile__symbols {
+    display: flex;
+    align-items: stretch;
+    li {
+      color: white;
+      display: inline-block;
+      padding: $small-spacing;
+    }
+  }
+}
+
+.nav-mobile-symbols__search {
+   background: #535353;
+}
+
+.nav-mobile-symbols__hamburger {
+  background: #96a061;
+
+}
+
+ul.nav--mobile {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0px;
+  background: black;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  @include grid-media($nav-break) {
+    display: flex;
+  }
+  &.active {
+    max-height: 1000px;
+
+  }
+
+  li.menu-item {
+    text-align: left;
+    background: $nav-link-mobile;
+    border-bottom: 1px solid white;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+    &:after {
+      font-family: FontAwesome;
+      content: '\f078';
+      color: white;
+      text-align: right;
+      float: right;
+    }
+    a {
+      color: white;
+    }
+    ul.sub-menu {
+      display: block;
+      // &.active {
+      //   background: $nav-link-mobile-active;
+      // }
+      // li {
+      //   background: $nav-sub-item-mobile;
+      //   display: block;
+      //   a {
+      //   }
+      // }
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //mobile nav bar
 ul.mobile--nav {
@@ -151,7 +265,7 @@ ul.mobile--nav {
       background: black;
       text-align: left;
       font-family: $alt-font-family;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       width: auto;
     }
 

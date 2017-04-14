@@ -1,20 +1,50 @@
 // SITE FOOTER LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
 .footer {
-  height:400px;
   padding:3em;
   background-color: black;
+
+  img {
+    padding-right:2em;
+  }
+
+  .right-links {
+    width:100%;
+  }
+
+  .top-row {
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+  }
+
+  .middle-row {
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height:50px;
+  }
+
+  .bottom-row {
+    @extend .middle-row;
+
+    p {
+      color:white;
+      font-weight: 300;
+      font-family: .7em;
+      text-transform: uppercase;
+    }
+    .copyright {
+      margin-left:9em;
+      text-transform: capitalize;
+    }
+  }
 
   .footer-links {
     margin:auto;
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
-
-  img {
-    height:100px;
-    padding-right:1em;
-  }
 
   .footer-links-section {
     a {
@@ -35,4 +65,47 @@
     }
   }
 }
+  .email-subscribe {
+    margin-bottom:0;
+    padding-bottom:0;
+
+    p {
+      display:flex;
+    }
+    input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email {
+      height:40px;
+      width:250px;
+      margin-right: 5px;
+      border-radius:2px;
+      text-transform: uppercase;
+      color:white;
+      font-size:.9em;
+      margin-top:5px;
+    }
+
+    input.wpcf7-form-control.wpcf7-submit {
+      @extend .green-button;
+      height:40px;
+    }
+  }
+
+  .small-social-icons {
+
+    position:relative;
+    top:5px;
+    margin-left:5em;
+
+    img {
+      height:40px;
+      padding:0;
+      margin:0;
+      padding-right:3px;
+    }
+  }
+
+  .hr-break {
+    width:100%;
+    display:block;
+    color:#707070;
+  }
 }

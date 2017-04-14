@@ -1,2 +1,38 @@
 // SITE FOOTER LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
+.footer {
+  height:400px;
+  padding:3em;
+  background-color: black;
+
+  .footer-links {
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+  img {
+    height:100px;
+    padding-right:1em;
+  }
+
+  .footer-links-section {
+    a {
+      width:150px;
+      padding-bottom:15px;
+      display:block;
+      color:white;
+      text-transform: uppercase;
+      font-size:1.3em;
+    }
+  }
+
+  .footer-links-section__small {
+    a {
+      width:150px;
+      font-size:.8em;
+      color:#707070;
+    }
+  }
+}
+}

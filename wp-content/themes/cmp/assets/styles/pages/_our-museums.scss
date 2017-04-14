@@ -1,0 +1,22 @@
+#our-museums {
+
+  padding-bottom:2em;
+
+  .museum-container {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+  }
+  .museum {
+      flex-basis: 23%;
+      padding-bottom:1em;
+
+      h4 {
+        font-family: 'Roboto';
+        font-size: 1em;
+        font-weight:400;
+        padding:0;
+        margin:0;
+      }
+  }
+}

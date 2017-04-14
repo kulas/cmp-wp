@@ -2,7 +2,7 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
-    $('.nav > .menu-item').on('click', function(){
+    $('.nav > .menu-item, .nav--mobile > .menu-item').on('click', function(){
       $('.sub-menu', this).toggleClass('active')
     });
 
@@ -12,6 +12,9 @@ export default {
       $('ul.nav--mobile').toggleClass('active');
     });
 
+    $('ul.nav--mobile li.menu-item').on('click', function(){
+      $('ul.nav--mobile li.menu-item ul.sub-menu');
+    })
     //
     // $('.mobile--nav_link').click(function() {
     //   var clicked = $(this);

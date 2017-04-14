@@ -1,0 +1,45 @@
+#featured-articles {
+
+  .section-hr__h5 {
+      width:225px;
+    }
+
+  .hero-header {
+      height:400px;
+      width:100%;
+      margin-bottom:10px;
+      background-size:cover;
+      background-position: top center;
+  }
+
+  .article {
+    flex-basis:50%;
+    padding:1em 1em 2em 1em;
+    display:flex;
+
+    img {
+      height:100px;
+      width:100px;
+      padding-right:1em;
+    }
+
+    .article__text-box {
+      h4 {
+        font-family: 'Roboto';
+        text-transform: uppercase;
+        font-size: 1.3em;
+        padding:0;
+        margin:0;
+        font-weight:400;
+      }
+      p {
+        font-weight:lighter;
+        padding:0;
+        padding-bottom:3px;
+        margin:0;
+        line-height: 20px;
+        font-size:.9em;
+      }
+    }
+  }
+}

@@ -1,2 +1,75 @@
 // HOME PAGE STYLES
 ////////////////////////////////////////////////////////////////
+a {
+  color: #96A061;
+}
+
+.content-container {
+  display:flex;
+  flex-wrap: wrap;
+  width:90%;
+  max-width:1300px;
+  margin:auto;
+}
+.section-hr {
+    display:block;
+    text-align: center;
+    width:90% !important;
+    max-width: 1300px;
+    margin:auto;
+    height:30px;
+    padding-top:3em;
+    padding-bottom:2em;
+
+    hr {
+      position:relative;
+      top:-73px;
+      padding-top:0px;
+      padding-bottom:10px;
+      width:100% !important;
+      color:black;
+    }
+
+    .section-hr__h5 {
+      width:160px;
+      position:relative;
+      margin:auto;
+      top:-120px;
+      margin: auto;
+      padding:3px;
+      background-color:white;
+
+      h5 {
+          font-family:'Roboto', sans-serif;
+          text-transform: uppercase;
+      }
+  }
+}
+
+.words-box {
+  margin:auto;
+  padding:1em;
+  width:90%;
+  max-width: 1300px;
+
+  h1 {
+    font-family: 'Lora', sans-serif;
+    font-weight: lighter;
+  }
+
+  a {
+    padding:0;
+    margin:0;
+  }
+}
+
+.green-button {
+  border:none;
+  border-radius:2px;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  color:white;
+  background-color: #96A061;
+  font-size:.9em;
+  margin-top:5px;
+}

@@ -145,33 +145,52 @@ ul.nav--mobile {
     text-transform: none;
     letter-spacing: 0.5px;
     font-size: 0.9em;
-    padding: $small-spacing 0;
-    &:after {
+    padding: 0;
+
+    a {
+      color: white;
+      display: inline-block;
+      padding: $small-spacing;
+    }
+
+    &:before {
       font-family: FontAwesome;
       content: '\f078';
       color: white;
       text-align: right;
       float: right;
+      padding: $small-spacing;
+
     }
 
-    a {
-      color: white;
-    }
+
+
 
     ul.sub-menu {
       display: block;
       width: 100%;
       position: static;
+      margin-top: 0;
+      max-height: 0;
+      transition: all 0.3s ease-in;
+      &.active {
+        display: block;
+        max-height: 1000px;
+      }
       li {
         background: $nav-sub-item-mobile;
         display: block;
         width: 100%;
-        padding: $small-spacing;
+        padding: 0;
         text-transform: none;
         border-bottom: 1px solid white;
+        &:last-child {
+          border-bottom: none;
+        }
         a {
           color: $dark-gray;
           font-size: 1.1em;
+
         }
       }
     }

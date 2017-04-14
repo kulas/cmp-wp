@@ -138,13 +138,14 @@ ul.nav--mobile {
 
   }
 
-  li.menu-item {
+  & > li.menu-item {
     text-align: left;
     background: $nav-link-mobile;
     border-bottom: 1px solid white;
     text-transform: none;
     letter-spacing: 0.5px;
     font-size: 0.9em;
+    padding: $small-spacing 0;
     &:after {
       font-family: FontAwesome;
       content: '\f078';
@@ -152,20 +153,27 @@ ul.nav--mobile {
       text-align: right;
       float: right;
     }
+
     a {
       color: white;
     }
+
     ul.sub-menu {
       display: block;
-      // &.active {
-      //   background: $nav-link-mobile-active;
-      // }
-      // li {
-      //   background: $nav-sub-item-mobile;
-      //   display: block;
-      //   a {
-      //   }
-      // }
+      width: 100%;
+      position: static;
+      li {
+        background: $nav-sub-item-mobile;
+        display: block;
+        width: 100%;
+        padding: $small-spacing;
+        text-transform: none;
+        border-bottom: 1px solid white;
+        a {
+          color: $dark-gray;
+          font-size: 1.1em;
+        }
+      }
     }
 
   }

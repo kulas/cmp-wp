@@ -98,6 +98,10 @@ ul.sub-menu {
 
   }
 
+  .nav-mobile__plan {
+    width: 100%;
+    text-align: left;
+  }
 
   li {
     color: white;
@@ -429,4 +433,10 @@ fieldset {
   background: black;
   height: 500px;
   height: 300px;
+  display:block;
+  max-height: 0px;
+  transition: 0.3s all;
+  &.active {
+    max-height: 1000px;
+  }
 }

@@ -20,7 +20,7 @@
 
 
       <ul class="nav-mobile--toggle">
-         <li>Plan your visit </li>
+         <li class="nav-mobile__plan">Plan your visit </li>
          <div class="nav-mobile__symbols">
            <li class="nav-mobile-symbols__down"> <i class="fa fa-chevron-down" aria-hidden="true"></i>  </li>
            <li class="nav-mobile-symbols__search"> <i class="fa fa-search" aria-hidden="true"></i> </li>
@@ -40,8 +40,7 @@
        </div>
 
        <div class="plan">
-         <h2>Hours</h2>
-         <h2>Admission</h2>
+
        </div>
 
 

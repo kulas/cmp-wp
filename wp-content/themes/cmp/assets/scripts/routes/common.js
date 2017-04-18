@@ -16,13 +16,21 @@ export default {
 
 
     $('.nav-mobile-symbols__hamburger').on('click', function(){
+      $('.plan').removeClass('active');
       $('.nav--mobile__search').removeClass('active');
       $('ul.nav--mobile').toggleClass('active');
     });
 
     $('.nav-mobile-symbols__search').click(function(){
       $('.nav--mobile').removeClass('active');
+      $('.plan').removeClass('active');
       $('.nav--mobile__search ').toggleClass('active');
+    });
+
+    $('.nav-mobile__plan, .nav-mobile-symbols__down').click(function(){
+      $('.nav--mobile').removeClass('active');
+      $('.nav--mobile__search ').removeClass('active');
+      $('.plan').toggleClass('active');
     });
 
     // $(document).click(function(event){

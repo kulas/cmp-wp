@@ -46,7 +46,7 @@ li.menu-item {
   text-transform: uppercase;
   position: relative;
   transition: 0.3s all;
-  &:active, &:hover {
+  &:active, &:hover, &.active {
     background: $nav-hover;
     color: white;
   }
@@ -158,9 +158,25 @@ ul.nav--mobile {
       content: '\f078';
       color: white;
       text-align: right;
+      //transform: rotate(180deg);
+      display: inline-block;
       float: right;
       padding: $small-spacing;
 
+    }
+
+    &.active {
+      &:before {
+        font-family: FontAwesome;
+        content: '\f077';
+        color: white;
+        text-align: right;
+        //transform: rotate(180deg);
+        display: inline-block;
+        float: right;
+        padding: $small-spacing;
+
+      }
     }
 
 
@@ -190,7 +206,7 @@ ul.nav--mobile {
         a {
           color: $dark-gray;
           font-size: 1.1em;
-
+          width: 100%;
         }
       }
     }

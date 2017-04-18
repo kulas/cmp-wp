@@ -4,8 +4,11 @@ export default {
 
     $('.nav > .menu-item, .nav--mobile > .menu-item').on('click', function(){
       var clicked = $(this);
+      clicked.toggleClass('active')
       $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).children().removeClass('active');
-      $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).children('li.menu-item.active').animate({transform: 'rotate(180deg)'}, "slow");
+      $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).removeClass('active');
+
+
       clicked.children().toggleClass('active');
     });
 

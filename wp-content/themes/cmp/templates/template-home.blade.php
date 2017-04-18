@@ -5,8 +5,12 @@
 @extends('layouts.base')
 
 @section('content')
-  @while(have_posts()) @php(the_post())
-    @include('partials.page-header')
+
     @include('partials.content-home')
-  @endwhile
+    @include('partials.content-featured-exhibits')
+    @include('partials.content-featured-articles')
+    @include('partials.content-things-to-do')
+    @include('partials.content-our-museums')
+    @include('partials.content-twitter-feed')
+
 @endsection

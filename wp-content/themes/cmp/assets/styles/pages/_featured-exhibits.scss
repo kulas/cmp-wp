@@ -1,0 +1,152 @@
+#featured-exhibits {
+
+.hero-header .exhibit {
+
+  flex-basis:100%;
+  padding:0 !important;
+
+  .exhibit__image {
+    height:350px;
+    width:100%;
+    margin-bottom:10px;
+    background-size:cover;
+    background-position: center;
+  }
+
+  .exhibit-preview__summary {
+    padding:0px;
+    margin:0px;
+    height:250px;
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+    }
+  }
+
+  .exhibit-preview__dates {
+    position:relative;
+    top:-64px;
+    display:flex;
+
+    .datespacer {
+      width:7%;
+      background-color: white;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      text-transform: uppercase;
+      background-color: white;
+      font-weight:bolder;
+      height:54px;
+      padding: 1em 0em 1em 0em;
+    }
+    .end-date {
+      padding-right:1em;
+    }
+  }
+  .words-box {
+    position:relative;
+    top:-50px;
+  }
+}
+
+  .section-hr {
+      display:block;
+      text-align: center;
+      width:90% !important;
+      max-width: 1300px;
+      margin:auto;
+      padding:1em;
+
+      hr {
+        position:relative;
+        top:-73px;
+        padding-top:0px;
+        padding-bottom:10px;
+        width:100% !important;
+        color:black;
+      }
+
+      .section-hr__h5 {
+        width:160px;
+        position:relative;
+        margin:auto;
+        top:-120px;
+        margin: auto;
+        padding:3px;
+        background-color:white;
+
+        h5 {
+            font-family:'Roboto', sans-serif;
+            text-transform: uppercase;
+        }
+    }
+    .words-box, .section-hr {
+      max-width:1300px;
+      margin:auto;
+    }
+  }
+}
+
+.content-container
+{
+  .exhibit {
+
+    padding:2em 1em 1em 1em;
+    flex-basis:50%;
+
+    .exhibit__image {
+      height:150px;
+      background-size: cover;
+      background-position: center;
+      margin:auto;
+    }
+
+    .exhibit-preview__dates
+    {
+        position:relative;
+        top:-30px;
+        display:flex;
+
+        p {
+          font-family: 'Roboto', sans-serif;
+          font-size:.8em;
+          text-transform: uppercase;
+          background-color: white;
+          height:30px;
+          padding:8px 0px 8px 1px;
+        }
+        .start-date {
+          padding-right:5px;
+        }
+        .end-date {
+          padding-right:1em;
+        }
+    }
+
+    .words-box {
+      position:relative;
+      top: -20px;
+      width:100%;
+      padding:0;
+      margin:auto;
+
+      h1 {
+        padding:0;
+        margin:0;
+        font-family: 'Lora', sans-serif;
+        font-weight: lighter;
+        font-size:1.3em;
+      }
+      p, a {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+      }
+      a {
+        font-weight:500;
+      }
+    }
+  }
+}

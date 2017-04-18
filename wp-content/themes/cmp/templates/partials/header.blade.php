@@ -28,6 +28,22 @@
          </div>
        </ul>
 
+       <div class="nav--mobile__search">
+         <form class="form-search" action="/" method="get" role="search">
+           <legend class="screen-reader-text">Search form</legend>
+           <fieldset>
+             <label for="search-field">Search</label>
+             <input type="text" id="search-field" name="s" placeholder="Search" />
+           </fieldset>
+           <button type="button" name="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+         </form>
+       </div>
+
+       <div class="plan">
+         <h2>Hours</h2>
+         <h2>Admission</h2>
+       </div>
+
 
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav--mobile']) !!}

@@ -4,12 +4,18 @@
 
   .museum-container {
     width:100%;
+    padding:0em 2em;
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
   .museum {
       flex-basis: 23%;
       padding-bottom:1em;
+
+      @include grid-media($medium) {
+        flex-basis:47%;
+      }
 
       h4 {
         font-family: 'Roboto';

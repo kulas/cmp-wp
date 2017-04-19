@@ -1,7 +1,11 @@
 #featured-articles {
 
+  .section-hr {
+    padding-bottom:1em;
+  }
+
   .section-hr__h5 {
-      width:225px;
+      width:300px;
     }
 
   .hero-header {
@@ -10,12 +14,113 @@
       margin-bottom:10px;
       background-size:cover;
       background-position: top center;
+
+      @include grid-media($medium) {
+        height:150px;
+      }
+  }
+
+  .article__title,
+  .article__author,
+  .article__summary,
+  .readmore-link {
+    display:none;
+
+    @include grid-media($medium) {
+      display:block;
+    }
+  }
+
+  @include grid-media($medium) {
+    .article__quote, #article__button {
+      display:none;
+    }
+    .words-box {
+      padding-left:1em;
+      padding-right:1em;
+      margin:auto;
+    }
+  }
+
+  .article__title {
+    text-align: center;
+    font-weight:300;
+    margin-top:.5em;
+    margin-bottom: 0;
+    padding:0;
+  }
+
+  .article__author {
+    text-align: center;
+    font-size: 1em;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    font-style: italic;
+    color:#7a7a7a;
+  }
+
+  .article__summary {
+    padding: 1em 1em 0em 1em;
+    font-family: sans-serif;
+    font-size:1em;
+    font-weight:300;
+
+    a {
+      font-family: 'Lora', serif;
+      text-transform: uppercase;
+      font-size: .8em;
+      font-weight:bolder;
+    }
+  }
+
+  .carnegie-magazine {
+    height:130px;
+    padding:0em 1.5em 1em 1.5em;
+    overflow:auto;
+    display:flex;
+    justify-content: space-between;
+
+    .carnegie-magazine__left-div {
+      min-width:100px;
+      overflow: hidden;
+      margin-right: 1em;
+    }
+
+    .carnegie-magazine__right-div {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      button {
+        padding: .75em;
+        font-weight: 500;
+      }
+    }
+
+    display:none;
+
+    @include grid-media($medium) {
+      display:flex;
+    }
+  }
+
+  .magazine-hr {
+    display: none;
+
+    @include grid-media($medium) {
+      display:block;
+    }
   }
 
   .article {
     flex-basis:50%;
     padding:1em 1em 2em 1em;
     display:flex;
+
+    @include grid-media($medium) {
+      display:none;
+    }
 
     img {
       height:100px;

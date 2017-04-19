@@ -111,4 +111,12 @@
    font-family: 'Roboto', sans-serif;
  }
 
+ .ctf-quoted-tweet {
+   display:none;
+ }
+
+ @include grid-media($medium) {
+   display:none;
+ }
+
 }

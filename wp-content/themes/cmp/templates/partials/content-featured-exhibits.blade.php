@@ -4,19 +4,28 @@
 
 <div id="featured-exhibits">
 
+<div class='section-hr-mobile'>
+  <hr><div class='section-hr__h5'>
+    <h5>Now Showing</h5>
+  </div>
+</div>
+
 <?php $count = 1; ?>
 
-<?php query_posts( array ( 'category_name' => 'Featured Exhibits', 'posts_per_page => 5', 'orderby' => 'rand') );
+<?php query_posts( array ( 'category_name' => 'Featured Exhibits', 'posts_per_page => 6', 'orderby' => 'rand') );
 
   while ( have_posts() ) : the_post();
 
-  if ($count==1)
-    echo "<div class='hero-header'>" ?>
+  if ($count==1) {
+    echo "<div id='exhibit-header' class='exhibit-header exhibit'>";
+  }
 
-<?php if ($count==2)
-    echo "<div class='content-container'>" ?>
+  if ($count==2) {
+    echo "<div class='content-container'>";
+  }
 
-  <div class="exhibit">
+  if ($count >= 2) {
+    echo "<div class='exhibit'>"; } ?>
 
     <div class="exhibit__image" style="background-image: url(<?php the_field('exhibit_image'); ?>)">
 
@@ -31,11 +40,9 @@
           <?php if( have_rows('exhibit_dates') ):
                 while ( have_rows('exhibit_dates') ) : the_row(); ?>
 
-                <div class="datespacer"></div>
+                    <p class="start-date"><?php the_sub_field('exhibit_start_date'); ?></p><p class="end-date"><?php the_sub_field('exhibit_end_date'); ?></p>
 
-                <p class="start-date"><?php the_sub_field('new_exhibit'); ?></p>
-
-                <p class="start-date"><?php the_sub_field('exhibit_start_date'); ?></p><p class="end-date"><?php the_sub_field('exhibit_end_date'); ?></p>
+                    <p class="new-exhibit"><?php the_sub_field('new_exhibit'); ?></p>
 
         <?php endwhile;
           else :
@@ -43,12 +50,13 @@
 
         </div>
 
-        <div class="words-box">
+        <div class="exhibit__words-box">
 
           <h1 class="exhibit-preview__title"><?php the_title(); ?></h1>
           <p><?php the_field('summary'); ?></p>
 
-          <a href="<?php the_permalink(); ?>">Learn More &#x2197;</a>
+          <a class="exhibit__learn-more" href="<?php the_permalink(); ?>">Learn More <img class="exhibit__learn-more-arrow" src="wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>
+          <a class="exhibit__learn-more-mobile" href="<?php the_permalink(); ?>"><img class="exhibit__learn-more-arrow" src="wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>
 
         </div>
 

@@ -20,9 +20,32 @@
 
   <div class="words-box">
 
-    <h2><?php the_field('summary'); ?></h2>
+    <h2 class="article__title"><?php the_title(); ?></h2>
+    <h3 class="article__author">by <?php the_author(); ?></h3>
+    <h2 class="article__quote"><?php the_field('quote'); ?></h2>
+    <h3 class="article__summary"><?php
+				$excerpt = get_the_excerpt();
+				$output = '<p>'.$excerpt.' <a href="'.get_permalink().'">Read Article ></a></p>';
+				echo $output;
+				?>
+    </h3>
 
-    <button class="green-button" href="<?php the_permalink(); ?>">Read the Article</button>
+    <button id="article__button" class="green-button" href="<?php the_permalink(); ?>">Read the Article</button>
+
+  </div>
+
+  <hr class="magazine-hr">
+
+  <div class="carnegie-magazine">
+
+    <div class="carnegie-magazine__left-div">
+      <img id="carnegie-magazine__cover" src="wp-content/themes/cmp/assets/images/carnegie-magazine.png">
+    </div>
+
+    <div class="carnegie-magazine__right-div">
+      <img id="carnegie-magazine__logo" src="wp-content/themes/cmp/assets/images/carnegie-magazine-logo.png">
+      <button class="green-button" href="http://www.carnegiemuseums.org/cmp/cmag/index.php">Read Current & Past Issues</button>
+    </div>
 
   </div>
 

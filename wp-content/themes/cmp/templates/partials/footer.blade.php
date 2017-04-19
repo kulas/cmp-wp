@@ -1,40 +1,51 @@
 <footer class="footer">
 
+  <div class="content-container">
+
   <div class="footer-links">
 
-    <img src="wp-content/themes/cmp/assets/images/cmpfooter.png">
-
-    <div class="right-links">
+    <img class="footer-logo" src="wp-content/themes/cmp/assets/images/cmpfooter.png">
+    <hr class="hr-break">
 
       <div class="top-row">
 
-        <div class="footer-links-section">
+          <div class="footer__left-div">
 
-          <a href="#">Things to Do</a>
-          <a href="#">Visit</a>
-          <a href="#">Join & Support</a>
+            <div class="footer-links-section">
 
-        </div>
+              <a href="#">Things to Do</a>
+              <a href="#">Visit</a>
+              <a href="#">Join & Support</a>
 
-        <div class="footer-links-section">
+            </div>
 
-          <a href="#">Event Spaces</a>
-          <a href="#">About Us</a>
-          <a href="#">Carnegie Magazine</a>
+            <div class="footer-links-section">
 
-        </div>
+              <a href="#">Event Spaces</a>
+              <a href="#">About Us</a>
+              <a href="#">Carnegie Magazine</a>
 
-        <div class="footer-links-section footer-links-section__small">
+            </div>
 
-          <a href="#">Carnegie Museum of Art</a>
-          <a href="#">Carnegie Science Center</a>
+          </div>
 
-        </div>
+          <hr class="hr-break">
 
-        <div class="footer-links-section footer-links-section__small">
+        <div class="footer__right-div">
 
-          <a href="#">Carnegie Museum of Natural History</a>
-          <a href="#">The Andy Warhol Museum</a>
+          <div class="footer-links-section footer-links-section__small">
+
+            <a href="#">Carnegie Museum of Art</a>
+            <a href="#">Carnegie Science Center</a>
+
+          </div>
+
+          <div class="footer-links-section footer-links-section__small">
+
+            <a href="#">Carnegie Museum of Natural History</a>
+            <a href="#">The Andy Warhol Museum</a>
+
+          </div>
 
         </div>
 
@@ -60,14 +71,16 @@
 
       </div>
 
-      <hr class="hr-break">
+      <hr class="hr-break mobile-hide">
 
       <div class="bottom-row">
 
-        <p>Press  |  Careers  |  Volunteers  |  Privacy</p>
+        <p>Press | Careers | Volunteers | Privacy</p>
         <p class="copyright">©2017 Carnegie Museums of Pittsburgh</p>
 
       </div>
+
+    </div>
 
     </div>
 

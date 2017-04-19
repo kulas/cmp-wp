@@ -3,6 +3,12 @@
 .footer {
   padding:3em;
   background-color: black;
+  width:100%;
+  overflow: hidden;
+
+  @include grid-media($medium) {
+    min-height:900px;
+  }
 
   img {
     padding-right:2em;
@@ -15,19 +21,19 @@
   .top-row {
     display:flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width:100%;
   }
 
   .middle-row {
     display:flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    // align-items: flex-start;
+    // justify-content: flex-start;
     height:50px;
   }
 
   .bottom-row {
-    @extend .middle-row;
-
     p {
       color:white;
       font-weight: 300;
@@ -35,8 +41,13 @@
       text-transform: uppercase;
     }
     .copyright {
-      margin-left:9em;
       text-transform: capitalize;
+    }
+
+    @include grid-media($medium) {
+      position:relative;
+      top:7em;
+      margin:auto;
     }
   }
 
@@ -45,10 +56,10 @@
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
 
   .footer-links-section {
     a {
-      width:150px;
       padding-bottom:15px;
       display:block;
       color:white;
@@ -59,28 +70,54 @@
 
   .footer-links-section__small {
     a {
-      width:150px;
       font-size:.8em;
       color:#707070;
     }
   }
 }
+
+  .footer__left-div {
+    display:flex;
+
+    @include grid-media($medium) {
+      flex-basis:100%;
+      justify-content: space-between;
+    }
+  }
+
+  .footer__right-div {
+    display:flex;
+
+    @include grid-media($medium) {
+      flex-basis:100%;
+      justify-content: space-between;
+    }
+  }
+
   .email-subscribe {
     margin-bottom:0;
     padding-bottom:0;
+
+    @include grid-media($medium) {
+      flex-basis: 100%;
+    }
 
     p {
       display:flex;
     }
     input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email {
       height:40px;
-      width:250px;
       margin-right: 5px;
       border-radius:2px;
       text-transform: uppercase;
       color:white;
       font-size:.9em;
       margin-top:5px;
+
+      @include grid-media($medium) {
+        min-width: 300px;
+        max-width: 80%;
+      }
     }
 
     input.wpcf7-form-control.wpcf7-submit {
@@ -90,16 +127,26 @@
   }
 
   .small-social-icons {
-
+    width:50%;
+    margin:auto;
     position:relative;
     top:5px;
     margin-left:5em;
+    display:flex;
+    justify-content: space-between;
 
     img {
       height:40px;
       padding:0;
-      margin:0;
+      margin:5px;
       padding-right:3px;
+    }
+
+    @include grid-media($medium) {
+      margin-left: 0;
+      display:flex;
+      justify-content: center;
+      flex-basis: 100%;
     }
   }
 

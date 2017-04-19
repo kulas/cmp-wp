@@ -2,39 +2,61 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
+    //display menu items on desktop and mobile
     $('.nav > .menu-item, .nav--mobile > .menu-item').on('click', function(){
-      $('.sub-menu', this).toggleClass('active')
+      var clicked = $(this);
+      clicked.toggleClass('active');
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
+      $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).children().removeClass('active');
+      $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).removeClass('active');
+      clicked.children().toggleClass('active');
     });
 
-
-
-    $('.nav-mobile--toggle').on('click', function(){
+    //display drop down on mobile
+    $('.nav__symHamburger').on('click', function(){
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
+      $('.navmobile__planDrop').removeClass('active');
+      $('.navMobile__search').removeClass('active');
       $('ul.nav--mobile').toggleClass('active');
     });
 
-    $('ul.nav--mobile li.menu-item').on('click', function(){
-      $('ul.nav--mobile li.menu-item ul.sub-menu');
-    })
-    //
-    // $('.mobile--nav_link').click(function() {
-    //   var clicked = $(this);
-    //   var upArrow = '<i class="fa fa-chevron-up" aria-hidden="true">';
-    //   var downArrow = '<i class="fa fa-chevron-down" aria-hidden="true">'
-    //
-    //   if( clicked && clicked.next().hasClass('active') ) {
-    //     clicked.find('.mobile--arrow__container').html(downArrow);
-    //   }
-    //
-    //   else {
-    //     $('.mobile--nav_link').not(clicked).next().removeClass('active');
-    //     clicked.find('.mobile--arrow__container').html(upArrow);
-    //     $('.mobile--nav_link').not(clicked).find('.mobile--arrow__container').html(downArrow);
-    //   }
-    //
-    //
-    //   clicked.next().toggleClass('active')
+    //display search on mobile
+    $('.nav__symSearch').click(function(){
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
+      $('.nav--mobile').removeClass('active');
+      $('.navmobile__planDrop').removeClass('active');
+      $('.navMobile__search ').toggleClass('active');
+    });
 
-    // });
+    //display plan your visit on mobile
+    $('.nav__plan, .nav__symDown').click(function(){
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
+      $('.nav--mobile').removeClass('active');
+      $('.navMobile__search ').removeClass('active');
+      $('.navmobile__planDrop').toggleClass('active');
+    });
+
+    // $(document).click(function(){
+    //   var clicked = $(this);
+    //
+    //   if ( !clicked.hasClass('nav-primary')) {
+    //     $('.nav--mobile').removeClass('active');
+    //     $('.navMobile__search ').removeClass('active');
+    //     $('.plan').removeClass('active');
+    //   }
+    //
+    // })
+
+
+
 
 
 

@@ -2,6 +2,16 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
+    // close all nav trays
+    function closeNav() {
+      $('.navMobile__search, .navmobile__planDrop, .nav--mobile, .overlay, site-header').removeClass('active');
+    }
+
+    // overlay function
+    $('.overlay').click( function(){
+      closeNav();
+    });
+
     //display menu items on desktop and mobile
     $('.nav > .menu-item, .nav--mobile > .menu-item').on('click', function(){
       var clicked = $(this);
@@ -43,6 +53,9 @@ export default {
       $('.navMobile__search ').removeClass('active');
       $('.navmobile__planDrop').toggleClass('active');
     });
+
+
+
 
     // $(document).click(function(){
     //   var clicked = $(this);

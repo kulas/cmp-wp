@@ -15,7 +15,7 @@
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
       @endif
 
-      <ul class="nav__mobile">
+      <ul class="nav-tray nav__mobile">
          <li class="nav__plan">Plan your visit </li>
          <div class="nav__symbols">
            <li class="nav__symDown"> <i class="fa fa-chevron-down" aria-hidden="true"></i>  </li>
@@ -24,7 +24,7 @@
          </div>
        </ul>
 
-       <div class="navMobile__search">
+       <div class="nav-tray navMobile__search">
          <form class="form-search" action="/" method="get" role="search">
            <legend class="screen-reader-text">Search form</legend>
            <fieldset>
@@ -35,7 +35,7 @@
          </form>
        </div>
 
-       <div class="navmobile__planDrop"></div>
+       <div class="nav-tray navmobile__planDrop"></div>
 
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav--mobile']) !!}

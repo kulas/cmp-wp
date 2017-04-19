@@ -8,8 +8,11 @@
 
 // main header
 .site-header {
+  position: relative;
   padding-top: $base-spacing;
   text-align: center;
+  background: #fff;
+  z-index: 99;
   &.active {
     max-height: 3000px;
     box-shadow: 0 0 1.5rem 0 rgba(0,0,0,.5);
@@ -457,6 +460,6 @@ fieldset {
     left: 0;
     background: #000;
     opacity: .33;
-    z-index: 100;
+    z-index: 9;
   }
 }

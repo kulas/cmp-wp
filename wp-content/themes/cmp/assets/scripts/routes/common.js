@@ -7,9 +7,12 @@ export default {
       $('.navMobile__search, .navmobile__planDrop, .nav--mobile, .overlay, .site-header').removeClass('active');
     }
 
-    // overlay function
-    $('.overlay').click( function(){
+    $(window).click(function() {
       closeNav();
+    });
+
+    $('.site-header').click(function(event){
+        event.stopPropagation();
     });
 
     //display menu items on desktop and mobile
@@ -17,8 +20,8 @@ export default {
       var clicked = $(this);
       clicked.toggleClass('active');
       //
-      $('.site-header').toggleClass('active');
-      $('.overlay').toggleClass('active');
+      // $('.site-header').toggleClass('active');
+      // $('.overlay').toggleClass('active');
       $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).children().removeClass('active');
       $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).removeClass('active');
       clicked.children().toggleClass('active');
@@ -27,8 +30,8 @@ export default {
     //display drop down on mobile
     $('.nav__symHamburger').on('click', function(){
       //
-      $('.site-header').toggleClass('active');
-      $('.overlay').toggleClass('active');
+      // $('.site-header').toggleClass('active');
+      // $('.overlay').toggleClass('active');
       $('.navmobile__planDrop').removeClass('active');
       $('.navMobile__search').removeClass('active');
       $('ul.nav--mobile').toggleClass('active');
@@ -37,8 +40,8 @@ export default {
     //display search on mobile
     $('.nav__symSearch').click(function(){
       //
-      $('.site-header').toggleClass('active');
-      $('.overlay').toggleClass('active');
+      // $('.site-header').toggleClass('active');
+      // $('.overlay').toggleClass('active');
       $('.nav--mobile').removeClass('active');
       $('.navmobile__planDrop').removeClass('active');
       $('.navMobile__search ').toggleClass('active');
@@ -47,8 +50,8 @@ export default {
     //display plan your visit on mobile
     $('.nav__plan, .nav__symDown').click(function(){
       //
-      $('.site-header').toggleClass('active');
-      $('.overlay').toggleClass('active');
+      // $('.site-header').toggleClass('active');
+      // $('.overlay').toggleClass('active');
       $('.nav--mobile').removeClass('active');
       $('.navMobile__search ').removeClass('active');
       $('.navmobile__planDrop').toggleClass('active');

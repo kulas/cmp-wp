@@ -5,44 +5,54 @@ export default {
     //display menu items on desktop and mobile
     $('.nav > .menu-item, .nav--mobile > .menu-item').on('click', function(){
       var clicked = $(this);
-      clicked.toggleClass('active')
+      clicked.toggleClass('active');
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
       $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).children().removeClass('active');
       $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).removeClass('active');
       clicked.children().toggleClass('active');
     });
 
     //display drop down on mobile
-    $('.nav-mobile-symbols__hamburger').on('click', function(){
-      $('.plan').removeClass('active');
-      $('.nav--mobile__search').removeClass('active');
+    $('.nav__symHamburger').on('click', function(){
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
+      $('.navmobile__planDrop').removeClass('active');
+      $('.navMobile__search').removeClass('active');
       $('ul.nav--mobile').toggleClass('active');
     });
 
     //display search on mobile
-    $('.nav-mobile-symbols__search').click(function(){
+    $('.nav__symSearch').click(function(){
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
       $('.nav--mobile').removeClass('active');
-      $('.plan').removeClass('active');
-      $('.nav--mobile__search ').toggleClass('active');
+      $('.navmobile__planDrop').removeClass('active');
+      $('.navMobile__search ').toggleClass('active');
     });
 
     //display plan your visit on mobile
-    $('.nav-mobile__plan, .nav-mobile-symbols__down').click(function(){
+    $('.nav__plan, .nav__symDown').click(function(){
+      //
+      $('.site-header').toggleClass('active');
+      $('.overlay').toggleClass('active');
       $('.nav--mobile').removeClass('active');
-      $('.nav--mobile__search ').removeClass('active');
-      $('.plan').toggleClass('active');
+      $('.navMobile__search ').removeClass('active');
+      $('.navmobile__planDrop').toggleClass('active');
     });
 
-    // $(document).click(function(event){
-    //   var clicked = $(event.target);
-    //   var mobileOpened = $('.nav--mobile').hasClass('active');
-    //   var desktopOpened = $('.nav li.menu-item').hasClass('active');
+    // $(document).click(function(){
+    //   var clicked = $(this);
     //
-    //   if (desktopOpened && !clicked.hasClass('active')) {
-    //     $('.nav li.menu-item').click();
+    //   if ( !clicked.hasClass('nav-primary')) {
+    //     $('.nav--mobile').removeClass('active');
+    //     $('.navMobile__search ').removeClass('active');
+    //     $('.plan').removeClass('active');
     //   }
-    //   if (mobileOpened && !clicked.hasClass('active')) {
-    //     $('.nav--mobile').click();
-    //   }
+    //
     // })
 
 

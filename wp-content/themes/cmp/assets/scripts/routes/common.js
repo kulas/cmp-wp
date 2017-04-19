@@ -4,7 +4,7 @@ export default {
 
     // close all nav trays
     function closeNav() {
-      $('.navMobile__search, .navmobile__planDrop, .nav--mobile, .overlay, site-header').removeClass('active');
+      $('.navMobile__search, .navmobile__planDrop, .nav--mobile, .overlay, .site-header').removeClass('active');
     }
 
     // overlay function

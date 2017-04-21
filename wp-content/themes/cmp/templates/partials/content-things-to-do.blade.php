@@ -35,7 +35,7 @@
         wp_reset_query();
       ?>
 
-      <button class="green-button">More Things To Do</button>
+      <button class="green-button more-things">More Things To Do</button>
 
     </div>
 

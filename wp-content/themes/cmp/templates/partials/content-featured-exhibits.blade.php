@@ -35,25 +35,25 @@
 
       <div class="exhibit-preview__summary">
 
-        <div class="exhibit-preview__dates">
-
-          <?php if( have_rows('exhibit_dates') ):
-                while ( have_rows('exhibit_dates') ) : the_row(); ?>
-
-                    <p class="start-date"><?php the_sub_field('exhibit_start_date'); ?></p><p class="end-date"><?php the_sub_field('exhibit_end_date'); ?></p>
-
-                    <p class="new-exhibit"><?php the_sub_field('new_exhibit'); ?></p>
-
-        <?php endwhile;
-          else :
-          endif; ?>
-
-        </div>
-
         <div class="exhibit__words-box">
 
+          <div class="exhibit-preview__dates">
+
+            <?php if( have_rows('exhibit_dates') ):
+                  while ( have_rows('exhibit_dates') ) : the_row(); ?>
+
+                      <p class="start-date"><?php the_sub_field('exhibit_start_date'); ?></p><p class="end-date"><?php the_sub_field('exhibit_end_date'); ?></p>
+
+                      <p class="new-exhibit"><?php the_sub_field('new_exhibit'); ?></p>
+
+          <?php endwhile;
+            else :
+            endif; ?>
+
+          </div>
+
           <h1 class="exhibit-preview__title"><?php the_title(); ?></h1>
-          <p><?php the_field('summary'); ?></p>
+          <div class="exhibit-preview__summary-text"><?php the_field('summary'); ?></div>
 
           <a class="exhibit__learn-more" href="<?php the_permalink(); ?>">Learn More <img class="exhibit__learn-more-arrow" src="wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>
           <a class="exhibit__learn-more-mobile" href="<?php the_permalink(); ?>"><img class="exhibit__learn-more-arrow" src="wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>

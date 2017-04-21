@@ -1,11 +1,18 @@
 <footer class="footer">
 
-  <div class="content-container">
+<div class="content-container">
 
   <div class="footer-links">
 
-    <img class="footer-logo" src="wp-content/themes/cmp/assets/images/cmpfooter.png">
-    <hr class="hr-break">
+    <div class="left-section">
+
+      <img class="footer-logo" src="wp-content/themes/cmp/assets/images/cmpfooter.png">
+
+      <hr class="hr-break-mobile">
+
+    </div>
+
+    <div class="right-section">
 
       <div class="top-row">
 
@@ -29,7 +36,7 @@
 
           </div>
 
-          <hr class="hr-break">
+        <hr class="hr-break-mobile">
 
         <div class="footer__right-div">
 
@@ -37,6 +44,7 @@
 
             <a href="#">Carnegie Museum of Art</a>
             <a href="#">Carnegie Science Center</a>
+            <a href="#">Accessibility</a>
 
           </div>
 
@@ -85,5 +93,7 @@
     </div>
 
   </div>
+
+</div>
 
 </footer>

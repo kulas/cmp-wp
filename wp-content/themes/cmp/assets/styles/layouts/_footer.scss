@@ -1,13 +1,21 @@
 // SITE FOOTER LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
 .footer {
-  padding:3em;
+  padding:1em;
   background-color: black;
   width:100%;
   overflow: hidden;
 
-  @include grid-media($medium) {
-    min-height:900px;
+  .content-container {
+    padding:0;
+  }
+
+  @include grid-media($large) {
+    min-height: 900px;
+
+    .left-section {
+      padding-top:1em;
+    }
   }
 
   img {
@@ -21,27 +29,46 @@
   .top-row {
     display:flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width:100%;
+
+    @include grid-media($large) {
+      display:block;
+    }
   }
 
   .middle-row {
     display:flex;
-    flex-wrap: wrap;
-    // align-items: flex-start;
-    // justify-content: flex-start;
     height:50px;
+
+    @include grid-media($medium) {
+      display:block;
+    }
   }
 
   .bottom-row {
+    display:flex;
+    justify-content: space-between;
+
+    @include grid-media($large) {
+      display:block;
+      text-align: center;
+    }
+
     p {
       color:white;
       font-weight: 300;
-      font-family: .7em;
+      font-size: .9em;
       text-transform: uppercase;
     }
     .copyright {
       text-transform: capitalize;
+      position: relative;
+      left:-.9em;
+
+      @media (max-width: 1100px) {
+        left:0em;
+      }
     }
 
     @include grid-media($medium) {
@@ -52,13 +79,20 @@
   }
 
   .footer-links {
+    width:90%;
     margin:auto;
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
+
+    @include grid-media($large) {
+      display:block;
+    }
 
   .footer-links-section {
+    flex-basis:50%;
+    padding:0px 5px;
+
     a {
       padding-bottom:15px;
       display:block;
@@ -69,6 +103,12 @@
   }
 
   .footer-links-section__small {
+    max-width:150px;
+
+    @include grid-media($large) {
+      max-width:none;
+    }
+
     a {
       font-size:.8em;
       color:#707070;
@@ -78,17 +118,12 @@
 
   .footer__left-div {
     display:flex;
-
-    @include grid-media($medium) {
-      flex-basis:100%;
-      justify-content: space-between;
-    }
   }
 
   .footer__right-div {
     display:flex;
 
-    @include grid-media($medium) {
+    @include grid-media($large) {
       flex-basis:100%;
       justify-content: space-between;
     }
@@ -107,33 +142,44 @@
     }
     input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email {
       height:40px;
-      margin-right: 5px;
+      max-width: 100%;
       border-radius:2px;
       text-transform: uppercase;
       color:white;
       font-size:.9em;
       margin-top:5px;
 
+
       @include grid-media($medium) {
-        min-width: 300px;
-        max-width: 80%;
+        display:block;
+        width:100% !important;
       }
     }
 
     input.wpcf7-form-control.wpcf7-submit {
       @extend .green-button;
       height:40px;
+      padding:0;
+      width:100px;
+      position:relative;
+      left:-5em;
+
+      @include grid-media($medium) {
+        left:5px;;
+      }
     }
   }
 
   .small-social-icons {
-    width:50%;
     margin:auto;
     position:relative;
-    top:5px;
-    margin-left:5em;
+    left:-6em;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+
+    @media (max-width: 1025px) {
+      left:0em;
+    }
 
     img {
       height:40px;
@@ -154,5 +200,14 @@
     width:100%;
     display:block;
     color:#707070;
+  }
+
+  .hr-break-mobile {
+    @extend .hr-break;
+    display:none;
+
+    @include grid-media($large) {
+      display:block;
+    }
   }
 }

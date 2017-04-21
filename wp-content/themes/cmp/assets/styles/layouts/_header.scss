@@ -89,7 +89,7 @@ ul.sub-menu {
   padding-left: 0;
   background: black;
   margin-bottom: 0;
-  border-bottom: 1px solid white;
+  // border-bottom: 1px solid white;
   @include grid-media($nav-break) {
     display: flex;
   }

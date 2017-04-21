@@ -18,6 +18,8 @@
   <div class="hero-header" style="background-image: url(<?php the_field('featured_image'); ?>)">
   </div>
 
+  <div class="articles__featured-content">
+
   <div class="words-box">
 
     <h2 class="article__title"><?php the_title(); ?></h2>
@@ -53,7 +55,9 @@
       wp_reset_query();
     ?>
 
-    <div class="content-container">
+    <h3 class="featured-articles-h3">Featured Articles</h3>
+
+    <div class="article-container">
 
     <?php query_posts( array ( 'category_name' => 'Featured Articles', 'posts_per_page => 4') );
       while ( have_posts() ) : the_post(); ?>
@@ -74,5 +78,7 @@
     ?>
 
   </div>
+
+</div>
 
 </div>

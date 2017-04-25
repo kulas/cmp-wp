@@ -64,11 +64,12 @@
     .copyright {
       text-transform: capitalize;
       position: relative;
-      left:-.9em;
+      left:-2.6em;
 
       @media (max-width: 1100px) {
         left:0em;
       }
+
     }
 
     @include grid-media($medium) {
@@ -177,7 +178,7 @@
     display:flex;
     justify-content: space-around;
 
-    @media (max-width: 1025px) {
+    @media (max-width: 1100px) {
       left:0em;
     }
 

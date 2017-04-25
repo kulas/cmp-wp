@@ -10,6 +10,7 @@
 .site-header {
   padding-top: $base-spacing;
   text-align: center;
+  padding-bottom:1em;
 }
 
 .site-header--logo {
@@ -197,6 +198,11 @@ ul.nav--mobile {
 
 
 //mobile nav bar
+ul.nav-mobile--toggle {
+  position:relative;
+  top:1em;
+}
+
 ul.mobile--nav {
   @include grid-media($nav-break){
     display: flex;

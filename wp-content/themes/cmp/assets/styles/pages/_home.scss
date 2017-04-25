@@ -98,9 +98,42 @@ a {
 }
 
 .mobile-hide {
-
   @include grid-media($medium) {
     display:none !important;
   }
+}
 
+.article {
+  flex-basis:49%;
+  padding-bottom:1em;
+  display:flex;
+
+  @include grid-media($medium) {
+    display:none;
+  }
+
+  img {
+    height:100px;
+    width:100px;
+    padding-right:1em;
+  }
+
+  .article__text-box {
+    h4 {
+      font-family: 'Roboto';
+      text-transform: uppercase;
+      font-size: 1.3em;
+      padding:0;
+      margin:0;
+      font-weight:400;
+    }
+    p {
+      font-weight:lighter;
+      padding:0;
+      padding-bottom:3px;
+      margin:0;
+      line-height: 20px;
+      font-size:.9em;
+    }
+  }
 }

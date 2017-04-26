@@ -1,0 +1,121 @@
+#learn-with-us {
+
+  .content-container {
+    @include grid-media($medium) {
+      padding:1em;
+    }
+  }
+
+  .hero-image__text {
+    position:relative;
+    top:284px;
+    left:1.9em;
+    padding:0;
+    margin:0;
+    width:350px;
+    background-color: white;
+    text-align: center;
+
+    @include grid-media($medium) {
+      padding:0;
+      top:102px;
+      width:250px;
+      left:0;
+    }
+
+    h1 {
+      font-weight:300;
+      font-size:3em;
+      width:350px;
+      padding-top:10px;
+
+      @include grid-media($medium) {
+        font-size:2em;
+        width:250px;
+      }
+    }
+  }
+
+  .learn__text-box {
+
+    width:70%;
+    margin-bottom: 0;
+    padding-bottom:0;
+
+    p {
+      font-weight: 300;
+    }
+
+    @include grid-media($medium) {
+      width:100%;
+    }
+  }
+
+  hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 100%;
+    background-color:#ccc;
+    height: 1px;
+    padding:0;
+  }
+
+  .learn__categories {
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+    .category {
+      height:175px;
+      flex-basis:49%;
+      margin-bottom:1em;
+      background-size:cover;
+      background-position: center;
+
+      @include grid-media($medium) {
+        flex-basis:100%;
+      }
+
+      h3 {
+        position: relative;
+        top:142px;
+        font-family: 'Roboto';
+        background-color: white;
+      }
+
+      .category__title-all-ages {
+        width:120px;
+      }
+
+      .category__title-adults {
+        width:100px;
+      }
+
+      .category__title-all-ages {
+        width:120px;
+      }
+
+      .category__title-kids {
+        width:190px;
+      }
+
+      .category__title-teens {
+        width:90px;
+      }
+
+      .category__title-schools {
+        width:280px;
+      }
+    }
+
+    .learn__categories__all-ages {
+      background-position:top center;
+
+      @include grid-media($medium) {
+        background-position: center;
+      }
+    }
+  }
+}

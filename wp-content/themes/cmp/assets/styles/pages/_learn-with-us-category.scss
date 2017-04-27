@@ -26,12 +26,29 @@
     p.breadcrumb-spacer:nth-child(6) {
       display:none;
     }
+
+    @include grid-media($medium) {
+      padding:1em;
+    }
   }
 
-  .large-title h1 {
-    font-size: 4.5em;
-    font-weight: 300;
+  .large-title {
+    @include grid-media($medium) {
+      padding:1em;
+    }
+
+    h1 {
+      font-size: 4em;
+      font-weight: 300;
+      margin-bottom: 0;
+
+      @include grid-media($medium) {
+        font-size:3em;
+      }
+    }
   }
+
+
 
   .activity-container {
     display:flex;
@@ -42,6 +59,11 @@
       flex-basis: 49%;
       justify-content: space-between;
       padding-bottom: 2em;
+
+      @include grid-media($medium) {
+        flex-basis:100%;
+        display:block;
+      }
 
       h3 {
         font-family: 'Roboto';
@@ -64,11 +86,5 @@
     height:20px;
     position: relative;
     top:3px;
-
-    @include grid-media($medium) {
-      height:25px;
-      left:10px;
-      top:-12px;
-    }
   }
 }

@@ -85,3 +85,13 @@ if (basename($stylesheet = get_option('template')) !== 'templates') {
     wp_redirect($_SERVER['REQUEST_URI']);
     exit();
 }
+
+class ext_breadcrumb_trail extends bcn_breadcrumb_trail
+{
+    //Default constructor
+    function __construct()
+    {
+        //Need to make sure we call the constructor of bcn_breadcrumb_trail
+        parent::__construct();
+    }
+}

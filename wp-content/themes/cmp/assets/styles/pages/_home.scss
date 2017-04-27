@@ -227,3 +227,15 @@ a {
       }
     }
   }
+
+  .learn-more-arrow {
+    height:20px;
+    position: relative;
+    top:3px;
+
+    @include grid-media($medium) {
+      height:25px;
+      left:10px;
+      top:-12px;
+    }
+  }

@@ -1,0 +1,74 @@
+.learn-with-us-category {
+
+  .content-container {
+    display: block;
+  }
+
+  .nav-breadcrumb {
+    display:flex;
+
+    a {
+      font-size:.9em;
+      text-transform: uppercase;
+    }
+
+    p.breadcrumb-spacer {
+      margin-top:3px;
+      padding:0px 5px;
+      font-size: .8em;
+      font-weight:300;
+    }
+
+    span:nth-child(7) {
+      display:none;
+    }
+
+    p.breadcrumb-spacer:nth-child(6) {
+      display:none;
+    }
+  }
+
+  .large-title h1 {
+    font-size: 4.5em;
+    font-weight: 300;
+  }
+
+  .activity-container {
+    display:flex;
+    flex-wrap: wrap;
+    top:0;
+
+    .activity {
+      flex-basis: 49%;
+      justify-content: space-between;
+      padding-bottom: 2em;
+
+      h3 {
+        font-family: 'Roboto';
+        font-weight:400;
+        margin-bottom:0;
+      }
+
+      p {
+        line-height: 1.7em;
+      }
+    }
+  }
+
+  h1.large-title, a.large-title {
+    display:inline;
+  }
+
+  .learn-more-arrow {
+    display: inline;
+    height:20px;
+    position: relative;
+    top:3px;
+
+    @include grid-media($medium) {
+      height:25px;
+      left:10px;
+      top:-12px;
+    }
+  }
+}

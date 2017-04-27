@@ -32,7 +32,7 @@
 				?>
     </h3>
 
-    <button id="article__button" class="green-button" href="<?php the_permalink(); ?>">Read the Article</button>
+    <a href="<?php the_permalink(); ?>"><button id="article__button" class="green-button">Read the Article</button></a>
 
   </div>
 
@@ -64,7 +64,7 @@
 
     <div class="article">
 
-      <img src="<?php the_field('featured_image') ?>">
+      <img src="<?php the_field('square_image') ?>">
 
       <div class="article__text-box">
         <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>

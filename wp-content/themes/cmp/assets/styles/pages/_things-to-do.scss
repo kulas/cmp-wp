@@ -1,13 +1,22 @@
 #things-to-do {
 
+  .activity-container {
+    padding-top:2em;
+  }
+
   .section-hr {
-    margin-top:2em;
-    padding-bottom:0em;
+    top:4em;
 
     @include grid-media($medium) {
-      margin-top:1em;
-      margin-bottom:2em;
+      position: relative;
+      height:10px;
+      top:2.3em;
+      padding:0;
     }
+  }
+
+  hr {
+    padding-top:.5em;
   }
 
   .section-hr__h5 {

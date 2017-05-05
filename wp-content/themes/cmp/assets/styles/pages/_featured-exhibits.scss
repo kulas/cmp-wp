@@ -113,7 +113,7 @@
   //the 'now showing' hr
   .section-hr {
 
-    padding-bottom:0;
+    // padding-bottom:0;
 
       @include grid-media($medium) { //dissapears on mobile to make way for the mobile version
         display:none;
@@ -124,7 +124,7 @@
 
 //the content container holds the 4 exhibits that are not the main exhibit
 .content-container {
-  margin-top:2em;
+  margin-top:1em;
   justify-content: space-between;
 
   @include grid-media($medium) {
@@ -134,8 +134,8 @@
   //individual exhibits
   .exhibit {
 
-    padding:0;
-    padding-top:1em;
+    padding-top:0 !important;
+    margin:0;
 
     flex-basis:48%;
 

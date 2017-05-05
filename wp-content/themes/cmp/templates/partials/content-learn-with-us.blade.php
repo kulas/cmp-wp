@@ -60,7 +60,7 @@
 
       </div>
 
-      <div class="category learn__categories__schools" style="background-image:url('wp-content/themes/cmp/assets/images/school.jpeg')">
+      <div class="category learn__categories__schools" style="background-image:url('wp-content/themes/cmp/assets/images/school.jpg')">
 
         <div class="category__title-schools">
           <h3>Schools & Educators</h3>

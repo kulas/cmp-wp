@@ -4,11 +4,12 @@
     <a href="#" class="button">Subscribe</a>
   </form>
 </header> --}}
-
+<div class="overlay"></div>
 <header class="site-header">
   <div class="container">
     <img src="<?= App\asset_path('images/logo--cmp.svg') ?>" alt="" class="site-header--logo"/>
     {{-- <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a> --}}
+
 
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))
@@ -43,5 +44,3 @@
     </nav>
   </div>
 </header>
-
-<div class="overlay"></div>

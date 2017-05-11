@@ -1,0 +1,123 @@
+#things-to-do-page {
+  padding-bottom:2em;
+
+  .nav-breadcrumb {
+    display:flex;
+
+    a {
+      font-size:.9em;
+      text-transform: uppercase;
+    }
+
+    p.breadcrumb-spacer {
+      margin-top:3px;
+      padding:0px 5px;
+      font-size: .8em;
+      font-weight:300;
+    }
+
+    span:last-child {
+      display:none;
+    }
+
+    p.breadcrumb-spacer:last-child {
+      display:none;
+    }
+
+    @include grid-media($medium) {
+      padding:1em;
+    }
+  }
+
+  .content-container {
+    display:flex;
+    flex-wrap: wrap;
+
+    @include grid-media($medium) {
+      padding:1em;
+    }
+  }
+
+  .activity {
+    flex-basis:49%;
+
+    @include grid-media($medium) {
+      flex-basis: 100%;
+    }
+
+    h3 {
+      font-family: 'Roboto';
+      font-size:1.5em;
+
+      @include grid-media($large) {
+        font-size: 1em;
+      }
+
+      @include grid-media($medium) {
+        font-size: 1.3em;
+      }
+    }
+
+    .activity__title {
+      padding-top: .5em;
+      padding-right: .5em;
+      display: inline-block;
+      position: relative;
+      top:135px;
+      background-color: white;
+    }
+  }
+
+  .activity__image {
+    height:175px;
+    background-size:cover;
+    background-position: center;
+    overflow: hidden;
+    margin-bottom:1em;
+  }
+
+  .hero-image__text {
+    position:relative;
+    top:284px;
+    left:2em;
+    padding:0em 1em;
+    margin:0;
+    display:inline-block;
+    background-color: white;
+    text-align: center;
+
+    @include grid-media($medium) {
+      // padding:0;
+      top:102px;
+      left:0;
+    }
+
+    h1 {
+      font-weight:300;
+      font-size:3em;
+      padding-top:10px;
+
+      @include grid-media($medium) {
+        font-size:2em;
+      }
+    }
+  }
+
+  hr {
+    margin-top:1em;
+  }
+
+  .text-box {
+    padding: 2em 0em 0em 0em;
+    width:60%;
+
+    @include grid-media($medium) {
+      padding: 0em;
+      width:100%;
+    }
+  }
+
+  h3 {
+    color: black !important;
+  }
+}

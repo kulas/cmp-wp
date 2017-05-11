@@ -1,0 +1,89 @@
+#explore-our-collections {
+
+  padding-bottom:2em;
+
+  .section-hr {
+    // position:relative;
+    // top:3em;
+    width:100%;
+    padding:1em 3em 3em 3em;
+
+    @include grid-media($medium) {
+      padding:0;
+    }
+  }
+
+  .section-hr__h5 {
+    top:-125px;
+    width:400px;
+
+    h5 {
+      font-size: 1.7em;
+    }
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  h3 {
+
+  }
+
+  .mobile-hr {
+    display:none;
+
+    @include grid-media($medium) {
+      display:block;
+      width:100%;
+      padding-top:0;
+    }
+  }
+
+  .content-container {
+    @include grid-media($medium) {
+      padding:1em;
+    }
+  }
+
+  .museum--image {
+    height:175px !important;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .museum-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    top:0;
+
+    .museum {
+      flex-basis: 49%;
+      padding-bottom: 0;
+
+      @include grid-media($medium) {
+        flex-basis:100%;
+        display:block;
+      }
+
+      h3 {
+        padding-top:.5em;
+        font-family: 'Roboto';
+        font-weight:400;
+        font-size:1.2em;
+      }
+
+      p {
+        line-height: 1.7em;
+      }
+
+      img {
+        max-height:400px;
+        width:auto;
+      }
+    }
+  }
+
+}

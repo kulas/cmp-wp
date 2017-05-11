@@ -1,0 +1,51 @@
+{{--
+  Template Name: Things To Do Page
+--}}
+
+<div id="things-to-do-page">
+
+  <div class="hero-image" style="background-image:url('{{ the_field('hero_image') }}')">
+
+    <div class="hero-image__text">
+      <h1>{{ the_title() }}</h1>
+    </div>
+
+  </div>
+
+  <div class="content-container">
+
+    <div class="text-box">
+
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+        the_content();
+      endwhile; else: ?>
+        <p>Sorry, no posts matched your criteria.</p>
+      <?php endif; ?>
+
+    </div>
+
+  <hr>
+
+  <?php if( have_rows('activity') ):
+      while ( have_rows('activity') ) : the_row() ?>
+
+      <div class="activity">
+
+      <a href="{{ the_sub_field('link') }}">
+        <div class="activity__image" style="background-image:url('{{ the_sub_field('image') }}')">
+          <div class="activity__title">
+              <h3>{{ the_sub_field('title') }}</h3>
+          </div>
+      </div>
+    </a>
+
+        <p>{{ the_sub_field('description') }}</p>
+
+      </div>
+
+      <?php endwhile;
+  else : endif; ?>
+
+  </div>
+
+</div>

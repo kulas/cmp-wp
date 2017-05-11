@@ -1,17 +1,60 @@
 #things-to-do {
 
+  .section-hr {
+    margin-top:2em;
+    padding-bottom:0em;
+
+    @include grid-media($medium) {
+      margin-top:1em;
+      margin-bottom:2em;
+    }
+  }
+
   .section-hr__h5 {
     width:150px;
+
+    @include grid-media($medium) {
+      width: 180px;
+      padding:4px;
+    }
+  }
+
+  .more-things, .activity__hr {
+    display:none;
   }
 
 .activity-container {
-
-  padding:0em 1em 1em 1em;
   display:flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  top:-1.5em;
+
+  @include grid-media($medium) {
+    flex-wrap:wrap;
+    padding:1em;
+
+    .activity__hr {
+        border: 5px;
+        clear:both;
+        display:block;
+        width: 100%;
+        height:1px;
+        background-color:#CCC;
+    }
+
+    .more-things {
+      display:block;
+    }
+  }
 
     .activity {
       flex-basis: 23%;
+
+      @include grid-media($medium) {
+        flex-basis: 100%;
+        display: flex;
+      }
 
       h4 {
         font-family: 'Roboto';
@@ -29,6 +72,31 @@
         line-height: 20px;
         font-size:.9em;
       }
+
+      .activity__main-image {
+        @include grid-media($medium) {
+          display:none;
+        }
+      }
+
+      .activity__square-image {
+        display:none;
+
+        @include grid-media($medium) {
+          display:block;
+          height:75px;
+          width:75px;
+          margin-right:1em;
+        }
+      }
     }
+  }
+
+  button {
+    width:100%;
+    padding:1em;
+    margin-bottom:1em;
+    font-size:1.2em;
+    font-weight:500;
   }
 }

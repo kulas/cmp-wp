@@ -3,16 +3,15 @@
   padding-bottom:2em;
 
   .section-hr {
-    position:relative;
-    top:3em;
+    // position:relative;
+    // top:3em;
     width:100%;
-    padding:0em 3em;
+    padding:1em 3em 3em 3em;
 
     @include grid-media($medium) {
       padding:0;
     }
   }
-
 
   .section-hr__h5 {
     top:-125px;

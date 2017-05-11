@@ -4,6 +4,10 @@ a {
   color: #96A061;
 }
 
+p {
+  font-weight: 300;
+}
+
 .hero-image {
   height:350px !important;
   width:100%;
@@ -113,6 +117,15 @@ a {
 .mobile-hide {
   @include grid-media($medium) {
     display:none !important;
+  }
+}
+
+.mobile-hr {
+  display:none;
+
+  @include grid-media($medium) {
+    display:block;
+    width:100%;
   }
 }
 
@@ -240,4 +253,8 @@ a {
       left:10px;
       top:-12px;
     }
+  }
+
+  hr {
+    width:100%;
   }

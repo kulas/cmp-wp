@@ -1,5 +1,7 @@
 #view-our-exhibitions {
 
+  padding-bottom:1em;
+
   .section-hr {
     position:relative;
     top:5em;
@@ -44,10 +46,17 @@
         display:block;
       }
 
+      .museum__image {
+        height:200px;
+        background-position: center;
+        background-size:cover;
+      }
+
       h3 {
         font-family: 'Roboto';
         font-weight:400;
         font-size:1.2em;
+        padding-top:.5em;
       }
 
       p {

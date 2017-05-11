@@ -86,12 +86,12 @@ if (basename($stylesheet = get_option('template')) !== 'templates') {
     exit();
 }
 
-class ext_breadcrumb_trail extends bcn_breadcrumb_trail
-{
-    //Default constructor
-    function __construct()
-    {
-        //Need to make sure we call the constructor of bcn_breadcrumb_trail
-        parent::__construct();
-    }
-}
+// class ext_breadcrumb_trail extends bcn_breadcrumb_trail
+// {
+//     //Default constructor
+//     function __construct()
+//     {
+//         //Need to make sure we call the constructor of bcn_breadcrumb_trail
+//         parent::__construct();
+//     }
+// }

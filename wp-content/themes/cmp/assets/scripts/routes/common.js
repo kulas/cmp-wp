@@ -16,16 +16,17 @@ export default {
     });
 
     //display menu items on desktop and mobile
-    $('.nav > .menu-item, .nav--mobile > .menu-item').on('click', function(){
-      var clicked = $(this);
-      clicked.toggleClass('active');
-      //
-      // $('.site-header').toggleClass('active');
-      // $('.overlay').toggleClass('active');
-      $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).children().removeClass('active');
-      $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).removeClass('active');
-      clicked.children().toggleClass('active');
-    });
+    // $('.nav > .menu-item, .nav--mobile > .menu-item').on('mouseover', function(){
+    //   var clicked = $(this);
+    //   clicked.toggleClass('active');
+    //   //
+    //   // $('.site-header').toggleClass('active');
+    //   // $('.overlay').toggleClass('active');
+    //
+    //   $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).children().removeClass('active');
+    //   $('.nav > .menu-item, .nav--mobile > .menu-item').not(clicked).removeClass('active');
+    //   clicked.children().toggleClass('active');
+    // });
 
     //display drop down on mobile
     $('.nav__symHamburger').on('click', function(){

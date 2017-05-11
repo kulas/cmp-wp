@@ -4,13 +4,13 @@
 
 <div id="explore-our-collections">
 
+  <img src="{{ the_field('explore_our_collections_header') }}" />
+
   <div class='section-hr'>
     <hr><div class='section-hr__h5'>
       <h5>Explore Our Collections</h5>
     </div>
   </div>
-
-  <img src="{{ the_field('explore_our_collections_header') }}" />
 
   <div class="content-container">
 

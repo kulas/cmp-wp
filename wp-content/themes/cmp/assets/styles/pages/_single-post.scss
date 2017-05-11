@@ -1,0 +1,284 @@
+article {
+
+    .title-box {
+      padding:1em;
+      text-align: center;
+      max-width:1000px;
+      margin:auto;
+
+    time {
+      display:none;
+    }
+
+    .entry-title {
+      font-family: 'Lora', serif;
+      font-weight:lighter;
+      font-size: 1.9em;
+      margin:0;
+      padding:0;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .author, .author a {
+      color: #7a7a7a;
+      font-family: 'Lora', sans-serif;
+      font-weight:bold;
+      font-style: italic;
+      font-size: 1em;
+    }
+
+    .article__summary {
+      font-weight:lighter;
+    }
+  }
+
+  .entry-content {
+    padding:0em 1em;
+    max-width:1000px;
+    margin:auto;
+
+    p {
+      font-size: .85em;
+      font-weight:lighter;
+      line-height: 25px;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      font-family: 'Roboto', sans-serif;
+      margin:0;
+      padding-bottom:5px;
+    }
+
+    h4 {
+      font-family: 'Lora', serif;
+      font-size: .9em;
+      font-style: italic;
+      color: #7a7a7a;
+    }
+
+    h5 {
+      font-size: .7em;
+      font-weight: lighter;
+      color:#7a7a7a;
+    }
+
+    .wp-caption-text {
+      @extend h5;
+      font-family: 'Lora';
+      padding:0;
+    }
+
+    .alignright {
+      float: right;
+    }
+
+    .alignleft {
+      float: left;
+    }
+
+    img.alignleft {
+      padding: .5em .5em .5em 0em;
+      float: left;
+    }
+
+    img.aligncenter {
+      margin:auto;
+      padding: .5em 0em;
+      height:auto;
+      width:100%;
+    }
+
+    img.alignright {
+      padding: .5em 0em .5em .5em;
+      float:right;
+    }
+
+    blockquote {
+      width:100%;
+      margin:0;
+      padding:0;
+
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Roboto', sans-serif;
+        font-weight:lighter;
+      }
+    }
+
+    .entry-content__notes {
+      font-size:.9em;
+      font-family: 'Lora';
+
+      strong {
+        font-weight: bold;
+        font-style: normal;
+      }
+    }
+  }
+
+  hr {
+    padding:0;
+    margin:0;
+    margin-bottom:1em;
+  }
+
+  .green-button {
+    margin-right:5px;
+    margin-bottom:1em;
+    text-transform: none;
+
+    a {
+      color:white;
+    }
+  }
+
+  .tags-title {
+    font-family: 'Roboto' !important;
+    font-style: normal !important;
+    text-transform: capitalize !important;
+    color:black !important;
+    margin-bottom:0;
+  }
+
+  .entry-social-links {
+    display:flex;
+    justify-content: flex-start;
+    max-width:100%;
+
+    div {
+      padding:.8em 1.5em;
+      margin-bottom:1em;
+      margin-right:5px;
+      text-align:center;
+      color:white;
+      font-size:.9em;
+      font-weight: 300;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+
+      @include grid-media($medium) {
+        padding: .5em 1em;
+      }
+
+      img {
+        height:20px;
+        padding-right: .8em;
+
+        @include grid-media($medium) {
+          height:15px;
+        }
+      }
+    }
+
+    .facebook-link {
+      background-color: #3B5999;
+    }
+
+    .twitter-link {
+      background-color:#1AA1F2;
+    }
+
+    .print-link {
+      background-color: #728A8E;
+    }
+
+    .more-link {
+      background-color: #FF6551;
+    }
+  }
+
+  .download-pdf {
+    width:130px;
+    display:flex;
+    align-items: center;
+
+    img {
+      height:20px;
+    }
+  }
+
+  .wpptopdfenh {
+    display:none;
+  }
+
+  .recent-articles-container {
+    position:relative;
+    margin-top:2em;
+    display:flex;
+    justify-content: space-between;
+
+    @include grid-media($medium) {
+      display: block;
+    }
+
+  }
+
+  .article {
+    flex-basis:32%;
+    display:flex !important;
+
+    h4 {
+      font-style: normal;
+    }
+  }
+
+  .more-articles-container {
+    width:100%;
+    display:flex;
+    justify-content: center;
+  }
+
+  button.green-button.more-articles {
+    width:32%;
+    padding: .8em 0em;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size:1.1em;
+
+    @include grid-media($medium) {
+      width:100%;
+    }
+  }
+
+  .section-hr {
+
+    position: relative;
+    top:4em;
+    padding:1em !important;
+    max-width: 1000px;
+
+    .section-hr__h5 {
+      width:250px;
+      top:-105px;
+    }
+
+    @include grid-media($medium) {
+      top:4em;
+
+      .section-hr__h5 {
+        top:-110px;
+        width:275px;
+
+        h5 {
+        font-weight:600;
+        color:black !important;
+        }
+      }
+    }
+
+  }
+
+    @include grid-media($medium) {
+      img {
+        margin:auto;
+      }
+    }
+}

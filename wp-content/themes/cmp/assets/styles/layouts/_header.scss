@@ -11,12 +11,7 @@
   position: relative;
   padding-top: $base-spacing;
   text-align: center;
-  background: #fff;
-  z-index: 99;
-  &.active {
-    max-height: 3000px;
-    box-shadow: 0 0 1.5rem 0 rgba(0,0,0,.5);
-  }
+  padding-bottom:1em;
 }
 
 .site-header--logo {
@@ -251,6 +246,11 @@ ul.nav--mobile {
 
 
 //mobile nav bar
+ul.nav-mobile--toggle {
+  position:relative;
+  top:1em;
+}
+
 ul.mobile--nav {
   @include grid-media($nav-break){
     display: flex;

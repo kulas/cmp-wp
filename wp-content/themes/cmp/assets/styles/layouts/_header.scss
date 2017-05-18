@@ -35,9 +35,16 @@
 }
 
 #menu-primary-navigation li a {
-  color:black !important;
+  color:black;
   font-family: sans-serif;
   font-size:.8em;
+  font-weight:bold;
+}
+
+#menu-primary-navigation li:hover {
+  a {
+    color:white;
+  }
 }
 
 ul.nav {
@@ -47,13 +54,14 @@ ul.nav {
   padding: 0;
   justify-content: space-between;
   border-top: $base-border;
+  border-bottom: $base-border;
   @include grid-media($nav-break){
     display: none;
   }
 }
 
 li.menu-item {
-  padding: $small-spacing;
+  padding: 0;
   position: relative;
   list-style-type: none;
   text-transform: uppercase;
@@ -63,30 +71,43 @@ li.menu-item {
     background: $nav-hover;
     color: white;
   }
+
+  a {
+    width:100%;
+    display:block;
+    padding: $small-spacing;
+  }
 }
 
 ul.sub-menu {
   margin-top: $small-spacing;
   padding-left: 0;
   position: absolute;
+  top:2.2em;
   left: 0;
-  display: none;
-  // overflow: hidden;
-  max-height: 0;
-  transition: all 0.3s;
+  overflow: hidden;
   z-index: 1;
+  height:0;
+  visibility:hidden;
+  opacity:0;
+  filter:alpha(opacity=0);
+  -webkit-transition:400ms ease;
+  -moz-transition:400ms ease;
+  -o-transition:400ms ease;
+  transition:400ms ease;
   &.active {
-    display: block;
     max-height: 1000px;
   }
   li {
-    height:40px;
+    transition: 0.4s all;
     background: #6F774A;
     width: 300px;
+    height:45px;
     color: white;
-    padding: $small-spacing/2 $small-spacing;
     a {
-      color: white;
+      // padding: $small-spacing/2 $small-spacing;
+      padding:1em;
+      overflow:hidden;
       letter-spacing: 0.5px;
       font-size: 0.9em;
     }
@@ -94,8 +115,30 @@ ul.sub-menu {
 }
 
 li.menu-item:hover > ul.sub-menu {
-    display:block;
+  height:auto;
+  visibility:visible;
+  opacity:1;
+  filter:alpha(opacity=100);
+  overflow:visible;
 }
+
+.sub-menu > li.menu-item > ul.sub-menu {
+  position: relative;
+  left: 300px;
+  top: -61px;
+}
+
+.sub-menu > li.menu-item > ul.sub-menu:hover {
+  height:auto;
+  visibility:visible;
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+
+.sub-menu > li.menu-item > ul.sub-menu > li.menu-item > ul.sub-menu {
+  top: -60px;
+}
+
 
 //mobile nav
 .nav__mobile {

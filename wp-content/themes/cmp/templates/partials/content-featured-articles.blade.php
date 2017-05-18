@@ -41,11 +41,11 @@
   <div class="carnegie-magazine">
 
     <div class="carnegie-magazine__left-div">
-      <img id="carnegie-magazine__cover" src="wp-content/themes/cmp/assets/images/carnegie-magazine.png">
+      <img id="carnegie-magazine__cover" src="/wp-content/themes/cmp/assets/images/carnegie-magazine.png">
     </div>
 
     <div class="carnegie-magazine__right-div">
-      <img id="carnegie-magazine__logo" src="wp-content/themes/cmp/assets/images/carnegie-magazine-logo.png">
+      <img id="carnegie-magazine__logo" src="/wp-content/themes/cmp/assets/images/carnegie-magazine-logo.png">
       <button class="green-button" href="http://www.carnegiemuseums.org/cmp/cmag/index.php">Read Current & Past Issues</button>
     </div>
 

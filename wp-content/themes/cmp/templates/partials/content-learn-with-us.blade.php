@@ -4,7 +4,7 @@
 
 <div id="learn-with-us">
 
-  <div class="hero-image" style="background-image:url('wp-content/themes/cmp/assets/images/learn-with-us.png')">
+  <div class="hero-image" style="background-image:url('/wp-content/themes/cmp/assets/images/learn-with-us.png')">
 
     <div class="hero-image__text">
       <h1>Learn With Us</h1>
@@ -28,7 +28,7 @@
 
     <div class="learn__categories">
 
-      <div class="category learn__categories__all-ages" style="background-image:url('wp-content/themes/cmp/assets/images/allages.jpeg')">
+      <div class="category learn__categories__all-ages" style="background-image:url('/wp-content/themes/cmp/assets/images/allages.jpeg')">
 
         <div class="category__title-all-ages">
           <h3>All Ages</h3>
@@ -36,7 +36,7 @@
 
       </div>
 
-      <div class="category learn__categories__adults" style="background-image:url('wp-content/themes/cmp/assets/images/adults.jpg')">
+      <div class="category learn__categories__adults" style="background-image:url('/wp-content/themes/cmp/assets/images/adults.jpg')">
 
         <div class="category__title-adults">
           <h3>Adults</h3>
@@ -44,7 +44,7 @@
 
       </div>
 
-      <div class="category learn__categories__kids-families" style="background-image:url('wp-content/themes/cmp/assets/images/family.jpeg')">
+      <div class="category learn__categories__kids-families" style="background-image:url('/wp-content/themes/cmp/assets/images/family.jpeg')">
 
         <div class="category__title-kids">
           <h3>Kids/Families</h3>
@@ -52,7 +52,7 @@
 
       </div>
 
-      <div class="category learn__categories__teens" style="background-image:url('wp-content/themes/cmp/assets/images/teens.jpeg')">
+      <div class="category learn__categories__teens" style="background-image:url('/wp-content/themes/cmp/assets/images/teens.jpeg')">
 
         <div class="category__title-teens">
           <h3>Teens</h3>
@@ -60,7 +60,7 @@
 
       </div>
 
-      <div class="category learn__categories__schools" style="background-image:url('wp-content/themes/cmp/assets/images/school.jpg')">
+      <div class="category learn__categories__schools" style="background-image:url('/wp-content/themes/cmp/assets/images/school.jpg')">
 
         <div class="category__title-schools">
           <h3>Schools & Educators</h3>

@@ -1,0 +1,101 @@
+.things-to-do-subcategory {
+
+  .content-container {
+    display: block;
+
+    @media(min-width: 1400px) {
+      padding:0 !important;
+    }
+  }
+
+  .nav-breadcrumb {
+    display:flex;
+
+    a {
+      font-size:.9em;
+      text-transform: uppercase;
+    }
+
+    p.breadcrumb-spacer {
+      margin-top:3px;
+      padding:0px 5px;
+      font-size: .8em;
+      font-weight:300;
+    }
+
+    @include grid-media($medium) {
+      padding:1em;
+    }
+  }
+
+  .large-title {
+
+    @include grid-media($medium) {
+      padding:0em 1em 1em 1em;
+    }
+
+    h1 {
+      font-size: 4em;
+      font-weight: 300;
+      margin-bottom: 0;
+
+      @include grid-media($medium) {
+        font-size:3em;
+      }
+    }
+  }
+
+  hr {
+
+    @include grid-media($medium) {
+      width:95%;
+      margin:auto;
+
+    }
+
+  }
+
+  .activity-container {
+    display:flex;
+    flex-wrap: wrap;
+    top:0;
+
+    .activity {
+      flex-basis: 49%;
+      justify-content: space-between;
+      padding-bottom: 2em;
+
+      @include grid-media($medium) {
+        flex-basis:100%;
+        display:block;
+      }
+
+      .activity__image {
+        height:200px;
+        background-size:cover;
+      }
+
+      h3 {
+        font-family: 'Roboto';
+        font-weight:400;
+        margin-bottom:0;
+        padding-top: .5em;
+      }
+
+      p {
+        line-height: 1.7em;
+      }
+    }
+  }
+
+  h1.large-title, a.large-title {
+    display:inline;
+  }
+
+  .learn-more-arrow {
+    display: inline;
+    top:4px;
+    left:0;
+    height:28px;
+  }
+}

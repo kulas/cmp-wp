@@ -31,7 +31,7 @@
 
       <div class="activity">
 
-      <a href="{{ the_sub_field('link') }}">
+      <a href="{{ the_sub_field('external_link') }} {{ the_sub_field('internal_link') }}">
         <div class="activity__image" style="background-image:url('{{ the_sub_field('image') }}')">
           <div class="activity__title">
               <h3>{{ the_sub_field('title') }}</h3>

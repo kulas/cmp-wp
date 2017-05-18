@@ -6,7 +6,21 @@
 
     <div class="left-section">
 
-      <img class="footer-logo" src="wp-content/themes/cmp/assets/images/cmpfooter.png">
+      <div class="footer__images">
+
+        <div class="logo-container">
+
+          <img class="footer-logo" src="/wp-content/themes/cmp/assets/images/cmpfooter.png">
+
+        </div>
+
+        <div class="rad-container">
+
+          <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg">
+
+        </div>
+
+      </div>
 
       <hr class="hr-break-mobile">
 
@@ -44,7 +58,6 @@
 
             <a href="#">Carnegie Museum of Art</a>
             <a href="#">Carnegie Science Center</a>
-            <a href="#">Accessibility</a>
 
           </div>
 
@@ -65,17 +78,64 @@
 
         <div class="email-subscribe">
 
-          <?php echo do_shortcode("[contact-form-7 id='128' title='Email Form']"); ?>
+          <div class="small-social-icons">
 
-        </div>
+                      <!-- Facebook -->
+                      <ul id="facebook">
+                        <li class="cmp">
+                          <img src="http://i.imgur.com/GRg770s.png">
+                          <ul>
+                            <li class="cmoa">
+                              <img src="http://i.imgur.com/GRg770s.png">
+                              <p>Carnegie Museum of Art</p>
+                            </li>
 
-        <div class="small-social-icons">
+                            <li class="cmnh">
+                              <img src="http://i.imgur.com/GRg770s.png">
+                              <p>Carnegie Museum of Natural History</p>
+                            </li>
+                            <li class="csc">
+                              <img src="http://i.imgur.com/GRg770s.png">
+                              <p>Carnegie Science Center</p>
+                            </li>
+                            <li class="warhol">
+                              <img src="http://i.imgur.com/GRg770s.png">
+                              <p>Andy Warhol Museum</p>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
 
-          <img src="wp-content/themes/cmp/assets/images/facebook.png">
-          <img src="wp-content/themes/cmp/assets/images/twitterwhite.png">
-          <img src="wp-content/themes/cmp/assets/images/instagram-logo-white.png">
+                       <!-- Twitter -->
+                       <ul id="twitter">
+                        <li class="cmp">
+                          <img src="http://i.imgur.com/Dfx1UKV.png">
 
-        </div>
+                          <ul>
+                            <li class="cmoa">
+                              <img src="http://i.imgur.com/Dfx1UKV.png">
+                              <p>Carnegie Museum of Art</p>
+                            </li>
+
+                            <li class="cmnh">
+                              <img src="http://i.imgur.com/Dfx1UKV.png">
+                              <p>Carnegie Museum of Natural History</p>
+                            </li>
+                            <li class="csc">
+                              <img src="http://i.imgur.com/Dfx1UKV.png">
+                              <p>Carnegie Science Center</p>
+                            </li>
+                            <li class="warhol">
+                              <img src="http://i.imgur.com/Dfx1UKV.png">
+                              <p>Andy Warhol Museum</p>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+
+                  </div>
+
+              </div>
 
       </div>
 
@@ -83,7 +143,7 @@
 
       <div class="bottom-row">
 
-        <p>Press | Careers | Volunteers | Privacy</p>
+        <p>Accessibility | Press | Careers | Volunteers | Privacy</p>
         <p class="copyright">©2017 Carnegie Museums of Pittsburgh</p>
 
       </div>

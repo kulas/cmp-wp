@@ -1,5 +1,5 @@
 {{--
-  Template Name: Things to Do
+  Template Name: Main Things to Do Page
 --}}
 
 @extends('layouts.base')

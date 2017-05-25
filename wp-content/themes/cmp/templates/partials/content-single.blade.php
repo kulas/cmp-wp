@@ -25,14 +25,14 @@
 
     <div class="entry-social-links">
 
-      <div class="facebook-link" href="facebook.com"><img src="wp-content/themes/cmp/assets/images/small-facebook.png">Facebook</div>
-      <div class="twitter-link" href="twitter.com"><img src="wp-content/themes/cmp/assets/images/small-twitter.png">Twitter</div>
-      <div class="print-link" href="#"><img src="wp-content/themes/cmp/assets/images/small-printer.png">Print</div>
-      <div class="more-link" href="#"><img src="wp-content/themes/cmp/assets/images/small-plus.png">More</div>
+      <div class="facebook-link" href="facebook.com"><img src="/wp-content/themes/cmp/assets/images/small-facebook.png">Facebook</div>
+      <div class="twitter-link" href="twitter.com"><img src="/wp-content/themes/cmp/assets/images/small-twitter.png">Twitter</div>
+      <div class="print-link" href="#"><img src="/wp-content/themes/cmp/assets/images/small-printer.png">Print</div>
+      <div class="more-link" href="#"><img src="/wp-content/themes/cmp/assets/images/small-plus.png">More</div>
 
     </div>
 
-    <a class="download-pdf" href="?p={{get_the_ID()}}&format=pdf">Download PDF<img src="wp-content/themes/cmp/assets/images/pdf-icon.svg"></a>
+    <a class="download-pdf" href="?p={{get_the_ID()}}&format=pdf">Download PDF<img src="/wp-content/themes/cmp/assets/images/pdf-icon.svg"></a>
 
 </div>
 

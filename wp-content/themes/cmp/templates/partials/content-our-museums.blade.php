@@ -18,22 +18,22 @@
       <div class="museum-container">
 
         <div class="museum">
-          <img src="wp-content/themes/cmp/assets/images/cmoa.png">
+          <img src="/wp-content/themes/cmp/assets/images/cmoa.png">
           <h4><a href="http://www.cmoa.org">Carnegie Museum of Art</a></h4>
         </div>
 
         <div class="museum">
-          <img src="wp-content/themes/cmp/assets/images/cmnh.png">
+          <img src="/wp-content/themes/cmp/assets/images/cmnh.png">
           <h4><a href="http://www.carnegiemnh.org/">Carnegie Museum of Natural History</a></h4>
         </div>
 
         <div class="museum">
-          <img src="wp-content/themes/cmp/assets/images/csc.png">
+          <img src="/wp-content/themes/cmp/assets/images/csc.png">
           <h4><a href="http://www.carnegiesciencecenter.org/">Carnegie Science Center</a></h4>
         </div>
 
         <div class="museum">
-          <img src="wp-content/themes/cmp/assets/images/wm.png">
+          <img src="/wp-content/themes/cmp/assets/images/wm.png">
           <h4><a href="http://www.warhol.org/">Andy Warhol Museum</a></h4>
         </div>
 

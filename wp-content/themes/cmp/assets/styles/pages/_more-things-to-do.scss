@@ -1,4 +1,10 @@
 #more-things-to-do {
+  .content-container {
+    @media(min-width: 1400px) {
+      padding:0 !important;
+    }
+  }
+
   .section-hr {
     top:0em;
     width:100%;

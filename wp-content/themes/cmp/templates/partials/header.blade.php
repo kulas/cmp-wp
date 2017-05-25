@@ -7,7 +7,9 @@
 <div class="overlay"></div>
 <header class="site-header">
   <div class="container">
-    <img src="<?= App\asset_path('images/logo--cmp.svg') ?>" alt="" class="site-header--logo"/>
+    <a href="/">
+      <img src="<?= App\asset_path('images/logo--cmp.svg') ?>" alt="" class="site-header--logo"/>
+    </a>
     {{-- <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a> --}}
 
 

@@ -1,7 +1,11 @@
-.learn-with-us-category {
+.things-to-do-subcategory {
 
   .content-container {
     display: block;
+
+    @media(min-width: 1400px) {
+      padding:0 !important;
+    }
   }
 
   .nav-breadcrumb {
@@ -19,22 +23,15 @@
       font-weight:300;
     }
 
-    span:nth-child(7) {
-      display:none;
-    }
-
-    p.breadcrumb-spacer:nth-child(6) {
-      display:none;
-    }
-
     @include grid-media($medium) {
       padding:1em;
     }
   }
 
   .large-title {
+
     @include grid-media($medium) {
-      padding:1em;
+      padding:0em 1em 1em 1em;
     }
 
     h1 {
@@ -46,6 +43,16 @@
         font-size:3em;
       }
     }
+  }
+
+  hr {
+
+    @include grid-media($medium) {
+      width:95%;
+      margin:auto;
+
+    }
+
   }
 
   .activity-container {
@@ -63,10 +70,16 @@
         display:block;
       }
 
+      .activity__image {
+        height:200px;
+        background-size:cover;
+      }
+
       h3 {
         font-family: 'Roboto';
         font-weight:400;
         margin-bottom:0;
+        padding-top: .5em;
       }
 
       p {
@@ -81,8 +94,8 @@
 
   .learn-more-arrow {
     display: inline;
-    height:20px;
-    position: relative;
-    top:3px;
+    top:4px;
+    left:0;
+    height:28px;
   }
 }

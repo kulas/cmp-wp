@@ -39,7 +39,8 @@
   }
 
   .activity {
-    flex-basis:49%;
+    flex-basis:48%;
+    padding-bottom:2em;
 
     @include grid-media($medium) {
       flex-basis: 100%;
@@ -78,7 +79,7 @@
 
   .hero-image__text {
     position:relative;
-    top:284px;
+    top:294px;
     left:2em;
     padding:0em 1em;
     margin:0;
@@ -96,6 +97,8 @@
       font-weight:300;
       font-size:3em;
       padding-top:10px;
+      padding-bottom:0;
+      margin-bottom:0;
 
       @include grid-media($medium) {
         font-size:2em;
@@ -108,7 +111,7 @@
   }
 
   .text-box {
-    padding: 2em 0em 0em 0em;
+    padding: 1em 0em 0em 0em;
     width:60%;
 
     @include grid-media($medium) {

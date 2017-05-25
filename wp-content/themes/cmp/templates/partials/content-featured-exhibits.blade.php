@@ -55,8 +55,8 @@
           <h1 class="exhibit-preview__title"><?php the_title(); ?></h1>
           <div class="exhibit-preview__summary-text"><?php the_field('summary'); ?></div>
 
-          <a class="exhibit__learn-more" href="<?php the_permalink(); ?>">Learn More <img class="exhibit__learn-more-arrow" src="wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>
-          <a class="exhibit__learn-more-mobile" href="<?php the_permalink(); ?>"><img class="exhibit__learn-more-arrow" src="wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>
+          <a class="exhibit__learn-more" href="<?php the_permalink(); ?>">Learn More <img class="exhibit__learn-more-arrow" src="/wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>
+          <a class="exhibit__learn-more-mobile" href="<?php the_permalink(); ?>"><img class="exhibit__learn-more-arrow" src="/wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></a>
 
         </div>
 

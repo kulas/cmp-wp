@@ -19,8 +19,8 @@ Template Name: More Things to Do
 
       <div class="activity">
 
-        <img class="activity__square-image" src="wp-content/themes/cmp/assets/images/afterdark-square.jpg">
-        <img class="activity__main-image" src="wp-content/themes/cmp/assets/images/afterdark.jpg">
+        <img class="activity__square-image" src="/wp-content/themes/cmp/assets/images/afterdark-square.jpg">
+        <img class="activity__main-image" src="/wp-content/themes/cmp/assets/images/afterdark.jpg">
 
         <div class="activity__text-box">
           <h4><a href="#">Nights at the Museum</a></h4>
@@ -33,8 +33,8 @@ Template Name: More Things to Do
 
       <div class="activity">
 
-        <img class="activity__square-image" src="wp-content/themes/cmp/assets/images/submarine-square.jpg">
-        <img class="activity__main-image" src="wp-content/themes/cmp/assets/images/submarine.jpg">
+        <img class="activity__square-image" src="/wp-content/themes/cmp/assets/images/submarine-square.jpg">
+        <img class="activity__main-image" src="/wp-content/themes/cmp/assets/images/submarine.jpg">
 
         <div class="activity__text-box">
           <h4><a href="#">Exhibitions</a></h4>
@@ -52,8 +52,8 @@ Template Name: More Things to Do
 
       <div class="activity">
 
-        <img class="activity__square-image" src="wp-content/themes/cmp/assets/images/butterflies-square.png">
-        <img class="activity__main-image" src="wp-content/themes/cmp/assets/images/butterflies.png">
+        <img class="activity__square-image" src="/wp-content/themes/cmp/assets/images/butterflies-square.png">
+        <img class="activity__main-image" src="/wp-content/themes/cmp/assets/images/butterflies.png">
 
         <div class="activity__text-box">
           <h4><a href="#">Explore Our Collections</a></h4>
@@ -70,8 +70,8 @@ Template Name: More Things to Do
 
       <div class="activity">
 
-        <img class="activity__square-image" src="wp-content/themes/cmp/assets/images/egypt-square.jpg">
-        <img class="activity__main-image" src="wp-content/themes/cmp/assets/images/egypt.jpg">
+        <img class="activity__square-image" src="/wp-content/themes/cmp/assets/images/egypt-square.jpg">
+        <img class="activity__main-image" src="/wp-content/themes/cmp/assets/images/egypt.jpg">
 
         <div class="activity__text-box">
           <h4><a href="#">Travel With Us</a></h4>

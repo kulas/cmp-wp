@@ -1,7 +1,6 @@
-{{--
-Template Name: Learn With Us Category
---}}
-<div class="learn-with-us-category">
+{{-- Template Name: Things To Do Subcategory Alt --}}
+
+<div class="things-to-do-subcategory">
 
   <div class="content-container">
 
@@ -29,9 +28,8 @@ Template Name: Learn With Us Category
 
       <div class="activity">
 
-        <img src="{{ the_sub_field('image') }}">
-        <a href="{{ the_sub_field('link') }}">
-          <h3>{{ the_sub_field('title') }} <img class="learn-more-arrow" src="wp-content/themes/cmp/assets/images/learnmore-arrow.svg"></h3>
+          <div class="activity__image" style="background-image:url('{{ the_sub_field('image') }}')"></div>
+          <h3>{{ the_sub_field('title') }}</h3>
         </a>
         <p>{{ the_sub_field('description') }}</p>
 

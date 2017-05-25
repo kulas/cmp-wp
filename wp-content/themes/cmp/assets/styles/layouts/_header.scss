@@ -2,8 +2,47 @@
 ////////////////////////////////////////////////////////////////
 
 // signup header
-.sign-up-header {
+.top-search-bar {
   background: $light-gray;
+  display: flex;
+  justify-content: space-between;
+  padding:0em 3em;
+  height:40px;
+
+  .searchbar-buttons {
+    button {
+      border:none;
+      text-transform: uppercase;
+      padding:0em 1em;
+      height:40px;
+      color:white;
+      background-color: #96A061;
+      font-size:.8em;
+      font-weight: bold;
+    }
+}
+
+  form {
+    display: flex;
+  }
+
+  input {
+    height:36px;
+    margin-top:2px;
+    border-radius: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size:.7em;
+  }
+}
+
+button#top-search-bar__button {
+  background-color: $dark-gray;
+  color:white;
+  border:none;
+  height:36px;
+  width:36px;
+  margin-top:2px;
 }
 
 // main header
@@ -26,12 +65,14 @@
   padding-bottom:1em;
 }
 
-
 //nav bar
+.nav-primary {
+  height:53px;
+}
+
 .menu-primary_navigation-container {
   padding:0em 3em;
   font-family: $base-font-family;
-
 }
 
 #menu-primary-navigation li a {

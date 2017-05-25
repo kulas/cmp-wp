@@ -4,6 +4,25 @@
     <a href="#" class="button">Subscribe</a>
   </form>
 </header> --}}
+<div class="top-search-bar">
+
+  <div class="searchbar-buttons">
+    <button>Join</button>
+    <button>Donate</button>
+  </div>
+
+  <form class="form-search" action="/" method="get" role="search">
+    <legend class="screen-reader-text">Search form</legend>
+    <fieldset>
+      <label for="search-field">Search</label>
+      <input type="text" name="s" placeholder="Search" />
+    </fieldset>
+    <button type="button" id="top-search-bar__button" name="button">
+      <i class="fa fa-search" aria-hidden="true"></i></button>
+  </form>
+
+</div>
+
 <div class="overlay"></div>
 <header class="site-header">
   <div class="container">
@@ -11,7 +30,6 @@
       <img src="<?= App\asset_path('images/logo--cmp.svg') ?>" alt="" class="site-header--logo"/>
     </a>
     {{-- <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a> --}}
-
 
     <nav class="nav-primary">
       @if (has_nav_menu('primary_navigation'))

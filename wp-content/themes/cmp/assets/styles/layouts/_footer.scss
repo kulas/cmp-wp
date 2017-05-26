@@ -150,7 +150,7 @@
   }
 
   .email-subscribe {
-    flex-basis:60%;
+    flex-basis:70%;
     margin-bottom:0;
     padding-bottom:0;
 
@@ -200,13 +200,13 @@
   .small-social-icons {
     position: relative;
     width:100%;
-    flex-basis: 40%;
+    flex-basis: 30%;
 
     .icons {
       display:block;
       position: relative;
       height:50px;
-      width:269px;
+      width:216px;
       float:right;
 
       @include grid-media($medium) {
@@ -234,11 +234,9 @@
       p {
         color:white;
         background:black;
-        margin-left:.5em;
         font-size: 1.5em;
         font-weight: 400;
         padding-top:.4em;
-        padding-left: .5em;
         margin:0;
         text-transform: uppercase;
       }
@@ -249,10 +247,11 @@
       width:200px;
       background-color: black;
       margin:0;
-      padding:0;
+      padding:.3em .3em 0em .3em;
       visibility: hidden;
       opacity: 0;
       top:-11.4em;
+      left:-.3em;
       transition: 0.5s all;
     }
 
@@ -307,6 +306,14 @@
     ul li:hover ul {
         opacity:1;
         visibility:visible;
+    }
+
+    li a p {
+      transition: 0.3s all;
+    }
+
+    li a p:hover {
+        color:#96A061;
     }
 }
 

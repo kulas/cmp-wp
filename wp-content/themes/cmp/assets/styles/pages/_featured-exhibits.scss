@@ -35,6 +35,7 @@
 
     p {
       font-family: 'Roboto', sans-serif;
+      font-size:1.2em;
       font-weight: 300;
     }
   }
@@ -44,16 +45,17 @@
     display:flex;
 
     p {
+      font-size: 1.5em;
       text-transform: uppercase;
       background-color: white;
       font-weight:bolder;
     }
 
     @include grid-media($medium) {
-    position:relative;
-    top:-35px;
-    left:1.5em;
-    z-index: 1;
+      position:relative;
+      top:-35px;
+      left:1.5em;
+      z-index: 1;
 
     p {
       font-family: 'Roboto', sans-serif;
@@ -70,7 +72,6 @@
   //the title, description, and 'learn more' link
   .exhibit__words-box {
     padding:3em 3em 1em 3em;
-    width:60%;
 
     @include grid-media($medium) {
       padding:0em 2em 2em 0em;
@@ -85,7 +86,7 @@
       left: .9em;
       font-size:2.3em;
       position: absolute;
-      top:295px;
+      top:297px;
 
       @include grid-media($medium) {
         position: relative;
@@ -187,12 +188,13 @@
       top:-30px;
       left:5px;
 
-      .exhibit-preview__title {
+      h1.exhibit-preview__title {
         position: relative;
         margin-top:1em;
         font-family: 'Lora', sans-serif;
         font-weight: lighter;
         font-size:1.3em;
+        margin-bottom:0;
 
         @include grid-media($medium) {
           font-size: 2em;

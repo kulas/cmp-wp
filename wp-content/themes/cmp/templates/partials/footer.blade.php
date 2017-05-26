@@ -232,16 +232,7 @@
                     </li>
                   </ul>
 
-                  <ul id="social-more">
-                   <li class="cmp">
-                     <a href="">
-                       <img src="/wp-content/themes/cmp/assets/images/social-plus.png">
-                     </a>
-                   </li>
-                 </ul>
-
               </div>
-
           </div>
 
       </div>

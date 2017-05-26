@@ -12,17 +12,17 @@
 
   </div>
 
-  <?php query_posts( array ( 'category_name' => 'Main Featured Article', 'posts_per_page => 1') );
+  <?php query_posts( array ( 'category_name' => 'Main Featured Article', 'posts_per_page => 3') );
     while ( have_posts() ) : the_post(); ?>
 
   <div class="hero-header" style="background-image: url(<?php the_field('featured_image'); ?>)">
+    <h2 class="article__title"><?php the_title(); ?></h2>
   </div>
 
   <div class="articles__featured-content">
 
   <div class="words-box">
 
-    <h2 class="article__title"><?php the_title(); ?></h2>
     <h3 class="article__author">by <?php the_author(); ?></h3>
     <h2 class="article__quote"><?php the_field('quote'); ?></h2>
     <h3 class="article__summary"><?php
@@ -59,7 +59,7 @@
 
     <div class="article-container">
 
-    <?php query_posts( array ( 'category_name' => 'Featured Articles', 'posts_per_page => 4') );
+    <?php query_posts( array ( 'category_name' => 'Featured Articles', 'posts_per_page => 3') );
       while ( have_posts() ) : the_post(); ?>
 
     <div class="article">
@@ -76,6 +76,18 @@
     <?php endwhile;
       wp_reset_query();
     ?>
+
+    <div class="article">
+
+      <img src="/wp-content/themes/cmp/assets/images/carnegie-magazine.png">
+
+      <div class="article__text-box">
+        <h4><a href="#">Additional Articles</a></h4>
+        <p>Read more from Carnegie Magazine.</p>
+        <button class="green-button">Read More Articles</button>
+      </div>
+
+    </div>
 
   </div>
 

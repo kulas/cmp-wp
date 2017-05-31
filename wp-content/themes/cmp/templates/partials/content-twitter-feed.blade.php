@@ -2,7 +2,7 @@
   Template Name: Twitter Feed
 --}}
 
-<div id="twitter-feed">
+<div id="twitter-feed" class="section--secondary">
 
   <div class="content-container">
 

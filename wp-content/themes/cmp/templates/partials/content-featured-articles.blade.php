@@ -1,7 +1,7 @@
 {{--
   Template Name: Featured Articles
 --}}
-<div id="featured-articles">
+<div id="featured-articles" class="section--primary">
 
   <div class="section-hr">
 

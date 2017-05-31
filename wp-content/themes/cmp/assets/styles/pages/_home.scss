@@ -20,17 +20,6 @@ p {
   }
 }
 
-.content-container {
-  display:flex;
-  flex-wrap: wrap;
-  padding:0em 3em;
-  max-width:1300px;
-  margin:auto;
-
-  @include grid-media($medium) {
-    padding:1em;
-  }
-}
 
 .section-hr {
     display:block;

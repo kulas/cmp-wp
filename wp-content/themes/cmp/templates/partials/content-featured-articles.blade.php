@@ -18,7 +18,7 @@
   <div class="hero-header" style="background-image: url(<?php the_field('featured_image'); ?>)">
   </div>
 
-  <div class="articles__featured-content">
+  <div class="articles__featured-content container">
 
   <div class="words-box">
 

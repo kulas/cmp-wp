@@ -1,7 +1,5 @@
 #featured-articles {
 
-  padding-top: 1em;
-
   .articles__featured-content {
     padding: 0em 3em;
 
@@ -9,25 +7,6 @@
       padding: 0em 1em;
     }
   }
-
-  .section-hr {
-    top:3em;
-
-    @include grid-media($medium) {
-      position: relative;
-      height:1px;
-      top:1.5em;
-      padding:0;
-    }
-  }
-
-  .section-hr__h5 {
-      width:250px;
-
-      @include grid-media($medium) {
-        width:275px;
-      }
-    }
 
   .hero-header {
       height:400px;
@@ -46,7 +25,6 @@
     font-family:'Roboto';
     text-transform: uppercase;
     font-size:1em;
-    margin-top:2em;
 
     @include grid-media($medium) {
       display:none;
@@ -153,7 +131,7 @@
 
   .article {
     flex-basis:49%;
-    padding-bottom:1em;
+    padding-bottom:$base-spacing;
     display:flex;
 
     @include grid-media($medium) {

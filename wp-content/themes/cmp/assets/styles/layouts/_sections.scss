@@ -6,10 +6,13 @@
   padding: $large-spacing 0;
   background:  $base-background-color;
   z-index: 99;
+
+  + .section--primary {
+    padding-top: 0;
+  }
 }
 
 .section--secondary {
-  @extend %inverse;
   position: relative;
   padding: $large-spacing 0;
   background: $secondary-background-color;

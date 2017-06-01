@@ -1,7 +1,7 @@
 {{--
   Template Name: Featured Articles
 --}}
-<div id="featured-articles">
+<div id="featured-articles" class="section--primary">
 
   <div class="section-hr">
 
@@ -18,7 +18,7 @@
   <div class="hero-header" style="background-image: url(<?php the_field('featured_image'); ?>)">
   </div>
 
-  <div class="articles__featured-content">
+  <div class="articles__featured-content container">
 
   <div class="words-box">
 

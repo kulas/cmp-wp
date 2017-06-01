@@ -13,6 +13,7 @@
   text-align: center;
   padding-bottom:1em;
   padding: 2em 3em 0em 3em;
+  z-index: 999;
 
   @include grid-media($nav-break) {
     padding: 2em 0em 0em 0em;

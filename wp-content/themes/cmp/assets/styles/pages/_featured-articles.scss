@@ -8,19 +8,6 @@
     }
   }
 
-  .hero-header {
-      height:400px;
-      width:100%;
-      margin-bottom:10px;
-      margin-top:.1em;
-      background-size:cover;
-      background-position: top center;
-
-      @include grid-media($medium) {
-        height:150px;
-      }
-  }
-
   .featured-articles-h3 {
     font-family:'Roboto';
     text-transform: uppercase;

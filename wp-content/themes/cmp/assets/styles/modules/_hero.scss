@@ -1,0 +1,18 @@
+.hero-header {
+    height: 550px;
+    width:100%;
+    margin-bottom:10px;
+    margin-top:.1em;
+    background-size:cover;
+    background-position: top center;
+
+    @include grid-media($extra-large) {
+      height:400px;
+    }
+    @include grid-media($medium) {
+      height: 300px;
+    }
+    @include grid-media($small) {
+      height:150px;
+    }
+}

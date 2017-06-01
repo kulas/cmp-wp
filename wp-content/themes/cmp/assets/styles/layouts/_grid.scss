@@ -24,6 +24,19 @@ body {
   margin: auto;
 }
 
+.content-container {
+  display:flex;
+  flex-wrap: wrap;
+  padding: 0em 3em;
+  max-width: $max-width;
+  margin:auto;
+
+  @include grid-media($medium) {
+    // padding:1em;
+  }
+}
+
+
 // Full
 .l-full {
   @include grid-column(12);

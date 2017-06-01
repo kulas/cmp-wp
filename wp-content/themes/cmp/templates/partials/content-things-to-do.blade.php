@@ -2,7 +2,7 @@
   Template Name: Things To Do
 --}}
 
-<div id="things-to-do">
+<div id="things-to-do" class="section--primary">
 
   <div class="section-hr">
     <hr>

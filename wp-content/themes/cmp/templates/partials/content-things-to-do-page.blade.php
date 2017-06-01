@@ -5,9 +5,10 @@
 <div id="things-to-do-page">
 
   <div class="hero-image" style="background-image:url('{{ the_field('hero_image') }}')">
-
-    <div class="hero-image__text">
-      <h1>{{ the_title() }}</h1>
+    <div class="content-container">
+      <div class="hero-image__text">
+        <h1>{{ the_title() }}</h1>
+      </div>
     </div>
 
   </div>

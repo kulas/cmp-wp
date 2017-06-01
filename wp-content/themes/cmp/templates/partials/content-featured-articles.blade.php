@@ -1,7 +1,7 @@
 {{--
   Template Name: Featured Articles
 --}}
-<div id="featured-articles">
+<div id="featured-articles" class="section--primary">
 
   <div class="section-hr">
 
@@ -19,7 +19,7 @@
     <h2 class="article__title"><?php the_title(); ?></h2>
   </div>
 
-  <div class="articles__featured-content">
+  <div class="articles__featured-content container">
 
   <div class="words-box">
 

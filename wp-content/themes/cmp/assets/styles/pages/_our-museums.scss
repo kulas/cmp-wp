@@ -1,18 +1,5 @@
 #our-museums {
 
-  .section-hr {
-    top:3.3em;
-    height:22px;
-
-    @include grid-media($medium) {
-      position: relative;
-      height:0px;
-      top:1.5em;
-      padding:0;
-      margin:0;
-    }
-  }
-
   .museum-container {
     width:100%;
     display:flex;

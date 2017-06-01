@@ -35,6 +35,7 @@
 
     p {
       font-family: 'Roboto', sans-serif;
+      font-size:1.2em;
       font-weight: 300;
     }
   }
@@ -44,16 +45,17 @@
     display:flex;
 
     p {
+      font-size: 1.5em;
       text-transform: uppercase;
       background-color: white;
       font-weight:bolder;
     }
 
     @include grid-media($medium) {
-    position:relative;
-    top:-35px;
-    left:1.5em;
-    z-index: 1;
+      position:relative;
+      top:-35px;
+      left:1.5em;
+      z-index: 1;
 
     p {
       font-family: 'Roboto', sans-serif;
@@ -61,11 +63,8 @@
       text-transform: uppercase;
       background-color: white;
       height:30px;
-      padding-top:5px;
+      padding:5px;
       color:black;
-    }
-    .new-exhibit {
-      padding-right: 1em;
     }
   }
 }
@@ -75,36 +74,41 @@
     padding:3em 3em 1em 3em;
 
     @include grid-media($medium) {
-      padding:0em 0em 2em 0em;
+      padding:0em 2em 2em 0em;
+      width:100%;
     }
 
     h1.exhibit-preview__title {
       font-family: 'Lora', sans-serif;
       font-weight: lighter;
-    }
-
-    .exhibit-preview__title {
-      position: relative;
-      top: -10px;
-      left:-3px;
+      background-color: white;
+      padding:.3em .5em 0em .3em;
+      left: .9em;
+      font-size:2.3em;
+      position: absolute;
+      top:297px;
 
       @include grid-media($medium) {
-        font-size: 2em;
         position: relative;
-        padding-left:1em;
+        font-size: 2em;
+        top: -.5em;
+        background-color: auto;
+        font-family: 'Roboto';
+        font-weight: 400;
+        padding: 0;
       }
     }
 
     .exhibit__learn-more-arrow {
-      height:20px;
+      height:30px;
       margin-left:0px;
       position: relative;
       top:3px;
 
       @include grid-media($medium) {
-        height:25px;
-        margin-left: 8px;
-        top:-5px;
+        height:30px;
+        margin-left: 5px;
+        top:4px;
       }
     }
   }
@@ -152,7 +156,7 @@
     .exhibit-preview__dates {
         position: relative;
         display:flex;
-        left:-10px;
+        left:-5px;
 
         .new-exhibit {
           padding-right: 10px;
@@ -165,23 +169,12 @@
           text-transform: uppercase;
           background-color: white;
           height:30px;
-          padding-top:5px;
+          padding:5px;
           color:black;
         }
 
-        .start-date {
-          padding-left: 10px;
-        }
-
-        @include grid-media($medium) {
-
-        .new-exhibit {
-          padding-right: 1em;
-        }
-      }
-
       @include grid-media($medium) {
-        top:-47px;
+        top:-45px;
         left:-3px;
       }
     }
@@ -195,12 +188,13 @@
       top:-30px;
       left:5px;
 
-      .exhibit-preview__title {
+      h1.exhibit-preview__title {
         position: relative;
         margin-top:1em;
         font-family: 'Lora', sans-serif;
         font-weight: lighter;
         font-size:1.3em;
+        margin-bottom:0;
 
         @include grid-media($medium) {
           font-size: 2em;
@@ -223,9 +217,9 @@
         top:3px;
 
         @include grid-media($medium) {
-          height:25px;
-          left:10px;
-          top:-12px;
+          height:30px;
+          margin-left:5px;
+          top:5px;
         }
       }
 
@@ -303,7 +297,7 @@
 //a bunch of things included for the media query
 @include grid-media($medium) {
   #featured-exhibits {
-    margin-top:1em;
+    margin:1em 0em;
   }
 
   .exhibit-preview__dates {

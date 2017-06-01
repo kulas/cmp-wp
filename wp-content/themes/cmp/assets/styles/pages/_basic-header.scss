@@ -1,0 +1,150 @@
+.basic-header {
+
+  .content-container {
+    padding-top:1em;
+    display: block;
+
+    @include grid-media($medium) {
+      padding: 1em;
+    }
+  }
+
+  h1 {
+    background-color: white;
+    display:inline-block;
+    position: relative;
+    top:290px;
+    font: 'Lora', serif;
+    padding:0.3em 1.2em 0em 1.2em;
+    font-weight: lighter;
+
+    @include grid-media($medium) {
+      // padding:0;
+      top:102px;
+      left:0;
+      padding:0.3em 1.2em 0em .5em;
+    }
+  }
+  
+  .osc-res-tab .nav-tabs {
+    border: none !important;
+    overflow: hidden;
+  }
+
+  ul.tab-content {
+    border: solid #96A061;
+    border-width: 8px 0px 0px 0px;
+    z-index: 5;
+  }
+
+  .osc-res-tab {
+    width:100%;
+
+      ul.nav {
+        justify-content: flex-start;
+      }
+
+      a {
+        color: #96A061;
+      }
+
+      li > a {
+        color: black;
+      }
+  }
+
+  .osc-res-tab .nav-tabs>li > a,
+  .osc-res-tab .nav-tabs>li.active>a,
+  .osc-res-tab .nav-tabs>li.active>a:hover,
+  .osc-res-tab .nav-tabs>li.active>a:focus {
+    border:0;
+    margin:0;
+    border-radius:0;
+    top:2px;
+    color:white;
+    text-transform:uppercase;
+    transition: .3s all;
+    overflow: hidden;
+  }
+
+  .osc-res-tab .nav-tabs>li > a {
+    color:black;
+  }
+
+  .osc-res-tab .nav-tabs>li > a:hover,
+  .osc-res-tab .nav-tabs>li.active>a,
+  .osc-res-tab .nav-tabs>li.active>a:hover,
+  .osc-res-tab .nav-tabs>li.active>a:focus {
+
+    background-color:#96A061;
+  }
+
+  .wpcf7 {
+    width:50%;
+
+    @include grid-media($medium) {
+      width:100%;
+    }
+
+    select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required {
+      width:100%;
+      height:40px;
+      margin-bottom:0;
+    }
+
+    input {
+      height:20px;
+      margin-bottom:0;
+    }
+
+    span.wpcf7-list-item {
+      display: block;
+    }
+
+    span.wpcf7-form-control-wrap.ZipPostalCode {
+      position: relative;
+    }
+
+    .wpcf7-form p {
+      margin-bottom:0;
+    }
+
+    input.wpcf7-form-control.wpcf7-submit {
+      margin-top:1em;
+      height:auto;
+      width:200px;
+    }
+  }
+  #foogallery-gallery-821 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a.fbx-link {
+    flex-basis:32%;
+    height:170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @include grid-media($large) {
+      flex-basis:100%;
+      height:300px;
+    }
+
+    #foogallery-gallery-821 > img {
+        flex-shrink: 0;
+        min-width: 100%;
+        height: 170px;
+        width:auto;
+      }
+    }
+  }
+
+  hr {
+    // padding:0;
+    margin:0;
+    margin-bottom:$small-spacing;
+  }
+}

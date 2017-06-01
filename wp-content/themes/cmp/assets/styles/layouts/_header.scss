@@ -2,8 +2,51 @@
 ////////////////////////////////////////////////////////////////
 
 // signup header
-.sign-up-header {
+.top-search-bar {
   background: $light-gray;
+  display: flex;
+  justify-content: space-between;
+  padding:0em 3em;
+  height:40px;
+
+  @include grid-media($medium) {
+    display: none;
+  }
+
+  .searchbar-buttons {
+    button {
+      border:none;
+      text-transform: uppercase;
+      padding:0em 1em;
+      height:40px;
+      color:white;
+      background-color: #96A061;
+      font-size:.8em;
+      font-weight: bold;
+    }
+}
+
+  form {
+    display: flex;
+  }
+
+  input {
+    height:36px;
+    margin-top:2px;
+    border-radius: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size:.7em;
+  }
+}
+
+button#top-search-bar__button {
+  background-color: $dark-gray;
+  color:white;
+  border:none;
+  height:36px;
+  width:36px;
+  margin-top:2px;
 }
 
 // main header
@@ -27,12 +70,14 @@
   padding-bottom:1em;
 }
 
-
 //nav bar
+.nav-primary {
+  height:53px;
+}
+
 .menu-primary_navigation-container {
   padding:0em 3em;
   font-family: $base-font-family;
-
 }
 
 #menu-primary-navigation li a {
@@ -46,6 +91,10 @@
   a {
     color:white;
   }
+}
+
+#menu-primary-navigation li > ul {
+  text-align: left;
 }
 
 ul.nav {
@@ -102,7 +151,7 @@ ul.sub-menu {
   li {
     transition: 0.4s all;
     background: #6F774A;
-    width: 300px;
+    width: 260px;
     height:45px;
     color: white;
     a {
@@ -125,8 +174,9 @@ li.menu-item:hover > ul.sub-menu {
 
 .sub-menu > li.menu-item > ul.sub-menu {
   position: relative;
-  left: 300px;
+  left: 260px;
   top: -61px;
+  text-align: left;
 }
 
 .sub-menu > li.menu-item > ul.sub-menu:hover {

@@ -1,11 +1,39 @@
 #featured-articles {
 
   .articles__featured-content {
-    padding: 0em 3em;
+    padding: 1em 3em;
 
     @include grid-media($medium) {
       padding: 0em 1em;
     }
+  }
+
+  .hero-header {
+      height:400px;
+      width:100%;
+      margin-bottom:10px;
+      margin-top:.1em;
+      background-size:cover;
+      background-position: top center;
+
+      @include grid-media($medium) {
+        height:300px;
+      }
+
+      h2.article__title {
+        display: inline-block;
+        position: relative;
+        top:320px;
+        padding:.3em 1.3em 0em 1.3em;
+        background-color: white;
+        font-size:2.5em;
+        font-family: 'Roboto', sans-serif;
+
+        @include grid-media($medium) {
+          top:210px;
+          width:100%;
+        }
+      }
   }
 
   .featured-articles-h3 {
@@ -26,7 +54,6 @@
     flex-wrap: wrap;
   }
 
-  .article__title,
   .article__author,
   .article__summary,
   .readmore-link {

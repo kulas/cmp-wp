@@ -98,28 +98,28 @@
                     <ul>
                       <li class="cmoa">
                         <a href="https://www.facebook.com/CarnegieMuseumofArt/">
-                          <img src="/wp-content/themes/cmp/assets/images/facebook.png">
+                          {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
                           <p>CMOA</p>
                         </a>
                       </li>
 
                       <li class="cmnh">
                         <a href="https://www.facebook.com/carnegiemnh/">
-                          <img src="/wp-content/themes/cmp/assets/images/facebook.png">
+                          {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
                           <p>CMNH</p>
                         </a>
                       </li>
 
                       <li class="csc">
                         <a href="https://www.facebook.com/carnegiesciencecenter/">
-                          <img src="/wp-content/themes/cmp/assets/images/facebook.png">
+                          {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
                           <p>CSC</p>
                         </a>
                       </li>
 
                       <li class="warhol">
                         <a href="https://www.facebook.com/thewarholmuseum/">
-                          <img src="/wp-content/themes/cmp/assets/images/facebook.png">
+                          {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
                           <p>Warhol</p>
                         </a>
                       </li>
@@ -140,28 +140,28 @@
 
                         <li class="cmoa">
                           <a href="https://twitter.com/cmoa">
-                            <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png">
+                            {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
                             <p>CMOA</p>
                           </a>
                         </li>
 
                         <li class="cmnh">
                           <a href="https://twitter.com/carnegiemnh">
-                            <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png">
+                            {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
                             <p>CMNH</p>
                           </a>
                         </li>
 
                         <li class="csc">
                           <a href="https://twitter.com/carnegiescictr">
-                            <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png">
+                            {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
                             <p>CSC</p>
                           </a>
                         </li>
 
                         <li class="warhol">
                           <a href="https://twitter.com/thewarholmuseum">
-                            <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png">
+                            {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
                             <p>Warhol</p>
                           </a>
                         </li>
@@ -182,20 +182,20 @@
                       <ul>
                         <li class="cmoa">
                           <a href="https://www.instagram.com/thecmoa">
-                            <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png">
+                            {{-- <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png"> --}}
                             <p>CMOA</p>
                           </a>
                       </li>
 
                       <li class="cmnh">
                         <a href="https://www.instagram.com/carnegiemnh">
-                          <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png">
+                          {{-- <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png"> --}}
                           <p>CMNH</p>
                       </li>
 
                       <li class="csc">
                         <a href="https://www.instagram.com/carnegiescictr">
-                          <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png">
+                          {{-- <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png"> --}}
                           <p>CSC</p>
                         </a>
                       </li>
@@ -211,19 +211,19 @@
                       <a href="#">
                         <img src="/wp-content/themes/cmp/assets/images/tumblr.png">
                       </a>
-                      
+
                       <ul>
 
                         <li class="cmnh">
                           <a href="http://carnegiemuseumnaturalhistory.tumblr.com/">
-                            <img src="/wp-content/themes/cmp/assets/images/tumblr.png">
+                            {{-- <img src="/wp-content/themes/cmp/assets/images/tumblr.png"> --}}
                             <p>CMNH</p>
                           </a>
                         </li>
 
                         <li class="warhol">
                           <a href="http://carnegiemuseumnaturalhistory.tumblr.com/">
-                            <img src="/wp-content/themes/cmp/assets/images/tumblr.png">
+                            {{-- <img src="/wp-content/themes/cmp/assets/images/tumblr.png"> --}}
                             <p>Warhol</p>
                           </a>
                         </li>
@@ -232,16 +232,7 @@
                     </li>
                   </ul>
 
-                  <ul id="social-more">
-                   <li class="cmp">
-                     <a href="">
-                       <img src="/wp-content/themes/cmp/assets/images/social-plus.png">
-                     </a>
-                   </li>
-                 </ul>
-
               </div>
-
           </div>
 
       </div>

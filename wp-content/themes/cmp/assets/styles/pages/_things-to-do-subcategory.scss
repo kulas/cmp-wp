@@ -8,26 +8,6 @@
     }
   }
 
-  .nav-breadcrumb {
-    display:flex;
-
-    a {
-      font-size:.9em;
-      text-transform: uppercase;
-    }
-
-    p.breadcrumb-spacer {
-      margin-top:3px;
-      padding:0px 5px;
-      font-size: .8em;
-      font-weight:300;
-    }
-
-    @include grid-media($medium) {
-      padding:1em;
-    }
-  }
-
   .large-title {
 
     @include grid-media($medium) {

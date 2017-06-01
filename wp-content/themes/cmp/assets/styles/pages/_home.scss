@@ -24,6 +24,7 @@ p {
   display:flex;
   flex-wrap: wrap;
   padding:0em 3em;
+  padding-bottom:1em;
   max-width:1300px;
   margin:auto;
 
@@ -257,4 +258,24 @@ p {
 
   hr {
     width:100%;
+  }
+
+  .nav-breadcrumb {
+    display:flex;
+
+    a {
+      font-size:.9em;
+      text-transform: uppercase;
+    }
+
+    p.breadcrumb-spacer {
+      margin-top:3px;
+      padding:0px 5px;
+      font-size: .8em;
+      font-weight:300;
+    }
+
+    @include grid-media($medium) {
+      padding-left:0.5em;
+    }
   }

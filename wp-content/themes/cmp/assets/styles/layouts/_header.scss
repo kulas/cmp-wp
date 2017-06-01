@@ -9,6 +9,10 @@
   padding:0em 3em;
   height:40px;
 
+  @include grid-media($medium) {
+    display: none;
+  }
+
   .searchbar-buttons {
     button {
       border:none;
@@ -88,6 +92,10 @@ button#top-search-bar__button {
   }
 }
 
+#menu-primary-navigation li > ul {
+  text-align: left;
+}
+
 ul.nav {
   display: flex;
   position: relative;
@@ -142,7 +150,7 @@ ul.sub-menu {
   li {
     transition: 0.4s all;
     background: #6F774A;
-    width: 300px;
+    width: 260px;
     height:45px;
     color: white;
     a {
@@ -165,8 +173,9 @@ li.menu-item:hover > ul.sub-menu {
 
 .sub-menu > li.menu-item > ul.sub-menu {
   position: relative;
-  left: 300px;
+  left: 260px;
   top: -61px;
+  text-align: left;
 }
 
 .sub-menu > li.menu-item > ul.sub-menu:hover {

@@ -35,3 +35,9 @@ $nav-break: (
   gutter: $base-spacing,
   media: '(max-width: 1027px)'
 );
+
+$nav-break2: (
+  columns: 12,
+  gutter: $base-spacing,
+  media: '(max-width: 1027px)'
+);

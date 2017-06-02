@@ -4,6 +4,17 @@
     <a href="#" class="button">Subscribe</a>
   </form>
 
+  <!-- visit callout -->
+  <a href="#visit" class="quickview-btn nav-callout" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
+    <div >
+      <span>Plan Your Visit</span>
+      <span itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="open-times"></span>
+    </div>
+    <span class="nav-icon nav-icon-visit">
+      <i class="icon -visit" aria-hidden="true"></i>
+    </span>
+  </a>
+
   <!-- persistant global nav -->
   <ul class="nav-global-persistant"  >
     <li>
@@ -19,16 +30,6 @@
     </li>
   </ul>
 
-  <!-- visit callout -->
-  <a href="#visit" class="quickview-btn nav-callout" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
-    <div >
-      <span>Plan Your Visit</span>
-      <span itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="open-times"></span>
-    </div>
-    <span class="nav-icon nav-icon-visit">
-      <i class="icon -visit" aria-hidden="true"></i>
-    </span>
-  </a>
 
 </header>
 
@@ -109,11 +110,9 @@
     <nav class="nav-desktop-container" role='navigation' aria-label="Global navigation">
 
       <!-- global nav -->
-      <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => '', 'menu_class' => 'desktop-nav']);
-        endif;
-      ?>
+      @if (has_nav_menu('primary_navigation'))
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'desktop-nav']) !!}
+      @endif
 
     </nav>
 

@@ -8,29 +8,14 @@ p {
   font-weight: 300;
 }
 
-.hero-image {
-  height:350px !important;
-  width:100%;
-  margin-bottom:10px;
-  background-size:cover;
-  background-position: center;
-
-  @include grid-media($medium) { //shrink height of image on mobile
-    height:150px !important;
-  }
-}
-
-.words-box {
-  margin-bottom: $large-spacing;
-}
-
 .section-hr {
     display:block;
     position: relative;
     text-align: center;
+    width: 100%;
     max-width: 1300px;
     margin: auto;
-    padding: 0 0 $small-spacing 0;
+    padding: 0 $base-spacing $small-spacing $base-spacing;
     text-align: center;
 
     @include grid-media($medium) {

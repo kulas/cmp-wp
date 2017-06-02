@@ -27,12 +27,12 @@ body {
 .content-container {
   display:flex;
   flex-wrap: wrap;
-  padding: 0em 3em;
+  padding: 0em $base-spacing;
   max-width: $max-width;
   margin:auto;
 
   @include grid-media($medium) {
-    // padding:1em;
+    padding: 0 1em;
   }
 }
 
@@ -67,5 +67,19 @@ body {
   @include grid-media($large) {
     @include grid-column(4);
     @include grid-container;
+  }
+}
+
+.small-only {
+  display: none !important;
+  @include grid-media($medium) {
+    display: block !important;
+  }
+}
+
+.large-only {
+  display: block;
+  @include grid-media($medium) {
+    display: none !important;
   }
 }

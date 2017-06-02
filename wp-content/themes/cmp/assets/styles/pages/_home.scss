@@ -15,13 +15,12 @@ p {
     width: 100%;
     max-width: 1300px;
     margin: auto;
-    padding: 0 $base-spacing $small-spacing $base-spacing;
+    margin-bottom: $large-spacing;
+    padding: 0 $base-spacing;
     text-align: center;
 
     @include grid-media($medium) {
       padding:1em 0em;
-      position:relative;
-      top:1em;
     }
 
     hr {
@@ -32,12 +31,11 @@ p {
     }
 
     .section-hr__h5 {
-      position: absolute;
       width: 100%;
+      height: 0;
       position: relative;
       text-align: center;
-      transform: translateY(-50%);
-
+      top: -.875em;
 
       h5 {
           display: inline;
@@ -45,6 +43,7 @@ p {
           text-transform: uppercase;
           padding: 0 1em;
           background-color:white;
+
       }
   }
 }

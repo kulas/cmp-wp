@@ -1,8 +1,8 @@
 // SITE HEADER LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
 
-// signup header
-.top-search-bar {
+// signup, mobile nav header
+.top-bar {
   background: $light-gray;
   display: flex;
   justify-content: space-between;
@@ -10,7 +10,7 @@
   height:40px;
 
   @include grid-media($medium) {
-    display: none;
+    // display: none;
   }
 
   .searchbar-buttons {
@@ -58,20 +58,20 @@ button#top-search-bar__button {
 
 
 // main header
-.site-header {
-  position: relative;
-  padding-top: $base-spacing;
-  text-align: center;
-  padding-bottom:1em;
-  padding: 2em 3em 0em 3em;
-  z-index: 999;
-
-  @include grid-media($nav-break) {
-    padding: 2em 0em 0em 0em;
-    height:178px;
-    overflow:hidden;
-  }
-}
+// .site-header {
+//   position: relative;
+//   padding-top: $base-spacing;
+//   text-align: center;
+//   padding-bottom:1em;
+//   padding: 2em 3em 0em 3em;
+//   z-index: 999;
+//
+//   @include grid-media($nav-break) {
+//     padding: 2em 0em 0em 0em;
+//     height:178px;
+//     overflow:hidden;
+//   }
+// }
 
 
 // main header
@@ -80,11 +80,12 @@ button#top-search-bar__button {
   position: relative;
   width: 100%;
   padding: 0;
-  z-index: 9999;
+  padding-top: $base-spacing;
+  text-align: center;
+  z-index: 999;
   border-bottom: $base-border;
 
   @include grid-media($nav-break) {
-    background: $light-gray;
     border-bottom: none;
 
     .container {
@@ -136,40 +137,34 @@ button#top-search-bar__button {
 }
 
 
-// Global Nav
+// Desktop Nav
 ///////////////////////////////////////////////////////////////////////////////
-.nav-container {
+.nav-desktop-container {
   max-width: none;
-  height: $large-spacing;
   background: #fff;
+  display: block;
 
   @include grid-media($nav-break) {
-    border: none;
+    display: none;
   }
 
-  @include grid-media($nav-break) {
-    display: flex;
-    flex-flow: row-reverse;
-    background: $base-color;
-  }
-
-  a.is-active,
-  button.is-active {
-    background: $base-color;
-    @include grid-media($nav-break) {
-      background: $dark-gray;
-    }
-  }
-
-  @include grid-media($nav-break) {
-    a {
-      background: $base-color;
-
-      i {
-        color: #fff !important;
-      }
-    }
-  }
+  // a.is-active,
+  // button.is-active {
+  //   background: $base-color;
+  //   @include grid-media($nav-break) {
+  //     background: $dark-gray;
+  //   }
+  // }
+  //
+  // @include grid-media($nav-break) {
+  //   a {
+  //     background: $base-color;
+  //
+  //     i {
+  //       color: #fff !important;
+  //     }
+  //   }
+  // }
 
 }
 
@@ -182,7 +177,7 @@ button#top-search-bar__button {
   display: block;
   float: right;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-size: 1em;
 
   ul {
@@ -232,6 +227,9 @@ button#top-search-bar__button {
   .menu-item-has-children{
     > a {
       // @include icon--chevron;
+      &:after{
+        content: "›"
+      }
     }
 
     a:before {
@@ -275,7 +273,7 @@ button#top-search-bar__button {
 
 
 .nav-global {
-
+  flex-grow: 1;
   @include grid-media($nav-break) {
     display: none;
   }
@@ -360,6 +358,9 @@ button#top-search-bar__button {
 .nav-icon.is-active i,
 .is-active .nav-icon i{
   // @include icon--close;
+  &:after{
+    content: 'x';
+  }
   animation: pop-in 1s ease-in 0s 1 normal none;
   color: #fff;
 }
@@ -408,6 +409,9 @@ button#top-search-bar__button {
       margin: 0;
       padding: 0;
       // @include icon--chevron;
+      &:after{
+        content: '›';
+      }
 
 
 
@@ -448,6 +452,9 @@ button#top-search-bar__button {
 
 .quickview-nav__expand {
   // @include icon--chevron;
+  &:after{
+    content: '›';
+  }
   position: absolute;
   top: 0;
   right: 0;
@@ -580,7 +587,7 @@ button#top-search-bar__button {
   background: $dark-gray;
   overflow: hidden;
   transition: all .6s ease;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .quickview-overlay {

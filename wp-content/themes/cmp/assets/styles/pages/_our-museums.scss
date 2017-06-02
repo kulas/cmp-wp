@@ -8,16 +8,22 @@
     overflow: hidden;
 
     @include grid-media($medium) {
-      padding:0em 1em 1em 1em;
+      padding:0em 1em;
     }
 
   }
   .museum {
       flex-basis: 23%;
-      margin-bottom: 1em;
 
       @include grid-media($medium) {
         flex-basis:47%;
+        margin-bottom: $base-spacing;
+
+        &:last-child,
+        &:nth-last-child(2){
+          margin-bottom: 0;
+        }
+
       }
 
     img {

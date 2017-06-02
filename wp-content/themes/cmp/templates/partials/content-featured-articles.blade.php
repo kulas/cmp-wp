@@ -16,7 +16,9 @@
     while ( have_posts() ) : the_post(); ?>
 
   <div class="hero-header" style="background-image: url(<?php the_field('featured_image'); ?>)">
-    <h2 class="article__title"><?php the_title(); ?></h2>
+  </div>
+  <div class="content-container">
+    <h2 class="hero-header__words-box"><?php the_title(); ?></h2>
   </div>
 
   <div class="articles__featured-content container">

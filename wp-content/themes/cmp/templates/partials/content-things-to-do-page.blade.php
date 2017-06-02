@@ -4,13 +4,12 @@
 
 <div id="things-to-do-page">
 
-  <div class="hero-image" style="background-image:url('{{ the_field('hero_image') }}')">
-    <div class="content-container">
-      <div class="hero-image__text">
-        <h1>{{ the_title() }}</h1>
-      </div>
+  <div class="hero-header" style="background-image:url('{{ the_field('hero_image') }}')">
+  </div>
+  <div class="content-container">
+    <div>
+      <h1 class="hero-header__words-box">{{ the_title() }}</h1>
     </div>
-
   </div>
 
   <div class="content-container">

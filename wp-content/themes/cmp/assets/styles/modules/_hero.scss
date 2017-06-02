@@ -1,0 +1,46 @@
+.hero-header {
+    height: 500px;
+    width:100%;
+    margin-bottom:10px;
+    background-size:cover;
+    background-position: top center;
+
+    @include grid-media($extra-large) {
+      height:450px;
+    }
+    @include grid-media($large) {
+      height: 350px;
+    }
+    @include grid-media($medium) {
+      height: 250px;
+    }
+    @include grid-media($small) {
+      height: 150px;
+    }
+}
+
+.hero-header__words-box {
+  position: relative;
+  display: block;
+  width: auto;
+  margin-top: -1em;
+  max-width: 100%;
+  padding: .3em .5em;
+  background: #fff;
+  font-size: 2em;
+
+  @include grid-media($medium) {
+    max-width: 100%;
+    font-size: 1.25em;
+    margin-top: -1.25em;
+  }
+}
+
+h1.hero-header__words-box {
+  font-size: 3em;
+  font-weight: 400;
+  @include grid-media($medium) {
+    font-size: 2em;
+
+  }
+}

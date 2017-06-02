@@ -1,27 +1,8 @@
 #more-things-to-do {
-  .content-container {
-    @media(min-width: 1400px) {
-      padding:0 !important;
-    }
-  }
+  // .content-container {
+  //   @media(min-width: 1400px) {
+  //     padding:0 !important;
+  //   }
+  // }
 
-  .section-hr {
-    top:0em;
-    width:100%;
-    padding:0;
-    padding: 2em 0em;
-
-    hr {
-      width:100%;
-      padding:0;
-    }
-
-    .section-hr__h5 {
-      width:250px;
-
-      @include grid-media($medium) {
-        width:275px;
-      }
-    }
-  }
 }

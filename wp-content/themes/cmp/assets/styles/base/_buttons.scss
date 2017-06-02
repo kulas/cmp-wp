@@ -92,9 +92,11 @@
 
 .button--link:after{
   position: relative;
-  top: -.05em;
-  left: .25em;
-  content: "›";
-  font-size: 1em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  content: "";
+  background-image: url("/wp-content/themes/cmp/assets/images/learnmore-arrow.svg");
+  background-size: cover;
   line-height: 0;
 }

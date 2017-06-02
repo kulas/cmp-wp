@@ -1,311 +1,136 @@
-#featured-exhibits {
-
-//header exhibit, randomly selected
-.exhibit-header {
-
-  flex-basis:100%;
+.exhibit-container {
+  display:flex;
+  flex-wrap: wrap;
+  padding: 0em $base-spacing;
+  max-width: $max-width;
+  margin:auto;
+  justify-content: space-between;
 
   @include grid-media($medium) {
-    margin:0;
-    padding:0;
-    overflow: hidden;
+    padding: 0;
+  }
+}
+
+//individual exhibits
+.exhibit {
+  padding-top:0 ;
+  margin:0;
+  width:48%;
+  margin-bottom: $base-spacing;
+
+  &:last-child,
+  &:nth-last-child(2) {
+    margin-bottom: 0;
   }
 
-//the 'hero' image
-  .exhibit__image {
-    height:350px !important;
-    width:100%;
-    margin-bottom:10px;
-    background-size:cover;
-    background-position: center;
-
-    @include grid-media($medium) { //shrink height of image on mobile
-      height:150px !important;
+  @include grid-media($medium) {
+    width: 100%;
+    &:nth-last-child(2) {
+      margin-bottom: $base-spacing;
     }
   }
+}
 
-//the text regarding the exhibit, including date
-  .exhibit-preview__summary {
-    padding:0px;
-    margin:0px;
+//their image
+.exhibit__image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin:auto;
 
-    @include grid-media($medium) {
-      height:auto;
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size:1.2em;
-      font-weight: 300;
-    }
+  @include grid-media($large) {
+    height: 150px;
   }
 
-  //the box with the exhibit dates
-  .exhibit-preview__dates {
+}
+
+//dates of exhibit
+.exhibit-preview__dates {
+    position: relative;
     display:flex;
-
-    p {
-      font-size: 1.5em;
-      text-transform: uppercase;
-      background-color: white;
-      font-weight:bolder;
-    }
-
-    @include grid-media($medium) {
-      position:relative;
-      top:-35px;
-      left:1.5em;
-      z-index: 1;
+    margin-top: -1rem;
 
     p {
       font-family: 'Roboto', sans-serif;
       font-size:.8em;
+      font-weight: bold !important;
       text-transform: uppercase;
       background-color: white;
-      height:30px;
-      padding:5px;
+      padding: .5em $small-spacing;
+      margin-bottom: 0;
       color:black;
     }
-  }
 }
 
-  //the title, description, and 'learn more' link
-  .exhibit__words-box {
-    padding:3em 3em 1em 3em;
-
-    @include grid-media($medium) {
-      padding:0em 2em 2em 0em;
-      width:100%;
-    }
-
-    h1.exhibit-preview__title {
-      font-family: 'Lora', sans-serif;
-      font-weight: lighter;
-      background-color: white;
-      padding:.3em .5em 0em .3em;
-      left: .9em;
-      font-size:2.3em;
-      position: absolute;
-      top:297px;
-
-      @include grid-media($medium) {
-        position: relative;
-        font-size: 2em;
-        top: -.5em;
-        background-color: auto;
-        font-family: 'Roboto';
-        font-weight: 400;
-        padding: 0;
-      }
-    }
-
-    .exhibit__learn-more-arrow {
-      height:30px;
-      margin-left:0px;
-      position: relative;
-      top:3px;
-
-      @include grid-media($medium) {
-        height:30px;
-        margin-left: 5px;
-        top:4px;
-      }
-    }
-  }
-}
-
-  //the 'now showing' hr
-  .section-hr {
-
-    // padding-bottom:0;
-
-      @include grid-media($medium) { //dissapears on mobile to make way for the mobile version
-        display:none;
-      }
-    }
-  }
-
-
-//the content container holds the 4 exhibits that are not the main exhibit
-.content-container {
-  // margin-top:1em;
-  justify-content: space-between;
+.exhibit-preview__title {
+  position: relative;
+  font-size: 1.5em;
+  margin-left: $small-spacing;
+  margin-bottom: 0;
 
   @include grid-media($medium) {
-    margin-top:0em;
-  }
-
-  //individual exhibits
-  .exhibit {
-
-    padding-top:0 !important;
-    margin:0;
-
-    flex-basis:48%;
-
-    //their image
-    .exhibit__image {
-      height:150px;
-      background-size: cover;
-      background-position: center;
-      margin:auto;
-
-    }
-
-    //dates of exhibit
-    .exhibit-preview__dates {
-        position: relative;
-        display:flex;
-        left:-5px;
-
-        .new-exhibit {
-          padding-right: 10px;
-        }
-
-        p {
-          font-family: 'Roboto', sans-serif;
-          font-size:.8em;
-          font-weight: bold !important;
-          text-transform: uppercase;
-          background-color: white;
-          height:30px;
-          padding:5px;
-          color:black;
-        }
-
-      @include grid-media($medium) {
-        top:-45px;
-        left:-3px;
-      }
-    }
-
-    //title, summary and 'read more'
-    .exhibit__words-box {
-      width:100%;
-      padding: 0;
-      margin:auto;
-      position: relative;
-      top:-30px;
-      left:5px;
-
-      h1.exhibit-preview__title {
-        position: relative;
-        margin-top:1em;
-        font-family: 'Lora', sans-serif;
-        font-weight: lighter;
-        font-size:1.3em;
-        margin-bottom:0;
-
-        @include grid-media($medium) {
-          font-size: 2em;
-        }
-      }
-
-      p, a {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
-      }
-
-      a {
-        font-weight:500;
-      }
-
-      //little arrow that appears next to 'learn more'
-      .exhibit__learn-more-arrow {
-        height:20px;
-        position: relative;
-        top:3px;
-
-        @include grid-media($medium) {
-          height:30px;
-          margin-left:5px;
-          top:5px;
-        }
-      }
-
-      @include grid-media($medium) { //padding for words box on mobile
-        padding:3em 2em 0em 2em;
-        left:-5px;
-      }
-
-      .exhibit-preview__title {
-        position: relative;
-        top: -15px;
-
-        @include grid-media($medium) {
-          font-size: 2em;
-          position: relative;
-          left: 5px;
-        }
-      }
-    }
-
-    @include grid-media($medium) { //makes the whole exhibit stretch to full width on mobile & removes extra padding
-      width:100%;
-      flex-basis:100%;
-      padding:0;
-    }
-  }
-
-  @include grid-media($medium) { //makes the content-container stretch to full width on mobile
-    width:100%;
-    padding:0;
+    font-size: 1.25em;
   }
 }
+
+.exhibit-preview__summary-text {
+  margin-left: $small-spacing;
+}
+
+
+// hero version
+.exhibit--hero {
+  position: relative;
+  margin-bottom: $base-spacing;
+
+  @include grid-media($medium) {
+    margin-bottom: 0;
+  }
+
+  .exhibit-preview__dates {
+    font-size: 1.5em;
+    p {
+      padding: 0 $small-spacing;
+    }
+
+    @include grid-media($medium) {
+      position: absolute;
+      bottom: 100%;
+      z-index: 99;
+      font-size: 1em;
+
+      p {
+        padding: .5em $small-spacing;
+      }
+    }
+  }
+
+  .exhibit-preview__summary-text {
+    font-size: 1.25em;
+    max-width: 80%;
+
+    @include grid-media($medium) {
+      max-width: 100%;
+    }
+  }
+
+  .hero-header__words-box {
+    @include grid-media($medium) {
+      margin-top: 0rem;
+    }
+  }
+}
+
 
 //hides the below div on desktop
 .exhibit__learn-more-mobile {
   display:none;
 }
 
-//the 'now showing' div that appears at the top of the page only on mobile
-.section-hr-mobile {
-  display:none;
-  text-align: center;
-  margin:auto;
-  height:30px;
-  padding-top:3em;
-  padding-bottom:0em;
-
-  hr {
-    position:relative;
-    top:-73px;
-    padding-top:0px;
-    padding-bottom:10px;
-    width:100% !important;
-    color:black;
-  }
-
-  .section-hr__h5 {
-    width:225px;
-    position:relative;
-    margin:auto;
-    top:-120px;
-    margin: auto;
-    padding-left:3px;
-    padding-right:3px;
-    background-color:white;
-
-    h5 {
-        font-family:'Roboto', sans-serif;
-        text-transform: uppercase;
-        font-size:25px;
-    }
-  }
-}
-
 //a bunch of things included for the media query
 @include grid-media($medium) {
   #featured-exhibits {
     margin:1em 0em;
-  }
-
-  .exhibit-preview__dates {
-    left:5px;
-
-  .start-date {
-      padding-left: 10px;
-    }
   }
 
   .exhibit-preview__summary-text {
@@ -322,12 +147,5 @@
 
   .section-hr-mobile {
     display:block;
-  }
-
-  .exhibit-preview__title {
-    width:90%;
-    display:inline;
-    position:relative;
-    left: .65em;
   }
 }

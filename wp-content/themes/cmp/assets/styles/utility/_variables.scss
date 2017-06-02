@@ -11,12 +11,15 @@ $max-width: 1300px;
 $base-spacing: 2rem;
 $small-spacing: $base-spacing / 2;
 $large-spacing: $base-spacing * 2;
+$extra-large-spacing: $base-spacing * 3;
 
 // Colors
 $dark-gray: #333;
+$medium-dark-gray: #666;
 $medium-gray: #999;
 $light-gray: #ccc;
 $base-color: #88B04B;
+$dark-color: darken($base-color, 15);
 
 // Font Colors
 $base-font-color: $dark-gray;
@@ -32,14 +35,8 @@ $secondary-background-color: $dark-gray;
 $base-border-color: $light-gray;
 $base-border-radius: 3px;
 $base-border: 1px solid $base-border-color;
+$inverse-border: 1px solid $dark-gray;
 
 //Nav colors
 $nav-dropdown: #6F774A;
 $nav-hover: #95A064;
-
-  //mobile nav
-  $nav-link-mobile: #525354;
-  $nav-link-mobile-active: #6F774A;
-  $nav-sub-item-mobile: #A8A9AA;
-  $nav-prim: #96a061;
-  $nav-sec: #535353;

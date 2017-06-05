@@ -257,8 +257,8 @@ ul.desktop-nav {
   }
 
 }
-//////////////////////////////////////////////////////////////// dtn
-.nav-desktop-container {
+
+.desktop-nav-container {
   max-width: none;
   background: #fff;
   display: block;
@@ -287,8 +287,9 @@ ul.desktop-nav {
 
 }
 
-.nav-global,
-.nav-global-persistant {
+// Top bar nav
+////////////////////////////////////////////////////////////////
+.top-bar-nav {
   position: relative;
   margin: 0;
   padding: 0;
@@ -333,73 +334,10 @@ ul.desktop-nav {
       color: #fff;
     }
   }
-
-  .current-menu-item a,
-  .current-page-ancestor a,
-  .current-menu-ancestor a
-   {
-    border-bottom: solid 3px $base-color;
-  }
-
-  // dropdowns
-
-  .menu-item-has-children{
-    > a {
-      // @include icon--chevron;
-      &:after{
-        content: "›"
-      }
-    }
-
-    a:before {
-      position: relative;
-      top: .5em;
-      margin-left: .25em;
-      float: right;
-      display: block;
-      font-size: .75em;
-      transform: rotate(180deg);
-    }
-
-    &:hover {
-      .sub-menu {
-        display: block;
-      }
-    }
-  }
-
-  .sub-menu {
-    position: absolute;
-    top: 100%;
-    min-width: 100%;
-    display: none;
-    background: $base-color;
-
-    li:hover {
-      background: $dark-color;
-    }
-
-    a {
-      color: #fff;
-      background: none;
-    }
-
-    .current-menu-item a{
-      border-bottom: none;
-    }
-  }
 }
 
 
-.nav-global {
-  flex-grow: 1;
-  @include grid-media($nav-break) {
-    display: none;
-  }
-}
-
-
-// Global Nav Icons
+// Nav Icons
 ////////////////////////////////////////////////////////////////////////////////
 .nav-icon {
   position: relative;
@@ -476,10 +414,8 @@ ul.desktop-nav {
 
 .nav-icon.is-active i,
 .is-active .nav-icon i{
-  // @include icon--close;
-  &:after{
-    content: 'x';
-  }
+  @include icon--close;
+
   animation: pop-in 1s ease-in 0s 1 normal none;
   color: #fff;
 }
@@ -489,8 +425,64 @@ ul.desktop-nav {
   animation: pop-out 1s ease-in 0s 1 normal none;
 }
 
-// Global Nav in Tray
+
+// Quickview nav (mobile)
 ///////////////////////////////////////////////////////////////////////////////
+// .current-menu-item a,
+// .current-page-ancestor a,
+// .current-menu-ancestor a
+//  {
+//   border-bottom: solid 3px $base-color;
+// }
+//
+// // dropdowns
+//
+// .menu-item-has-children{
+//   > a {
+//     // @include icon--chevron;
+//     &:after{
+//       content: "›"
+//     }
+//   }
+//
+//   a:before {
+//     position: relative;
+//     top: .5em;
+//     margin-left: .25em;
+//     float: right;
+//     display: block;
+//     font-size: .75em;
+//     transform: rotate(180deg);
+//   }
+//
+//   &:hover {
+//     .sub-menu {
+//       display: block;
+//     }
+//   }
+// }
+//
+// .sub-menu {
+//   position: absolute;
+//   top: 100%;
+//   min-width: 100%;
+//   display: none;
+//   background: $base-color;
+//
+//   li:hover {
+//     background: $dark-color;
+//   }
+//
+//   a {
+//     color: #fff;
+//     background: none;
+//   }
+//
+//   .current-menu-item a{
+//     border-bottom: none;
+//   }
+// }
+
 .quickview.quickview-nav {
   padding: 0;
 
@@ -507,13 +499,18 @@ ul.desktop-nav {
   li {
     position: relative;
     display: block;
+    width: 100%;
     padding: 0;
     margin: 0;
+    overflow: hidden;
   }
 
   a {
+    display: block;
+    width: 100%;
     padding: $small-spacing $base-spacing;
     border-top: $inverse-border;
+    color: #fff;
 
     &:hover {
       color: #fff;
@@ -524,16 +521,11 @@ ul.desktop-nav {
 
 
 // level 1
-.quickview-nav > ul{
+.quickview-nav > div > ul{
   > li {
       margin: 0;
       padding: 0;
-      // @include icon--chevron;
-      &:after{
-        content: '›';
-      }
-
-
+      border-bottom: solid 1px $medium-dark-gray;
 
     > a {
       font-size: 1.25em;
@@ -572,10 +564,7 @@ ul.desktop-nav {
 }
 
 .quickview-nav__expand {
-  // @include icon--chevron;
-  &:after{
-    content: '›';
-  }
+  @include icon--chevron;
   position: absolute;
   top: 0;
   right: 0;
@@ -595,6 +584,10 @@ ul.desktop-nav {
     font-size: .5em;
     transition: all .3s;
     transform: rotate(-180deg);
+  }
+
+  + .sub-menu {
+    max-height: 0;
   }
 }
 

@@ -4,32 +4,35 @@
     <a href="#" class="button">Subscribe</a>
   </form>
 
-  <!-- visit callout -->
-  <a href="#visit" class="quickview-btn nav-callout" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
-    <div >
-      <span>Plan Your Visit</span>
-      <span itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="open-times"></span>
-    </div>
-    <span class="nav-icon nav-icon-visit">
-      <i class="icon -visit" aria-hidden="true"></i>
-    </span>
-  </a>
 
-  <!-- persistant global nav -->
-  <ul class="nav-global-persistant"  >
-    <li>
-      <button  class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
-        <i class="icon -search" aria-hidden="true">S</i>
-      </button>
-    </li>
-
-    <li>
-      <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
-        <i class="icon -hamburger" aria-hidden="true">=</i>
-      </button>
-    </li>
-  </ul>
-
+  <nav>
+    <ul class="top-bar-nav">
+      <!-- visit callout btn-->
+      <li>
+        <a href="#visit" class="quickview-btn nav-callout" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
+          <div >
+            <span>Plan Your Visit</span>
+            <span itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="open-times"></span>
+          </div>
+          <span class="nav-icon nav-icon-visit">
+            <i class="icon -visit" aria-hidden="true"></i>
+          </span>
+        </a>
+      </li>
+      <!-- search nav btn-->
+      <li>
+        <button  class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
+          <i class="icon -search" aria-hidden="true"></i>
+        </button>
+      </li>
+      <!-- mobile nav btn-->
+      <li>
+        <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
+          <i class="icon -hamburger" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
 
 </header>
 
@@ -54,6 +57,7 @@
 
 <!-- quickview tray -->
 <header class="quickview-container">
+  <!-- quick visit -->
   <div class="quickview quickview-visit" id="visit">
     <figure itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="quickview-visit--details">
       <figcaption>Hours</figcaption>
@@ -78,14 +82,16 @@
     </figure>
   </div>
 
-  <div class="quickview quickview-nav" id="quickview-nav">
+  <!-- mobile nav  -->
+  <nav class="quickview quickview-nav" id="quickview-nav" role='navigation' aria-label="Global navigation" >
     <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => '', 'menu_class' => 'nav-global']);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => '']);
       endif;
     ?>
-  </div>
+  </nav>
 
+  <!-- search  -->
   <div class="quickview" id="search" >
     <form class="form-search" action="/" method="get" role="search">
       <legend class="screen-reader-text">Search form</legend>
@@ -96,19 +102,20 @@
       <button type="submit" class="btn" title="Start search"><i class="icon -search"></i></button>
     </form>
   </div>
+
 </header>
 <div class="quickview-overlay"></div>
 
+<!-- main header -->
 <header class="header-main">
 
   <a href="/">
     <img src="<?= App\asset_path('images/logo--cmp.svg') ?>" alt="" class="site-header--logo"/>
   </a>
 
-    <!-- global nav primary-->
-    <nav class="nav-desktop-container" role='navigation' aria-label="Global navigation">
+    <!-- desktop nav-->
+    <nav class="desktop-nav-container" role='navigation' aria-label="Global navigation">
 
-      <!-- global nav -->
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'desktop-nav']) !!}
       @endif

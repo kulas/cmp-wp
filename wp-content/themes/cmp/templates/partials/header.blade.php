@@ -97,7 +97,6 @@
     </form>
   </div>
 </header>
-
 <div class="quickview-overlay"></div>
 
 <header class="header-main">

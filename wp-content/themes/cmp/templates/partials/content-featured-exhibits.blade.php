@@ -29,8 +29,8 @@
 
             <div class="exhibit-preview__summary">
 
-              <h2 class="hero-header__words-box button--link">
-                <a href="{{ the_sub_field('link') }}">{{ the_sub_field('title') }}</a>
+              <h2 class="hero-header__words-box ">
+                <a href="{{ the_sub_field('link') }}" class="button--link">{{ the_sub_field('title') }}</a>
 
               </h2>
 

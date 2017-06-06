@@ -1,59 +1,39 @@
-<header class="top-bar">
-  <form class="" action="index.html" method="post">
-    <input type="text" name="" value="">
-    <a href="#" class="button">Subscribe</a>
-  </form>
+<header class="top-bar-container">
+  <div class="top-bar">
+    <form class="top-bar__form" action="index.html" method="post">
+      <input type="text" name="" value="" placeholder="enter your email">
+      <a href="#" class="button">Subscribe</a>
+    </form>
 
 
-  <nav>
-    <ul class="top-bar-nav">
-      <!-- visit callout btn-->
-      <li>
-        <a href="#visit" class="quickview-btn nav-callout" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
-          <div >
+    <nav>
+      <ul class="top-bar-nav">
+        <!-- visit callout btn-->
+        <li>
+          <a href="#visit" class="quickview-btn nav-visit" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
             <span>Plan Your Visit</span>
-            <span itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="open-times"></span>
-          </div>
-          <span class="nav-icon nav-icon-visit">
-            <i class="icon -visit" aria-hidden="true"></i>
-          </span>
-        </a>
-      </li>
-      <!-- search nav btn-->
-      <li>
-        <button  class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
-          <i class="icon -search" aria-hidden="true"></i>
-        </button>
-      </li>
-      <!-- mobile nav btn-->
-      <li>
-        <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
-          <i class="icon -hamburger" aria-hidden="true"></i>
-        </button>
-      </li>
-    </ul>
-  </nav>
-
+            <span class="nav-icon nav-icon-visit">
+              <i class="icon -visit" aria-hidden="true"></i>
+            </span>
+          </a>
+        </li>
+        <!-- search nav btn-->
+        <li>
+          <button  class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
+            <i class="icon -search" aria-hidden="true"></i>
+          </button>
+        </li>
+        <!-- mobile nav btn-->
+        <li>
+          <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
+            <i class="icon -hamburger" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-{{-- <div class="top-search-bar">
-
-  <div class="searchbar-buttons">
-    <button>Join</button>
-    <button>Donate</button>
-  </div>
-
-  <form class="form-search" action="/" method="get" role="search">
-    <legend class="screen-reader-text">Search form</legend>
-    <fieldset>
-      <label for="search-field">Search</label>
-      <input type="text" name="s" placeholder="Search" />
-    </fieldset>
-    <button type="button" id="top-search-bar__button" name="button">
-      <i class="fa fa-search" aria-hidden="true"></i></button>
-  </form>
-
-</div> --}}
 
 <!-- quickview tray -->
 <header class="quickview-container">
@@ -94,12 +74,12 @@
   <!-- search  -->
   <div class="quickview" id="search" >
     <form class="form-search" action="/" method="get" role="search">
-      <legend class="screen-reader-text">Search form</legend>
+      {{-- <legend class="screen-reader-text">Search form</legend> --}}
       <fieldset>
-        <input type="text" id="search-field" name="s" value="">
-        <label for="search-field"> Search</label>
+        <input type="text" id="search-field" placeholder="search" name="s" value="">
+        {{-- <label for="search-field"> Search</label> --}}
       </fieldset>
-      <button type="submit" class="btn" title="Start search"><i class="icon -search"></i></button>
+      <button type="submit" class="btn" title="Start search"><i class="icon -search button"></i></button>
     </form>
   </div>
 

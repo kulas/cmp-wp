@@ -6,7 +6,7 @@
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  <div class="hero-image" style="background-image:url('{{ the_field('header') }}')">
+  <div class="hero-header" style="background-image:url('{{ the_field('header') }}')">
     <h1>{{ the_title() }}</h1>
   </div>
 

@@ -1,8 +1,8 @@
 {{--
-  Template Name: Basic Template With Header
+  Template Name: Member Events
 --}}
 
-<div class="basic-header">
+<div class="member-events">
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -28,12 +28,6 @@
 
   <hr>
 
-    <div class="main-text">
       {{ the_content() }}
-    </div>
-
-  </div>
-
-  <?php endwhile; else: endif; ?>
 
 </div>

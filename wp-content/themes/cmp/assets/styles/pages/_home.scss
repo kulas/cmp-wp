@@ -13,14 +13,14 @@ p {
     position: relative;
     text-align: center;
     width: 100%;
-    max-width: 1300px;
+    max-width: $max-width;
     margin: auto;
     margin-bottom: $large-spacing;
     padding: 0 $base-spacing;
     text-align: center;
 
     @include grid-media($medium) {
-      padding:1em 0em;
+      margin-bottom: $base-spacing;
     }
 
     hr {

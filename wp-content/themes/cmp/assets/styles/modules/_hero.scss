@@ -1,27 +1,27 @@
 .hero-header {
-    height: 500px;
+    height: 600px;
     width:100%;
     margin-bottom:10px;
     background-size:cover;
-    background-position: top center;
+    background-position: center center;
 
     @include grid-media($extra-large) {
-      height:450px;
+      height:500px;
     }
     @include grid-media($large) {
-      height: 350px;
+      height: 400px;
     }
     @include grid-media($medium) {
-      height: 250px;
+      height: 300px;
     }
     @include grid-media($small) {
-      height: 150px;
+      height: 200px;
     }
 }
 
 .hero-header__words-box {
   position: relative;
-  display: block;
+  display: inline-block;
   width: auto;
   margin-top: -1em;
   max-width: 100%;

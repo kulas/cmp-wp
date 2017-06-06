@@ -1,0 +1,17 @@
+.member-events {
+
+  .event {
+    display: flex;
+    height:200px;
+  }
+
+  .activity__image {
+    padding-right:.5em;
+    height:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+  }
+
+}

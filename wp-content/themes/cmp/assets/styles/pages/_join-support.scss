@@ -20,7 +20,7 @@
     }
 
     p {
-      max-width: 60%;
+      // max-width: 60%;
 
       @include grid-media($medium) {
         max-width:100%;
@@ -35,8 +35,11 @@
   }
 
   .sub-page {
+    flex-basis: 48%;
+  }
+
+  .sub-page__background {
     height: 200px;
-    flex-basis:48%;
     background-size: cover;
 
     h3 {

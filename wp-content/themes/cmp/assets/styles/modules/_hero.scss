@@ -21,11 +21,10 @@
 
 .hero-header__words-box {
   position: relative;
-  display: inline-block;
-  width: auto;
+  display: block;
+  max-width: 100%;
   margin-top: -1em;
   padding: .3em .6em;
-  background: #fff;
   font-size: 2em;
   margin-bottom:0;
 
@@ -36,7 +35,7 @@
   }
 
   @media (min-width: 1300px) {
-    
+
 
   }
 }
@@ -44,6 +43,7 @@
 h1.hero-header__words-box {
   font-size: 3em;
   font-weight: 400;
+  background: #fff;
   @include grid-media($medium) {
     font-size: 2em;
   }

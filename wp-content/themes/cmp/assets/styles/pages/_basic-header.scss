@@ -1,31 +1,5 @@
 .basic-header {
 
-  .content-container {
-    padding-top:1em;
-    display: block;
-
-    @include grid-media($medium) {
-      padding: 1em;
-    }
-  }
-
-  h1 {
-    background-color: white;
-    display:inline-block;
-    position: relative;
-    top:290px;
-    font: 'Lora', serif;
-    padding:0.3em 1.2em 0em 1.2em;
-    font-weight: lighter;
-
-    @include grid-media($medium) {
-      // padding:0;
-      top:102px;
-      left:0;
-      padding:0.3em 1.2em 0em .5em;
-    }
-  }
-
   .wpcf7 {
     width:50%;
 
@@ -106,4 +80,8 @@ p {
 
 label {
   margin:0;
+}
+
+ul > li {
+  font-weight:300;
 }

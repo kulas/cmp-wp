@@ -213,6 +213,11 @@ img.alignright {
     width:100%;
   }
 
+  .breadcrumb-container {
+    display: block;
+    width:100%;
+  }
+
   .nav-breadcrumb {
     display:flex;
 
@@ -307,4 +312,24 @@ ul.tab-content {
     display: none;
   }
 
+}
+
+p.main-text {
+  max-width:60%;
+
+  @include grid-media($medium) {
+    max-width:100%;
+  }
+}
+
+table {
+  width:100% !important;
+}
+
+td {
+  padding:1em 1em 1em 0em;
+
+  p {
+    font-size:.9em;
+  }
 }

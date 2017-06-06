@@ -4,9 +4,9 @@
 
 <div id="learn-with-us">
 
-  <div class="hero-image" style="background-image:url('/wp-content/themes/cmp/assets/images/learn-with-us.png')">
+  <div class="hero-header" style="background-image:url('/wp-content/themes/cmp/assets/images/learn-with-us.png')">
 
-    <div class="hero-image__text">
+    <div class="hero-header__text">
       <h1>Learn With Us</h1>
     </div>
 

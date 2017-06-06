@@ -25,59 +25,6 @@
       padding:0.3em 1.2em 0em .5em;
     }
   }
-  
-  .osc-res-tab .nav-tabs {
-    border: none !important;
-    overflow: hidden;
-  }
-
-  ul.tab-content {
-    border: solid #96A061;
-    border-width: 8px 0px 0px 0px;
-    z-index: 5;
-  }
-
-  .osc-res-tab {
-    width:100%;
-
-      ul.nav {
-        justify-content: flex-start;
-      }
-
-      a {
-        color: #96A061;
-      }
-
-      li > a {
-        color: black;
-      }
-  }
-
-  .osc-res-tab .nav-tabs>li > a,
-  .osc-res-tab .nav-tabs>li.active>a,
-  .osc-res-tab .nav-tabs>li.active>a:hover,
-  .osc-res-tab .nav-tabs>li.active>a:focus {
-    border:0;
-    margin:0;
-    border-radius:0;
-    top:2px;
-    color:white;
-    text-transform:uppercase;
-    transition: .3s all;
-    overflow: hidden;
-  }
-
-  .osc-res-tab .nav-tabs>li > a {
-    color:black;
-  }
-
-  .osc-res-tab .nav-tabs>li > a:hover,
-  .osc-res-tab .nav-tabs>li.active>a,
-  .osc-res-tab .nav-tabs>li.active>a:hover,
-  .osc-res-tab .nav-tabs>li.active>a:focus {
-
-    background-color:#96A061;
-  }
 
   .wpcf7 {
     width:50%;
@@ -145,6 +92,18 @@
   hr {
     // padding:0;
     margin:0;
-    margin-bottom:$small-spacing;
+    margin-bottom:0.5em;
   }
+}
+
+br {
+  height:0px;
+}
+
+p {
+  padding-bottom: 0.5em !important;
+}
+
+label {
+  margin:0;
 }

@@ -1,5 +1,5 @@
 {{--
-  Template Name: Basic Template With Header
+  Template Name: Plan a Visit
 --}}
 
 <div class="basic-header">
@@ -11,18 +11,6 @@
   </div> --}}
 
   <div class="content-container">
-
-  <div class="nav-breadcrumb">
-
-    <?php if(function_exists('bcn_display'))
-      {
-          bcn_display();
-      }
-    ?>
-
-  </div>
-
-  <hr>
 
     <div class="main-text">
       {{ the_content() }}

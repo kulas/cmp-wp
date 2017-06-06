@@ -1,8 +1,5 @@
 // HOME PAGE STYLES
 ////////////////////////////////////////////////////////////////
-a {
-  color: #96A061;
-}
 
 p {
   font-weight: 300;
@@ -46,17 +43,6 @@ p {
 
       }
   }
-}
-
-.green-button {
-  border:none;
-  border-radius:2px;
-  text-transform: uppercase;
-  padding: 0.5em 1em;
-  color:white;
-  background-color: #96A061;
-  font-size:.9em;
-  margin-top:5px;
 }
 
 .mobile-hide {
@@ -185,18 +171,6 @@ p {
           margin-right:1em;
         }
       }
-    }
-  }
-
-  .learn-more-arrow {
-    height:20px;
-    position: relative;
-    top:3px;
-
-    @include grid-media($medium) {
-      height:25px;
-      left:10px;
-      top:-12px;
     }
   }
 

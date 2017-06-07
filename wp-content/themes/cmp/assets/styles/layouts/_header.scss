@@ -7,11 +7,26 @@
 .top-bar-container {
   position: relative;
   background: #eaeaea;
-  z-index: 1001;
+  z-index: 9999;
 
   @include grid-media($nav-break) {
     background: $base-color;
   }
+}
+
+// fixed but hidden
+.top-bar-container.is-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  border-bottom: $base-border;
+}
+
+// slide the bar down when visible
+.top-bar-container.is-visible {
+  transform: translateY(0);
+  transition: all .3s;
 }
 
 .top-bar {

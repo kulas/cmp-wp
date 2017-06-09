@@ -11,6 +11,10 @@
   }
 }
 
+.hero-header__words-box .button--link {
+  left:0;
+}
+
 //individual exhibits
 .exhibit {
   padding-top:0 ;
@@ -49,6 +53,7 @@
     position: relative;
     display:flex;
     margin-top: -1rem;
+    padding-top:1em;
 
     p {
       font-family: 'Roboto', sans-serif;

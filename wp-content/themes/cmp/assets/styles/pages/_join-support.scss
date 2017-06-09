@@ -40,6 +40,10 @@
       p {
         padding-top:.5em;
       }
+
+      @include grid-media($medium) {
+        flex-basis: 100%;
+      }
   }
 
   .sub-page__background {

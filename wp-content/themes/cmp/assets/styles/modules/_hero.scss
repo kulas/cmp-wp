@@ -28,6 +28,7 @@
   padding: .3em .6em;
   font-size: 2em;
   margin-bottom:0;
+  left:-.6em;
 
   @include grid-media($medium) {
     max-width: 100%;

@@ -57,6 +57,7 @@ p {
   background-color: #96A061;
   font-size:.9em;
   margin-top:5px;
+  margin-bottom: $small-spacing;
 }
 
 .mobile-hide {
@@ -335,6 +336,10 @@ td {
   p {
     font-size:.9em;
   }
+}
+
+h2.hero-header__words-box {
+  left:0 !important;
 }
 
 // .main-text {

@@ -2,16 +2,41 @@
 
   .event {
     display: flex;
-    height:200px;
+    align-items: flex-start;
   }
 
   .activity__image {
     padding-right:.5em;
-    height:200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden
+    flex-basis:33%;
+    height:100%;
+    display:inline-block;
+    overflow: hidden;
+    object-fit: fill;
+
+    @include grid-media($medium) {
+      display: none;
+    }
+  }
+
+  .activity__image > img {
+      object-fit: cover;
+  }
+
+  .activity__content {
+    flex-basis: 66%;
+
+    @include grid-media($medium) {
+      flex-basis:100%;
+    }
+
+    h3 {
+      margin:0;
+    }
+  }
+
+
+  hr {
+    padding: .5em 0em;
   }
 
 }

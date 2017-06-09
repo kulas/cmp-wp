@@ -311,7 +311,10 @@ ul.tab-content {
   @include grid-media($medium) {
     display: none;
   }
+}
 
+.osc-res-tab .nav-tabs > li a {
+  font-weight: 400;
 }
 
 p.main-text {
@@ -333,3 +336,11 @@ td {
     font-size:.9em;
   }
 }
+
+// .main-text {
+//   max-width: 60%;
+//
+//   @include grid-media($medium) {
+//     max-width:100%;
+//   }
+// }

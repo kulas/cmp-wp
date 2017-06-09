@@ -1,0 +1,26 @@
+.member-perks {
+
+  .sub-page-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sub-page {
+    flex-basis:24%;
+    text-align: center;
+  }
+
+  .sub-page__image {
+    width:100%;
+  }
+
+  .contact-us {
+    padding-bottom: $small-spacing;
+  }
+
+  hr {
+    padding: 0;
+    margin:$small-spacing 0;
+  }
+
+}

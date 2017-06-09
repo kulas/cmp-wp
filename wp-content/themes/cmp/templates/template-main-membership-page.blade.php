@@ -1,12 +1,12 @@
 {{--
-  Template Name: Join and Support
+  Template Name: Main Membership Page
 --}}
 
 @extends('layouts.base')
 
 @section('content')
 
-  @include('partials.content-join-support')
+  @include('partials.content-things-to-do-page')
   @include('partials.content-member-perks')
 
 @endsection

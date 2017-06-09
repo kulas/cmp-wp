@@ -18,24 +18,28 @@
       font-size:2.5em;
       font-weight:300;
     }
+  }
 
-    p {
-      // max-width: 60%;
+  .main-text {
+    max-width: 60%;
 
-      @include grid-media($medium) {
-        max-width:100%;
-      }
+    @include grid-media($medium) {
+      max-width:100%;
     }
   }
 
   .sub-pages {
     display: flex;
-    padding-bottom: 3em;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .sub-page {
     flex-basis: 48%;
+    padding: 1em 0em;
+      p {
+        padding-top:.5em;
+      }
   }
 
   .sub-page__background {
@@ -64,8 +68,4 @@
       display: inline-block;
     }
   }
-
-
-
-
 }

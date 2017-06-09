@@ -1,5 +1,5 @@
 {{--
-  Template Name: Plan a Visit
+  Template Name: Simple Header No Breadcrumb
 --}}
 
 <div class="basic-header">

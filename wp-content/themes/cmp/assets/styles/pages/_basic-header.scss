@@ -1,5 +1,13 @@
 .basic-header {
 
+  .content-container {
+    padding-bottom: 1em;
+  }
+
+  .main-text {
+    padding-bottom: $small-spacing;
+  }
+
   .wpcf7 {
     width:50%;
 
@@ -68,20 +76,29 @@
     margin:0;
     margin-bottom:0.5em;
   }
-}
 
-br {
-  height:0px;
-}
+  br {
+    height:0px;
+  }
 
-p {
-  padding-bottom: 0.5em !important;
-}
+  p {
+    padding-bottom: 0.5em !important;
+  }
 
-label {
-  margin:0;
-}
+  label {
+    margin:0;
+  }
 
-ul > li {
-  font-weight:300;
+  ul > li {
+    font-weight:300;
+  }
+
+  td {
+    border-bottom:none;
+  }
+
+  tr:nth-child(1) {
+    border-bottom:1px;
+  }
+
 }

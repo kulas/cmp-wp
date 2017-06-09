@@ -1,12 +1,12 @@
 {{--
-  Template Name: Join and Support
+  Template Name: Simple Header No Breadcrumb
 --}}
 
 @extends('layouts.base')
 
 @section('content')
 
-  @include('partials.content-join-support')
+  @include('partials.content-simple-header-no-breadcrumb')
   @include('partials.content-member-perks')
 
 @endsection

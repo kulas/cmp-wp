@@ -15,11 +15,9 @@
 
     <div class="content-container">
 
-      <h1 class="hero-header__words-box">You Belong Here</h1>
+      <h1 class="hero-header__words-box">{{ the_title() }}</h1>
 
-      <p class="main-text">{{ the_content() }}</p>
-
-      <hr>
+      <div class="main-text">{{ the_content() }}</div>
 
       <div class="sub-pages">
 

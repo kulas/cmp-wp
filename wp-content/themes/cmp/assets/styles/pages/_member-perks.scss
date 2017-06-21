@@ -3,11 +3,16 @@
   .sub-page-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .sub-page {
     flex-basis:24%;
     text-align: center;
+
+    @include grid-media($medium) {
+      flex-basis: 49%;
+    }
   }
 
   .sub-page__image {
@@ -15,12 +20,11 @@
   }
 
   .contact-us {
-    padding-bottom: $small-spacing;
+    padding-bottom: $base-spacing;
   }
 
   hr {
     padding: 0;
     margin:$small-spacing 0;
   }
-
 }

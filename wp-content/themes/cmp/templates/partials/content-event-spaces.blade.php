@@ -6,15 +6,13 @@
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  <div class="hero-header" style="background-image:url('{{ the_field('header') }}')">
-    <h1>{{ the_title() }}</h1>
-  </div>
+  <div class="hero-header" style="background-image:url('{{ the_field('header') }}')"></div>
 
   <div class="content-container">
 
-      <div class="main-text">
-        {{ the_content() }}
-      </div>
+      <h1 class="hero-header__words-box">{{ the_title() }}</h1>
+
+      <div class="main-text">{{ the_content() }}</div>
 
       <div class="spaces">
 
@@ -26,12 +24,11 @@
 
             <div class="event-space__image-container">
               <img src="{{ the_sub_field('image') }}" />
+              <h2>{{ the_sub_field('name') }}</h2>
             </div>
-
-            <h2>{{ the_sub_field('name') }}</h2>
-            <p>{{ the_sub_field('description') }}</p>
-
           </a>
+
+          <p>{{ the_sub_field('description') }}</p>
 
         </div>
 

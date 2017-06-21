@@ -221,6 +221,7 @@ img.alignright {
 
   .nav-breadcrumb {
     display:flex;
+    padding: $small-spacing 0;
 
     a {
       font-size:.9em;
@@ -314,8 +315,13 @@ ul.tab-content {
   }
 }
 
-.osc-res-tab .nav-tabs > li a {
+.osc-res-tab .nav-tabs > li > a {
   font-weight: 400;
+
+  @include grid-media($large) {
+    font-size: .9em;
+    padding: 5px 7px;
+  }
 }
 
 p.main-text {
@@ -341,11 +347,3 @@ td {
 h2.hero-header__words-box {
   left:0 !important;
 }
-
-// .main-text {
-//   max-width: 60%;
-//
-//   @include grid-media($medium) {
-//     max-width:100%;
-//   }
-// }

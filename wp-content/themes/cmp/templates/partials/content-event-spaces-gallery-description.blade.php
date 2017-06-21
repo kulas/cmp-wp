@@ -1,5 +1,5 @@
 {{--
-  Template Name: Event Spaces Gallery
+  Template Name: Event Spaces Gallery Description
 --}}
 
 <div class="event-spaces-gallery">
@@ -8,27 +8,21 @@
 
   <div class="content-container">
 
-    <div class="nav-breadcrumb">
-
-      <?php if(function_exists('bcn_display'))
-        {
-            bcn_display();
-        }
-      ?>
-
-    </div>
-
       <div class="spaces">
 
         <?php if( have_rows('event_space') ): while ( have_rows('event_space') ) : the_row(); ?>
 
           <div class="event-space">
 
-                <div class="event-space__image-container">
-                  <img src="{{ the_sub_field('image') }}" />
+                <div class="event-space__image-container" style="background-image:url('{{ the_sub_field('image') }}')">
+                  {{-- <img src="{{ the_sub_field('image') }}" /> --}}
+                  <div class="event-space__description">
+                    {{ the_sub_field('detailed_description') }}
+                  </div>
                 </div>
 
                 <h2>{{ the_sub_field('name') }}</h2>
+                {{-- <p>{{ the_sub_field('description') }}</p> --}}
 
           </div>
 

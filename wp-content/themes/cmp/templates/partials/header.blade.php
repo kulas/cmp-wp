@@ -1,10 +1,17 @@
 <header class="top-bar-container">
   <div class="top-bar">
-    <form class="top-bar__form" action="index.html" method="post">
-      <input type="text" name="" value="" placeholder="enter your email">
-      <a href="#" class="button">Subscribe</a>
-    </form>
 
+    <div class="top-bar__left">
+
+      <form class="top-bar__form" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder="Enter your email">
+        <button class="green-button" id="top-bar__subscribe-button" href="#">Subscribe</a>
+      </form>
+
+      <button class="green-button">Join</a>
+      <button class="green-button">Donate</a>
+
+    </div>
 
     <nav>
       <ul class="top-bar-nav">

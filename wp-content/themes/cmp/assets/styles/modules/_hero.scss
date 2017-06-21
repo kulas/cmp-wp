@@ -4,6 +4,9 @@
     margin-bottom:10px;
     background-size:cover;
     background-position: center center;
+    // z-index:1002;
+    position: relative;
+    // top: -1px;
 
     @include grid-media($extra-large) {
       height:500px;

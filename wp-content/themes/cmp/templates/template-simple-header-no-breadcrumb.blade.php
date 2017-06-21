@@ -7,6 +7,5 @@
 @section('content')
 
   @include('partials.content-simple-header-no-breadcrumb')
-  @include('partials.content-member-perks')
 
 @endsection

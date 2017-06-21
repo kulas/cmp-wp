@@ -23,26 +23,50 @@
   justify-content: space-between;
   max-width: $max-width;
   margin: auto;
-  padding: 0  $base-spacing;
+  // padding: 0  $base-spacing;
   @include grid-media($nav-break) {
     justify-content: flex-end;
     padding: 0;
   }
 }
 
+.top-bar__left {
+  display: flex;
+  justify-content: space-between;
+
+  button.green-button {
+    margin-right:5px;
+    height:35px;
+    position: relative;
+    top:5px;
+    border-radius:0;
+    background-color: #88B04B;
+  }
+
+  #top-bar__subscribe-button {
+    border-radius: 0;
+  }
+}
+
 .top-bar__form {
   position: relative;
   display: flex;
-  width: 300px;
-  padding: $small-spacing 0;
+  width: 350px;
+  position: relative;
+
   @include grid-media($nav-break) {
     display: none;
   }
   input {
     margin-bottom: 0;
     padding: .5em;
+    border: 0;
+    border-radius: 0;
+    font-size: .9em;
+    height:35px;
+    position: relative;
+    top:10px;
   }
-
 }
 
 .top-bar-nav {
@@ -324,6 +348,11 @@ a.nav-visit {
   path {
     fill: #fff !important;
   }
+}
+
+//turning Plan a Visit off until CMP confirms they want this feature
+a.quickview-btn.nav-visit {
+  display: none;
 }
 
 // Quickview nav (mobile dropdown)
@@ -693,6 +722,16 @@ a.nav-visit {
       background: $dark-color;
     }
   }
+
+  #search-field {
+    border:0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  button.btn {
+    border:0;
+  }
 }
 
 
@@ -715,7 +754,6 @@ a.nav-visit {
   padding-top: $base-spacing;
   text-align: center;
   z-index: 999;
-  border-bottom: $base-border;
 
   @include grid-media($nav-break) {
     border-bottom: none;
@@ -775,10 +813,14 @@ a.nav-visit {
 .menu-primary_navigation-container {
   padding:0em 3em;
   font-family: $base-font-family;
-
+  border-bottom: $base-border;
 }
 
 // fix vv
+#menu-primary-navigation {
+  border-bottom: 5px;
+}
+
 #menu-primary-navigation li a {
   // color:black;
   font-family: sans-serif;
@@ -801,7 +843,7 @@ ul.desktop-nav {
   margin: auto;
   justify-content: space-between;
   border-top: $base-border;
-  // border-bottom: $base-border;
+  border-bottom: $base-border;
   @include grid-media($nav-break){
     display: none;
   }
@@ -814,6 +856,8 @@ ul.desktop-nav {
     text-transform: uppercase;
     position: relative;
     transition: 0.3s all;
+    text-align: left;
+
     &:active, &:hover, &.active {
       background: $nav-hover;
       color: white;
@@ -827,14 +871,18 @@ ul.desktop-nav {
     }
   }
 
+    li.current-menu-item {
+      background: $nav-hover;
+    }
+
   ul.sub-menu {
     margin-top: $small-spacing;
     padding-left: 0;
     position: absolute;
-    top:2.2em;
+    top:2.5em;
     left: 0;
     overflow: hidden;
-    z-index: 1;
+    z-index: 1003;
     height:0;
     visibility:hidden;
     opacity:0;
@@ -846,10 +894,11 @@ ul.desktop-nav {
     &.active {
       max-height: 1000px;
     }
+
     li {
       transition: 0.4s all;
       background: #6F774A;
-      width: 300px;
+      width: 250px;
       height:45px;
       color: white;
       a {
@@ -857,7 +906,7 @@ ul.desktop-nav {
         padding:1em;
         overflow:hidden;
         letter-spacing: 0.5px;
-        font-size: 0.9em;
+        font-size: 0.8em;
         color: #fff;
       }
     }
@@ -873,7 +922,7 @@ ul.desktop-nav {
 
   .sub-menu > li.menu-item > ul.sub-menu {
     position: relative;
-    left: 300px;
+    left: 249px;
     top: -61px;
   }
 

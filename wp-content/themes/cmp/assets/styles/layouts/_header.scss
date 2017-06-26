@@ -40,7 +40,11 @@
     position: relative;
     top:5px;
     border-radius:0;
-    background-color: #88B04B;
+    background-color: #95A064;
+
+    @include grid-media($nav-break) {
+      background-color: transparent;
+    }
   }
 
   #top-bar__subscribe-button {
@@ -813,7 +817,7 @@ a.quickview-btn.nav-visit {
 .menu-primary_navigation-container {
   padding:0em 3em;
   font-family: $base-font-family;
-  border-bottom: $base-border;
+  // border-bottom: $base-border;
 }
 
 // fix vv
@@ -843,7 +847,7 @@ ul.desktop-nav {
   margin: auto;
   justify-content: space-between;
   border-top: $base-border;
-  border-bottom: $base-border;
+  // border-bottom: $base-border;
   @include grid-media($nav-break){
     display: none;
   }

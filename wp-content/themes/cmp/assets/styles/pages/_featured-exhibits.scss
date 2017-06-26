@@ -11,8 +11,13 @@
   }
 }
 
-.hero-header__words-box .button--link {
+h2.hero-header__words-box.button--link {
   left:0;
+  padding-left: 0;
+
+  @include grid-media($medium) {
+    padding: $small-spacing !important;
+  }
 }
 
 //individual exhibits
@@ -29,7 +34,9 @@
 
   @include grid-media($medium) {
     width: 100%;
-    &:nth-last-child(2) {
+    margin-bottom: 0;
+
+    &.last-child {
       margin-bottom: $base-spacing;
     }
   }
@@ -92,7 +99,7 @@
   margin-bottom: $base-spacing;
 
   @include grid-media($medium) {
-    margin-bottom: 0;
+    margin-bottom: $small-spacing;
   }
 
   .exhibit-preview__dates {
@@ -100,8 +107,9 @@
     display: block;
     font-size: 1.5em;
 
-    p {
-      padding: 0 $small-spacing;
+    p.start-date {
+      padding: 0;
+      margin: 0;
     }
 
     @include grid-media($medium) {
@@ -111,7 +119,7 @@
       font-size: 1em;
 
       p {
-        padding: .5em $small-spacing;
+        padding: .5em $small-spacing !important;
       }
     }
   }
@@ -119,13 +127,17 @@
   .exhibit-preview__summary-text {
     font-size: 1.25em;
     max-width: 80%;
+    margin: 0;
 
     @include grid-media($medium) {
       max-width: 100%;
     }
   }
 
-  .hero-header__words-box {
+  h2.hero-header__words-box.button--link {
+    display: block !important;
+    margin-top: 0;
+
     @include grid-media($medium) {
       margin-top: 0rem;
     }

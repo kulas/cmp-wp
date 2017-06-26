@@ -1,4 +1,4 @@
-#things-to-do-page {
+.things-to-do-page {
 
   .nav-breadcrumb {
     display:flex;
@@ -28,7 +28,7 @@
     }
   }
 
-  .content-container {
+  >.content-container {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;

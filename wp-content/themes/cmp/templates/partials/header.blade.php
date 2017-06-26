@@ -8,8 +8,8 @@
         <button class="green-button" id="top-bar__subscribe-button" href="#">Subscribe</a>
       </form>
 
-      <button class="green-button">Join</a>
-      <button class="green-button">Donate</a>
+      <a href="/join-support/membership"><button class="green-button">Join</button></a>
+      <a href="/join-support/donate"><button class="green-button">Donate</button></a>
 
     </div>
 

@@ -41,7 +41,7 @@
         padding-top:.5em;
       }
 
-      @include grid-media($medium) {
+      @include grid-media($large) {
         flex-basis: 100%;
       }
   }
@@ -50,6 +50,10 @@
     height: 200px;
     background-size: cover;
 
+    @include grid-media($large) {
+      height:250px;
+    }
+
     h3 {
       position: relative;
       top:168px;
@@ -57,16 +61,23 @@
       background-color: white;
       display: inline-block;
       font-family: 'Roboto', sans-serif;
+      font-size: 1.5em;
+      padding: 5px 5px 0px 0px;
+
+      @include grid-media($large) {
+        top: 218px;
+      }
     }
+
 
     h4.sub-page__quote {
       position: relative;
-      left:60%;
-      top:-1.8em;
+      left:1em;
+      top:-2.5em;
       max-width:200px;
       color:white;
       background: black;
-      font-size:1.1em;
+      font-size:.9em;
       font-weight: 300;
       font-style: italic;
       padding:.3em;

@@ -2,6 +2,10 @@
 
   .content-container {
     padding-bottom: 1em;
+
+    .ul {
+      margin-bottom: $small-spacing;
+    }
   }
 
   .main-text {

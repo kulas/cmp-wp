@@ -6,7 +6,7 @@
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-  <div class="content-container">
+    <div class="content-container">
 
       <div class="spaces">
 
@@ -14,15 +14,12 @@
 
           <div class="event-space">
 
-                <div class="event-space__image-container" style="background-image:url('{{ the_sub_field('image') }}')">
-                  {{-- <img src="{{ the_sub_field('image') }}" /> --}}
-                  <div class="event-space__description">
-                    {{ the_sub_field('detailed_description') }}
-                  </div>
+              <a class="event-space__image-container" style="background-image:url('{{ the_sub_field('image') }}')" href="">
+                <div class="event-space__description">
+                  {{ the_sub_field('detailed_description') }}
                 </div>
-
-                <h2>{{ the_sub_field('name') }}</h2>
-                {{-- <p>{{ the_sub_field('description') }}</p> --}}
+              </a>
+              <h2>{{ the_sub_field('name') }}</h2>
 
           </div>
 
@@ -30,7 +27,7 @@
 
       </div>
 
-  </div>
+    </div>
 
   <?php endwhile; else: endif; ?>
 

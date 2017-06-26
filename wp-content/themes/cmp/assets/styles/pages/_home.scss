@@ -21,6 +21,7 @@ p {
 
     @include grid-media($medium) {
       margin-bottom: $base-spacing;
+      padding:0;
     }
 
     hr {
@@ -217,11 +218,15 @@ img.alignright {
   .breadcrumb-container {
     display: block;
     width:100%;
+
+    @include grid-media($medium) {
+      display: none;
+    }
   }
 
   .nav-breadcrumb {
     display:flex;
-    padding: $small-spacing 0;
+    padding: 0.5em 0;
 
     a {
       font-size:.9em;
@@ -324,6 +329,12 @@ ul.tab-content {
   }
 }
 
+.tab-pane > h2 {
+  @include grid-media($medium) {
+    font-size: 1.5em;
+  }
+}
+
 p.main-text {
   max-width:60%;
 
@@ -338,12 +349,28 @@ table {
 
 td {
   padding:1em 1em 1em 0em;
+  vertical-align: top;
 
-  p {
+  > p {
     font-size:.9em;
+  }
+
+  > h3 {
+    @include grid-media($medium) {
+      font-size: 1.2em;
+    }
+
+  img {
+    height:auto;
+    width: auto;
+  }
+
+  @include grid-media($medium) {
+    padding:0;
   }
 }
 
-h2.hero-header__words-box {
-  left:0 !important;
+  h2.hero-header__words-box {
+    left:0 !important;
+  }
 }

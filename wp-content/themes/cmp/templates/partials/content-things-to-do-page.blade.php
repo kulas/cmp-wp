@@ -2,7 +2,7 @@
   Template Name: Things To Do Page
 --}}
 
-<div id="things-to-do-page">
+<div class="things-to-do-page">
 
   <div class="hero-header" style="background-image:url('{{ the_field('hero_image') }}')">
   </div>

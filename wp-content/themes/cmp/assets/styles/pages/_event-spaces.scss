@@ -13,6 +13,10 @@
   h1.hero-header__words-box {
     position: relative;
     top: -.5em;
+
+    @include grid-media($medium) {
+      padding-bottom: $small-spacing;
+    }
   }
 
   .spaces {

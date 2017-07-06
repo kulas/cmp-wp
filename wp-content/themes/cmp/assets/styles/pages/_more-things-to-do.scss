@@ -6,4 +6,11 @@
     padding:0;
   }
 
+  .activity-container {
+
+    @include grid-media($medium) {
+      padding: $small-spacing 0;
+    }
+  }
+
 }

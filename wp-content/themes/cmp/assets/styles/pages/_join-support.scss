@@ -1,22 +1,17 @@
 .join-support {
 
-  // h1.quote {
-  //   font-style: italic;
-  //   font-weight: 300;
-  //   position: relative;
-  //   top:-25px;
-  //   display: inline-block;
-  //   background-color: white;
-  //   padding-left: .5em;
-  //   padding-right:.5em;
-  // }
-
   .content-container {
     display: block;
+    padding-top: $small-spacing;
 
-    h2 {
-      font-size:2.5em;
-      font-weight:300;
+    @include grid-media($medium) {
+      padding-bottom: 0;
+    }
+  }
+
+  h1.hero-header__words-box {
+    @include grid-media($medium) {
+      padding-bottom: $small-spacing;
     }
   }
 
@@ -49,6 +44,7 @@
   .sub-page__background {
     height: 200px;
     background-size: cover;
+    background-position: center;
 
     @include grid-media($large) {
       height:250px;
@@ -65,7 +61,8 @@
       padding: 5px 5px 0px 0px;
 
       @include grid-media($large) {
-        top: 218px;
+        top: 220px;
+        font-size: 1.4em;
       }
     }
 

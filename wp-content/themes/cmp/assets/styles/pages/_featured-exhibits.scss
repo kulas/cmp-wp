@@ -59,6 +59,11 @@ h2.hero-header__words-box.button--link {
     position: relative;
     display: inline-block;
     padding-top: 1em;
+    height:2em;
+
+    @include grid-media($medium) {
+      height: auto;
+    }
 
     p {
       font-family: 'Roboto', sans-serif;

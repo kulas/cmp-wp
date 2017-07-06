@@ -40,8 +40,6 @@
   }
 
   @media (min-width: 1300px) {
-
-
   }
 }
 
@@ -55,10 +53,14 @@ h1.hero-header__words-box {
 
   @include grid-media($medium) {
     font-size: 2em;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
   }
 
-  // @include grid-media($small) {
-  //   font-size: 1.75em;
-  //   padding-bottom: $small-spacing;
-  // }
+  @include grid-media($small) {
+    font-size: 1.75em;
+    padding-bottom: 0;
+  }
 }

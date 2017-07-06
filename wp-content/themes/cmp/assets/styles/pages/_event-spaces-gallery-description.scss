@@ -65,6 +65,10 @@
         height: 400px;
       }
 
+      @include grid-media($small) {
+        height: 300px;
+      }
+
       .event-space__description {
         height:100%;
         width:100%;

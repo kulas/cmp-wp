@@ -241,7 +241,7 @@ img.alignright {
     }
 
     @include grid-media($medium) {
-      padding-left:0.5em;
+      display: none;
     }
   }
 

@@ -7,5 +7,8 @@
 @section('content')
 
   @include('partials.content-carnegie-magazine-current-1')
+  @include('partials.content-carnegie-magazine-current-2')
+  @include('partials.content-carnegie-magazine-current-3')
+  @include('partials.content-carnegie-magazine-current-4')
 
 @endsection

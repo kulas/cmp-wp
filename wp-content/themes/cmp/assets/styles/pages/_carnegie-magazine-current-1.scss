@@ -3,11 +3,12 @@
   .current-issue {
     display: flex;
     align-content: space-between;
+    padding-bottom: $base-spacing;
   }
 
   .current-issue__left {
     flex-basis: 60%;
-    padding: 0 $small-spacing;
+    padding: 0 $small-spacing 0 0;
     overflow: hidden;
   }
 
@@ -37,33 +38,9 @@
     text-transform: uppercase;
   }
 
-  .small-uppercase {
-    text-transform: uppercase;
-    font-size: .8em;
-    font-weight: 300;
-  }
-
   ul.post-categories > li > a {
     @extend .small-uppercase;
     color: grey;
-  }
-
-  .small-uppercase--bold {
-    @extend .small-uppercase;
-    font-weight: 400;
-  }
-
-  .green-robot-link {
-    font-family: 'Roboto', sans-serif;
-    padding:0;
-    margin:0;
-    font-weight: 400;
-  }
-
-  .author {
-    font-style: italic;
-    font-size:.9em;
-    padding-top:.5em;
   }
 
   .magazine-archives__container {
@@ -75,18 +52,9 @@
     flex-basis: 48%;
   }
 
-  .center {
-    text-align: center;
-  }
-
-  .uppercase-bold {
-    text-transform: uppercase;
-    font-weight: 400;
-  }
-
   .green-button {
     width: 100%;
     padding: $small-spacing $base-spacing;
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
   }
 }

@@ -1,0 +1,40 @@
+.carnegie-magazine-current-3 {
+
+  hr {
+    padding: 0;
+    margin: 0 0 0.5em 0;
+  }
+
+  .also-in-issue {
+    width: 65%;
+  }
+
+  .also-article {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .also-article__left,
+  .also-article__right {
+    flex-basis: 50%;
+  }
+
+  .also-article__right {
+    padding: 0 $small-spacing $small-spacing $small-spacing;
+    font-size: .9em;
+  }
+
+  .green-robot-link {
+    margin:0;
+  }
+
+  .feature-type {
+    @extend .small-uppercase;
+    display: inline-block;
+    background-color: white;
+    position: relative;
+    top: -2em;
+    padding: .25em .5em 0 0;
+  }
+
+}

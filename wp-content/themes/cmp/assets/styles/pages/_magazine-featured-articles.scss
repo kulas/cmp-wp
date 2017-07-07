@@ -184,19 +184,9 @@
       margin: 0;
     }
 
-    h3.article__title {
+    .article__title {
       padding-top: $small-spacing;
       text-transform: none;
-    }
-
-    button.grey-button {
-      height: 50px;
-      width: 100%;
-      background: white;
-      border: solid 1px #CCC;
-      margin: .5em 0;
-      font-size: 1em;
-      color: #A6A6A6;
     }
   }
 }

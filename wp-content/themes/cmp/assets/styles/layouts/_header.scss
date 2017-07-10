@@ -7,17 +7,32 @@
 .top-bar-container {
   position: relative;
   background: #eaeaea;
-  z-index: 1001;
+  z-index: 9999;
 
   @include grid-media($nav-break) {
     background: $base-color;
   }
 }
 
+// fixed but hidden
+.top-bar-container.is-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  border-bottom: $base-border;
+}
+
+// slide the bar down when visible
+.top-bar-container.is-visible {
+  transform: translateY(0);
+  transition: all .3s;
+}
+
 .top-bar {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 4em;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -127,14 +142,16 @@
 
 .nav-icon {
   position: relative;
-  // height: 100%;
+  display: inline-block;
+  height: 100%;
   padding: 0 .5em;
   transition: all .3s;
   cursor: pointer;
-  height: $large-spacing;
   display: flex;
   align-items: center;
+  line-height: 1;
   color: $base-font-color;
+
 
   &:hover {
     background: $base-color;
@@ -154,6 +171,12 @@
     position: relative;
     top: .2em;
     font-size: 1.2em;
+    line-height: 1;
+    &:before {
+      position: relative;
+      top: -.25em;
+    }
+
   }
 }
 
@@ -175,7 +198,7 @@
     opacity: 1;
   }
   @include grid-media($nav-break) {
-    // display: none;
+    border-right: $base-border !important;
   }
 }
 
@@ -215,6 +238,7 @@
 
 a.nav-visit {
   position: relative;
+  height: 100%;
   font-family: $base-font-family;
   display: flex;
   align-items: center;
@@ -225,9 +249,15 @@ a.nav-visit {
   color: $dark-gray;
   z-index: 99;
   transition: background .2s;
+
+  .nav-icon {
+    padding: 0;
+    padding-left: .6em;
+  }
   @include grid-media($nav-break) {
     color: #fff;
-    padding-right: 0;
+    // padding-right: 0;
+    border-right: $base-border;
   }
 
   li:hover &,
@@ -852,7 +882,6 @@ ul.desktop-nav {
     display: none;
   }
 
-
   li.menu-item {
     padding: 0;
     position: relative;
@@ -863,8 +892,12 @@ ul.desktop-nav {
     text-align: left;
 
     &:active, &:hover, &.active {
-      background: $nav-hover;
+      background: $base-color;
       color: white;
+    }
+
+    &:hover a{
+      color: #fff;
     }
 
     a {
@@ -880,7 +913,6 @@ ul.desktop-nav {
     }
 
   ul.sub-menu {
-    margin-top: $small-spacing;
     padding-left: 0;
     position: absolute;
     top:2.5em;

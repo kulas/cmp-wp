@@ -2,7 +2,7 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
-  //   require('waypoints/lib/jquery.waypoints');
+    require('waypoints/lib/jquery.waypoints');
   // var store = require('store2');
 
   // main navigation
@@ -132,38 +132,36 @@ export default {
 
     // scroll functions
     ////////////////////////////////////////////////////////////////////////////////
-    // var headerHeight = $('.header-main').outerHeight();
+    var topBarContainer = $(".top-bar-container");
+    var topBar = $(".top-bar-container");
+    // var headerHeight = $('.top-bar-container').innerHeight();
 
-    // var fixNav = new Waypoint({
-    //   element: $('.nav-container'),
-    //   handler: function(direction) {
-    //     if (direction == 'down' && quickviewState == false){
-    //       $('.header-main').addClass('is-fixed');
-    //       $('.quickview-container + *').css({'padding-top':headerHeight});
-    //     }
-    //     else {
-    //       $('.header-main').removeClass('is-fixed');
-    //       $('.quickview-container + *').css({'padding-top':'0'});
-    //
-    //     }
-    //   },
-    //   offset: '-220px'
-    // })
+    topBar.waypoint({
+        handler: function(direction) {
+          if (direction == 'down' && quickviewState == false){
+            topBar.addClass('is-fixed');
+            $('body').css({'padding-top': "4em"});
+          }
+          else {
+            topBar.removeClass('is-fixed');
+            $('body').css({'padding-top':0});
 
-    // var animateNav = new Waypoint({
-    //   element: $('.nav-container'),
-    //   handler: function(direction) {
-    //     if (direction == 'up'){
-    //       $('.header-main').removeClass('is-visible');
-    //     }
-    //     else {
-    //       $('.header-main').addClass('is-visible');
-    //     }
-    //   },
-    //   offset: '-250px'
-    // })
-  
+          }
+        },
+        offset: '-220px'
+    });
 
+    topBarContainer.waypoint({
+      handler: function(direction) {
+        if (direction == 'up'){
+          topBar.removeClass('is-visible');
+        }
+        else {
+          topBar.addClass('is-visible');
+        }
+      },
+      offset: '-250px'
+    });
 
 
   },

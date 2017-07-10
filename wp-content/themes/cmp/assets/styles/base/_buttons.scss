@@ -30,8 +30,8 @@
   &:active,
   &.active {
     color: #fff;
-    background-color: darken($action-color, 15);
-    border-color: $action-color;
+    background-color: $dark-color;
+    border-color: $base-color;
     outline: 0;
     text-decoration: none;
   }
@@ -60,6 +60,10 @@
   }
 }
 
+.green-button {
+  @extend %button-base;
+  font-size: .75em !important;
+}
 
 // Button Sizes
 ////////////////////////////////////////////////////////////////
@@ -101,14 +105,14 @@
 // Special Links
 ////////////////////////////////////////////////////////////////
 
-.button--link:after{
+.button--link{
+  @include icon--learn;
   position: relative;
   top:5px;
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  content: "";
-  background-image: url("/wp-content/themes/cmp/assets/images/learnmore-arrow.svg");
-  background-size: cover;
-  line-height: 0;
+
+  &:before {
+    margin-left: .25em;
+    line-height: 1.25;
+  }
 }

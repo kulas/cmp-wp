@@ -50,13 +50,13 @@ p {
 
 a {
   transition: color 0.2s;
-  // color: $action-color;
+  color: $base-color;
   text-decoration: none;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 20%);
+    color: $dark-color;
     outline: none;
   }
 }

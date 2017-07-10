@@ -1,8 +1,5 @@
 // HOME PAGE STYLES
 ////////////////////////////////////////////////////////////////
-a {
-  color: #96A061;
-}
 
 p {
   font-weight: 300;
@@ -196,18 +193,6 @@ img.alignright {
           margin-right:1em;
         }
       }
-    }
-  }
-
-  .learn-more-arrow {
-    height:20px;
-    position: relative;
-    top:3px;
-
-    @include grid-media($medium) {
-      height:25px;
-      left:10px;
-      top:-12px;
     }
   }
 

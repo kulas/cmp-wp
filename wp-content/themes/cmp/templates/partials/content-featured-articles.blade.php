@@ -35,7 +35,7 @@
     </h3>
 
     <a href="<?php the_permalink(); ?>"><button id="article__button" class="green-button">Read the Article</button></a>
-
+    <br><br>
   </div>
 
   <hr class="magazine-hr">

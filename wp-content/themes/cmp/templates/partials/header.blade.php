@@ -18,22 +18,22 @@
         <!-- visit callout btn-->
         <li>
           <a href="#visit" class="quickview-btn nav-visit" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
-            <span>Plan Your Visit</span>
+            <span class="nav-visit__text">Plan Your Visit</span>
             <span class="nav-icon nav-icon-visit">
-              <i class="icon -visit" aria-hidden="true"></i>
+              <i class="icon-visit" aria-hidden="true"></i>
             </span>
           </a>
         </li>
         <!-- search nav btn-->
         <li>
           <button  class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
-            <i class="icon -search" aria-hidden="true"></i>
+            <i class="icon-search" aria-hidden="true"></i>
           </button>
         </li>
         <!-- mobile nav btn-->
         <li>
           <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
-            <i class="icon -hamburger" aria-hidden="true"></i>
+            <i class="icon-hamburger" aria-hidden="true"></i>
           </button>
         </li>
       </ul>
@@ -86,7 +86,7 @@
         <input type="text" id="search-field" placeholder="search" name="s" value="">
         {{-- <label for="search-field"> Search</label> --}}
       </fieldset>
-      <button type="submit" class="btn" title="Start search"><i class="icon -search button"></i></button>
+      <button type="submit" class="btn" title="Start search"><i class="icon-search button"></i></button>
     </form>
   </div>
 

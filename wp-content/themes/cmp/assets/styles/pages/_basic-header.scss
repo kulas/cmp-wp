@@ -1,5 +1,25 @@
 .basic-header {
 
+  .content-container {
+    padding-bottom: 1em;
+
+    .ul {
+      margin-bottom: $small-spacing;
+    }
+  }
+
+  .main-text {
+    padding-bottom: $small-spacing;
+
+    p {
+      max-width: 60%;
+
+      @include grid-media($large) {
+        max-width:100%;
+      }
+    }
+  }
+
   .wpcf7 {
     width:50%;
 
@@ -68,20 +88,48 @@
     margin:0;
     margin-bottom:0.5em;
   }
-}
 
-br {
-  height:0px;
-}
+  br {
+    height:0px;
+  }
 
-p {
-  padding-bottom: 0.5em !important;
-}
+  p {
+    padding-bottom: 0.5em !important;
+  }
 
-label {
-  margin:0;
-}
+  label {
+    margin:0;
+  }
 
-ul > li {
-  font-weight:300;
+  ul > li {
+    font-weight:300;
+  }
+
+  td {
+    border-bottom:none;
+    width: 33%;
+    padding:0;
+
+    @include grid-media($medium) {
+      padding-right: .5em;
+      font-size: .8em;
+
+      h4 {
+        font-size: 1em;
+      }
+    }
+
+    >h3 {
+      padding: 0;
+    }
+
+    >img {
+      width:100%;
+    }
+  }
+
+  tr:nth-child(1) {
+    border-bottom:1px;
+  }
+
 }

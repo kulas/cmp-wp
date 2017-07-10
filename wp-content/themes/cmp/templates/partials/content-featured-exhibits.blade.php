@@ -12,33 +12,38 @@
   </div>
 </div>
 
+<?php
 
-<?php $count = 1; ?>
+  $count = 0; 
+  $exhibits = get_field('exhibit'); //get all rows
+  shuffle ($exhibits); //randomize rows
 
-<?php if( have_rows('exhibit') ):
+?>
 
- 	// loop through the rows of data
-  while ( have_rows('exhibit') ) : the_row();
+<?php if( have_rows('exhibit') ): while ( have_rows('exhibit') ) : the_row();
+
+  $exhibit = $exhibits[$count];
 
   // hero block
-  if ($count==1) {
+  if ($count==0) {
     ?>
-        <div class="hero-header" style="background-image: url({{ the_sub_field('exhibit_image') }})"></div>
+        <div class="hero-header" style="background-image: url({{ $exhibit['exhibit_image'] }})"></div>
         <div class='exhibit-container exhibit--hero'>
           <div class="exhibit__preview">
 
             <div class="exhibit-preview__summary">
 
-              <h2 class="hero-header__words-box ">
-                <a href="{{ the_sub_field('link') }}" class="button--link">{{ the_sub_field('title') }}</a>
-
+              <h2 class="hero-header__words-box button--link">
+                <a href="{{ $exhibit['link'] }}">{{ $exhibit['title'] }}</a>
               </h2>
 
               <div class="exhibit-preview__dates">
-                  <p class="start-date">{{ the_sub_field('dates') }}</p>
+                  <p class="start-date">{{ $exhibit['dates'] }}</p>
               </div>
 
-              <div class="exhibit-preview__summary-text">{{ the_sub_field('summary') }}</div>
+              <p class="exhibit-preview__summary-text">
+                {{ $exhibit['summary'] }}
+              </p>
 
             </div>
 
@@ -47,7 +52,7 @@
     <?php
   }
 
-  if ($count==2) {
+  if ($count==1) {
   ?>
     <div class='section-hr large-only'><hr><div class='section-hr__h5'><h5>Now Showing</h5></div></div>
     <div class='exhibit-container'>
@@ -55,10 +60,10 @@
   }
 
   // callout blocks
-  if ($count >= 2) {
+  if ($count >= 1) {
   ?>
     <div class='exhibit'>
-      <div class="exhibit__image" style="background-image: url({{ the_sub_field('exhibit_image') }})">
+      <div class="exhibit__image" style="background-image: url({{ $exhibit['exhibit_image'] }})">
       </div>
 
       <div class="exhibit__preview">
@@ -69,17 +74,19 @@
 
             <div class="exhibit-preview__dates">
 
-                <p class="start-date">{{ the_sub_field('dates') }}</p>
+                <p class="start-date">{{ $exhibit['dates'] }}</p>
 
             </div>
 
-            <a href="{{ the_sub_field('link') }}">
+            <a href="{{ $exhibit['link'] }}">
               <h1 class="exhibit-preview__title button--link">
-                {{ the_sub_field('title') }}
+                {{ $exhibit['title'] }}
               </h1>
             </a>
 
-            <div class="exhibit-preview__summary-text">{{ the_sub_field('summary') }}</div>
+            <p class="exhibit-preview__summary-text">
+              {{ $exhibit['summary'] }}
+            </p>
 
           </div>
 
@@ -93,13 +100,11 @@
 }
 ?>
 
-
-
-<?php if ($count==6)
+<?php if ($count > 5)
     echo "</div>" ?>
 
+<?php $count = $count + 1 ?>
 
-<?php $count += 1 ?>
 <?php endwhile; else : endif; ?>
 
 </div>

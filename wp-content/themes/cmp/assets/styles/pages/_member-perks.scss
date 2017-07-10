@@ -1,0 +1,32 @@
+.member-perks {
+
+  .sub-page-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .sub-page {
+    flex-basis:24%;
+    text-align: center;
+    padding-bottom: $base-spacing;
+
+    @include grid-media($medium) {
+      flex-basis: 49%;
+      padding-bottom: 0;
+    }
+  }
+
+  .sub-page__image {
+    width:100%;
+  }
+
+  .contact-us {
+    padding-bottom: $base-spacing;
+  }
+
+  hr {
+    padding: 0;
+    margin:$small-spacing 0;
+  }
+}

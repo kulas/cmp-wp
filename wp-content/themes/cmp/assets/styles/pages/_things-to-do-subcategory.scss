@@ -2,10 +2,15 @@
 
   .content-container {
     display: block;
+    padding: 0 $base-spacing $small-spacing $base-spacing;
 
-    @media(min-width: 1400px) {
+    @include grid-media($medium) {
       padding:0 !important;
     }
+  }
+
+  .nav-breadcrumb {
+    border-top: 1px solid #CCCCCC;
   }
 
   .large-title {

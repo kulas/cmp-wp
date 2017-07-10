@@ -1,0 +1,27 @@
+.carnegie-magazine-current-2 {
+
+  .features {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .article {
+    display: block;
+    flex-basis: 32%;
+  }
+
+  .article__image-container {
+    height:225px;
+    overflow: hidden;
+
+    img {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  hr {
+    margin: 0 0 0.5em 0;
+  }
+
+}

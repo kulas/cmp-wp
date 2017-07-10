@@ -1,0 +1,36 @@
+.plan-visit {
+
+  .museum-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: $small-spacing;
+    padding-bottom: $base-spacing;
+
+    >.museum-container__museum {
+      flex-basis: 30%;
+      padding-right:$small-spacing;
+      border-right: 1px solid #D3D3D3;
+
+      >p {
+        padding-bottom: $small-spacing;
+      }
+
+      @media (max-width: 1100px) {
+        flex-basis: 100%;
+        border: none;
+        border-bottom: 1px solid #D3D3D3;
+
+        &:last-child,
+        &:nth-last-child(2) {
+          padding-top: $small-spacing;
+        }
+      }
+    }
+
+    >.museum-container__museum:last-child {
+      border:none;
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+.single-event {
+
+  .event-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .event-description {
+    padding-right: $small-spacing;
+  }
+
+  .event__image {
+    flex-basis:48%;
+  }
+
+  .em-booking-form-details {
+    padding: 0;
+
+    input {
+      height:40px;
+    }
+
+    #em-booking-submit {
+      height:auto;
+    }
+  }
+
+}

@@ -7,5 +7,6 @@
 @section('content')
 
   @include('partials.content-join-support')
+  @include('partials.content-member-perks')
 
 @endsection

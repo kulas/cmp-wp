@@ -234,8 +234,8 @@
       p {
         color:white;
         background:black;
-        font-size: 1.5em;
-        font-weight: 400;
+        font-size: .8em;
+        font-weight: 300;
         padding-top:.4em;
         margin:0;
         text-transform: uppercase;
@@ -244,13 +244,13 @@
 
     li > ul {
       position: absolute;
-      width:200px;
+      width:150px;
       background-color: black;
       margin:0;
       padding:.3em .3em 0em .3em;
       visibility: hidden;
       opacity: 0;
-      top:-11.4em;
+      top:-8.9em;
       left:-.3em;
       transition: 0.5s all;
     }
@@ -276,7 +276,7 @@
       margin:0;
 
       li > ul {
-        top:-8.5em;
+        top: -6em;
       }
     }
 

@@ -2,26 +2,20 @@
 
   .content-container {
     padding-top:1em;
+    padding-bottom: $small-spacing;
+    display: block;
 
     @include grid-media($medium) {
       padding: 1em;
     }
   }
 
-  h1 {
-    background-color: white;
-    display:inline-block;
+  h1.hero-header__words-box {
     position: relative;
-    top:290px;
-    font: 'Lora', serif;
-    padding:0.3em 1.2em 0em 1.2em;
-    font-weight: lighter;
+    top: -.5em;
 
     @include grid-media($medium) {
-      // padding:0;
-      top:102px;
-      left:0;
-      padding:0.3em 1.2em 0em .5em;
+      padding-bottom: $small-spacing;
     }
   }
 
@@ -31,22 +25,34 @@
     flex-wrap: wrap;
 
     .event-space {
+      position: relative;
       flex-basis:49%;
-      height:300px;
+      height:550px;
+      margin-bottom: $small-spacing;
 
       @include grid-media($large) {
         flex-basis: 100%;
+        height:auto;
       }
 
       h2 {
-        position: relative;
-        top: -38px;
+        position: absolute;
+        top: 235px;
+        left:0;
         background-color: white;
         display: inline-block;
         padding-right: .2em;
         padding-top: .1em;
         font-family: 'Roboto', sans-serif;
-        font-weight:300;
+
+        @include grid-media($medium) {
+          font-size: 1.5em;
+          top: 250px;
+        }
+      }
+
+      p {
+        padding-top: .5em;
       }
     }
 
@@ -64,6 +70,18 @@
       }
     }
   }
+
+  .main-text {
+    max-width: 60%;
+    padding-bottom: $small-spacing;
+    margin-bottom: 0;
+    position: relative;
+    top: -1em;
+
+    @include grid-media($medium) {
+      max-width: 100%;
+    }
+  }
 }
 
 .wpcf7 {
@@ -79,8 +97,8 @@
       max-width:100%;
     }
   }
-}
 
-span.wpcf7-list-item {
-  display:block;
+  span.wpcf7-list-item {
+    display:block;
+  }
 }

@@ -99,28 +99,28 @@
                       <li class="cmoa">
                         <a href="https://www.facebook.com/CarnegieMuseumofArt/">
                           {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
-                          <p>CMOA</p>
+                          <p>Museum of Art</p>
                         </a>
                       </li>
 
                       <li class="cmnh">
                         <a href="https://www.facebook.com/carnegiemnh/">
                           {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
-                          <p>CMNH</p>
+                          <p>Museum of Natural History</p>
                         </a>
                       </li>
 
                       <li class="csc">
                         <a href="https://www.facebook.com/carnegiesciencecenter/">
                           {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
-                          <p>CSC</p>
+                          <p>Science Center</p>
                         </a>
                       </li>
 
                       <li class="warhol">
                         <a href="https://www.facebook.com/thewarholmuseum/">
                           {{-- <img src="/wp-content/themes/cmp/assets/images/facebook.png"> --}}
-                          <p>Warhol</p>
+                          <p>Andy Warhol Museum</p>
                         </a>
                       </li>
 
@@ -141,28 +141,28 @@
                         <li class="cmoa">
                           <a href="https://twitter.com/cmoa">
                             {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
-                            <p>CMOA</p>
+                            <p>Museum of Art</p>
                           </a>
                         </li>
 
                         <li class="cmnh">
                           <a href="https://twitter.com/carnegiemnh">
                             {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
-                            <p>CMNH</p>
+                            <p>Museum of Natural History</p>
                           </a>
                         </li>
 
                         <li class="csc">
                           <a href="https://twitter.com/carnegiescictr">
                             {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
-                            <p>CSC</p>
+                            <p>Science Center</p>
                           </a>
                         </li>
 
                         <li class="warhol">
                           <a href="https://twitter.com/thewarholmuseum">
                             {{-- <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png"> --}}
-                            <p>Warhol</p>
+                            <p>Andy Warhol Museum</p>
                           </a>
                         </li>
 
@@ -183,20 +183,20 @@
                         <li class="cmoa">
                           <a href="https://www.instagram.com/thecmoa">
                             {{-- <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png"> --}}
-                            <p>CMOA</p>
+                            <p>Museum of Art</p>
                           </a>
                       </li>
 
                       <li class="cmnh">
                         <a href="https://www.instagram.com/carnegiemnh">
                           {{-- <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png"> --}}
-                          <p>CMNH</p>
+                          <p>Museum of Natural History</p>
                       </li>
 
                       <li class="csc">
                         <a href="https://www.instagram.com/carnegiescictr">
                           {{-- <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png"> --}}
-                          <p>CSC</p>
+                          <p>Science Center</p>
                         </a>
                       </li>
 
@@ -217,14 +217,14 @@
                         <li class="cmnh">
                           <a href="http://carnegiemuseumnaturalhistory.tumblr.com/">
                             {{-- <img src="/wp-content/themes/cmp/assets/images/tumblr.png"> --}}
-                            <p>CMNH</p>
+                            <p>Museum of Natural History</p>
                           </a>
                         </li>
 
                         <li class="warhol">
                           <a href="http://carnegiemuseumnaturalhistory.tumblr.com/">
                             {{-- <img src="/wp-content/themes/cmp/assets/images/tumblr.png"> --}}
-                            <p>Warhol</p>
+                            <p>Andy Warhol Museum</p>
                           </a>
                         </li>
 

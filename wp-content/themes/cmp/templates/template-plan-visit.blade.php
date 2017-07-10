@@ -9,4 +9,3 @@
   @include('partials.content-plan-visit')
 
 @endsection
- 

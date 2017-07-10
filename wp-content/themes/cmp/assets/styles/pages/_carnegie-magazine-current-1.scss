@@ -1,0 +1,60 @@
+.carnegie-magazine-current-1 {
+
+  .current-issue {
+    display: flex;
+    align-content: space-between;
+    padding-bottom: $base-spacing;
+  }
+
+  .current-issue__left {
+    flex-basis: 60%;
+    padding: 0 $small-spacing 0 0;
+    overflow: hidden;
+  }
+
+  .current-issue__right {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 $small-spacing;
+    overflow: hidden;
+  }
+
+  .issue-title {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  ul > li {
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  ul.post-categories > li > a {
+    @extend .small-uppercase;
+    color: grey;
+  }
+
+  .magazine-archives__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .archive {
+    flex-basis: 48%;
+  }
+
+  .green-button {
+    width: 100%;
+    padding: $small-spacing $base-spacing;
+    margin-bottom: 0.5em;
+  }
+}

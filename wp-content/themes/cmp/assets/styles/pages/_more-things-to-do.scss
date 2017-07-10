@@ -1,8 +1,16 @@
 #more-things-to-do {
-  // .content-container {
-  //   @media(min-width: 1400px) {
-  //     padding:0 !important;
-  //   }
-  // }
+
+  padding-bottom:$base-spacing;
+
+  .section-hr {
+    padding:0;
+  }
+
+  .activity-container {
+
+    @include grid-media($medium) {
+      padding: $small-spacing 0;
+    }
+  }
 
 }

@@ -98,5 +98,63 @@ hr {
   h6 {
     color: $inverse-font-color;
   }
+}
 
+.categories a,
+.categories p {
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: 300;
+  color: grey;
+}
+
+h2.robot-uppercase {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+}
+
+.center {
+  text-align: center;
+}
+
+.uppercase-bold {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.small-uppercase {
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: 300;
+}
+
+.small-uppercase--bold {
+  @extend .small-uppercase;
+  font-weight: bold;
+}
+
+.green-robot-link {
+  font-family: 'Roboto', sans-serif;
+  padding:0;
+  margin:0.5em 0 0 0;
+  font-weight: 400;
+}
+
+.author {
+  font-style: italic;
+  font-size:.9em;
+  padding-top:.5em;
+}
+
+.uppercase-robot {
+  @extend .uppercase-bold;
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+}
+
+.center {
+  text-align: center;
 }

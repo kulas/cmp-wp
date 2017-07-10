@@ -1,46 +1,54 @@
 .join-support {
 
-  h1.quote {
-    font-style: italic;
-    font-weight: 300;
-    position: relative;
-    top:-25px;
-    display: inline-block;
-    background-color: white;
-    padding-left: .5em;
-    padding-right:.5em;
-  }
-
   .content-container {
     display: block;
+    padding-top: $small-spacing;
 
-    h2 {
-      font-size:2.5em;
-      font-weight:300;
+    @include grid-media($medium) {
+      padding-bottom: 0;
     }
+  }
 
-    p {
-      // max-width: 60%;
+  h1.hero-header__words-box {
+    @include grid-media($medium) {
+      padding-bottom: $small-spacing;
+    }
+  }
 
-      @include grid-media($medium) {
-        max-width:100%;
-      }
+  .main-text {
+    max-width: 60%;
+
+    @include grid-media($medium) {
+      max-width:100%;
     }
   }
 
   .sub-pages {
     display: flex;
-    padding-bottom: 3em;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .sub-page {
     flex-basis: 48%;
+    padding: 1em 0em;
+      p {
+        padding-top:.5em;
+      }
+
+      @include grid-media($large) {
+        flex-basis: 100%;
+      }
   }
 
   .sub-page__background {
     height: 200px;
     background-size: cover;
+    background-position: center;
+
+    @include grid-media($large) {
+      height:250px;
+    }
 
     h3 {
       position: relative;
@@ -48,24 +56,33 @@
       padding-right:.3em;
       background-color: white;
       display: inline-block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5em;
+      padding: 5px 5px 0px 0px;
+
+      @include grid-media($large) {
+        top: 220px;
+        font-size: 1.4em;
+      }
     }
+
 
     h4.sub-page__quote {
       position: relative;
-      left:60%;
-      top:-1.8em;
+      left:1em;
+      top:-2.5em;
       max-width:200px;
       color:white;
       background: black;
-      font-size:1.1em;
+      font-size:.9em;
       font-weight: 300;
       font-style: italic;
       padding:.3em;
       display: inline-block;
+
+      @include grid-media($large) {
+        display: none;
+      }
     }
   }
-
-
-
-
 }

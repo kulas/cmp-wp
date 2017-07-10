@@ -4,6 +4,9 @@
     margin-bottom:10px;
     background-size:cover;
     background-position: center center;
+    // z-index:1002;
+    position: relative;
+    // top: -1px;
 
     @include grid-media($extra-large) {
       height:500px;
@@ -21,12 +24,14 @@
 
 .hero-header__words-box {
   position: relative;
-  display: block;
+  background: #fff;
+  display: inline-block;
   max-width: 100%;
   margin-top: -1em;
   padding: .3em .6em;
   font-size: 2em;
   margin-bottom:0;
+  left:-.6em;
 
   @include grid-media($medium) {
     max-width: 100%;
@@ -35,16 +40,27 @@
   }
 
   @media (min-width: 1300px) {
-
-
   }
 }
 
 h1.hero-header__words-box {
   font-size: 3em;
   font-weight: 400;
-  background: #fff;
+
+  @include grid-media($large) {
+    font-size: 2.5em;
+  }
+
   @include grid-media($medium) {
     font-size: 2em;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  @include grid-media($small) {
+    font-size: 1.75em;
+    padding-bottom: 0;
   }
 }

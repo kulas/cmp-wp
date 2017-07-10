@@ -4,11 +4,19 @@
 
 <div class="event-spaces-gallery">
 
-  <div class="hero-header" style="background-image:url('{{ the_field('header') }}')">
-    <h1>{{ the_title() }}</h1>
-  </div>
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
   <div class="content-container">
+
+    <div class="nav-breadcrumb">
+
+      <?php if(function_exists('bcn_display'))
+        {
+            bcn_display();
+        }
+      ?>
+
+    </div>
 
       <div class="spaces">
 
@@ -18,19 +26,18 @@
 
                 <div class="event-space__image-container">
                   <img src="{{ the_sub_field('image') }}" />
-
-                  <div class="event-space__description">
-                    <h2>{{ the_sub_field('name') }}</h2>
-                    <p>{{ the_sub_field('description') }}</p>
-                  </div>
                 </div>
 
-            </div>
+                <h2>{{ the_sub_field('name') }}</h2>
+
+          </div>
 
         <?php endwhile; else : endif; ?>
 
       </div>
 
   </div>
+
+  <?php endwhile; else: endif; ?>
 
 </div>

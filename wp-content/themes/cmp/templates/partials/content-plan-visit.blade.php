@@ -2,7 +2,7 @@
   Template Name: Plan a Visit
 --}}
 
-<div class="basic-header">
+<div class="plan-visit">
 
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -12,8 +12,18 @@
 
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>
 
-    <div class="main-text">
-      {{ the_content() }}
+    <div class="museum-container">
+
+      <?php if( have_rows('museum_details') ): while ( have_rows('museum_details') ) : the_row() ?>
+
+          <div class="museum-container__museum">
+
+            {{ the_sub_field('museum_details') }}
+
+          </div>
+
+      <?php endwhile; else : endif; ?>
+
     </div>
 
   </div>

@@ -1,0 +1,33 @@
+.event-spaces-contact {
+  .contact-form {
+    padding: $small-spacing 0;
+    max-width: 60%;
+
+    @include grid-media($medium) {
+      max-width: 100%;
+    }
+
+    form {
+      padding: $small-spacing 0;
+    }
+
+    h2 {
+      padding-bottom: $small-spacing;
+    }
+
+    input {
+      max-height:40px;
+    }
+
+    input.wpcf7-form-control.wpcf7-submit {
+      max-height: 100%;
+      width:200px;
+      margin-top:$small-spacing;
+    }
+  }
+
+  hr {
+    padding-top:0;
+    margin-top:0;
+  }
+}

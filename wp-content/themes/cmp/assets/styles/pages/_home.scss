@@ -18,6 +18,7 @@ p {
 
     @include grid-media($medium) {
       margin-bottom: $base-spacing;
+      padding:0;
     }
 
     hr {
@@ -43,6 +44,18 @@ p {
 
       }
   }
+}
+
+.green-button {
+  border:none;
+  border-radius:2px;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  color:white;
+  background-color: #96A061;
+  font-size:.9em;
+  margin-top:5px;
+  margin-bottom: $small-spacing;
 }
 
 .mobile-hide {
@@ -190,10 +203,15 @@ img.alignright {
   .breadcrumb-container {
     display: block;
     width:100%;
+
+    @include grid-media($medium) {
+      display: none;
+    }
   }
 
   .nav-breadcrumb {
     display:flex;
+    padding: 0.5em 0;
 
     a {
       font-size:.9em;
@@ -208,7 +226,7 @@ img.alignright {
     }
 
     @include grid-media($medium) {
-      padding-left:0.5em;
+      display: none;
     }
   }
 
@@ -285,7 +303,21 @@ ul.tab-content {
   @include grid-media($medium) {
     display: none;
   }
+}
 
+.osc-res-tab .nav-tabs > li > a {
+  font-weight: 400;
+
+  @include grid-media($large) {
+    font-size: .9em;
+    padding: 5px 7px;
+  }
+}
+
+.tab-pane > h2 {
+  @include grid-media($medium) {
+    font-size: 1.5em;
+  }
 }
 
 p.main-text {
@@ -302,8 +334,28 @@ table {
 
 td {
   padding:1em 1em 1em 0em;
+  vertical-align: top;
 
-  p {
+  > p {
     font-size:.9em;
+  }
+
+  > h3 {
+    @include grid-media($medium) {
+      font-size: 1.2em;
+    }
+
+  img {
+    height:auto;
+    width: auto;
+  }
+
+  @include grid-media($medium) {
+    padding:0;
+  }
+}
+
+  h2.hero-header__words-box {
+    left:0 !important;
   }
 }

@@ -41,7 +41,7 @@
               <?php $post = $post_object; setup_postdata( $post ); ?>
 
                 <div class="article">
-                  {{ the_category(' | ') }}
+                  @php(the_tags( '', ' | ', '' ))
                   <div class="article__image-container">
                     <img src="{{ the_field('featured_image') }}">
                   </div>

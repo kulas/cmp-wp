@@ -25,7 +25,7 @@
               setup_postdata( $post );
             ?>
 
-              <div class="categories">{{ the_category(' | ') }}</div>
+              <div class="tags">@php(the_tags( '', ' | ', '' ))</div>
 
               <a href="{{ the_permalink() }}">
                 <h2 class="green-robot-link">{{ the_title() }}</h2>

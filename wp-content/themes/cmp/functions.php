@@ -95,3 +95,30 @@ if (basename($stylesheet = get_option('template')) !== 'templates') {
 //         parent::__construct();
 //     }
 // }
+
+//Allows custom taxonomy to be displayed
+function display_taxonomy_terms($post_type, $display = false) {
+    global $post;
+    $term_list = wp_get_post_terms($post->ID, $post_type, array('fields' => 'names'));
+
+    if($display == false) {
+        echo $term_list[0];
+    }elseif($display == 'return') {
+        return  $term_list[0];
+    }
+}
+
+//Stops wordpress from hardcoding height and widths to images in the editor
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+
+function filter_ptags_on_images($content){ // Remove p tags from around images
+     return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+
+}
+add_filter('the_content', 'filter_ptags_on_images');

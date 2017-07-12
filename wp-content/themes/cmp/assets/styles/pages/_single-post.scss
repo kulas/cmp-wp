@@ -1,4 +1,18 @@
 article {
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .article-meta__main,
+    .font-resizer {
+      display: flex;
+    }
+
+    p.article-meta__divider {
+      font-weight: bold;
+      padding: 0 $small-spacing;
+    }
 
     .title-box {
       padding:1em;
@@ -37,35 +51,20 @@ article {
     padding:0em 1em;
     max-width:1000px;
     margin:auto;
+    overflow: hidden;
 
     p {
-      font-size: .85em;
-      font-weight:lighter;
       line-height: 25px;
+      padding-bottom: $small-spacing;
     }
 
-    h3 {
-      font-size: 1.3em;
+    h2, h3 {
       font-family: 'Roboto', sans-serif;
-      margin:0;
-      padding-bottom:5px;
     }
 
-    h4 {
-      font-family: 'Lora', serif;
-      font-size: .9em;
-      font-style: italic;
-      color: #7a7a7a;
-    }
-
-    h5 {
-      font-size: .7em;
-      font-weight: lighter;
-      color:#7a7a7a;
-    }
 
     .wp-caption-text {
-      @extend h5;
+      // @extend h5;
       font-family: 'Lora';
       padding:0;
     }
@@ -76,6 +75,18 @@ article {
 
     .alignleft {
       float: left;
+    }
+
+    img,
+    p > img {
+      width: 100%;
+      height: auto;
+      padding-bottom: 0;
+    }
+
+    figcaption.wp-caption-text {
+      // max-width: 100% !important;
+      max-width: 1300px;
     }
 
     img.alignleft {
@@ -97,28 +108,13 @@ article {
 
     blockquote {
       width:100%;
-      margin:0;
-      padding:0;
+      margin:$small-spacing 0;
+      padding:$small-spacing 0;
+      border-top: solid 3px;
+      border-bottom: solid 3px;
 
-      p,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: 'Roboto', sans-serif;
-        font-weight:lighter;
-      }
-    }
-
-    .entry-content__notes {
-      font-size:.9em;
-      font-family: 'Lora';
-
-      strong {
-        font-weight: bold;
-        font-style: normal;
+      p {
+        padding-bottom: 0;
       }
     }
   }
@@ -127,6 +123,7 @@ article {
     padding:0;
     margin:0;
     margin-bottom:1em;
+    height: 3px;
   }
 
   .green-button {
@@ -170,7 +167,7 @@ article {
 
       img {
         height:20px;
-        padding-right: .8em;
+        width: 100%;
 
         @include grid-media($medium) {
           height:15px;
@@ -281,4 +278,148 @@ article {
         margin:auto;
       }
     }
+
+  .tags a,
+  .article-meta__issue a,
+  .article-meta__issue p,
+  a.print,
+  .font-resizer a {
+    @extend .small-uppercase;
+    color: black;
+    font-weight: bold;
+  }
+
+  .tags a,
+  .tags p {
+    color: #96A061;
+  }
+
+  li.fontResizer.ct-font-resizer-element {
+    list-style-type: none;
+    padding-left: 5px;
+  }
+
+  ul.ct-font-resizer {
+    padding: 0;
+    margin: 0;
+  }
+
+  a.print {
+    margin-top: 4px;
+
+    i {
+      padding-right: 5px;
+    }
+  }
+
+  .article__main {
+    figure {
+      max-width: 100% !important;
+      padding-bottom: $base-spacing;
+    }
+
+    figcaption.wp-caption-text,
+    span.media-credit {
+      font-size: .8em;
+      font-family: 'Roboto';
+    }
+
+    span.media-credit {
+      float: right;
+      padding-bottom: 0;
+      color:black;
+      font-size: .7em;
+      font-weight: lighter;
+    }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    blockquote,
+    figcaption {
+      max-width: 70%;
+    }
+
+    blockquote {
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6, {
+        max-width: 100%;
+      }
+    }
+  }
+
+.article__related {
+  float: right;
+  max-width: 30%;
+  padding: $base-spacing;
+  position: relative;
+  bottom: 100em;
+  height: 0;
+
+    h4 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+      text-transform: uppercase;
+      position: relative;
+      left: 1em;
+      padding: 0;
+      margin: 0;
+    }
+
+    .image-container {
+      height:125px;
+      min-width: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    .tags a {
+      color: grey;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+      font-size: .9em;
+      line-height: 20px;
+      min-width: 285px;
+      padding-bottom: 0.5em;
+    }
+
+    .author {
+      padding: 0;
+      margin: 0;
+      margin-bottom: $small-spacing;
+    }
+  }
+}
+
+.magazine-subscribe {
+  max-width: 60%;
+  text-align:center;
+  padding-bottom: $base-spacing;
+
+  p.uppercase-robot {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .grey-button {
+    text-transform: uppercase;
+    color: black;
+    font-size: .9em;
+  }
+}
+
+p.sp-layer.sp-black.sp-padding.desc-in.desc-in-bg.hide-medium-screen {
+  top: 90% !important;
 }

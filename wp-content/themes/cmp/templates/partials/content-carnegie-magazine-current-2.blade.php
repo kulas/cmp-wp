@@ -19,7 +19,7 @@
               <?php $post = $post_object; setup_postdata( $post ); ?>
 
                 <div class="article">
-                  <div class="categories">{{ the_category( ' | ' ) }}</div>
+                  <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
                   <div class="article__image-container">
                     <img src="{{ the_field('square_image') }}">
                   </div>

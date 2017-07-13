@@ -13,11 +13,9 @@
 </div>
 
 <?php
-
-  $count = 0; 
+  $count = 0;
   $exhibits = get_field('exhibit'); //get all rows
   shuffle ($exhibits); //randomize rows
-
 ?>
 
 <?php if( have_rows('exhibit') ): while ( have_rows('exhibit') ) : the_row();

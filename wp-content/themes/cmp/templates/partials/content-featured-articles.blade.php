@@ -12,8 +12,13 @@
 
   </div>
 
-  <?php query_posts( array ( 'category_name' => 'Main Featured Article', 'posts_per_page => 3') );
-    while ( have_posts() ) : the_post(); ?>
+  <?php
+    global $post;
+    $post_object = get_field('main_featured_article');
+    if( $post_object ):
+    $post = $post_object;
+    setup_postdata( $post );
+  ?>
 
   <div class="hero-header" style="background-image: url(<?php the_field('featured_image'); ?>)">
   </div>
@@ -53,16 +58,17 @@
 
   </div>
 
-    <?php endwhile;
-      wp_reset_query();
-    ?>
+  <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+  <?php endif; ?>
 
     <h3 class="featured-articles-h3">Featured Articles</h3>
 
-    <div class="article-container">
-
-    <?php query_posts( array ( 'category_name' => 'Featured Articles', 'posts_per_page => 3') );
-      while ( have_posts() ) : the_post(); ?>
+<div class="article-container">
+  <?php if( have_rows('featured_articles') ): ?>
+  <?php while ( have_rows('featured_articles') ) : the_row(); ?>
+  <?php $post_object = get_sub_field('article'); ?>
+  <?php if( $post_object ): ?>
+  <?php $post = $post_object; setup_postdata( $post ); ?>
 
     <div class="article">
 
@@ -75,9 +81,10 @@
 
     </div>
 
-    <?php endwhile;
-      wp_reset_query();
-    ?>
+    <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+    <?php endwhile; ?>
+    <?php endif; ?>
 
     <div class="article">
 

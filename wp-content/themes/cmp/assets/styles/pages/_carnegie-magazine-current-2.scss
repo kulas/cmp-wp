@@ -3,6 +3,10 @@
   .features {
     display: flex;
     justify-content: space-between;
+
+    @include grid-media($medium) {
+      display: block;
+    }
   }
 
   .article {

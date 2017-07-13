@@ -17,6 +17,16 @@ body {
   margin: 0;
 }
 
+// .main {
+//   padding: $small-spacing $base-spacing;
+//   max-width: $max-width;
+//   margin:auto;
+//
+//   @include grid-media($medium) {
+//     padding: 0 1em;
+//   }
+// }
+
 .container {
   @include grid-container;
   position: relative;

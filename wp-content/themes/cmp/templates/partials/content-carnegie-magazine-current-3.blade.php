@@ -27,7 +27,7 @@
                   </div>
 
                   <div class="also-article__right">
-                    <div class="categories">{{ the_category( ' | ' ) }}</div>
+                    <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
                     <a href="{{ the_permalink() }}">
                       <h3 class="green-robot-link">{{ the_title() }}</h3>
                     </a>

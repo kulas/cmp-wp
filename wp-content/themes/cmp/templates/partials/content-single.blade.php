@@ -1,85 +1,108 @@
 <article @php(post_class())>
+
   <header>
     <img class="entry-image" src="{{ the_field('featured_image') }}" />
-
     <div class="title-box">
       <h1 class="entry-title">{{ get_the_title() }}</h1>
-      @include('partials/entry-meta')
-
       <p class="article__summary">{{ get_the_excerpt() }}</p>
-      <hr>
+      <p class="author">By {{ the_field('author') }}</p>
     </div>
 
   </header>
 
   <div class="entry-content">
-    @php(the_content())
 
-    <h4 class="tags-title">TOPICS:</h4>
-    @php(the_tags( '<button class="green-button">', '</button><button class="green-button">', '</button>' ))
     <hr>
 
-    <div class="entry-content__notes">
-      <p>@php(the_field('credits_and_notes'))</p>
+    <div class="article-meta">
+
+      <div class="article-meta__main">
+
+      <div class="tags">
+
+        @php(the_tags( '', ' | ', '' ))
+
+      </div>
+
+      <p class="article-meta__divider">|</p>
+
+      <div class="article-meta__issue">
+
+        {{ the_category(' | ') }}
+
+      </div>
+
+      <p class="article-meta__divider">|</p>
+
+      <div class="social-share">
+        <?php echo do_shortcode( '[ess_post]' ); ?>
+      </div>
+
+      <p class="article-meta__divider">|</p>
+
+      <a class="print" href="#" onClick="window.print();"><i class="fa fa-print" aria-hidden="true"></i>Print</a>
+
     </div>
 
-    <div class="entry-social-links">
-
-      <div class="facebook-link" href="facebook.com"><img src="/wp-content/themes/cmp/assets/images/small-facebook.png">Facebook</div>
-      <div class="twitter-link" href="twitter.com"><img src="/wp-content/themes/cmp/assets/images/small-twitter.png">Twitter</div>
-      <div class="print-link" href="#"><img src="/wp-content/themes/cmp/assets/images/small-printer.png">Print</div>
-      <div class="more-link" href="#"><img src="/wp-content/themes/cmp/assets/images/small-plus.png">More</div>
-
-    </div>
-
-    <a class="download-pdf" href="?p={{get_the_ID()}}&format=pdf">Download PDF<img src="/wp-content/themes/cmp/assets/images/pdf-icon.svg"></a>
-
-</div>
-
-    <div class="section-hr">
-
-      <hr>
-      <div class="section-hr__h5">
-        <h5>You Might Also Like</h5>
+      <div class="font-resizer">
+        <p>Text Size:</p>
+        <?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
       </div>
 
     </div>
 
-<div class="entry-content">
+    <hr>
 
-    <div class="recent-articles-container">
+  <div class="article__content">
 
-      <?php query_posts( array ( 'category_name' => 'Featured Articles', 'posts_per_page => 3', 'post__not_in' => array( $post->ID ), 'post__not_in' => array( 83 )) );
-        while ( have_posts() ) : the_post(); ?>
+    <div class="article__main">
 
-      <div class="article">
+      @php(the_content())
 
-        <img src="<?php the_field('featured_image') ?>">
+    </div>
 
-        <div class="article__text-box">
-          <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-          <p><?php the_field('summary') ?></p>
-        </div>
+    <div class="article__related">
 
-      </div>
+      <h4 class="center">You May Also Like</h4>
 
-      <hr>
+      {{-- This is the related post sidebar --}}
+      <?php
+        //for use in the loop, list 5 post titles related to first tag on current post
+        $tags = wp_get_post_tags($post->ID);
+        if ($tags) {
+          $first_tag = $tags[0]->term_id;
+          $args=array(
+          'tag__in' => array($first_tag),
+          'post__not_in' => array($post->ID),
+          'posts_per_page'=>3,
+          'caller_get_posts'=>3
+        );
+        $my_query = new WP_Query($args);
+          if( $my_query->have_posts() ) {
+            while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-      <?php endwhile;
-        wp_reset_query();
-      ?>
+            {{-- Actual content in related posts --}}
+              <div class="tags">
+                @php(the_tags( '', ' | ', '' ))
+              </div>
+              <div class="image-container" style="background-image:url({{ the_field('featured_image') }})"></div>
+              <a href="{{ the_permalink() }}">
+                {{ the_title() }}
+              </a>
+              <div class="excerpt">{{ the_excerpt() }}</div>
+              <p class="author">{{ the_field('author') }}</p>
+
+        <?php endwhile; } wp_reset_query(); } ?>
+
+    </div>
 
   </div>
 
-  <div class="more-articles-container">
-    <button class="green-button more-articles">More Articles</button>
+  <div class="magazine-subscribe">
+    <p class="uppercase-robot">Sign up</br>
+    to receive</br>
+    more stories</p>
+    <button class="grey-button">Subscribe</button>
   </div>
-
-  </div>
-
-  <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}
-  </footer>
-
 
 </article>

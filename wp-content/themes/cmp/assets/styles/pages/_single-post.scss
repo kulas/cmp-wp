@@ -9,6 +9,13 @@ article {
       display: flex;
     }
 
+    .article-meta__main {
+      @include grid-media($medium) {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
     p.article-meta__divider {
       font-weight: bold;
       padding: 0 $small-spacing;
@@ -24,22 +31,14 @@ article {
       display:none;
     }
 
-    .entry-title {
-      font-family: 'Lora', serif;
-      font-weight:lighter;
-      font-size: 1.9em;
+    h1.entry-title {
+      font-family: 'Roboto', serif;
+      font-size: 3em;
+      font-weight: 400;
       margin:0;
-      padding:0;
+      padding-bottom: $small-spacing;
       max-width:1000px;
       margin:auto;
-    }
-
-    .author, .author a {
-      color: #7a7a7a;
-      font-family: 'Lora', sans-serif;
-      font-weight:bold;
-      font-style: italic;
-      font-size: 1em;
     }
 
     .article__summary {
@@ -144,78 +143,8 @@ article {
     margin-bottom:0;
   }
 
-  .entry-social-links {
-    display:flex;
-    justify-content: flex-start;
-    max-width:100%;
-
-    div {
-      padding:.8em 1.5em;
-      margin-bottom:1em;
-      margin-right:5px;
-      text-align:center;
-      color:white;
-      font-size:.9em;
-      font-weight: 300;
-      display:flex;
-      justify-content: center;
-      align-items: center;
-
-      @include grid-media($medium) {
-        padding: .5em 1em;
-      }
-
-      img {
-        height:20px;
-        width: 100%;
-
-        @include grid-media($medium) {
-          height:15px;
-        }
-      }
-    }
-
-    .facebook-link {
-      background-color: #3B5999;
-    }
-
-    .twitter-link {
-      background-color:#1AA1F2;
-    }
-
-    .print-link {
-      background-color: #728A8E;
-    }
-
-    .more-link {
-      background-color: #FF6551;
-    }
-  }
-
-  .download-pdf {
-    width:130px;
-    display:flex;
-    align-items: center;
-
-    img {
-      height:20px;
-    }
-  }
-
   .wpptopdfenh {
     display:none;
-  }
-
-  .recent-articles-container {
-    position:relative;
-    margin-top:2em;
-    display:flex;
-    justify-content: space-between;
-
-    @include grid-media($medium) {
-      display: block;
-    }
-
   }
 
   .article {
@@ -312,6 +241,15 @@ article {
     }
   }
 
+  .social-share,
+  a.print,
+  .font-resizer,
+  p.article-meta__divider {
+    @include grid-media($medium) {
+      display: none;
+    }
+  }
+
   .article__main {
     figure {
       max-width: 100% !important;
@@ -342,6 +280,10 @@ article {
     blockquote,
     figcaption {
       max-width: 70%;
+
+      @include grid-media($large) {
+        max-width: 100%;
+      }
     }
 
     blockquote {
@@ -364,6 +306,10 @@ article {
   position: relative;
   bottom: 100em;
   height: 0;
+
+  @include grid-media($large) {
+    display: none;
+  }
 
     h4 {
       font-family: 'Roboto', sans-serif;
@@ -406,6 +352,10 @@ article {
   max-width: 60%;
   text-align:center;
   padding-bottom: $base-spacing;
+
+  @include grid-media($large) {
+    max-width: 100%;
+  }
 
   p.uppercase-robot {
     width: 100%;

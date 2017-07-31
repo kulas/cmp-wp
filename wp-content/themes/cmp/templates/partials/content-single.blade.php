@@ -34,32 +34,26 @@
 
       <p class="article-meta__divider">|</p>
 
-      <div class="social-share">
-        <?php echo do_shortcode( '[ess_post]' ); ?>
-      </div>
-
-      <p class="article-meta__divider">|</p>
-
       <a class="print" href="#" onClick="window.print();"><i class="fa fa-print" aria-hidden="true"></i>Print</a>
 
     </div>
 
       <div class="font-resizer">
-        <p>Text Size:</p>
+
+        <div class="social-share">
+          <?php echo do_shortcode( '[ess_post]' ); ?>
+        </div>
+
+        <p class="article-meta__divider">|</p>
+
+        <p class="small-uppercase--bold">Text Size:</p>
         <?php if(function_exists('fontResizer_place')) { fontResizer_place(); } ?>
+
       </div>
 
     </div>
 
     <hr>
-
-  <div class="article__content">
-
-    <div class="article__main">
-
-      @php(the_content())
-
-    </div>
 
     <div class="article__related">
 
@@ -95,6 +89,15 @@
         <?php endwhile; } wp_reset_query(); } ?>
 
     </div>
+
+  <div class="article__content">
+
+    <div class="article__main">
+
+      @php(the_content())
+
+    </div>
+
 
   </div>
 

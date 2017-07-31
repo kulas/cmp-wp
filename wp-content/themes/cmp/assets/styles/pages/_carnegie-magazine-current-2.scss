@@ -1,9 +1,13 @@
+// Second section of Carnegie Magazine Current Issue page (Featured Articles).
+
 .carnegie-magazine-current-2 {
+  display: flex;
+  padding-bottom: $base-spacing;
+  margin: auto;
 
   .features {
     display: flex;
     justify-content: space-between;
-
     @include grid-media($medium) {
       display: block;
     }
@@ -15,7 +19,7 @@
   }
 
   .article__image-container {
-    height:225px;
+    height: 225px;
     overflow: hidden;
 
     img {
@@ -25,7 +29,6 @@
   }
 
   hr {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.5em;
   }
-
 }

@@ -6,8 +6,9 @@
 
 @section('content')
 
-  @include('partials.content-magazine-featured-articles')
-  @include('partials.content-magazine-section-2')
-  @include('partials.content-magazine-section-3')
+  @include('partials.content-carnegie-magazine-nav')
+  @include('partials.content-carnegie-magazine-home-1')
+  @include('partials.content-carnegie-magazine-home-2')
+  @include('partials.content-carnegie-magazine-home-3')
 
 @endsection

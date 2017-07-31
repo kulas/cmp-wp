@@ -814,10 +814,19 @@ a.quickview-btn.nav-visit {
 // Desktop Nav
 ////////////////////////////////////////////////////////////////
 
-.menu-primary_navigation-container {
+.menu-primary_navigation-container,
+.menu-magazine-nav-container {
   padding:0em 3em;
   font-family: $base-font-family;
   // border-bottom: $base-border;
+}
+
+.menu-magazine-nav-container {
+  padding: 0;
+}
+
+ul#menu-magazine-nav {
+  background-color: $nav-hover;
 }
 
 // fix vv
@@ -838,7 +847,18 @@ a.quickview-btn.nav-visit {
   }
 }
 
+#menu-magazine-nav li:hover {
+  a {
+    color:white;
+  }
+}
+
 ul.desktop-nav {
+  border-top: $base-border;
+}
+
+ul.desktop-nav,
+ul#menu-magazine-nav {
   display: flex;
   position: relative;
   margin: 0;
@@ -846,21 +866,22 @@ ul.desktop-nav {
   max-width: $max-width;
   margin: auto;
   justify-content: space-between;
-  border-top: $base-border;
+  // border-top: $base-border;
   // border-bottom: $base-border;
   @include grid-media($nav-break){
     display: none;
   }
 
-
   li.menu-item {
     padding: 0;
     position: relative;
+    display: block;
     list-style-type: none;
     text-transform: uppercase;
     position: relative;
     transition: 0.3s all;
     text-align: left;
+    font-weight: bold;
 
     &:active, &:hover, &.active {
       background: $nav-hover;
@@ -875,7 +896,9 @@ ul.desktop-nav {
     }
   }
 
-    li.current-menu-item {
+    li.current-menu-item,
+    li.current-page-ancestor,
+    li.current-menu-parent a {
       background: $nav-hover;
     }
 
@@ -902,7 +925,7 @@ ul.desktop-nav {
     li {
       transition: 0.4s all;
       background: #6F774A;
-      width: 250px;
+      min-width: 250px;
       height:45px;
       color: white;
       a {
@@ -940,7 +963,25 @@ ul.desktop-nav {
   .sub-menu > li.menu-item > ul.sub-menu > li.menu-item > ul.sub-menu {
     top: -60px;
   }
+}
 
+ul#menu-magazine-nav {
+
+  li.menu-item:hover {
+    background-color: #6e7649;
+  }
+  li.current-menu-item {
+    background-color: #6e7649;
+  }
+}
+
+li.menu-item-299 > ul.sub-menu {
+  left: -8.9em;
+
+  li.menu-item {
+    text-align: right;
+    overflow: hidden;
+  }
 }
 
 .desktop-nav-container {

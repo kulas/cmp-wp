@@ -1,5 +1,6 @@
-.member-perks {
+// Second section on all Membership & Donation inside pages, with 4 links to other membership/donation pages.
 
+.member-perks {
   .sub-page-container {
     display: flex;
     justify-content: space-between;
@@ -7,10 +8,9 @@
   }
 
   .sub-page {
-    flex-basis:24%;
+    flex-basis: 24%;
     text-align: center;
     padding-bottom: $base-spacing;
-
     @include grid-media($medium) {
       flex-basis: 49%;
       padding-bottom: 0;
@@ -18,7 +18,7 @@
   }
 
   .sub-page__image {
-    width:100%;
+    width: 100%;
   }
 
   .contact-us {
@@ -27,6 +27,6 @@
 
   hr {
     padding: 0;
-    margin:$small-spacing 0;
+    margin: $small-spacing 0;
   }
 }

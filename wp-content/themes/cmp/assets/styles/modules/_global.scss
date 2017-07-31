@@ -1,2 +1,192 @@
 // GLOBAL MODULES -  Modules that can be used anywhere.  Break bigger modules into their own file.
 ////////////////////////////////////////////////////////////////
+
+// This is the HR with a text overlay that serves as a break/section header.
+.section-hr {
+    display:block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: $max-width;
+    margin: auto;
+    margin-bottom: $large-spacing;
+    padding: 0 $base-spacing;
+    text-align: center;
+
+    @include grid-media($medium) {
+      margin-bottom: $base-spacing;
+      padding:0;
+    }
+
+    hr {
+      position:relative;
+      margin: 0;
+      padding: 0;
+      color:black;
+    }
+
+    .section-hr__h5 {
+      width: 100%;
+      height: 0;
+      position: relative;
+      text-align: center;
+      top: -.875em;
+
+    h5 {
+        display: inline;
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        padding: 0 1em;
+        background-color:white;
+    }
+  }
+}
+
+// For anything you want to hide on mobile.
+.mobile-hide {
+  @include grid-media($medium) {
+    display:none !important;
+  }
+}
+
+// An hr that only appears on mobile.
+.mobile-hr {
+  display:none;
+
+  @include grid-media($medium) {
+    display:block;
+    width:100%;
+  }
+}
+
+// These ensure all images aligned left or right in the content editor function correctly.
+img.alignleft {
+  float:left;
+  padding: 0 0.5em 0.5em 0;
+}
+
+img.alignright {
+  float:right;
+  padding: 0 0em 0.5em 0.5em;
+}
+
+// Appears on the mobile versions of the more things to do section on the homepage & things to do section.
+.more-things, .activity__hr {
+  display:none;
+}
+
+// Little arrow that appears next to some links.
+.learn-more-arrow  {
+  height:20px;
+  position: relative;
+  top:3px;
+
+  @include grid-media($medium) {
+    height:25px;
+    left:10px;
+    top:-12px;
+  }
+}
+
+// All hrs.
+hr {
+  width:100%;
+}
+
+// Main text paragraph
+.main-text {
+  padding-bottom: $small-spacing;
+
+  p {
+    max-width:60%;
+    @include grid-media($medium) {
+      max-width:100%;
+    }
+  }
+}
+
+//For automatically generated Wordpress pages (e.g. tags)
+.generic-article,
+.page-header {
+  max-width: $max-width;
+  margin:auto;
+  padding: 0 3em;
+
+  hr {
+    padding: 0;
+    margin: 0;
+    margin-bottom: .5em;
+  }
+}
+
+.generic-article {
+  padding-bottom: 2em;
+}
+
+//Used on several 'Things to Do' templates
+.activity-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  @include grid-media($medium) {
+    flex-wrap: wrap;
+    padding: 1em;
+
+    .activity__hr {
+      padding-top: 0 !important;
+      border: 0;
+      clear: both;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #CCC;
+    }
+
+    .more-things {
+      display: block;
+    }
+  }
+
+  .activity {
+    flex-basis: 23%;
+    @include grid-media($medium) {
+      flex-basis: 100%;
+      display: flex;
+    }
+
+    h4 {
+      font-family: 'Roboto';
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      font-weight: lighter;
+      padding: 0 0 3px;
+      margin: 0;
+      line-height: 20px;
+      font-size: 0.9em;
+    }
+
+    .activity__main-image {
+      @include grid-media($medium) {
+        display: none;
+      }
+    }
+
+    .activity__square-image {
+      display: none;
+      @include grid-media($medium) {
+        display: block;
+        height: 75px;
+        width: 75px;
+        margin-right: 1em;
+      }
+    }
+  }
+}

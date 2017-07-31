@@ -1,41 +1,39 @@
-#our-museums {
+// Our Museums homepage section.
 
+#our-museums {
   .museum-container {
-    width:100%;
-    display:flex;
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     overflow: hidden;
-
     @include grid-media($medium) {
-      padding:0em 1em;
+      padding: 0 1em;
+    }
+  }
+
+  .museum {
+    flex-basis: 23%;
+    @include grid-media($medium) {
+      flex-basis: 47%;
+      margin-bottom: $base-spacing;
+
+      &:last-child,
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
     }
 
-  }
-  .museum {
-      flex-basis: 23%;
-
-      @include grid-media($medium) {
-        flex-basis:47%;
-        margin-bottom: $base-spacing;
-
-        &:last-child,
-        &:nth-last-child(2){
-          margin-bottom: 0;
-        }
-
-      }
-
     img {
-      width:100%;
+      width: 100%;
     }
 
     h4 {
       font-family: 'Roboto';
       font-size: 1.1em;
-      font-weight:bold;
-      padding:0;
-      margin:0;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
     }
   }
 }

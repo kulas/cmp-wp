@@ -1,5 +1,6 @@
-.plan-visit {
+// Plan a Visit page, with 3 columns.
 
+.plan-visit {
   .museum-container {
     display: flex;
     flex-wrap: wrap;
@@ -7,15 +8,14 @@
     padding-top: $small-spacing;
     padding-bottom: $base-spacing;
 
-    >.museum-container__museum {
+    > .museum-container__museum {
       flex-basis: 30%;
-      padding-right:$small-spacing;
+      padding-right: $small-spacing;
       border-right: 1px solid #D3D3D3;
 
-      >p {
+      > p {
         padding-bottom: $small-spacing;
       }
-
       @media (max-width: 1100px) {
         flex-basis: 100%;
         border: none;
@@ -28,9 +28,8 @@
       }
     }
 
-    >.museum-container__museum:last-child {
-      border:none;
+    > .museum-container__museum:last-child {
+      border: none;
     }
   }
-
 }

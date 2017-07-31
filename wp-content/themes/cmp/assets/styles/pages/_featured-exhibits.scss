@@ -1,37 +1,33 @@
-.exhibit-container {
-  display:flex;
-  flex-wrap: wrap;
-  padding: 0em $base-spacing;
-  max-width: $max-width;
-  margin:auto;
-  justify-content: space-between;
+// Featured Exhibits section on the homepage, under 'Now Showing.'
 
+.exhibit-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 $base-spacing;
+  max-width: $max-width;
+  margin: auto;
+  justify-content: space-between;
   @include grid-media($medium) {
     padding: 0;
   }
 }
 
 h2.hero-header__words-box.button--link {
-  left:0;
-  padding-left: 0;
-
   @include grid-media($medium) {
     padding: $small-spacing !important;
   }
 }
-
 //individual exhibits
 .exhibit {
-  padding-top:0 ;
-  margin:0;
-  width:48%;
+  padding-top: 0;
+  margin: 0;
+  width: 48%;
   margin-bottom: $base-spacing;
 
   &:last-child,
   &:nth-last-child(2) {
     margin-bottom: 0;
   }
-
   @include grid-media($medium) {
     width: 100%;
     margin-bottom: 0;
@@ -41,41 +37,37 @@ h2.hero-header__words-box.button--link {
     }
   }
 }
-
 //their image
 .exhibit__image {
   height: 200px;
   background-size: cover;
   background-position: center;
-  margin:auto;
-
+  margin: auto;
   @include grid-media($large) {
     height: 150px;
   }
 }
-
 //dates of exhibit
 .exhibit-preview__dates {
-    position: relative;
+  position: relative;
+  display: inline-block;
+  padding-top: 1em;
+  height: 2em;
+  @include grid-media($medium) {
+    height: auto;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 0.5em $small-spacing;
     display: inline-block;
-    padding-top: 1em;
-    height:2em;
-
-    @include grid-media($medium) {
-      height: auto;
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size:.8em;
-      font-weight: bold !important;
-      text-transform: uppercase;
-      background-color: white;
-      padding: .5em $small-spacing;
-      display:inline-block;
-      margin-bottom: $small-spacing;
-      color:black;
-    }
+    margin-bottom: $small-spacing;
+    color: black;
+  }
 }
 
 .exhibit__words-box {
@@ -88,7 +80,6 @@ h2.hero-header__words-box.button--link {
   font-size: 1.5em;
   margin-left: $small-spacing;
   margin-bottom: 0;
-
   @include grid-media($medium) {
     font-size: 1.25em;
   }
@@ -97,18 +88,16 @@ h2.hero-header__words-box.button--link {
 .exhibit-preview__summary-text {
   margin-left: $small-spacing;
 }
-
 // hero version
 .exhibit--hero {
   position: relative;
   margin-bottom: $base-spacing;
-
   @include grid-media($medium) {
     margin-bottom: $small-spacing;
   }
 
   .exhibit-preview__dates {
-    padding-top:0;
+    padding-top: 0;
     display: block;
     font-size: 1.5em;
 
@@ -116,7 +105,6 @@ h2.hero-header__words-box.button--link {
       padding: 0;
       margin: 0;
     }
-
     @include grid-media($medium) {
       position: absolute;
       bottom: 100%;
@@ -124,7 +112,7 @@ h2.hero-header__words-box.button--link {
       font-size: 1em;
 
       p {
-        padding: .5em $small-spacing !important;
+        padding: 0.5em $small-spacing !important;
       }
     }
   }
@@ -133,7 +121,6 @@ h2.hero-header__words-box.button--link {
     font-size: 1.25em;
     max-width: 80%;
     margin: 0;
-
     @include grid-media($medium) {
       max-width: 100%;
     }
@@ -142,38 +129,34 @@ h2.hero-header__words-box.button--link {
   h2.hero-header__words-box.button--link {
     display: block !important;
     margin-top: 0;
-
     @include grid-media($medium) {
-      margin-top: 0rem;
+      margin-top: 0;
     }
   }
 }
-
-
 //hides the below div on desktop
 .exhibit__learn-more-mobile {
-  display:none;
+  display: none;
 }
-
 //a bunch of things included for the media query
 @include grid-media($medium) {
   #featured-exhibits {
-    margin:1em 0em;
+    margin: 1em 0;
   }
 
   .exhibit-preview__summary-text {
-    display:none;
+    display: none;
   }
 
   .exhibit__learn-more {
-    display:none;
+    display: none;
   }
 
   .exhibit__learn-more-mobile {
-    display:inline;
+    display: inline;
   }
 
   .section-hr-mobile {
-    display:block;
+    display: block;
   }
 }

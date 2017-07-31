@@ -1,5 +1,6 @@
-.single-event {
+// Single Member Event from the Events plugin.
 
+.single-event {
   .event-container {
     display: flex;
     justify-content: space-between;
@@ -10,19 +11,18 @@
   }
 
   .event__image {
-    flex-basis:48%;
+    flex-basis: 48%;
   }
 
   .em-booking-form-details {
     padding: 0;
 
     input {
-      height:40px;
+      height: 40px;
     }
 
     #em-booking-submit {
-      height:auto;
+      height: auto;
     }
   }
-
 }

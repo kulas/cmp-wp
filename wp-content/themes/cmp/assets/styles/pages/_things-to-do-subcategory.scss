@@ -1,11 +1,11 @@
-.things-to-do-subcategory {
+// Deepest level inside page in 'Things to Do section'
 
+.things-to-do-subcategory {
   .content-container {
     display: block;
-    padding: 0 $base-spacing $small-spacing $base-spacing;
-
+    padding: 0 $base-spacing $small-spacing;
     @include grid-media($medium) {
-      padding:0 !important;
+      padding: 0 !important;
     }
   }
 
@@ -14,57 +14,51 @@
   }
 
   .large-title {
-
     @include grid-media($medium) {
-      padding:0em 1em 1em 1em;
+      padding: 0 1em 1em;
     }
 
     h1 {
       font-size: 4em;
       font-weight: 300;
       margin-bottom: 0;
-
       @include grid-media($medium) {
-        font-size:3em;
+        font-size: 3em;
       }
     }
   }
 
   hr {
-
     @include grid-media($medium) {
-      width:95%;
-      margin:auto;
-
+      width: 95%;
+      margin: auto;
     }
-
   }
 
   .activity-container {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
-    top:0;
+    top: 0;
 
     .activity {
       flex-basis: 49%;
       justify-content: space-between;
       padding-bottom: 2em;
-
       @include grid-media($medium) {
-        flex-basis:100%;
-        display:block;
+        flex-basis: 100%;
+        display: block;
       }
 
       .activity__image {
-        height:200px;
-        background-size:cover;
+        height: 200px;
+        background-size: cover;
       }
 
       h3 {
         font-family: 'Roboto';
-        font-weight:400;
-        margin-bottom:0;
-        padding-top: .5em;
+        font-weight: 400;
+        margin-bottom: 0;
+        padding-top: 0.5em;
       }
 
       p {
@@ -73,14 +67,15 @@
     }
   }
 
-  h1.large-title, a.large-title {
-    display:inline;
+  a.large-title,
+  h1.large-title {
+    display: inline;
   }
 
   .learn-more-arrow {
     display: inline;
-    top:4px;
-    left:0;
-    height:28px;
+    top: 4px;
+    left: 0;
+    height: 28px;
   }
 }

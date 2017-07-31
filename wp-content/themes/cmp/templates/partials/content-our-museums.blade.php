@@ -1,6 +1,7 @@
 {{--
   Template Name: Our Museums
 --}}
+
 <div id="our-museums" class="section--primary">
 
   <div class="section-hr">

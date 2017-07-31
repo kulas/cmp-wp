@@ -1,14 +1,15 @@
+//Carnegie Magazine homepage section (Inside the Museums).
+
 .carnegie-magazine-section-3 {
   padding-bottom: $base-spacing;
   margin-bottom: $base-spacing;
 
-  h1.hero-header__words-box {
-    font-family: 'Roboto', sans-serif;
+  .content-container {
+    padding: 0 5em;
   }
 
   p.inside-museums-text {
     max-width: 75%;
-
     @include grid-media($medium) {
       max-width: 100%;
       padding-top: 0.5em;

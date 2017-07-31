@@ -1,0 +1,38 @@
+.magazine-archive {
+  display: flex;
+
+  .issue {
+    flex-basis: 80%;
+    display: flex;
+    padding: $small-spacing 0;
+  }
+
+  .issue__cover {
+    flex-basis: 20%;
+  }
+
+  .issue__content {
+    flex-basis: 75%;
+    padding: 0 $small-spacing;
+  }
+
+  .archive__sidebar {
+    padding-top: $small-spacing;
+    flex-basis: 20%;
+
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+    }
+
+    li {
+      padding: 0;
+    }
+  }
+
+  .archive__sidebar__container {
+    padding: $small-spacing;
+    border-left: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+  }
+}

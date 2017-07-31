@@ -51,9 +51,9 @@
       </div>
     </div>
 
-    @php
-      $i = $i+1;
-      endwhile; else : endif;
-    @endphp
+  @php
+    $i = $i+1;
+    endwhile; else : endif;
+  @endphp
 
 </div>

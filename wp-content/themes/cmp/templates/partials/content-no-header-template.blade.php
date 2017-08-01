@@ -10,16 +10,16 @@
 
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-  <div class="breadcrumb-container">
-    <div class="nav-breadcrumb">
+    <div class="breadcrumb-container">
+      <div class="nav-breadcrumb">
 
-      @php if(function_exists('bcn_display')) // breadcrumb
-        {
-            bcn_display();
-        }
-      @endphp
+        @php if(function_exists('bcn_display')) // breadcrumb
+          {
+              bcn_display();
+          }
+        @endphp
 
-    </div>
+      </div>
   </div>
   <hr>
     <div class="main-text">

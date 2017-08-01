@@ -9,9 +9,7 @@
 <div class="things-to-do-page">
   <div class="hero-header" style="background-image:url('{{ the_field('hero_image') }}')"></div>
   <div class="content-container">
-    <div>
-      <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-    </div>
+    <h1 class="hero-header__words-box">{{ the_title() }}</h1>
   </div>
   <div class="content-container">
     <div class="text-box">

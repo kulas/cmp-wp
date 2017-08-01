@@ -162,10 +162,22 @@
       display:flex;
     }
 
+    // Email subscribe form
+    .wpcf7 {
+      width: 75%;
+      @include grid-media($medium) {
+        width: 100%;
+      }
+    }
+
     .wpcf7-form-control-wrap {
       @include grid-media($medium) {
         width: 100%;
       }
+    }
+
+    .wpcf7 form.wpcf7-form {
+      padding: 0 !important;
     }
 
     input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email {
@@ -186,7 +198,7 @@
     input.wpcf7-form-control.wpcf7-submit {
       @extend .green-button;
       height:42px;
-      padding:0;
+      padding: 0 .5em;
       width:100px;
       position:relative;
       left:.5em;

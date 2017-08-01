@@ -1,3 +1,5 @@
+{{-- Main part of some automatically generated pages (e.g. topics in the Carnegie Magazine secion) --}}
+
 <div class="generic-article">
   <article @php(post_class())>
     <header>

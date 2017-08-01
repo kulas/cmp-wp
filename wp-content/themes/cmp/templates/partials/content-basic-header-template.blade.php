@@ -1,13 +1,10 @@
-{{--
-   Basic Page Template With Header Custom Field
---}}
+{{-- Basic Page Template With Header Custom Header Field --}}
+
+@php
+  if (have_posts()) : while (have_posts()) : the_post();
+@endphp
 
 <div class="basic-header">
-
-  @php
-    if (have_posts()) : while (have_posts()) : the_post();
-  @endphp
-
   <div class="hero-header" style="background-image:url('{{ the_field('header_image') }}')"></div>
     <div class="content-container">
       <h1 class="hero-header__words-box">{{ the_title() }}</h1>
@@ -27,9 +24,8 @@
       {{ the_content() }}
     </div>
   </div>
-
-  @php
-    endwhile; else: endif;
-  @endphp
-
 </div>
+
+@php
+  endwhile; else: endif;
+@endphp

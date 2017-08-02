@@ -10,4 +10,18 @@
       padding: $small-spacing 0;
     }
   }
+
+  .activity__main-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+
+    @include grid-media($medium) {
+      display: none;
+    }
+  }
+
+  .activity__hr:last-child {
+    display: none;
+  }
 }

@@ -16,7 +16,9 @@
     setup_postdata( $post );
   @endphp
 
-  <div class="hero-header" style="background-image: url('{{ the_field('featured_image') }}')"></div>
+  <a href="{{ the_permalink() }}">
+    <div class="hero-header" style="background-image: url('{{ the_field('featured_image') }}')"></div>
+  </a>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h2>
   </div>

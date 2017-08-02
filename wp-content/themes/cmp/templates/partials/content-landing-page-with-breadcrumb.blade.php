@@ -1,4 +1,4 @@
-{{--  Basic Landing Page With Breadcrumb/has large sub-page images/links --}}
+{{--  Basic Landing Page With Breadcrumb/has large square sub-page images/links --}}
 
 {{-- Uses the same general layout as event spaces, thus the class --}}
 <div class="event-spaces">

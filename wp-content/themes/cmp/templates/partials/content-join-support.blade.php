@@ -29,19 +29,19 @@
             the_row()
           @endphp
 
-          <div class="sub-page">
-            <div class="sub-page__background" style="background-image:url('{{ $rows[$i]['image'] }}'">
-              <a href="{{ the_sub_field('link') }}">
-                <div class="sub-page__title">
-                    <h3>{{ the_sub_field('title') }}</h3>
-                </div>
-                <h4 class="sub-page__quote">"{{ $rows[$i]['quote'] }}"</h4>
-              </a>
-            </div>
-          <p class="description">
-            {{ the_sub_field('description') }}
-          </p>
-        </div>
+            <div class="sub-page">
+                <div class="sub-page__background" style="background-image:url('{{ $rows[$i]['image'] }}'">
+                  <div class="sub-page__title">
+                    <a href="{{ the_sub_field('link') }}">
+                      <h3>{{ the_sub_field('title') }}</h3>
+                    </a>
+                  </div>
+                  <h4 class="sub-page__quote">"{{ $rows[$i]['quote'] }}"</h4>
+              </div>
+            <p class="description">
+              {{ the_sub_field('description') }}
+            </p>
+          </div>
 
         @php
           $i = $i+1;

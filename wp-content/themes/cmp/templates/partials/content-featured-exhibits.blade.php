@@ -22,7 +22,9 @@
     if ($count==0) { // The first exhibit is the hero image/main featured exhibit.
   @endphp
 
+    <a href="{{ $exhibit['link'] }}">
       <div class="hero-header" style="background-image: url({{ $exhibit['exhibit_image'] }})"></div>
+    </a>
       <div class='exhibit-container exhibit--hero'>
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">
@@ -56,9 +58,11 @@
       if ($count >= 1) {
     @endphp
 
-     {{-- Callout blocks/4 featutred exhibits --}}
-      <div class='exhibit'>
+    {{-- Callout blocks/4 featutred exhibits --}}
+    <div class='exhibit'>
+      <a href="{{ $exhibit['link'] }}">
         <div class="exhibit__image" style="background-image: url({{ $exhibit['exhibit_image'] }})"></div>
+      </a>
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">
             <div class="exhibit__words-box">

@@ -17,16 +17,18 @@
       @endphp
 
       <div class="activity">
-        <div class="activity__image-container">
-          <img class="activity__main-image" src="{{ the_sub_field('featured_image') }}">
-        </div>
-        <img class="activity__square-image" src="{{ the_sub_field('square_image') }}">
-        <div class="activity__text-box">
-          <h4><a href="{{ the_sub_field('link') }}">{{ the_sub_field('title') }}</a></h4>
-          <p>{{ the_sub_field('summary') }}</p>
-        </div>
+        <a href="{{ the_sub_field('link') }}">
+          <div class="activity__image-container">
+            <img class="activity__main-image" src="{{ the_sub_field('featured_image') }}">
+          </div>
+          <img class="activity__square-image" src="{{ the_sub_field('square_image') }}">
+          <div class="activity__text-box">
+            <h4>{{ the_sub_field('title') }}</h4>
+        </a>
+        <p>{{ the_sub_field('summary') }}</p>
       </div>
-      <hr class="activity__hr" />
+    </div>
+    <hr class="activity__hr" />
 
       @php
         endwhile; else : endif;

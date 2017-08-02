@@ -36,19 +36,16 @@
     <div class="contact-us">
       <h3>Contact Us</h3>
       <div class="main-text">
-        <p>
-          The Membership Team is here to help, and we’d be
-          glad to answer your questions or update your contact
-          information. We’re available every Monday through
-          Friday from 8:30 a.m. to 5 p.m., so please feel free
-          to email, call, or tweet at us. We strive to answer every
-          call personally and to respond to all emails within one business day.
-        </p>
-      <div>
-        Email: <a href="mailto:membership@carnegiemuseums.org">membership@carnegiemuseums.org</a><br />
-        Phone: 412.622.3314<br />
-        Twitter: <a href="https://twitter.com/carnegiemembers?lang=en">@carnegiemembers</a><br />
-      </p>
+
+        @php
+          $page_id = 292;
+          $contact = ( get_field( 'contact_us', $page_id ) ) // Gets content from Join & Support page so it's the same on all subpages
+        @endphp
+
+        @php
+          echo $contact;
+        @endphp
+
     </div>
   </div>
 </div>

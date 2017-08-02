@@ -27,7 +27,7 @@ let webpackConfig = {
         enforce: 'pre',
         test: /\.js?$/,
         include: config.paths.assets,
-        use: 'eslint',
+        // use: 'eslint',
       },
       {
         test: /\.js$/,
@@ -101,7 +101,7 @@ let webpackConfig = {
     moduleExtensions: ['-loader'],
   },
   externals: {
-    jquery: 'jQuery',
+    jquery: 'jQuery'
   },
   plugins: [
     new CleanPlugin([config.paths.dist], {

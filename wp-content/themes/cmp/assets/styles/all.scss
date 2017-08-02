@@ -28,6 +28,9 @@
 // SHARED MODULES
 @import "modules/global";
 @import "modules/hero";
+@import "modules/breadcrumb";
+@import "modules/tabs";
+@import "modules/contact-form";
 
 // PAGE MODULES
 @import "pages/home";
@@ -37,7 +40,6 @@
 @import "pages/our-museums";
 @import "pages/twitter-feed";
 @import "pages/single-post";
-@import "pages/learn-with-us";
 @import "pages/more-things-to-do";
 @import "pages/things-to-do-page";
 @import "pages/things-to-do-subcategory";
@@ -51,13 +53,15 @@
 @import "pages/event-spaces-contact";
 @import "pages/plan-visit";
 @import "pages/no-header";
-@import "pages/magazine-featured-articles";
+@import "pages/carnegie-magazine-section-1";
 @import "pages/carnegie-magazine-section-2";
 @import "pages/carnegie-magazine-section-3";
 @import "pages/carnegie-magazine-current-1";
 @import "pages/carnegie-magazine-current-2";
 @import "pages/carnegie-magazine-current-3";
 @import "pages/carnegie-magazine-current-4";
+@import "pages/archives";
+
 
 // THEMES
 @import "themes/ie";

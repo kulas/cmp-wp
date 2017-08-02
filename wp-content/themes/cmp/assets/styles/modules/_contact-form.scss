@@ -1,0 +1,47 @@
+// Contact form plugin styling
+
+.wpcf7 {
+  width:50%;
+
+  @include grid-media($medium) {
+    width:100%;
+  }
+
+  form.wpcf7-form {
+    padding: $small-spacing 0;
+  }
+
+  select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required {
+    width:100%;
+    height:40px;
+    margin-bottom:0;
+  }
+
+  input {
+    height:20px;
+    margin-bottom:0;
+  }
+
+  span.wpcf7-list-item {
+    display: block;
+  }
+
+  span.wpcf7-form-control-wrap.ZipPostalCode {
+    position: relative;
+  }
+
+  .wpcf7-form p {
+    margin-bottom:0;
+  }
+
+  input.wpcf7-form-control.wpcf7-submit {
+    margin-top:1em;
+    height: auto;
+    width:200px;
+    margin-top:$small-spacing;
+  }
+
+  span.wpcf7-list-item {
+    display:block;
+  }
+}

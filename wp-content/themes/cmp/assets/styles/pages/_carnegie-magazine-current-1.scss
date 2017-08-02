@@ -1,10 +1,13 @@
+// Top section of Carnegie Magazine Current Issue page.
+
 .carnegie-magazine-current-1 {
+  display: flex;
+  padding-bottom: $base-spacing;
 
   .current-issue {
     display: flex;
     align-content: space-between;
     padding-bottom: $base-spacing;
-
     @include grid-media($medium) {
       display: block;
     }
@@ -14,16 +17,15 @@
     flex-basis: 60%;
     padding: 0 $small-spacing 0 0;
     overflow: hidden;
-    }
+  }
 
   .current-issue__right {
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 $small-spacing;
+    padding: $small-spacing $small-spacing 0;
     overflow: hidden;
-
     @include grid-media($medium) {
       padding: 0;
     }
@@ -39,16 +41,6 @@
   ul {
     padding: 0;
     margin: 0;
-  }
-
-  ul > li {
-    list-style: none;
-    text-transform: uppercase;
-  }
-
-  ul.post-categories > li > a {
-    @extend .small-uppercase;
-    color: grey;
   }
 
   .magazine-archives__container {

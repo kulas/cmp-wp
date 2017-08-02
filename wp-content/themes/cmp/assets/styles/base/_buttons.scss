@@ -102,6 +102,19 @@
   color: #A6A6A6;
 }
 
+.green-button {
+  display: inline-block;
+  border:none;
+  border-radius:2px;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  color:white;
+  background-color: #96A061;
+  font-size:.9em;
+  margin-top:5px;
+  margin-bottom: $small-spacing;
+}
+
 // Special Links
 ////////////////////////////////////////////////////////////////
 

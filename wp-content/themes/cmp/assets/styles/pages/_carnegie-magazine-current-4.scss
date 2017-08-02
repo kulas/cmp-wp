@@ -1,9 +1,19 @@
-.magazine-signup {
-    padding: $base-spacing;
-    width: 100%;
-    text-align: center;
+// Big Picture & Magazine Signup on Current Issue page
 
-    p {
-      width: 100%;
-    }
+.carnegie-magazine__big-picture {
+  .content-container {
+    margin: auto;
+  }
+}
+
+.magazine-signup {
+  padding: $small-spacing 0;
+  max-width: $max-width;
+  width: 100%;
+  text-align: center;
+  padding-bottom: $base-spacing;
+
+  p {
+    width: 100%;
+  }
 }

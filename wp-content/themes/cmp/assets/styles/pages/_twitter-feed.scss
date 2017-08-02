@@ -1,47 +1,49 @@
+// Twitter Feed on homepage.
+
 #twitter-feed {
-
   width: 100%;
-
   background-color: #EBEBEB;
 
   .content-container {
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    height:200px;
+    height: 200px;
   }
 
   #twitter-info {
-    width:170px;
+    width: 170px;
     padding-right: 20px;
     font-family: Arial;
 
     img {
-      width:25px;
+      width: 25px;
     }
 
     h2 {
-      margin:0;
+      margin: 0;
       font-size: 1.4em;
       font-family: Arial;
     }
+
     a {
       color: #5FB0F5;
       font-weight: 400;
-      font-size:.9em;
+      font-size: 0.9em;
     }
+
     p {
-      margin-top:1em;
-      font-weight:300;
-      font-size: .8em;
+      margin-top: 1em;
+      font-weight: 300;
+      font-size: 0.8em;
     }
   }
 
   .cmp-twitter-feed {
-    width:100%;
+    width: 100%;
   }
 
   .ctf-context {
-    display:none;
+    display: none;
   }
 
   li#text-2 {
@@ -49,102 +51,99 @@
   }
 
   a.ctf-tweet-text-media-wrap {
-    display:none;
+    display: none;
   }
 
- .ctf-tweets {
-   display: flex;
-   justify-content: space-between;
-   margin:auto;
-   border-color: #EBEBEB;
- }
+  .ctf-tweets {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    border-color: #EBEBEB;
+  }
 
- .ctf-item {
-   position:relative;
-   border:none;
-   background-color:white;
-   margin:5px;
-   padding:1em;
-   min-height:175px;
-   flex-basis:25%;
-   border-radius:3px;
-   -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
-   -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.25);
+  .ctf-item {
+    position: relative;
+    border: none;
+    background-color: white;
+    margin: 5px;
+    padding: 1em;
+    min-height: 175px;
+    flex-basis: 25%;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.25);
     font-family: Arial;
 
-  a {
-    color:#7F7F7F;
-  }
-
-
-  .ctf-tweet-date {
-    position:absolute;
-    bottom:15px;
     a {
-      color:#7F7F7F !important;
+      color: #7F7F7F;
+    }
+
+    .ctf-tweet-date {
+      position: absolute;
+      bottom: 15px;
+
+      a {
+        color: #7F7F7F !important;
+      }
+    }
+
+    .ctf-twitterlink {
+      position: absolute;
+      bottom: 15px;
+      right: 7px;
+    }
+
+    .ctf-tweet-text {
+      position: relative;
+      top: -1.5em;
+    }
+
+    .ctf-twitterlink {
+      color: blue !important;
+    }
+
+    p {
+      font-weight: lighter;
+      font-size: 0.8em;
     }
   }
-  .ctf-twitterlink {
-    position: absolute;
-    bottom: 15px;
-    right: 7px;
-  }
-  .ctf-tweet-text {
-    position: relative;
-    top:-1.5em;
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
   }
 
-  .ctf-twitterlink {
-    color:blue !important;
+  .ctf-quoted-tweet {
+    display: none;
   }
-
-  p {
-    font-weight: lighter;
-    font-size: .8em;
+  @include grid-media($medium) {
+    display: none;
   }
- }
+  @media (max-width: 1164px) {
+    .content-container {
+      margin-top: 0;
+    }
+  }
+  @media (max-width: 1030px) {
+    .content-container {
+      margin-top: 1em;
+    }
 
- h2 {
-   font-family: 'Roboto', sans-serif;
- }
+    .ctf-item:nth-child(4) {
+      display: none;
+    }
 
- .ctf-quoted-tweet {
-   display:none;
- }
+    .ctf-item {
+      flex-basis: 33%;
+    }
+  }
+  @media (max-width: 900px) {
+    .ctf-item:nth-child(3) {
+      display: none;
+    }
 
- @include grid-media($medium) {
-   display:none;
- }
-
- @media (max-width: 1164px) {
-   .content-container {
-     margin-top:0em;
-   }
- }
-
- @media (max-width: 1030px) {
-   .content-container {
-     margin-top:1em;
-   }
-
-   .ctf-item:nth-child(4) {
-     display:none;
-   }
-
-   .ctf-item {
-     flex-basis: 33%;
-   }
- }
-
- @media (max-width: 900px) {
-   .ctf-item:nth-child(3) {
-     display:none;
-   }
-
-   .ctf-item {
-     flex-basis: 49%;
-   }
- }
-
+    .ctf-item {
+      flex-basis: 49%;
+    }
+  }
 }

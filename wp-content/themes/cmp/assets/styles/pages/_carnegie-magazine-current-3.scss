@@ -1,13 +1,18 @@
+// Section 3 of the Carnegie Magazine current issue page ('also in this issue').
+
 .carnegie-magazine-current-3 {
+  display: flex;
+  padding-bottom: $base-spacing;
+  margin: auto;
+  max-width: $max-width;
 
   hr {
     padding: 0;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.5em;
   }
 
   .also-in-issue {
     width: 65%;
-
     @include grid-media($medium) {
       width: 100%;
     }
@@ -16,7 +21,6 @@
   .also-article {
     display: flex;
     justify-content: space-between;
-
     @include grid-media($medium) {
       display: block;
     }
@@ -28,16 +32,15 @@
   }
 
   .also-article__right {
-    padding: 0 $small-spacing $small-spacing $small-spacing;
-    font-size: .9em;
-
+    padding: 0 $small-spacing $small-spacing;
+    font-size: 0.9em;
     @include grid-media($medium) {
-      padding: 0 0 $base-spacing 0;
+      padding: 0 0 $base-spacing;
     }
   }
 
   .green-robot-link {
-    margin:0;
+    margin: 0;
   }
 
   .feature-type {
@@ -46,7 +49,6 @@
     background-color: white;
     position: relative;
     top: -2em;
-    padding: .25em .5em 0 0;
+    padding: 0.25em 0.5em 0 0;
   }
-
 }

@@ -1,8 +1,9 @@
+// For the template with no hero image. 
+
 .no-header {
   @extend .basic-header;
 
   .hero-header__words-box {
     margin-top: 0;
   }
-
 }

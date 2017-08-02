@@ -2,10 +2,11 @@
 ////////////////////////////////////////////////////////////////
 
 table {
-  border-collapse: collapse;
+  // border-collapse: collapse;
   margin: $small-spacing 0;
   table-layout: fixed;
   width: 100%;
+  width:60% !important;
 }
 
 th {
@@ -15,9 +16,12 @@ th {
   text-align: left;
 }
 
+tr {
+  border-top: solid;
+}
+
 td {
-  border-bottom: $base-border;
-  padding: $small-spacing 0;
+  padding: $small-spacing;
 }
 
 tr,
@@ -25,3 +29,57 @@ td,
 th {
   vertical-align: middle;
 }
+
+td {
+  border-bottom:none;
+  width: 33%;
+  padding:0;
+
+  @include grid-media($medium) {
+    padding-right: .5em;
+    font-size: .8em;
+
+    h4 {
+      font-size: 1em;
+    }
+  }
+
+  >h3 {
+    padding: 0;
+  }
+
+  >img {
+    width:100%;
+  }
+}
+
+tr:nth-child(1) {
+  border-bottom:1px;
+}
+
+  // table {
+  //   width:100% !important;
+  // }
+  //
+  // td {
+  //   padding:1em 1em 1em 0em;
+  //   vertical-align: top;
+  //
+  //   > p {
+  //     font-size:.9em;
+  //   }
+  //
+  //   > h3 {
+  //     @include grid-media($medium) {
+  //       font-size: 1.2em;
+  //     }
+  //
+  //   img {
+  //     height:auto;
+  //     width: auto;
+  //   }
+  //
+  //   @include grid-media($medium) {
+  //     padding:0;
+  //   }
+  // }

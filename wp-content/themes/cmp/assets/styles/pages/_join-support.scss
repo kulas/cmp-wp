@@ -1,25 +1,13 @@
+// Join & Support Landing Page
+
 .join-support {
 
   .content-container {
     display: block;
-    padding-top: $small-spacing;
+    // padding-top: $small-spacing;
 
     @include grid-media($medium) {
       padding-bottom: 0;
-    }
-  }
-
-  h1.hero-header__words-box {
-    @include grid-media($medium) {
-      padding-bottom: $small-spacing;
-    }
-  }
-
-  .main-text {
-    max-width: 60%;
-
-    @include grid-media($medium) {
-      max-width:100%;
     }
   }
 
@@ -65,7 +53,6 @@
         font-size: 1.4em;
       }
     }
-
 
     h4.sub-page__quote {
       position: relative;

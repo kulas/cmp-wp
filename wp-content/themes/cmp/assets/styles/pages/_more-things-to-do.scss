@@ -1,16 +1,27 @@
 #more-things-to-do {
-
-  padding-bottom:$base-spacing;
+  padding-bottom: $base-spacing;
 
   .section-hr {
-    padding:0;
+    padding: 0;
   }
 
   .activity-container {
-
     @include grid-media($medium) {
       padding: $small-spacing 0;
     }
   }
 
+  .activity__main-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+
+    @include grid-media($medium) {
+      display: none;
+    }
+  }
+
+  .activity__hr:last-child {
+    display: none;
+  }
 }

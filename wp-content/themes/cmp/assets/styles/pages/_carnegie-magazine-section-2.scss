@@ -1,14 +1,14 @@
-.carnegie-magazine-section-2 {
-  padding-bottom: $base-spacing;
+//Carnegie Magazine homepage section 2 (Big Picture, Facetime)
 
-  h1.hero-header__words-box {
-    font-family: 'Roboto', sans-serif;
+.carnegie-magazine-section-2 {
+  .content-container {
+    display: block;
+    padding: 0 3em;
   }
 
   p {
     max-width: 75%;
     padding-bottom: $base-spacing;
-
     @include grid-media($medium) {
       max-width: 100%;
       padding-top: 0.5em;
@@ -17,9 +17,8 @@
 
   .facetime {
     display: flex;
-    overflow:hidden;
-    width:75%;
-
+    overflow: hidden;
+    width: 75%;
     @include grid-media($large) {
       width: 100%;
     }
@@ -32,25 +31,23 @@
   }
 
   h2.facetime-title {
-    width:100%;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
+    width: 100%;
   }
 
   .facetime__left {
-    padding-right: .5em;
+    padding-right: 0.5em;
 
     .facetime__left__name {
-      font-size:1.5em;
-
+      font-size: 1.5em;
     }
+
     img {
       max-height: 640px;
     }
   }
 
   .facetime__right {
-    flex-basis:30%;
+    flex-basis: 30%;
     flex-flow: column;
 
     img {
@@ -59,11 +56,9 @@
   }
 
   p.facetime__text {
-    max-width:48%;
-
+    max-width: 48%;
     @include grid-media($medium) {
       max-width: 100%;
     }
   }
-
 }

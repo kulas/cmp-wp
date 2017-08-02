@@ -1,6 +1,10 @@
 // SITE SECTIONS LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
 
+.main {
+  min-height: 500px;
+}
+
 .section--primary {
   position: relative;
   padding: $large-spacing 0;

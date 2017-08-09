@@ -4,10 +4,17 @@
   if ( have_posts() ) :
   while ( have_posts() ) :
   the_post();
+
+  $header_image = get_field('header'); //gets full image array
+  $header_image_url = $header_image['url']; //url of image
+  $header_image_id = $header_image['id']; //id of image
+  $header_image_credit = get_media_credit_html($header_image_id); //media credit for image
 @endphp
 
 <div class="event-spaces">
-  <div class="hero-header" style="background-image:url('{{ the_field('header') }}')"></div>
+  <div class="hero-header" style="background-image:url('{{ $header_image_url }}')">
+    <p class="media-credit">@php echo $header_image_credit; @endphp</p>
+  </div>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>
       <div class="main-text">{{ the_content() }}</div>

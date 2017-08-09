@@ -4,12 +4,19 @@
   if ( have_posts() ) :
   while ( have_posts() ) :
   the_post();
+
+  $big_picture_image = get_field('big_picture_image'); //gets full image array
+  $big_picture_image_url = $big_picture_image['url']; //url of image
+  $big_picture_image_id = $big_picture_image['id']; //id of image
+  $big_picture_image_credit = get_media_credit_html($big_picture_image_id); //media credit for image
 @endphp
 
   <div class="carnegie-magazine-section-2">
     <div class="carnegie-magazine__big-picture">
       <a href="{{ the_field('big_picture_link') }}">
-        <div class="hero-header" style="background-image:url('{{ the_field('big_picture_image') }}')"></div>
+        <div class="hero-header" style="background-image:url('{{ $big_picture_image_url }}')">
+            <p class="media-credit">@php echo $big_picture_image_credit; @endphp</p>
+        </div>
         <div class="content-container">
           <h1 class="hero-header__words-box robot">{{ the_field('big_picture_title') }}</h1>
       </a>

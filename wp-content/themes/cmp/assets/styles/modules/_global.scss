@@ -191,3 +191,25 @@ hr {
     }
   }
 }
+
+//Media credit for large hero images.
+.media-credit {
+  float: right;
+  padding-bottom: 0;
+  padding-right: .5em;
+  color: black;
+  font-size: 0.7em;
+  font-weight: lighter;
+  width:100%;
+  position: absolute;
+  bottom: -2em;
+  z-index: 1;
+
+  > a {
+    display: none;
+  }
+
+  @include grid-media($medium) {
+    display: none;
+  }
+}

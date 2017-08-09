@@ -129,6 +129,16 @@ h2.hero-header__words-box.button--link {
   h2.hero-header__words-box.button--link {
     display: block !important;
     margin-top: 0;
+    font-weight: 500;
+
+    a {
+      color: black;
+    }
+
+    a:hover {
+      color: $action-color;
+    }
+
     @include grid-media($medium) {
       margin-top: 0;
     }

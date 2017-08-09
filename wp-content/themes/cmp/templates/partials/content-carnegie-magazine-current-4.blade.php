@@ -6,9 +6,18 @@
   the_post();
 @endphp
 
+@php
+  $bigpicture_image = get_field('big_picture_image'); //gets full image array
+  $bigpicture_id = $bigpicture_image['id']; //id of image
+  $bigpicture_url = $bigpicture_image['url']; //url of image
+  $bigpicture_credit = get_media_credit_html($bigpicture_id); //media credit for image
+@endphp
+
 <div class="carnegie-magazine__big-picture">
   <a href="{{ the_field('big_picture_link') }}">
-    <div class="hero-header" style="background-image:url('{{ the_field('big_picture_image') }}')"></div>
+    <div class="hero-header" style="background-image:url('{{ $bigpicture_url }}')">
+      <p class="media-credit">@php echo $bigpicture_credit; @endphp</p>
+    </div>
     <div class="content-container">
       <h1 class="hero-header__words-box green-robot-link">{{ the_field('big_picture_title') }}</h1>
   </a>

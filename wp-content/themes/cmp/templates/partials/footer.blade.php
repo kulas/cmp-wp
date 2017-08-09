@@ -8,9 +8,6 @@
             <div class="logo-container">
               <img class="footer-logo" src="/wp-content/themes/cmp/assets/images/cmpfooter.png">
             </div>
-            <div class="rad-container">
-              <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg">
-            </div>
           </div>
         <hr class="hr-break-mobile">
       </div>
@@ -18,25 +15,25 @@
         <div class="top-row">
             <div class="footer__left-div">
               <div class="footer-links-section">
-                <a href="#">Things to Do</a>
-                <a href="#">Visit</a>
-                <a href="#">Join & Support</a>
+                <a href="/things-to-do">Things to Do</a>
+                <a href="/plan-a-visit">Visit</a>
+                <a href="/join-support">Join & Support</a>
               </div>
               <div class="footer-links-section">
-                <a href="#">Event Spaces</a>
-                <a href="#">About Us</a>
-                <a href="#">Carnegie Magazine</a>
+                <a href="/great-event-spaces">Event Spaces</a>
+                <a href="/about-us">About Us</a>
+                <a href="/carnegie-magazine">Carnegie Magazine</a>
               </div>
             </div>
           <hr class="hr-break-mobile">
           <div class="footer__right-div">
             <div class="footer-links-section footer-links-section__small">
-              <a href="#">Carnegie Museum of Art</a>
-              <a href="#">Carnegie Science Center</a>
+              <a href="http://cmoa.org">Carnegie Museum of Art</a>
+              <a href="http://www.carnegiesciencecenter.org/">Carnegie Science Center</a>
             </div>
             <div class="footer-links-section footer-links-section__small">
-              <a href="#">Carnegie Museum of Natural History</a>
-              <a href="#">The Andy Warhol Museum</a>
+              <a href="http://carnegiemnh.org">Carnegie Museum of Natural History</a>
+              <a href="http://warhol.org">The Andy Warhol Museum</a>
             </div>
           </div>
         </div>
@@ -49,123 +46,41 @@
             @endphp
 
           </div>
-            <div class="small-social-icons">
-              <div class="icons">
-
-                  <!-- Facebook -->
-                  <ul id="facebook">
-                    <li class="cmp">
-                      <a href="https://www.facebook.com/Carnegie-Museums-of-Pittsburgh-Members-Page-212872248764519/">
-                        <img src="/wp-content/themes/cmp/assets/images/facebook.png">
-                      </a>
-                      <ul>
-                        <li class="cmoa">
-                          <a href="https://www.facebook.com/CarnegieMuseumofArt/">
-                            <p>Museum of Art</p>
-                          </a>
-                        </li>
-                        <li class="cmnh">
-                          <a href="https://www.facebook.com/carnegiemnh/">
-                            <p>Museum of Natural History</p>
-                          </a>
-                        </li>
-                        <li class="csc">
-                          <a href="https://www.facebook.com/carnegiesciencecenter/">
-                            <p>Science Center</p>
-                          </a>
-                        </li>
-                        <li class="warhol">
-                          <a href="https://www.facebook.com/thewarholmuseum/">
-                            <p>Andy Warhol Museum</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-
-                  <!-- Twitter -->
-                     <ul id="twitter">
-                      <li class="cmp">
-                        <a href="https://twitter.com/carnegiemembers">
-                          <img src="/wp-content/themes/cmp/assets/images/twitterwhite.png">
-                        </a>
-                        <ul>
-                          <li class="cmoa">
-                            <a href="https://twitter.com/cmoa">
-                              <p>Museum of Art</p>
-                            </a>
-                          </li>
-                          <li class="cmnh">
-                            <a href="https://twitter.com/carnegiemnh">
-                              <p>Museum of Natural History</p>
-                            </a>
-                          </li>
-                          <li class="csc">
-                            <a href="https://twitter.com/carnegiescictr">
-                              <p>Science Center</p>
-                            </a>
-                          </li>
-                          <li class="warhol">
-                            <a href="https://twitter.com/thewarholmuseum">
-                              <p>Andy Warhol Museum</p>
-                            </a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                  <!-- Instagram -->
-                     <ul id="insta">
-                      <li class="cmp">
-                        <a href="https://www.instagram.com/carnegiemuseums/">
-                          <img src="/wp-content/themes/cmp/assets/images/instagram-logo-white.png">
-                        </a>
-                        <ul>
-                          <li class="cmoa">
-                            <a href="https://www.instagram.com/thecmoa">
-                              <p>Museum of Art</p>
-                            </a>
-                        </li>
-                        <li class="cmnh">
-                          <a href="https://www.instagram.com/carnegiemnh">
-                            <p>Museum of Natural History</p>
-                        </li>
-                        <li class="csc">
-                          <a href="https://www.instagram.com/carnegiescictr">
-                            <p>Science Center</p>
-                          </a>
-                        </li>
-                        </ul>
-                      </li>
-                    </ul>
-
-                  <!-- Twitter -->
-                     <ul id="tumblr">
-                      <li class="cmp">
-                        <a href="#">
-                          <img src="/wp-content/themes/cmp/assets/images/tumblr.png">
-                        </a>
-                        <ul>
-                          <li class="cmnh">
-                            <a href="http://carnegiemuseumnaturalhistory.tumblr.com/">
-                              <p>Museum of Natural History</p>
-                            </a>
-                          </li>
-                          <li class="warhol">
-                            <a href="http://carnegiemuseumnaturalhistory.tumblr.com/">
-                              <p>Andy Warhol Museum</p>
-                            </a>
-                          </li>
-                        </ul>
-                     </li>
-                   </ul>
-                </div>
+            <div class="social-media">
+              <a class="connect" href="#">
+                <span class="connect-1">Connect with our museums</span>
+                <span class="connect-2">Social Media, Blogs, Apps & More ></span>
+              </a>
             </div>
+
+            <hr class="mobile-hr">
         </div>
+
         <hr class="hr-break mobile-hide">
+
         <div class="bottom-row">
-          <p>Accessibility | Press | Careers | Volunteers | Privacy</p>
-          <p class="copyright">©2017 Carnegie Museums of Pittsburgh</p>
+          <div class="bottom-row__left">
+
+            <div class="bottom-row__links">
+              <a href="#">Accessibility</a><p>|</p>
+              <a href="#">Press</a><p>|</p>
+              <a href="#">Careers</a><p>|</p>
+              <a href="#">Volunteers</a>
+            </div>
+
+            <hr class="mobile-hr">
+
+            <div class="copyright">
+              <p>©2017 Carnegie Museums of Pittsburgh</p>
+              <a href="#">Privacy Policy</a>
+            </div>
+
+          </div>
+
+          <div class="rad-container">
+            <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg">
+          </div>
+
         </div>
       </div>
      </div>

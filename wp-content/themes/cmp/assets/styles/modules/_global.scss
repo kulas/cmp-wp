@@ -213,3 +213,11 @@ hr {
     display: none;
   }
 }
+
+//for use in automatically generated content pages
+article,
+.navigation.posts-navigation {
+  max-width: $max-width;
+  margin: auto;
+  padding: 0 3em;
+}

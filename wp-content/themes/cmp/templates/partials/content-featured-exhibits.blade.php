@@ -34,7 +34,10 @@
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">
             <h2 class="hero-header__words-box button--link">
-              <a href="{{ $exhibit['link'] }}">{{ $exhibit['title'] }}</a>
+              <a href="{{ $exhibit['link'] }}">
+                {{ $exhibit['title'] }}
+                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+              </a>
             </h2>
             <div class="exhibit-preview__dates">
                 <p class="start-date">{{ $exhibit['dates'] }}</p>
@@ -75,9 +78,10 @@
                   <p class="start-date">{{ $exhibit['dates'] }}</p>
               </div>
               <a href="{{ $exhibit['link'] }}">
-                <h1 class="exhibit-preview__title button--link">
+                <h2 class="exhibit-preview__title button--link">
                   {{ $exhibit['title'] }}
-                </h1>
+                  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </h2>
               </a>
               <p class="exhibit-preview__summary-text">
                 {{ $exhibit['summary'] }}

@@ -38,7 +38,7 @@
 
       </div>
       <hr />
-      <h2 class="uppercast-robot--large">Featured Stories</h2>
+      <h2 class="uppercase-robot--large">Featured Stories</h2>
 
       {{-- Featured stories section --}}
       <div class="featured-stories">
@@ -122,12 +122,12 @@
 
     {{-- Sidebar section --}}
     <div class="magazine-featured-articles__sidebar">
-      <h3 class="uppercast-robot--large center">Current Issue</h3>
+      <h3 class="uppercase-robot--large center">Current Issue</h3>
       <div class="magazine-featured-articles__sidebar__container">
         <a href="/carnegie-magazine/current-issue">
           <img src={{ the_field('current_issue') }} />
         </a>
-        <h3 class="uppercast-robot--large center">Sign up<br /> to receive<br /> more stories<br /> in your email</h3>
+        <h3 class="uppercase-robot--large center">Sign up<br /> to receive<br /> more stories<br /> in your email</h3>
         <button class="grey-button">Enter Your Email</button>
         <div class="most-read-articles">
 

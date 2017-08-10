@@ -23,6 +23,14 @@
     }
   }
 
+  a {
+    color: white;
+  }
+
+  a:hover {
+    color: darken($action-color, 20%);
+  }
+
   .footer-logo {
     padding-right:2em;
   }

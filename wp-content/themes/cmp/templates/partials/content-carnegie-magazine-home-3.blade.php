@@ -15,11 +15,11 @@
     <div class="carnegie-magazine__big-picture">
       <a href="{{ the_field('inside_museums_link') }}">
         <div class="hero-header" style="background-image:url('{{ $inside_museums_image_url }}')">
-          <p class="media-credit">@php echo $inside_museums_image_credit; @endphp</p>
         </div>
-      </a>
         <div class="content-container">
           <h1 class="hero-header__words-box robot">{{ the_field('inside_museums_title') }}</h1>
+      </a>
+          <p class="media-credit">@php echo $inside_museums_image_credit; @endphp</p>
         <p class="inside-museums-text">{{ the_field('inside_museums_text') }}</p>
       </div>
     </div>

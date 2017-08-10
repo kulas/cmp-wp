@@ -2,7 +2,14 @@
 
 .carnegie-magazine__big-picture {
   .content-container {
-    margin: auto;
+    padding: 0 3em;
+  }
+
+  .media-credit {
+    max-width: 20%;
+    position: relative;
+    bottom: 4em;
+    left: 2em;
   }
 }
 

@@ -47,7 +47,7 @@
 
           </div>
             <div class="social-media">
-              <a class="connect" href="#">
+              <a class="connect" href="/connect-with-us/">
                 <span class="connect-1">Connect with our museums</span>
                 <span class="connect-2">Social Media, Blogs, Apps & More ></span>
               </a>

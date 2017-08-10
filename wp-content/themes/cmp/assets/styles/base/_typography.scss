@@ -17,6 +17,7 @@ h6 {
   font-family: $alt-font-family;
   line-height: 1.2;
   margin: 0 0 $small-spacing;
+  font-weight: 400;
 }
 
 
@@ -44,10 +45,10 @@ h6 {
   font-size: 1em;
 }
 
-p {
-  margin: 0 0 $small-spacing;
+p,
+p.p1 {
+  margin: 0 0 0.5em 0;
   font-weight: 300;
-  padding-bottom: 0.5em;
 }
 
 a {
@@ -202,6 +203,7 @@ br {
 label {
   margin: 0;
 }
+
 
 ul.post-categories {
   padding: 0;

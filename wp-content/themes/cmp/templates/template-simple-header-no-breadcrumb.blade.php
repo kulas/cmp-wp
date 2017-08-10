@@ -1,11 +1,11 @@
 {{--
-  Template Name: Simple Header No Breadcrumb
+  Template Name: Basic Header No Breadcrumb
 --}}
 
 @extends('layouts.base')
 
 @section('content')
 
-  @include('partials.content-simple-header-no-breadcrumb')
+  @include('partials.content-basic-header-template-no-breadcrumb')
 
 @endsection

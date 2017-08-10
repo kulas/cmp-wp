@@ -95,7 +95,7 @@
 
         {{-- <label for="search-field"> Search</label> --}}
       </fieldset>
-      <button type="submit" class="btn" title="Start search"><i class="icon -search button"></i></button>
+      <button type="submit" class="btn" title="Start search"><i class="icon-search button"></i></button>
     </form>
   </div>
 </header>

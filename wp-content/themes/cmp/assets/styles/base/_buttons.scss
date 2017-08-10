@@ -30,8 +30,8 @@
   &:active,
   &.active {
     color: #fff;
-    background-color: darken($action-color, 15);
-    border-color: $action-color;
+    background-color: $dark-color;
+    border-color: $base-color;
     outline: 0;
     text-decoration: none;
   }
@@ -60,6 +60,10 @@
   }
 }
 
+.green-button {
+  @extend %button-base;
+  font-size: .75em !important;
+}
 
 // Button Sizes
 ////////////////////////////////////////////////////////////////
@@ -119,7 +123,8 @@
 // Special Links
 ////////////////////////////////////////////////////////////////
 
-.button--link:after{
+.button--link{
+  @include icon--learn;
   position: relative;
   top:5px;
   display: inline-block;

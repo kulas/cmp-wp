@@ -106,24 +106,6 @@ hr {
   }
 }
 
-//For automatically generated Wordpress pages (e.g. tags)
-.generic-article,
-.page-header {
-  max-width: $max-width;
-  margin:auto;
-  padding: 0 3em;
-
-  hr {
-    padding: 0;
-    margin: 0;
-    margin-bottom: .5em;
-  }
-}
-
-.generic-article {
-  padding-bottom: 2em;
-}
-
 //Used on several 'Things to Do' templates
 .activity-container {
   display: flex;
@@ -214,10 +196,53 @@ hr {
   }
 }
 
-//for use in automatically generated content pages
+//For automatically generated Wordpress pages (e.g. tags)
 article,
-.navigation.posts-navigation {
+.alert.alert-warning,
+.navigation.posts-navigation,
+form.search-form {
   max-width: $max-width;
   margin: auto;
-  padding: 0 3em;
+  padding: 0 2em;
+
+  h2 {
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+
+article {
+  padding-bottom: $small-spacing;
+}
+
+nav.navigation.posts-navigation {
+  margin-bottom: $base-spacing;
+
+  > h2.screen-reader-text {
+    height: 0px;
+    overflow: hidden;
+  }
+}
+
+.page-header {
+  max-width: $max-width;
+  margin: auto;
+  padding: 0 2em;
+
+  h1 {
+    width: 100%;
+    border-top: 1px solid #CCCCCC;
+    font-weight: 400;
+    padding-top: $small-spacing;
+  }
+}
+
+// Site search form on 'no results were found' pages.
+
+form.search-form {
+  margin-top: 1em;
+
+  input {
+    max-width: 40%;
+  }
 }

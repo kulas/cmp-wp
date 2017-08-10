@@ -15,7 +15,7 @@
 
 <div class="basic-header">
   <div class="hero-header" style="background-image:url('{{ $image_url }}')">
-    <p class="media-credit">{{ $image_credit }}</p>
+    <p class="media-credit">@php echo $image_credit; @endphp</p>
   </div>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>

@@ -1,4 +1,10 @@
 // Lots of styling for the tabs plugin
+ul.nav.osc-res-nav.nav-tabs.osc-tabs-left-ul {
+
+
+
+}
+
 .osc-res-tab .nav-tabs {
   border: none !important;
   overflow: hidden;
@@ -8,6 +14,14 @@ ul.tab-content {
   border: solid #96A061;
   border-width: 8px 0px 0px 0px;
   z-index: 5;
+
+  > li > ul {
+    max-width: 60%;
+
+    @include grid-media($medium) {
+      max-width: 100%;
+    }
+  }
 }
 
 .osc-res-tab {

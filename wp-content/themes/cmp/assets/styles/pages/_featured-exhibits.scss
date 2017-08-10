@@ -15,6 +15,7 @@
 h2.hero-header__words-box.button--link {
   @include grid-media($medium) {
     padding: $small-spacing !important;
+    margin: $small-spacing;
   }
 }
 //individual exhibits
@@ -83,17 +84,23 @@ h2.hero-header__words-box.button--link {
   @include grid-media($medium) {
     font-size: 1.25em;
   }
+
+  a {
+    font-weight: 400;
+  }
 }
 
 .exhibit-preview__summary-text {
   margin-left: $small-spacing;
 }
+
 // hero version
 .exhibit--hero {
   position: relative;
   margin-bottom: $base-spacing;
+
   @include grid-media($medium) {
-    margin-bottom: $small-spacing;
+    margin-bottom: 0;
   }
 
   .exhibit-preview__dates {
@@ -105,6 +112,7 @@ h2.hero-header__words-box.button--link {
       padding: 0;
       margin: 0;
     }
+
     @include grid-media($medium) {
       position: absolute;
       bottom: 100%;
@@ -126,14 +134,46 @@ h2.hero-header__words-box.button--link {
     }
   }
 
-  h2.hero-header__words-box.button--link {
+  .hero-header__words-box.button--link {
     display: block !important;
     margin-top: 0;
+    font-weight: lighter;
+
+    a {
+      color: black;
+      font-weight: 400;
+    }
+
+    a:hover {
+      color: $action-color;
+    }
+
+    i {
+      display: none;
+    }
+
     @include grid-media($medium) {
+      padding: 1em;
       margin-top: 0;
+
+      i {
+        display: inline;
+      }
+
+      a {
+        color: #96A061;
+      }
+      a:hover {
+        color: darken($action-color, 20%);
+      }
     }
   }
 }
+
+h2.exhibit-preview__title.button--link {
+  font-weight: 400;
+}
+
 //hides the below div on desktop
 .exhibit__learn-more-mobile {
   display: none;

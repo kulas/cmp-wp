@@ -162,6 +162,18 @@ h2.robot-uppercase {
   font-weight: 400;
 }
 
+h1 > a,
+a > h1 {
+  color: black;
+  transition: .3s;
+}
+
+h1 > a:hover,
+a > h1:hover {
+  color: #96A061;
+  transition: .3s;
+}
+
 .uppercase-robot {
   @extend .uppercase-bold;
   font-family: 'Roboto', sans-serif;

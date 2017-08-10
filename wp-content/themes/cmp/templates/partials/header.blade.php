@@ -1,39 +1,54 @@
 <header class="top-bar-container">
   <div class="top-bar">
     <div class="top-bar__left">
-      <form class="top-bar__form" action="index.html" method="post">
-        <input type="text" name="" value="" placeholder="Enter your email">
-        <button class="green-button" id="top-bar__subscribe-button" href="#">Subscribe</a>
-      </form>
+      <div class="top-bar__form">
+
+        @php
+          echo do_shortcode("[contact-form-7 id='128' title='Email Form']"); //Sign up
+        @endphp
+
+      </div>
+
       <a href="/join-support/membership"><button class="green-button">Join</button></a>
       <a href="/join-support/donate"><button class="green-button">Donate</button></a>
     </div>
     <nav>
+
       <ul class="top-bar-nav">
 
-        <!-- visit callout btn-->
-        <li>
-          <a href="#visit" class="quickview-btn nav-visit" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
-            <span class="nav-visit__text">Plan Your Visit</span>
-            <span class="nav-icon nav-icon-visit">
-              <i class="icon-visit" aria-hidden="true"></i>
-            </span>
-          </a>
-        </li>
+        {{-- Plan a Visit link --}}
+        <div class="top-bar__plan-visit">
+          <a href="/plan-a-visit">Plan Your Visit</a>
+        </div>
 
-        <!-- search nav btn-->
-        <li>
-          <button  class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
-            <i class="icon-search" aria-hidden="true"></i>
-          </button>
-        </li>
+        <div class="nav-buttons">
 
-        <!-- mobile nav btn-->
-        <li>
-          <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
-            <i class="icon-hamburger" aria-hidden="true"></i>
-          </button>
-        </li>
+          <!-- visit callout btn-->
+          <li>
+            <a href="#visit" class="quickview-btn nav-visit" title="Plan Your Visit" aria-label="Plan Your Visit navigation trigger">
+              <span>Plan Your Visit</span>
+              <span class="nav-icon nav-icon-visit">
+                <i class="icon -visit" aria-hidden="true"></i>
+              </span>
+            </a>
+          </li>
+
+          <!-- search nav btn-->
+          <li>
+            <button class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
+              <i class="icon -search" aria-hidden="true"></i>
+            </button>
+          </li>
+
+          <!-- mobile nav btn-->
+          <li>
+            <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
+              <i class="icon -hamburger" aria-hidden="true"></i>
+            </button>
+          </li>
+
+        </div>
+
       </ul>
     </nav>
   </div>

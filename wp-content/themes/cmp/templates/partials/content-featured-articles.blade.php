@@ -14,10 +14,15 @@
     if( $post_object ):
     $post = $post_object;
     setup_postdata( $post );
+
+    $featured_image = get_field('featured_image'); //gets full image array
+    $featured_image_url = $featured_image['url']; //url of image
+    $featured_image_id = $featured_image['id']; //id of image
+    $featured_image_credit = get_media_credit_html($featured_image_id); //media credit for image
   @endphp
 
   <a href="{{ the_permalink() }}">
-    <div class="hero-header" style="background-image: url('{{ the_field('featured_image') }}')"></div>
+    <div class="hero-header" style="background-image: url('{{ $featured_image_url }}')"></div>
   </a>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h2>

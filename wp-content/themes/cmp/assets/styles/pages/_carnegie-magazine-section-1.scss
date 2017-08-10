@@ -5,6 +5,7 @@
   padding-bottom: $base-spacing;
   max-width: $max-width;
   margin: auto;
+  width: 100%;
 
   .magazine-featured-articles__main {
     flex-basis: 75%;
@@ -109,5 +110,14 @@
       padding-top: $small-spacing;
       text-transform: none;
     }
+  }
+
+  h3, h4 {
+    margin-bottom: 0;
+    margin-top: .25em;
+  }
+
+  a > h3 {
+    font-weight: 400;
   }
 }

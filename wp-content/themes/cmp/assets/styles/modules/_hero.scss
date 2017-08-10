@@ -1,6 +1,8 @@
 .hero-header {
-    height: 600px;
+    height: 500px;
     width:100%;
+    max-width: 1136px;
+    margin: auto;
     margin-bottom:10px;
     background-size:cover;
     background-position: center center;
@@ -9,13 +11,13 @@
     // top: -1px;
 
     @include grid-media($extra-large) {
-      height:500px;
+      height:400px;
     }
     @include grid-media($large) {
-      height: 400px;
+      height: 300px;
     }
     @include grid-media($medium) {
-      height: 300px;
+      height: 200px;
     }
     @include grid-media($small) {
       height: 200px;
@@ -28,10 +30,10 @@
   display: inline-block;
   max-width: 100%;
   margin-top: -1em;
-  padding: .3em .6em;
+  padding: .3em .7em;
   font-size: 2em;
   margin-bottom:0;
-  left:-.6em;
+  left:-.7em;
 
   @include grid-media($medium) {
     max-width: 100%;
@@ -54,9 +56,8 @@ h1.hero-header__words-box {
   @include grid-media($medium) {
     font-size: 2em;
     width: 100%;
-    left: 0;
     margin: 0;
-    padding: 0;
+    margin-bottom: 0.25em;
   }
 
   @include grid-media($small) {

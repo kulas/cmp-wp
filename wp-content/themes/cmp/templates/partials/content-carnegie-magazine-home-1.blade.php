@@ -1,4 +1,4 @@
-{{-- Carnegie Magazine homepage section 1 (stops at 'Big Picture' section) --}}
+{{-- Carnegie Magazine homepage section 1 (stops before 'Big Picture' section) --}}
 
 {{-- Cover Story section -- this weird thing is what's required to get a single 'post object' custom field --}}
 @php
@@ -7,12 +7,19 @@
   if( $post_object ):
   $post = $post_object;
   setup_postdata( $post );
+
+  $featured_image = get_field('featured_image'); //gets full image array
+  $featured_image_url = $featured_image['url']; //url of image
+  $featured_image_id = $featured_image['id']; //id of image
+  $featured_image_credit = get_media_credit_html($featured_image_id); //media credit for image
 @endphp
 
 <a href="{{ the_permalink() }}">
-  <div class="hero-header" style="background-image:url({{ the_field('featured_image') }})">
-  </div>
+  <div class="hero-header" style="background-image:url({{ $featured_image_url }})"></div>
 </a>
+<div class="media-credit-container">
+  <p class="media-credit">@php echo $featured_image_credit; @endphp</p>
+</div>
 <div class="magazine-featured-articles">
   <div class="magazine-featured-articles__main">
     <div class="content-container">
@@ -31,7 +38,7 @@
 
       </div>
       <hr />
-      <h2 class="uppercast-robot--large">Featured Stories</h2>
+      <h2 class="uppercase-robot--large">Featured Stories</h2>
 
       {{-- Featured stories section --}}
       <div class="featured-stories">
@@ -42,13 +49,16 @@
           $post_object = get_sub_field('article');
           if( $post_object ):
           $post = $post_object; setup_postdata( $post );
+
+          $featured_image = get_field('featured_image'); //gets full image array
+          $featured_image_url = $featured_image['url']; //url of image
         @endphp
 
         <div class="article">
           <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
           <a href="{{ the_permalink() }}">
             <div class="article__image-container">
-              <img src="{{ the_field('featured_image') }}">
+              <img src="{{ $featured_image_url }}">
             </div>
             <h3 class="robot--bold">{{ the_title() }}</h3>
           </a>
@@ -87,7 +97,7 @@
         <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
         <a href="{{ the_permalink() }}">
           <div class="article__image-container">
-            <img src="{{ the_field('featured_image') }}">
+            <img src="{{ get_field('square_image') }}">
           </div>
           <h3>{{ the_title() }}</h3>
         </a>
@@ -112,12 +122,12 @@
 
     {{-- Sidebar section --}}
     <div class="magazine-featured-articles__sidebar">
-      <h3 class="uppercast-robot--large center">Current Issue</h3>
+      <h3 class="uppercase-robot--large center">Current Issue</h3>
       <div class="magazine-featured-articles__sidebar__container">
         <a href="/carnegie-magazine/current-issue">
           <img src={{ the_field('current_issue') }} />
         </a>
-        <h3 class="uppercast-robot--large center">Sign up<br /> to receive<br /> more stories<br /> in your email</h3>
+        <h3 class="uppercase-robot--large center">Sign up<br /> to receive<br /> more stories<br /> in your email</h3>
         <button class="grey-button">Enter Your Email</button>
         <div class="most-read-articles">
 
@@ -128,13 +138,16 @@
             $post_object = get_sub_field('article');
             if( $post_object ):
             $post = $post_object; setup_postdata( $post );
+
+            $featured_image = get_field('featured_image'); //gets full image array
+            $featured_image_url = $featured_image['url']; //url of image
           @endphp
 
             <div class="article">
               <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
               <a href="{{ the_permalink() }}">
                 <div class="article__image-container">
-                  <img src="{{ the_field('featured_image') }}">
+                  <img src="{{ $featured_image_url }}">
                 </div>
                 <h4 class="robot--bold">{{ the_title() }}</h4>
               </a>

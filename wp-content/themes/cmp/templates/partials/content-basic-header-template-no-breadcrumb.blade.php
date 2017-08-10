@@ -6,8 +6,17 @@
   the_post();
 @endphp
 
+@php
+  $image = get_field('header_image');
+  $image_id = $image['id'];
+  $image_url = $image['url'];
+  $image_credit = get_media_credit_html($image_id);
+@endphp
+
 <div class="basic-header">
-  <div class="hero-header" style="background-image:url('{{ the_field('header_image') }}')"></div>
+  <div class="hero-header" style="background-image:url('{{ $image_url }}')">
+    <p class="media-credit">{{ $image_credit }}</p>
+  </div>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>
     <div class="main-text">

@@ -1,8 +1,20 @@
 {{-- Oh boy, this is the template for a single Carnegie Magazine article AKA blog post. Sorry. --}}
 
 <article @php(post_class())>
+
+  @php
+
+    $header_image = get_field('featured_image'); //gets full image array
+    $header_image_url = $header_image['url']; //url of image
+    $header_image_id = $header_image['id']; //id of image
+    $header_image_credit = get_media_credit_html($header_image_id); //media credit for image
+
+  @endphp
+
   <header>
-    <img class="entry-image" src="{{ the_field('featured_image') }}" />
+    <div class="hero-header" style="background-image: url('{{ $header_image_url }}')">
+      <p class="media-credit">@php echo $header_image_credit; @endphp</p>
+    </div>
     <div class="title-box">
       <h1 class="entry-title">{{ get_the_title() }}</h1>
       <p class="article__summary">{{ get_the_excerpt() }}</p>
@@ -69,13 +81,20 @@
         $my_query->the_post();
       @endphp
 
+      @php
+        $featured_image = get_field('featured_image'); //gets full image array
+        $featured_image_url = $featured_image['url']; //url of image
+        $featured_image_id = $featured_image['id']; //id of image
+        $featured_image_credit = get_media_credit_html($featured_image_id); //media credit for image
+      @endphp
+
       {{-- Related Posts --}}
       <div class="tags">
 
         @php(the_tags( '', ' | ', '' ))
 
       </div>
-      <div class="image-container" style="background-image:url({{ the_field('featured_image') }})"></div>
+      <div class="image-container" style="background-image:url({{ $featured_image_url }})"></div>
       <a href="{{ the_permalink() }}">{{ the_title() }} </a>
       <div class="excerpt">{{ the_excerpt() }}</div>
       <p class="author">{{ the_field('author') }}</p>

@@ -40,7 +40,8 @@
     "wpackagist-plugin/tinymce-advanced": "4.6.3",
     "wpackagist-plugin/ultimate-responsive-image-slider": "3.0.4",
     "wpackagist-plugin/wp-custom-widget-area": "1.2.5",
-    "wpackagist-plugin/wp-easy-responsive-tabs-to-accordion": "1.2.2"
-    
+    "wpackagist-plugin/wp-easy-responsive-tabs-to-accordion": "1.2.2",
+    "wpackagist-plugin/all-in-one-wp-migration": "6.55",
+    "wpackagist-plugin/contact-form-7": "4.8.1"
   }
 }

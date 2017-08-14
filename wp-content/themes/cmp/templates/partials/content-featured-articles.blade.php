@@ -29,7 +29,7 @@
   </div>
   <div class="articles__featured content-container">
     <div class="words-box">
-      <h3 class="article__author">by {{ the_author() }}</h3>
+      <h3 class="article__author">by {{ the_field('author') }}</h3>
       <h2 class="article__quote">{{ the_field('quote') }}</h2>
       <h3 class="article__summary">
 

@@ -100,7 +100,8 @@ hr {
 
   p {
     max-width:60%;
-    @include grid-media($medium) {
+
+    @include grid-media($large) {
       max-width:100%;
     }
   }
@@ -113,9 +114,9 @@ hr {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
+
   @include grid-media($medium) {
     flex-wrap: wrap;
-    padding: 1em;
 
     .activity__hr {
       padding-top: 0 !important;

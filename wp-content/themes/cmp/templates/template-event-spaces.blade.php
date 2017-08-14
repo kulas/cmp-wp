@@ -7,5 +7,6 @@
 @section('content')
 
   @include('partials.content-event-spaces')
+  @include('partials.content-event-spaces-contact')
 
 @endsection

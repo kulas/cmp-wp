@@ -5,9 +5,9 @@
       <div class="footer-links">
         <div class="left-section">
           <div class="footer__images">
-            <div class="logo-container">
+
               <img class="footer-logo" src="/wp-content/themes/cmp/assets/images/cmpfooter.png">
-            </div>
+
           </div>
         <hr class="hr-break-mobile">
       </div>
@@ -17,7 +17,10 @@
               <div class="footer-links-section">
                 <a href="/things-to-do">Things to Do</a>
                 <a href="/plan-a-visit">Visit</a>
-                <a href="/join-support">Join & Support</a>
+                <a href="/join-support">
+                  Join &
+                  <div>Support</div>
+                </a>
               </div>
               <div class="footer-links-section">
                 <a href="/great-event-spaces">Event Spaces</a>
@@ -28,7 +31,9 @@
           <hr class="hr-break-mobile">
           <div class="footer__right-div">
             <div class="footer-links-section footer-links-section__small">
-              <a href="http://cmoa.org">Carnegie Museum of Art</a>
+              <a href="http://cmoa.org">Carnegie Museum
+                <div>of Art</div>
+              </a>
               <a href="http://www.carnegiesciencecenter.org/">Carnegie Science Center</a>
             </div>
             <div class="footer-links-section footer-links-section__small">

@@ -8,7 +8,8 @@
   }
 
   form.wpcf7-form {
-    padding: $small-spacing 0;
+    // padding: $small-spacing 0;
+
   }
 
   select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required {
@@ -43,5 +44,24 @@
 
   span.wpcf7-list-item {
     display:block;
+  }
+
+  label {
+    padding-top: 10px;
+  }
+
+  select.wpcf7-form-control.wpcf7-select {
+    height: 35px;
+    width: 100%;
+  }
+
+  .wpcf7-list-item {
+    font-weight: 300;
+  }
+}
+
+.top-bar__form {
+  > .wpcf7 > form > p {
+    display: flex !important;
   }
 }

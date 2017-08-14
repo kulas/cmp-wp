@@ -6,7 +6,8 @@ table {
   margin: $small-spacing 0;
   table-layout: fixed;
   width: 100%;
-  width:60% !important;
+  border-collapse: collapse;
+  // width:60% !important;
 }
 
 th {
@@ -16,22 +17,23 @@ th {
   text-align: left;
 }
 
-tr {
-  border-top: solid;
-}
-
 td {
-  padding: $small-spacing;
+  padding: 1em !important;
+
+  > p {
+    max-width: 100% !important;
+  }
 }
 
 tr,
 td,
 th {
   vertical-align: middle;
+  border: solid 1px #CCCCCC;
 }
 
 td {
-  border-bottom:none;
+  // border-bottom:none;
   width: 33%;
   padding:0;
 
@@ -44,12 +46,14 @@ td {
     }
   }
 
-  >h3 {
+  >h3,
+  >h4 {
     padding: 0;
+    margin: 0;
   }
 
-  >img {
-    width:100%;
+  > div {
+    max-width: 100%;
   }
 }
 

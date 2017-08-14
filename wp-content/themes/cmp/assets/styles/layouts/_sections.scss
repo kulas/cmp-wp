@@ -7,12 +7,16 @@
 
 .section--primary {
   position: relative;
-  padding: $large-spacing 0;
+  padding: $small-spacing 0;
   background:  $base-background-color;
   z-index: 99;
 
   + .section--primary {
     padding-top: 0;
+  }
+
+  @include grid-media($medium) {
+    padding: $small-spacing 0;
   }
 }
 

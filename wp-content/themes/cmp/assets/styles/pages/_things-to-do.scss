@@ -1,6 +1,11 @@
 // Homepage Things to Do section.
 
 #things-to-do {
+  
+  @include grid-media($medium) {
+    padding: 0;
+  }
+
   .activity__image-container {
     height: 155px;
     display: flex;
@@ -8,24 +13,24 @@
     align-items: center;
     overflow: hidden;
     padding-bottom: $small-spacing;
+
     @include grid-media($medium) {
+      height: 100px;
+      width: 100px;
       padding: 0;
-      height: 0;
     }
 
     img {
       object-fit: cover;
       width: 100%;
-      height: 10em;
+      height: 100%;
+      flex-grow: 0;
     }
   }
 
-  button {
-    width: 100%;
-    padding: 1em;
-    margin-bottom: 1em;
-    font-size: 1.2em;
-    font-weight: 500;
+  .activity__square-image {
+    height: 100px;
+    width: 100px;
   }
 
   h4 {

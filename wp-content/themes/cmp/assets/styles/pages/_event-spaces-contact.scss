@@ -1,12 +1,15 @@
 // Styling for the contact form on the Events Space pages.
 
 .event-spaces-contact {
+  width: 100%;
+  padding-bottom: $base-spacing;
+
   .contact-form {
-    padding: $small-spacing 0;
-    max-width: 60%;
-    @include grid-media($medium) {
-      max-width: 100%;
-    }
+    // padding: $small-spacing 0;
+    // max-width: 60%;
+    // @include grid-media($medium) {
+    //   max-width: 100%;
+    // }
 
     h2 {
       padding-bottom: $small-spacing;

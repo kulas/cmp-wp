@@ -1,0 +1,22 @@
+body.search-results {
+  .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  main {
+    width: 75%;
+    margin-bottom: 4rem;
+    @include grid-media($nav-break) {
+      width: 100%;
+    }
+
+  }
+
+  .page-header h1 {
+    border: none;
+  }
+
+  article {
+    padding-top: 1.2rem;
+  }
+}

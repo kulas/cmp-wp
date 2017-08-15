@@ -1,6 +1,11 @@
 // This is the Featured Articles section on the homepage, under 'Carnegie Magazine'
 
 #featured-articles {
+  .articles__featured {
+    margin-top: $base-spacing;
+    margin-bottom: $base-spacing;
+  }
+
   .featured-articles-title {
     padding-bottom: 0.5em;
     @include grid-media($medium) {

@@ -6,6 +6,7 @@
   padding: 0 $base-spacing;
   max-width: $max-width;
   margin: auto;
+  margin-bottom: $base-spacing;
   justify-content: space-between;
   @include grid-media($medium) {
     padding: 0;
@@ -97,7 +98,7 @@ h2.hero-header__words-box.button--link {
 // hero version
 .exhibit--hero {
   position: relative;
-  margin-bottom: $base-spacing;
+  margin-bottom: $large-spacing;
 
   @include grid-media($medium) {
     margin-bottom: 0;

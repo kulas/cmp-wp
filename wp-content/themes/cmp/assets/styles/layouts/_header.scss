@@ -1008,11 +1008,9 @@ ul#menu-magazine-nav
     background-color: #6e7649;
   }
 
-    li.current-menu-item,
-    li.current-page-ancestor,
-    li.current-menu-parent a {
-      background: $nav-hover;
-    }
+  > li.current-page-ancestor {
+    background: $nav-hover;
+  }
 
   li.current-menu-item > a,
   li.current-page-ancestor > a {

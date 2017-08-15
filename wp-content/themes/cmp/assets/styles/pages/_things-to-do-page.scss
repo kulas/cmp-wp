@@ -24,20 +24,26 @@
     }
 
     .activity__title {
-      padding-top: 0.5em;
-      padding-right: 0.5em;
+      padding-top: 0.75em;
+      padding-right: 0.75em;
       display: inline-block;
-      position: relative;
-      top: 135px;
+      position: absolute;
+      bottom: 0;
       background-color: white;
+
+      h3 {
+        margin: 0;
+        line-height: 1;
+      }
     }
   }
 
   .activity__image {
+    position: relative;
     height: 175px;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    overflow: visible;
     margin-bottom: 1em;
   }
 

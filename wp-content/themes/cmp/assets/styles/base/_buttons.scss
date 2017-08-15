@@ -119,19 +119,3 @@
   height: 20px;
   width: 20px;
 }
-
-// Special Links
-////////////////////////////////////////////////////////////////
-
-.button--link{
-  @include icon--learn;
-  position: relative;
-  top:5px;
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  content: "";
-  // background-image: url("/wp-content/themes/cmp/assets/images/learnmore-arrow.svg");
-  background-size: cover;
-  line-height: 0;
-}

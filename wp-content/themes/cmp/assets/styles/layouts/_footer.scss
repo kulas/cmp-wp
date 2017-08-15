@@ -8,6 +8,8 @@
 
   .content-container {
     padding:0;
+    max-width: 1136px;
+    border: 1px solid white;
   }
 
   @include grid-media($large) {
@@ -32,7 +34,14 @@
   }
 
   .footer-logo {
-    padding-right:2em;
+    position: relative;
+    right: 2em;
+    @media only screen and (max-width: 900px) {
+      right: 0;
+    }
+    @media only screen and (min-width: 1136px) {
+      right: 3.4em;
+    }
   }
 
   .rad-container {
@@ -40,7 +49,6 @@
     flex-basis: 50%;
     justify-content: flex-start;
     margin-left: 1em;
-
     @include grid-media($medium) {
       justify-content: center;
     }
@@ -167,9 +175,13 @@
       display:block;
     }
 
+
+
   .footer-links-section {
     flex-basis:50%;
     padding:0px 5px;
+    position: relative;
+    left: 5px;
 
     a {
       padding-bottom:15px;
@@ -179,6 +191,16 @@
       font-size:1.3em;
     }
   }
+
+
+  .middle-row,
+  .bottom-row__links,
+  .hr-break,
+  .copyright {
+    position: relative;
+    left: 9px;
+  }
+
 
   .footer-links-section__small {
     max-width:150px;
@@ -294,7 +316,7 @@
   }
 
   .hr-break {
-    width:100%;
+    width:106%;
     display:block;
   }
 

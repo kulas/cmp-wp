@@ -1,15 +1,16 @@
 // SITE FOOTER LAYOUT STYLES
 ////////////////////////////////////////////////////////////////
-.footer {
+footer {
   padding: $large-spacing 0;
   background-color: black;
   width:100%;
-  overflow: hidden;
+  // overflow: hidden;
 
   .content-container {
     padding:0;
     max-width: 1136px;
-    border: 1px solid white;
+    // overflow: hidden;
+    // border: 1px solid white;
   }
 
   @include grid-media($large) {
@@ -49,8 +50,12 @@
     flex-basis: 50%;
     justify-content: flex-start;
     margin-left: 1em;
+    z-index: 0;
+
     @include grid-media($medium) {
       justify-content: center;
+      margin-left: 0;
+      margin-bottom: 5em;
     }
   }
 
@@ -109,7 +114,12 @@
       margin-right: 6px;
 
       @include grid-media($medium) {
-        font-size: .9em;
+        font-size: .85em;
+        margin-right: 6px;
+      }
+
+      @media only screen and (max-width: 325px) {
+        font-size: .7em;
       }
     }
 
@@ -122,6 +132,7 @@
 
       @include grid-media($medium) {
         flex-basis: 100%;
+        padding: 0 $small-spacing;
       }
     }
 
@@ -183,6 +194,10 @@
     position: relative;
     left: 5px;
 
+    @include grid-media($medium) {
+      left: 0;
+    }
+
     a {
       padding-bottom:15px;
       display:block;
@@ -199,6 +214,10 @@
   .copyright {
     position: relative;
     left: 9px;
+
+    @include grid-media($medium) {
+      left: 0;
+    }
   }
 
 
@@ -316,7 +335,7 @@
   }
 
   .hr-break {
-    width:106%;
+    // width:106%;
     display:block;
   }
 
@@ -334,4 +353,35 @@
     opacity: .5;
     margin: $small-spacing 0;
   }
+
+  .sticky-join-donate {
+    max-height:50px;
+    width: 100%;
+    background-color: gray;
+    display: none;
+    overflow: hidden;
+    justify-content: space-between;
+    z-index: 1005;
+    position: fixed;
+    bottom: 0;
+
+    @include grid-media($medium) {
+      display: flex;
+    }
+
+    > a {
+      padding:1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $alt-font-family;
+      flex-grow: 1
+    }
+  }
+  a.sticky-join-donate__join {
+    background-color: #282828;
+  }
+  a.sticky-join-donate__donate {
+    background-color: #3D3D3D;
+  }
+
 }

@@ -36,14 +36,14 @@
           <!-- search nav btn-->
           <li>
             <button class="nav-icon nav-icon-search quickview-btn" href="#search" aria-label="Search navigation trigger" title="Search">
-              <i class="icon -search" aria-hidden="true"></i>
+              <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </li>
 
           <!-- mobile nav btn-->
           <li>
             <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
-              <i class="icon -hamburger" aria-hidden="true"></i>
+              <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
           </li>
 

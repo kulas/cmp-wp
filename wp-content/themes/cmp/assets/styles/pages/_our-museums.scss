@@ -6,6 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: $large-spacing;
     overflow: hidden;
     @include grid-media($medium) {
       padding-bottom: $base-spacing;

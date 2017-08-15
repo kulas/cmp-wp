@@ -114,6 +114,7 @@ hr {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
+  margin-bottom: $base-spacing;
 
   @include grid-media($medium) {
     flex-wrap: wrap;

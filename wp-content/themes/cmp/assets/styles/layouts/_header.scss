@@ -3,13 +3,11 @@
 
 // Top bar nav:
 // signup, mobile nav header
-
 .top-bar-container {
   position: relative;
   background: #eaeaea;
   z-index: 1001;
   width: 100%;
-
 
   @include grid-media($nav-break) {
     background: $base-color;
@@ -40,10 +38,12 @@
   align-content: center;
   justify-content: space-between;
   margin: auto;
-  padding: 0  $base-spacing;
+  padding: 0 $base-spacing;
+
   @include grid-media($nav-break) {
     justify-content: flex-end;
     padding: 0;
+    height:auto;
   }
 }
 
@@ -99,13 +99,12 @@
   position: relative;
   display: flex;
   overflow: hidden;
-  width: 294px;
+  width: 275px;
   position: relative;
 
   @include grid-media($nav-break) {
     display: none;
   }
-
 
   input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email {
     margin: 0 !important;
@@ -187,8 +186,6 @@ ul.top-bar-nav {
   }
 }
 
-
-
 // Nav Icons
 ////////////////////////////////////////////////////////////////
 .nav-buttons {
@@ -206,7 +203,7 @@ button.nav-icon.nav-icon-search.quickview-btn {
 
 button.nav-icon.nav-icon-hamburger.quickview-btn {
   @include grid-media($nav-break) {
-    background: #96A061;
+    background: $base-color;
     padding: $small-spacing;
   }
 }
@@ -223,7 +220,6 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
   line-height: 1;
   color: $base-font-color;
 
-
   &:hover {
     background: $base-color;
     color: #fff;
@@ -233,7 +229,7 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
   }
 
   @include grid-media($nav-break) {
-    border-left: $inverse-border;
+    // border-left: $inverse-border;
     padding: 0 1.15em;
     color: #fff;
   }
@@ -269,7 +265,7 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
     opacity: 1;
   }
   @include grid-media($nav-break) {
-    border-right: $base-border !important;
+    // border-right: $base-border !important;
   }
 }
 
@@ -943,7 +939,7 @@ ul#menu-magazine-nav {
 }
 
 #menu-primary-navigation-1 {
-  border-bottom: 1px solid #ccc;
+  // border-bottom: 1px solid #ccc;
 }
 
 #menu-primary-navigation-1 li:hover > a,
@@ -1026,8 +1022,9 @@ ul#menu-magazine-nav
   ul.sub-menu {
     padding-left: 0;
     position: absolute;
-    top:2.5em;
+    top:3.5em;
     left: 0;
+    background-color: #95A064;
     overflow: hidden;
     z-index: 1003;
     height:0;
@@ -1045,17 +1042,19 @@ ul#menu-magazine-nav
     > li {
       transition: 0.4s all;
       background: #95A064;
-      min-width: 250px;
-      height:45px;
+      width: 260px;
+      height:50px;
       color: white;
       text-align: left;
       a {
-        // padding: $small-spacing/2 $small-spacing;
-        padding:1em;
+        padding-left: 2.5em;
         overflow:hidden;
         letter-spacing: 0.5px;
         font-size: 0.8em;
         color: #fff;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
@@ -1071,8 +1070,8 @@ ul#menu-magazine-nav
 
   .sub-menu > li.menu-item > ul.sub-menu {
     position: relative;
-    left: 249px;
-    top: -61px;
+    left: 259px;
+    top: -3.2em;
   }
 
   .sub-menu > li.menu-item > ul.sub-menu:hover {
@@ -1095,12 +1094,6 @@ ul#menu-magazine-nav {
   li.current-menu-item {
     background-color: #6e7649;
   }
-}
-
-li.menu-item-299 > ul {
-  left: -8.9em;
-  width: 150px !important;
-  overflow: hidden;
 }
 
 .desktop-nav-container {

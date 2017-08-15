@@ -161,7 +161,7 @@ h2.hero-header__words-box.button--link {
       }
 
       a {
-        color: #96A061;
+        color: $base-color;
       }
       a:hover {
         color: darken($action-color, 20%);

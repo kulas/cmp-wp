@@ -54,7 +54,7 @@ p.p1 {
 
 a {
   transition: color 0.2s;
-  color: #96A061;
+  color: $base-color;
   text-decoration: none;
 
   &:active,
@@ -85,7 +85,7 @@ hr {
 
   a {
     // color: $inverse-action-color;
-    color: #96A061;
+    color: $base-color;
 
     &:active,
     &:focus,
@@ -172,7 +172,7 @@ a > h1 {
 
 h1 > a:hover,
 a > h1:hover {
-  color: #96A061;
+  color: $base-color;
   transition: .3s;
 }
 

@@ -11,7 +11,7 @@ ul.nav.osc-res-nav.nav-tabs.osc-tabs-left-ul {
 }
 
 ul.tab-content {
-  border: solid #96A061;
+  border: solid $base-color;
   border-width: 8px 0px 0px 0px;
   z-index: 5;
 
@@ -32,7 +32,7 @@ ul.tab-content {
     }
 
     a {
-      color: #96A061;
+      color: $base-color;
     }
 
     li > a {
@@ -62,7 +62,7 @@ ul.tab-content {
 .osc-res-tab .nav-tabs>li.active>a,
 .osc-res-tab .nav-tabs>li.active>a:hover,
 .osc-res-tab .nav-tabs>li.active>a:focus {
-  background-color:#96A061;
+  background-color:$base-color;
 }
 
 .osc-res-tab .tab-content > .tab-pane, .osc-res-tab .pill-content > .pill-pane,

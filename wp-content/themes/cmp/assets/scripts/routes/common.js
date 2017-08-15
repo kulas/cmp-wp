@@ -2,7 +2,7 @@ export default {
   init() {
     // JavaScript to be fired on all pages
 
-    require('waypoints/lib/jquery.waypoints');
+    // require('waypoints/lib/jquery.waypoints');
   // var store = require('store2');
 
   // main navigation

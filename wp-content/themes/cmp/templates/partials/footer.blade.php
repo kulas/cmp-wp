@@ -57,38 +57,35 @@
                 <span class="connect-2">Social Media, Blogs, Apps & More ></span>
               </a>
             </div>
-
             <hr class="mobile-hr">
         </div>
-
         <hr class="hr-break mobile-hide">
-
         <div class="bottom-row">
           <div class="bottom-row__left">
-
             <div class="bottom-row__links">
               <a href="/accessibility">Accessibility</a><p>|</p>
               <a href="/press">Press</a><p>|</p>
               <a href="/careers">Careers</a><p>|</p>
               <a href="/volunteer">Volunteers</a>
             </div>
-
             <hr class="mobile-hr">
-
             <div class="copyright">
               <p>©2017 Carnegie Museums of Pittsburgh</p>
               <a href="#">Privacy Policy</a>
             </div>
-
           </div>
-
           <div class="rad-container">
             <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg">
           </div>
-
         </div>
       </div>
      </div>
     </div>
   </div>
+
+  <div class="sticky-join-donate">
+    <a href="/join-support/membership/" class="sticky-join-donate__join">Join</a>
+    <a href="/join-support/donate/" class="sticky-join-donate__donate">Donate</a>
+  </div>
+
 </footer>

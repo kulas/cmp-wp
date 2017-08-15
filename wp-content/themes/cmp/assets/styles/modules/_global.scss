@@ -238,11 +238,15 @@ nav.navigation.posts-navigation {
 }
 
 // Site search form on 'no results were found' pages.
-
 form.search-form {
   margin-top: 1em;
 
   input {
     max-width: 40%;
   }
+}
+
+//Added to prevent stray fixed-width elements from overflowing on mobile.
+.content {
+  overflow:hidden;
 }

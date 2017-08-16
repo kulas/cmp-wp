@@ -28,8 +28,11 @@
     </div>
   </div>
   <hr>
-    <div class="main-text">
+    <div class="main-text spaced">
       {{ the_content() }}
+
+      @include('partials.tabs')
+
     </div>
   </div>
 </div>

@@ -52,7 +52,7 @@ p.p1 {
   font-weight: 300;
 }
 
-a {
+a:not([role]) {
   transition: color 0.2s;
   color: $base-color;
   text-decoration: none;

@@ -24,18 +24,28 @@
     @endphp
       <div class="tab-panel" id="tab-content-{{ $content_index }}" aria-labelledby="tab-{{ $content_index }}" aria-hidden="{{ $content_index === 0 ? "false" : "true" }}" role="tabpanel">
         @php
-          $image = get_sub_field('tab_image');
-          if(!empty($image)):
+          while(have_rows('tab_body_layout')): the_row();
+            if(get_row_layout() == 'text'):
         @endphp
-          <div class="tab__image">
-            <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" />
+          <div class="tab__body">
+            {!! get_sub_field('tab_copy') !!}
           </div>
         @php
-          endif;
+          elseif(get_row_layout() == 'trip'):
+          $image = get_sub_field('trip_image');
         @endphp
-        <div class="tab__body">
-          {!! get_sub_field('tab_body') !!}
-        </div>
+          <div class="tab__trip">
+            <div class="tab__trip-image">
+              <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" />
+            </div>
+
+            <div class="tab__body">
+              {!! get_sub_field('trip_copy') !!}
+            </div>
+          </div>
+        @php
+          endif; endwhile;
+        @endphp
       </div>
     @php
       $content_index++;

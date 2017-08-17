@@ -910,20 +910,24 @@ a.quickview-btn.nav-visit {
 
 // Desktop Nav
 ////////////////////////////////////////////////////////////////
+.desktop-nav-container {
+  width: 100%;
+  max-width: $max-width;
+  padding: 0  $base-spacing;
+  margin: auto;
+  background: #fff;
+  display: block;
+
+  @include grid-media($nav-break) {
+    display: none;
+  }
+}
 
 .menu-primary_navigation-container,
 .menu-magazine-nav-container {
   padding:0em 3em;
   font-family: $base-font-family;
   // border-bottom: $base-border;
-}
-
-.menu-magazine-nav-container {
-  padding: 0;
-}
-
-ul#menu-magazine-nav {
-  background-color: $nav-hover;
 }
 
 // fix vv
@@ -945,12 +949,6 @@ ul#menu-magazine-nav {
 #menu-primary-navigation-1 li:hover > a,
 #menu-primary-navigation li:active > a {
   color: white !important;
-}
-
-#menu-magazine-nav li:hover {
-  > a {
-    color:white;
-  }
 }
 
 ul.desktop-nav {
@@ -1015,6 +1013,7 @@ ul#menu-magazine-nav
   li.current-menu-item > a,
   li.current-page-ancestor > a {
     color: white;
+    background: $nav-hover;
   }
 
   ul.sub-menu {
@@ -1084,44 +1083,59 @@ ul#menu-magazine-nav
   }
 }
 
+//Magazine nav stuff
+nav.magazine-nav-container.desktop-nav-container {
+  position: relative;
+  top: 0em;
+  z-index: 500;
+  background: transparent;
+  height: 0;
+}
+
+.menu-magazine-nav-container {
+  padding: 0;
+}
+
 ul#menu-magazine-nav {
 
+  li.menu-item,
+  ul.sub-menu > li.menu-item {
+    background-color: black;
+    opacity: 0.8;
+  }
+
   li.menu-item:hover {
-    background-color: #6e7649;
+    background-color: black;
+    opacity: 1;
   }
+
   li.current-menu-item {
-    background-color: #6e7649;
+    background-color: black;
   }
 }
 
-.desktop-nav-container {
-  width: 100%;
-  max-width: $max-width;
-  padding: 0  $base-spacing;
-  margin: auto;
-  background: #fff;
-  display: block;
-
-  @include grid-media($nav-break) {
-    display: none;
-  }
-
-  // a.is-active,
-  // button.is-active {
-  //   background: $base-color;
-  //   @include grid-media($nav-break) {
-  //     background: $dark-gray;
-  //   }
-  // }
-  //
-  // @include grid-media($nav-break) {
-  //   a {
-  //     background: $base-color;
-  //
-  //     i {
-  //       color: #fff !important;
-  //     }
-  //   }
-  // }
-
+ul#menu-magazine-nav li.menu-item:hover,
+ul#menu-magazine-nav .current-menu-item {
+  // opacity: 1;
 }
+
+ul#menu-magazine-nav li.menu-item:hover > ul.sub-menu {
+  background: black !important;
+}
+
+
+ul#menu-magazine-nav > li > a {
+  color: white !important;
+}
+
+#menu-magazine-nav li:hover {
+  > a {
+    color:white;
+  }
+}
+
+// .page-id-307 {
+//     .top-bar-container {
+//       display: none;
+//     }
+//   }

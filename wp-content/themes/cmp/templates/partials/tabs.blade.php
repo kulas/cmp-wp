@@ -8,7 +8,7 @@
         while(have_rows('tab_layout')): the_row();
       @endphp
         <li class="tab" role="presentation">
-          <a class="tab__link" href="#tab-content-{{ $tab_index }}" id="tab-{{ $tab_index }}" tabindex="{{ $tab_index === 0 ? "0" : "-1" }}" role="tab" aria-controls="tab-content-{{ $tab_index }}" aria-selected="{{ $tab_index === 0 ? "true" : "false" }}">
+          <a class="tab__link tab__button" href="#tab-content-{{ $tab_index }}" id="tab-{{ $tab_index }}" tabindex="{{ $tab_index === 0 ? "0" : "-1" }}" role="tab" aria-controls="tab-content-{{ $tab_index }}" aria-selected="{{ $tab_index === 0 ? "true" : "false" }}">
             {{ get_sub_field('tab_title') }}
           </a>
         </li>
@@ -22,6 +22,7 @@
       $content_index = 0;
       while(have_rows('tab_layout')): the_row();
     @endphp
+      <button class="tab__title tab__button" aria-controls="tab-content-{{ $content_index }}" aria-expanded="{{ $content_index === 0 ? "true" : "false" }}">{{ get_sub_field('tab_title') }}</button>
       <div class="tab-panel" id="tab-content-{{ $content_index }}" aria-labelledby="tab-{{ $content_index }}" aria-hidden="{{ $content_index === 0 ? "false" : "true" }}" role="tabpanel">
         @php
           while(have_rows('tab_body_layout')): the_row();

@@ -1,8 +1,8 @@
 export default function setupTabs() {
-  $('.tab__link').click(function(e) {
+  $('.tab__button').click(function(e) {
     e.preventDefault();
 
-    const tab_index = $('.tab__link').index($(this));
+    const tab_index = $('.tab__button:visible').index($(this));
     setIndex(tab_index);
 
   }).keyup(function(e) {
@@ -19,19 +19,22 @@ export default function setupTabs() {
 }
 
 function setIndex(tab_index) {
-  $('.tab__link').attr(
+  $('.tab__link:visible').attr(
     {
       tabindex: '-1',
       'aria-selected': 'false',
     }
   );
 
-  $(`.tab__link:eq(${tab_index})`).attr(
+  $(`.tab__link:visible:eq(${tab_index})`).attr(
     {
       tabindex: '0',
       'aria-selected': 'true',
     }
   );
+
+  $('.tab__title:visible').attr('aria-expanded', 'false');
+  $(`.tab__title:visible:eq(${tab_index})`).attr('aria-expanded', 'true');
 
   $('.tab-panel').attr('aria-hidden', 'true');
   $(`.tab-panel:eq(${tab_index})`).attr('aria-hidden', 'false');

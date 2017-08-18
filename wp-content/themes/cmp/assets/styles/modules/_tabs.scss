@@ -112,6 +112,10 @@ ul.tab-content {
   padding: 0;
   border-bottom: 8px solid $base-color;
 
+  @include grid-media($medium) {
+    display: none;
+  }
+
   .tab {
     display: inline-block;
   }
@@ -145,6 +149,23 @@ ul.tab-content {
 
   &[aria-hidden="true"] {
     display: none;
+  }
+}
+
+.tab__title {
+  display: none;
+  width: 100%;
+  margin-bottom: 0.25em;
+  padding: $small-spacing;
+  font-family: $base-font-family;
+  font-size: 1.335em;
+  background-color: $action-color;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  @include grid-media($medium) {
+    display: block;
   }
 }
 

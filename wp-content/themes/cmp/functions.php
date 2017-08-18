@@ -123,9 +123,54 @@ function filter_ptags_on_images($content){ // Remove p tags from around images
 }
 add_filter('the_content', 'filter_ptags_on_images');
 
+//Magazine navigation function
 function register_my_menu() {
   register_nav_menu('magazine_nav',__( 'Magazine Navigation' ));
 }
 add_action( 'init', 'register_my_menu' );
 
-define( 'WP_DEBUG', true );
+// Changes the author of an article to the name in the Author custom field
+add_filter( 'the_author', 'guest_author_name' );
+add_filter( 'get_the_author_display_name', 'guest_author_name' );
+
+function guest_author_name( $name ) {
+global $post;
+  $author = get_post_meta( $post->ID, 'author', true );
+  if ( $author )
+  $name = $author;
+  return $name;
+}
+
+// add_filter( 'get_the_author_user_url', 'guest_author_url' );
+// add_filter( 'the_author', 'guest_author_link' );
+// add_filter( 'get_the_author_display_name', 'guest_author_name' );
+//
+// function guest_author_url($url) {
+//   global $post;
+//   $guest_url = get_post_meta( $post->ID, 'guest-url', true );
+//   if ( filter_var($guest_url, FILTER_VALIDATE_URL) ) {
+//     return $guest_url;
+//   } elseif ( get_post_meta( $post->ID, 'guest-author', true ) ) {
+//     return '#';
+//   }
+//   return $url;
+// }
+//
+// function guest_author_link($name) {
+//   global $post;
+//   $guest_url = get_post_meta( $post->ID, 'guest-url', true );
+//   $guest_name = get_post_meta( $post->ID, 'guest-author', true );
+//   if ( $guest_name && filter_var($guest_url, FILTER_VALIDATE_URL) ) {
+//     return '<a href="' . esc_url( $guest_url ) . '" title="' . esc_attr( sprintf(__("Visit %s&#8217;s website"), $guest_name) ) . '" rel="author external">' . $guest_name . '</a>';
+//   } elseif( $guest_name ) {
+//     return $guest_name;
+//   }
+//   return $name;
+// }
+//
+// function guest_author_name( $name ) {
+//   global $post;
+//   $guest_name = get_post_meta( $post->ID, 'guest-author', true );
+//   if ( $guest_name ) return $guest_name;
+//   return $name;
+// }

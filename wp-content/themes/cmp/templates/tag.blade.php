@@ -1,8 +1,9 @@
 @extends('layouts.base')
 
 @section('content')
-  @include('partials.content-carnegie-magazine-nav')
+  @include('partials.page-header')
+
   @while(have_posts()) @php(the_post())
-    @include('partials/content-single-'.get_post_type())
+    @include('partials.tag-partial')
   @endwhile
 @endsection

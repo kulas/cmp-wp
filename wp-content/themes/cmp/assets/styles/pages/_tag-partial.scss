@@ -1,0 +1,22 @@
+.tag-partial {
+  max-width: $max-width;
+  margin: auto;
+
+  p {
+    max-width: 60
+  }
+
+  article {
+    display: flex;
+  }
+  .article-content {
+    flex-basis: 80%;
+  }
+
+  .article__image {
+    padding-right: 1em;
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+  }
+}

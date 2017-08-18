@@ -4,6 +4,10 @@
   .content-container {
     display: block;
     padding: 0 3em;
+
+    @include grid-media($medium) {
+      padding: 0 1em;
+    }
   }
 
   p {

@@ -42,6 +42,10 @@
     "wpackagist-plugin/wp-custom-widget-area": "1.2.5",
     "wpackagist-plugin/wp-easy-responsive-tabs-to-accordion": "1.2.2",
     "wpackagist-plugin/all-in-one-wp-migration": "6.55",
-    "wpackagist-plugin/contact-form-7": "4.8.1"
+    "wpackagist-plugin/contact-form-7": "4.8.1",
+    "wpackagist-plugin/add-category-to-pages": "1.0",
+    "wpackagist-plugin/font-resizer": "1.3.5",
+    "wpackagist-plugin/google-analytics-for-wordpress": "6.2.1",
+    "wpackagist-plugin/simple-page-tester": "1.4.4"
   }
 }

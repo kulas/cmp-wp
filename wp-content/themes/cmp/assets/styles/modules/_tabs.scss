@@ -26,6 +26,7 @@ ul.tab-content {
 
 .osc-res-tab {
   width:100%;
+  margin-top: $base-spacing;
 
     ul.nav {
       justify-content: flex-start;
@@ -99,3 +100,113 @@ ul.tab-content {
   }
 }
 // End tabs plugin.
+
+.tabbed-content {
+  overflow: hidden;
+}
+
+.tabs-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 8px solid $base-color;
+
+  @include grid-media($medium) {
+    display: none;
+  }
+
+  .tab {
+    display: inline-block;
+  }
+
+  .tab__link {
+    display: block;
+    padding: 0.66em 1em;
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s;
+
+    &:hover, &[aria-selected="true"] {
+      background-color: $base-color;
+    }
+
+    &[aria-selected="true"] {
+      color: #fff;
+    }
+  }
+}
+
+.tab-panel {
+  padding: $small-spacing;
+
+  @include grid-media($small) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.tab__title {
+  display: none;
+  width: 100%;
+  margin-bottom: 0.25em;
+  padding: $small-spacing;
+  font-family: $base-font-family;
+  font-size: 1.335em;
+  background-color: $action-color;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+
+  @include grid-media($medium) {
+    display: block;
+  }
+}
+
+.tab__trip {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-bottom: $base-spacing;
+  padding-bottom: $small-spacing;
+  border-bottom: 1px solid $light-gray;
+
+  @include grid-media($large) {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  @include grid-media($medium) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.tab__trip-image {
+  grid-column-start: 1;
+  margin-right: $small-spacing;
+
+  @include grid-media($small) {
+    grid-column-start: span 2;
+    margin-right: 0;
+  }
+}
+
+.tab__body {
+  grid-column-start: 2;
+
+  @include grid-media($small) {
+    grid-column-start: span 2;
+  }
+
+  p {
+    margin-bottom: 0.5em; // we can remove this once the tab plugin is removed
+  }
+}

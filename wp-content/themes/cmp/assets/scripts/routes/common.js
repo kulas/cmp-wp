@@ -1,9 +1,9 @@
+require('waypoints/lib/jquery.waypoints');
+import setupTabs from '../tabs';
+
 export default {
   init() {
     // JavaScript to be fired on all pages
-
-    // require('waypoints/lib/jquery.waypoints');
-  // var store = require('store2');
 
   // main navigation
   ////////////////////////////////////////////////////////////////////////////////
@@ -163,7 +163,7 @@ export default {
       offset: '-250px'
     });
 
-
+    setupTabs();
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

@@ -118,7 +118,7 @@ footer {
         margin-right: 6px;
       }
 
-      @media only screen and (max-width: 325px) {
+      @media only screen and (max-width: 375px) {
         font-size: .7em;
       }
     }
@@ -374,7 +374,8 @@ footer {
       text-align: center;
       text-transform: uppercase;
       font-family: $alt-font-family;
-      flex-grow: 1
+      flex-grow: 1;
+      color: white;
     }
   }
   a.sticky-join-donate__join {

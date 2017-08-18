@@ -1107,6 +1107,18 @@ ul#menu-magazine-nav {
     display: none;
   }
 
+  //hides magazine submenu on desktop
+li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.menu-item-310 {
+  >ul.sub-menu {
+    display: none;
+  }
+  @include grid-media($nav-break) {
+    display: inherit;
+  }
+}
+
+
+
   // a.is-active,
   // button.is-active {
   //   background: $base-color;

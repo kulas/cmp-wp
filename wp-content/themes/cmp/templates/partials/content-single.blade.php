@@ -60,61 +60,71 @@
       </div>
     </div>
     <hr>
-    <div class="article__related">
-      <h4 class="center">You May Also Like</h4>
+    <div class="content-sidebar-container">
 
-      {{-- This is the related/'you may also like' post sidebar --}}
+    <div class="article__content">
+        <div class="article__main">
+          <div class="article__related">
+            <h4 class="center">You May Also Like</h4>
 
-      @php // This gets 3 related posts by the first tag of an article.
-        $tags = wp_get_post_tags($post->ID);
-        if ($tags) {
-            $first_tag = $tags[0]->term_id;
-            $args=array(
-              'tag__in' => array($first_tag),
-              'post__not_in' => array($post->ID),
-              'posts_per_page'=>3,
-              'caller_get_posts'=>3
-            );
-        $my_query = new WP_Query($args);
-        if ($my_query->have_posts()) {
-        while ($my_query->have_posts()) :
-        $my_query->the_post();
-      @endphp
+              {{-- This is the related/'you may also like' post sidebar --}}
 
-      @php
-        $featured_image = get_field('featured_image'); //gets full image array
-        $featured_image_url = $featured_image['url']; //url of image
-        $featured_image_id = $featured_image['id']; //id of image
-        $featured_image_credit = get_media_credit_html($featured_image_id); //media credit for image
-      @endphp
+              @php // This gets 3 related posts by the first tag of an article.
+                $tags = wp_get_post_tags($post->ID);
+                if ($tags) {
+                    $first_tag = $tags[0]->term_id;
+                    $args=array(
+                      'tag__in' => array($first_tag),
+                      'post__not_in' => array($post->ID),
+                      'posts_per_page'=>3,
+                      'caller_get_posts'=>3
+                    );
+                $my_query = new WP_Query($args);
+                if ($my_query->have_posts()) {
+                while ($my_query->have_posts()) :
+                $my_query->the_post();
+              @endphp
 
-      {{-- Related Posts --}}
-      <div class="tags">
+              @php
+                $featured_image = get_field('featured_image'); //gets full image array
+                $featured_image_url = $featured_image['url']; //url of image
+                $featured_image_id = $featured_image['id']; //id of image
+                $featured_image_credit = get_media_credit_html($featured_image_id); //media credit for image
+              @endphp
 
-        @php(the_tags( '', ' | ', '' ))
+              {{-- Related Posts --}}
+              <div class="tags">
 
-      </div>
-      <div class="image-container" style="background-image:url({{ $featured_image_url }})"></div>
-      <a href="{{ the_permalink() }}">{{ the_title() }} </a>
-      <div class="excerpt">{{ the_excerpt() }}</div>
-      <p class="author">{{ the_field('author') }}</p>
+                @php(the_tags( '', ' | ', '' ))
 
-      @php endwhile;
-        }
-          wp_reset_query(); // End related posts.
-        }
-      @endphp
+              </div>
+              <div class="image-container" style="background-image:url({{ $featured_image_url }})"></div>
+              <a href="{{ the_permalink() }}">{{ the_title() }} </a>
+              <div class="excerpt">{{ the_excerpt() }}</div>
+              <p class="author">{{ the_field('author') }}</p>
 
-    </div>
-  <div class="article__content">
-    <div class="article__main">
-      {{ the_content() }}
+              @php endwhile;
+                }
+                  wp_reset_query(); // End related posts.
+                }
+              @endphp
+
+            </div>
+
+          {{ the_content() }}
+        </div>
     </div>
   </div>
+
   <div class="magazine-subscribe">
     <p class="uppercase-robot">Sign up</br>
     to receive</br>
     more stories</p>
     <button class="grey-button">Subscribe</button>
+  </div>
+
+  <div class="bottom-tags">
+    <p>Tags:</p>
+    @php(the_tags( '', ' ', '' ))
   </div>
 </article>

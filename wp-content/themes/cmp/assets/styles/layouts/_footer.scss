@@ -132,7 +132,7 @@ footer {
 
       @include grid-media($medium) {
         flex-basis: 100%;
-        padding: 0 $small-spacing;
+        padding: 0;
       }
     }
 

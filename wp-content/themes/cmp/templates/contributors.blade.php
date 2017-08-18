@@ -1,8 +1,12 @@
+{{--
+  Template Name: Contributors
+--}}
+
 @extends('layouts.base')
 
 @section('content')
+
   @include('partials.content-carnegie-magazine-nav')
-  @while(have_posts()) @php(the_post())
-    @include('partials/content-single-'.get_post_type())
-  @endwhile
+  @include('partials.content-contributors')
+
 @endsection

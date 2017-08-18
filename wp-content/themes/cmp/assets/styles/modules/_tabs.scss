@@ -110,7 +110,7 @@ ul.tab-content {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-block-end: 8px solid $base-color;
+  border-bottom: 8px solid $base-color;
 
   .tab {
     display: inline-block;
@@ -169,6 +169,7 @@ ul.tab-content {
 }
 
 .tab__trip-image {
+  grid-column-start: 1;
   margin-right: $small-spacing;
 
   @include grid-media($small) {
@@ -178,6 +179,8 @@ ul.tab-content {
 }
 
 .tab__body {
+  grid-column-start: 2;
+
   @include grid-media($small) {
     grid-column-start: span 2;
   }

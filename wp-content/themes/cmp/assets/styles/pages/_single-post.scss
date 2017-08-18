@@ -53,16 +53,27 @@ article {
       font-weight: lighter;
     }
   }
-  //Tons of formatting to esnure all the things in the WYSWIG editor box format coorrectly.
+
+  // .content-sidebar-container {
+  //   display: flex;
+  // }
+
+  // .article__content {
+  //   flex-basis: 85%;
+  //   overflow: hidden;
+  // }
+
+  //Tons of formatting to ensure all the things in the WYSWIG editor box format coorrectly.
   .entry-content {
     padding: 0 1em;
-    max-width: 1000px;
+    max-width: $max-width;
     margin: auto;
     overflow: hidden;
 
     p {
       line-height: 25px;
       padding-bottom: $small-spacing;
+      font-size: 1.1em;
     }
 
     h2,
@@ -304,12 +315,14 @@ article {
   }
   // 'You may also like' sidebar.
   .article__related {
+    max-width: 25%;
     float: right;
-    max-width: 30%;
-    padding: $base-spacing;
+    text-align: left;
+    display: block;
+    padding-bottom: $small-spacing;
     position: relative;
-    top: 82em;
-    height: 0;
+    top: 30%;
+
     @include grid-media($large) {
       display: none;
     }
@@ -318,15 +331,14 @@ article {
       font-family: 'Roboto', sans-serif;
       font-size: 1em;
       text-transform: uppercase;
-      position: relative;
-      left: 1em;
+      min-width: 100%;
       padding: 0;
       margin: 0;
     }
 
     .image-container {
       height: 125px;
-      min-width: 300px;
+      // min-width: 300px;
       background-size: cover;
       background-position: center;
     }
@@ -340,7 +352,7 @@ article {
       margin: 0;
       font-size: 0.9em;
       line-height: 20px;
-      min-width: 285px;
+      min-width: 100%;
       padding-bottom: 0.5em;
     }
 
@@ -378,4 +390,19 @@ p.sp-layer.sp-black.sp-padding.desc-in.desc-in-bg.hide-medium-screen {
 
 .ess-button-inner {
   background-color: grey !important;
+}
+
+.bottom-tags {
+  display: flex;
+  p {
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: .8em !important;
+    font-weight: bold;
+  }
+  > a {
+    @extend .green-button;
+    max-height: 25px;
+    overflow: hidden;
+  }
 }

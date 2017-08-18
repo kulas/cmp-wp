@@ -22,4 +22,10 @@
     bottom: 4em;
     left: 2em;
   }
+
+  h1.hero-header__words-box.robot {
+    @include grid-media($medium) {
+      margin: 0;
+    }
+  }
 }

@@ -3,6 +3,10 @@
 .carnegie-magazine__big-picture {
   .content-container {
     padding: 0 3em;
+
+    @include grid-media($medium) {
+      padding: 0 1em;
+    }
   }
 
   .media-credit {
@@ -13,12 +17,22 @@
   }
 }
 
+h1.hero-header__words-box.robot {
+  @include grid-media($medium) {
+    margin: 0;
+  }
+}
+
 .magazine-signup {
   padding: $small-spacing 0;
   max-width: $max-width;
   width: 100%;
   text-align: center;
   padding-bottom: $base-spacing;
+
+  @include grid-media($medium) {
+    padding: 1em 0;
+  }
 
   p {
     width: 100%;

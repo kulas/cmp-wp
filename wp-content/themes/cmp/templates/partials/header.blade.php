@@ -42,7 +42,7 @@
 
           <!-- mobile nav btn-->
           <li>
-            <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" role="button" aria-label="Mobile navigation trigger">
+            <button class="nav-icon nav-icon-hamburger quickview-btn" href="#quickview-nav" aria-label="Menu" Title="Menu" aria-label="Mobile navigation trigger">
               <i class="fa fa-bars" aria-hidden="true"></i>
             </button>
           </li>
@@ -104,7 +104,7 @@
 <!-- main header -->
 <header class="header-main">
   <a href="/">
-    <img src="<?= App\asset_path('images/logo--cmp.svg') ?>" alt="" class="site-header--logo"/>
+    <img src="<?= App\asset_path('images/logo--cmp.svg') ?>" alt="Carnegie Museums of Pittsburgh" class="site-header--logo"/>
   </a>
 
     <!-- desktop nav-->

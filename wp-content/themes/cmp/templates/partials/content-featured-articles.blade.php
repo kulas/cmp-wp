@@ -76,11 +76,11 @@
       @endphp
 
       <div class="article">
-        <img src="/wp-content/themes/cmp/assets/images/carnegie-magazine.png">
+        <img src="/wp-content/themes/cmp/assets/images/carnegie-magazine.png" alt="carnegie magazine">
         <div class="article__text-box">
-          <h4><a href="#">Additional Articles</a></h4>
+          <h4><a href="/carnegie-magazine/">Additional Articles</a></h4>
           <p>Read more from Carnegie Magazine.</p>
-          <button class="green-button">Read More Articles</button>
+          <a class="green-button" href="/carnegie-magazine/" role="link">Read More Articles</a>
         </div>
       </div>
     </div>

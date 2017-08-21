@@ -6,7 +6,7 @@
         <div class="left-section">
           <div class="footer__images">
 
-              <img class="footer-logo" src="/wp-content/themes/cmp/assets/images/cmpfooter.png">
+              <img class="footer-logo" src="/wp-content/themes/cmp/assets/images/cmpfooter.png" alt="Carngie Museums of Pittsburgh">
 
           </div>
         <hr class="hr-break-mobile">
@@ -46,6 +46,7 @@
         <div class="middle-row">
           <div class="email-subscribe">
 
+            <label for="128" class="label--hidden">Subscribe to our emails</label>
             @php
               echo do_shortcode("[contact-form-7 id='128' title='Email Form']");
             @endphp
@@ -75,7 +76,7 @@
             </div>
           </div>
           <div class="rad-container">
-            <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg">
+            <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg" alt="Rad">
           </div>
         </div>
       </div>

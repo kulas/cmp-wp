@@ -76,7 +76,7 @@
             </div>
           </div>
           <div class="rad-container">
-            <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg" alt="Rad">
+            <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/logo_rad.svg" alt="Allegheny Regional Asset District">
           </div>
         </div>
       </div>

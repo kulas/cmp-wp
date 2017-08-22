@@ -63,6 +63,7 @@
 .green-button {
   @extend %button-base;
   font-size: .75em !important;
+
 }
 
 // Button Sizes
@@ -106,6 +107,7 @@
   display: inline-block;
   border:none;
   border-radius:2px;
+  text-decoration: none;
   text-transform: uppercase;
   padding: 0.5em 1em;
   color:white;

@@ -34,7 +34,7 @@
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">
             <h2 class="hero-header__words-box button--link">
-              <a href="{{ $exhibit['link'] }}">
+              <a href="{{ $exhibit['link'] }}" aria-label="{{ $exhibit['title'] }}">
                 {{ $exhibit['title'] }}
                 <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
               </a>
@@ -68,12 +68,8 @@
 
     {{-- Callout blocks/4 featutred exhibits --}}
     <div class='exhibit'>
-      <a href="{{ $exhibit['link'] }}">
-        <div class="exhibit__image" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})">
-          <div class="exhibit-preview__dates">
-            <p class="start-date">{{ $exhibit['dates'] }}</p>
-          </div>
-        </div>
+      <a aria-label="{{$exhibit['title']}}" href="{{ $exhibit['link'] }}" >
+        <div class="exhibit__image" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})"></div>
       </a>
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">

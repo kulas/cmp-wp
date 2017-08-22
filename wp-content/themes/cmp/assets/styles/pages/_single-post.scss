@@ -180,10 +180,12 @@ article {
     justify-content: center;
   }
 
+  a.green-button.more-articles,
   button.green-button.more-articles {
     width: 32%;
     padding: 0.8em 0;
     text-transform: capitalize;
+    // text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
     @include grid-media($medium) {

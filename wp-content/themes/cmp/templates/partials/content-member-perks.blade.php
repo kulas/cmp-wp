@@ -17,7 +17,7 @@
 
       <div class="sub-page">
         <a href="{{ the_sub_field('link') }}">
-          <img class="sub-page__image" src="{{ the_sub_field('image') }}">
+          <img class="sub-page__image" src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('title') }}">
           <div class="sub-page__text-box">
             <h4>{{ the_sub_field('title') }}</h4>
           </div>

@@ -13,7 +13,7 @@
     }
 
     h3 {
-      font-family: 'Roboto';
+      font-family: $base-font-family;
       font-size: 1.5em;
       @include grid-media($large) {
         font-size: 1em;

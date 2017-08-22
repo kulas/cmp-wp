@@ -147,7 +147,7 @@ hr {
       font-size: 1em;
       font-weight: 400;
       padding: 0;
-      margin: 0;
+      margin: 0 0 0.25em 0;
     }
 
     p {
@@ -173,10 +173,6 @@ hr {
         margin-right: 1em;
       }
     }
-  }
-
-  .activity__text-box {
-    margin-top: $small-spacing;
   }
 }
 

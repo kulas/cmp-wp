@@ -22,10 +22,12 @@
   </div>
     <div class="content-container">
       <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-    </div>
-    <div class="content-container">
-      <div class="main-text">{{ the_content() }}</div>
+      <div class="main-text">
+        {{ the_content() }}
+      </div>
+
       <hr>
+
         <div class="sub-pages">
 
           @php
@@ -45,9 +47,7 @@
                   </div>
                   <h4 class="sub-page__quote">"{{ $rows[$i]['quote'] }}"</h4>
               </div>
-            <p class="description">
               {{ the_sub_field('description') }}
-            </p>
           </div>
 
         @php

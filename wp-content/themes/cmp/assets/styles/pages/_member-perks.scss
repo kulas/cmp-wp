@@ -10,10 +10,14 @@
   .sub-page {
     flex-basis: 24%;
     text-align: center;
-    padding-bottom: $base-spacing;
+
     @include grid-media($medium) {
       flex-basis: 49%;
-      padding-bottom: 0;
+      padding-bottom: $small-spacing;
+    }
+
+    @include grid-media($small) {
+      flex-basis: 100%;
     }
   }
 

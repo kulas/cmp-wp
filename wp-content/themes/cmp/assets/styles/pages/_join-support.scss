@@ -2,9 +2,8 @@
 
 .join-support {
 
-  .content-container {
-    display: block;
-    // padding-top: $small-spacing;
+  > .content-container {
+    justify-content: space-between;
 
     @include grid-media($medium) {
       padding-bottom: 0;
@@ -30,6 +29,7 @@
   }
 
   .sub-page__background {
+    position: relative;
     height: 200px;
     background-size: cover;
     background-position: center;
@@ -38,29 +38,37 @@
       height:250px;
     }
 
-    h3 {
-      position: relative;
-      top:168px;
-      padding-right:.3em;
-      background-color: white;
+    .sub-page__title {
       display: inline-block;
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.5em;
-      padding: 5px 5px 0px 0px;
+      position: absolute;
+      bottom: 0;
+      padding-top: 0.75em;
+      padding-right: 0.75em;
+      background-color: white;
 
-      @include grid-media($large) {
-        top: 220px;
-        font-size: 1.4em;
+      h3 {
+        margin: 0;
+        font-family: $base-font-family;
+        line-height: 1;
+        font-size: 1.5em;
+
+        @include grid-media($large) {
+          font-size: 1em;
+        }
+
+        @include grid-media($medium) {
+          font-size: 1.3em;
+        }
       }
     }
 
     h4.sub-page__quote {
       position: relative;
-      left:1em;
-      top:-2.5em;
+      left: 1em;
+      top: 1em;
       max-width:200px;
       color:white;
-      background: black;
+      background: rgba(0,0,0,0.8);
       font-size:.9em;
       font-weight: 300;
       font-style: italic;

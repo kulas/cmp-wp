@@ -19,6 +19,15 @@
     }
   }
 
+  h1.hero-header__words-box.robot {
+    padding-left: 0.7em;
+
+    @include grid-media($medium) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
   .facetime {
     display: flex;
     overflow: hidden;

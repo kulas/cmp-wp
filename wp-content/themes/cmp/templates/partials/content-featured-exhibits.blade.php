@@ -74,9 +74,6 @@
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">
             <div class="exhibit__words-box">
-              <div class="exhibit-preview__dates">
-                  <p class="start-date">{{ $exhibit['dates'] }}</p>
-              </div>
               <a href="{{ $exhibit['link'] }}">
                 <h2 class="exhibit-preview__title button--link">
                   {{ $exhibit['title'] }}

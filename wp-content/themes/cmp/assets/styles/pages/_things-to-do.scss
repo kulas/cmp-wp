@@ -1,7 +1,7 @@
 // Homepage Things to Do section.
 
 #things-to-do {
-  
+
   @include grid-media($medium) {
     padding: 0;
   }
@@ -34,6 +34,6 @@
   }
 
   h4 {
-    font-weight: bold;
+    font-weight: 400;
   }
 }

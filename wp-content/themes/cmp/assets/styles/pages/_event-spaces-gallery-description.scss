@@ -49,32 +49,44 @@
         height: 100%;
         width: 100%;
         padding: 1em;
-        position: absolute;
+        position: relative;
+        left: 0;
         margin: auto;
         background-color: black;
         transition: 0.3s all;
         opacity: 0;
-        overflow: hidden;
+        // overflow: hidden;
         @include grid-media($large) {
           opacity: 0.8;
-          width: 50%;
-          left: 0;
+          max-width: 60%;
+          left: -1em;
+          margin-left: 1em;
+          top: 0;
+          background-color: transparent;
+          // height: 50%;
         }
-        @include grid-media($small) {
-          display: none;
+        @include grid-media($medium) {
+          max-width: 100%;
+          margin-left: 0em;
+          left: 0;
         }
 
         li,
         p {
           position: relative;
-          top: 1rem;
           opacity: 1;
           color: white;
           font-size: 0.8em;
           font-weight: 300;
+          object-fit: contain;
           // padding: 0.5em 1em;
           @include grid-media($large) {
             top: 0.5em;
+            background-color: black;
+            padding: .5em;
+          }
+          @include grid-media($small) {
+            font-size: .7em;
           }
         }
       }

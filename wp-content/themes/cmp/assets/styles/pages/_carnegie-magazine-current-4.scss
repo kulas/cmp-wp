@@ -17,9 +17,12 @@
   }
 }
 
-h1.hero-header__words-box.robot {
+h1.hero-header__words-box.green-robot-link {
+  padding-left: 0.7em;
+
   @include grid-media($medium) {
-    margin: 0;
+    padding: 0;
+    margin: 0 0 $small-spacing 0;
   }
 }
 

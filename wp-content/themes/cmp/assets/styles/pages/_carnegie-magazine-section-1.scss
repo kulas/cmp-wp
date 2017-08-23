@@ -110,6 +110,10 @@
       padding-top: $small-spacing;
       text-transform: none;
     }
+
+    button.grey-button {
+      max-width: 100%;
+    }
   }
 
   h3, h4 {

@@ -63,33 +63,6 @@
 .green-button {
   @extend %button-base;
   font-size: .75em !important;
-
-}
-
-// Button Sizes
-////////////////////////////////////////////////////////////////
-
-.button--large {
-  @extend %button-base;
-  font-size: 1.5em !important;
-}
-
-.button--small {
-  @extend %button-base;
-  font-size: .75em !important;
-}
-
-.button--tiny {
-  @extend %button-base;
-  font-size: .5em !important;
-}
-
-.button--block {
-  @extend %button-base;
-  display: block !important;
-  width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 
 .grey-button {
@@ -120,4 +93,30 @@
 .arrow-button {
   height: 20px;
   width: 20px;
+}
+
+// Button Sizes
+////////////////////////////////////////////////////////////////
+
+.button--large {
+  @extend %button-base;
+  font-size: 1.5em !important;
+}
+
+.button--small {
+  @extend %button-base;
+  font-size: .75em !important;
+}
+
+.button--tiny {
+  @extend %button-base;
+  font-size: .5em !important;
+}
+
+.button--block {
+  @extend %button-base;
+  display: block !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

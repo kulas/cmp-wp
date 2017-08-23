@@ -69,7 +69,11 @@
     {{-- Callout blocks/4 featutred exhibits --}}
     <div class='exhibit'>
       <a aria-label="{{$exhibit['title']}}" href="{{ $exhibit['link'] }}" >
-        <div class="exhibit__image" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})"></div>
+        <div class="exhibit__image" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})">
+          <div class="exhibit-preview__dates">
+            <p class="start-date">{{ $exhibit['dates'] }}</p>
+          </div>
+        </div>
       </a>
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">

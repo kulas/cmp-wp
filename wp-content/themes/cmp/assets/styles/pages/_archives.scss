@@ -1,19 +1,48 @@
 .magazine-archive {
+  padding-top: $large-spacing;
   display: flex;
+  // flex-wrap: wrap;
+
+  @include grid-media($nav-break) {
+    padding: 0;
+  }
 
   .issue {
     flex-basis: 80%;
     display: flex;
+    flex-wrap: wrap;
     padding: $small-spacing 0;
+
+    @include grid-media($nav-break) {
+      flex-basis: 100%;
+    }
   }
 
   .issue__cover {
     flex-basis: 20%;
+    padding-bottom: $small-spacing;
+
+    @include grid-media($nav-break) {
+      flex-basis:30%;
+    }
+
+    @include grid-media($small) {
+      display: none;
+    }
   }
 
   .issue__content {
     flex-basis: 75%;
     padding: 0 $small-spacing;
+    padding-bottom: $small-spacing;
+
+    @include grid-media($nav-break) {
+      flex-basis: 70%;
+    }
+
+    @include grid-media($small) {
+      flex-basis: 100%;
+    }
   }
 
   .archive__sidebar {
@@ -27,6 +56,14 @@
 
     li {
       padding: 0;
+    }
+
+    @include grid-media($nav-break) {
+      display: none;
+    }
+
+    @include grid-media($small) {
+      display: none;
     }
   }
 

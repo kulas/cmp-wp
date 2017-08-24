@@ -12,9 +12,25 @@
   @endphp
 
   <header>
-    <div class="hero-header" style="background-image: url('{{ $header_image_url }}')">
-      <p class="media-credit">@php echo $header_image_credit; @endphp</p>
-    </div>
+
+    @php
+      if ($header_image != null) {
+    @endphp
+
+      <div class="hero-header" style="background-image: url('{{ $header_image_url }}')">
+        <p class="media-credit">@php echo $header_image_credit; @endphp</p>
+      </div>
+
+    @php
+      } else {
+    @endphp
+
+      <div class="hero-header" style="background-image: url('{{ $header_image_url }}'); height:50px;"></div>
+
+    @php
+      }
+    @endphp
+
     <div class="title-box">
       <h1 class="entry-title">{{ get_the_title() }}</h1>
       <p class="article__summary">{{ get_the_excerpt() }}</p>

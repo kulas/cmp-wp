@@ -64,6 +64,8 @@
   "dependencies": {
     "imagemin-pngquant": "github:imagemin/imagemin-pngquant",
     "jquery": "1.12.4 - 3",
+    "object-fit-images": "^3.2.3",
+    "object-fit-polyfill": "^0.1.0",
     "waypoints": "^4.0.1"
   }
 }

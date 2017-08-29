@@ -5,11 +5,27 @@
   padding-bottom: $base-spacing;
   margin: auto;
 
+  .content-container {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      // min-width: 100%;
+      min-width: $max-width;
+      margin: auto;
+
+      @include grid-media($extra-large) {
+        min-width: 1136px;
+      }
+    }
+  }
+
   .features {
     display: flex;
     justify-content: space-between;
     @include grid-media($medium) {
       display: block;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      min-width: 100%;
     }
   }
 

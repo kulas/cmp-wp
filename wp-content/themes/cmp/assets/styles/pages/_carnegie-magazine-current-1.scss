@@ -22,6 +22,19 @@
     flex-basis: 60%;
     padding: 0 $small-spacing 0 0;
     overflow: hidden;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      min-width: 700px;
+      overflow: hidden;
+      padding-right: $base-spacing;
+
+      @include grid-media($extra-large) {
+        min-width: 500px;
+      }
+      @include grid-media($nav-break) {
+        min-width: 300px;
+      }
+    }
   }
 
   .current-issue__right {
@@ -33,6 +46,15 @@
     overflow: hidden;
     @include grid-media($medium) {
       padding: 0;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      min-width: 40%;
+
+      .magazine-archives {
+        position: relative;
+        top: 3em;
+      }
     }
   }
 

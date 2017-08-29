@@ -9,14 +9,21 @@
   article {
     display: flex;
   }
-  .article-content {
+
+  .article__content {
     flex-basis: 80%;
+    margin-left: 1em !important;
   }
 
   .article__image {
-    padding-right: 1em;
-    object-fit: cover;
     height: 200px;
     width: 200px;
+    // overflow: hidden;
+
+    img {
+      object-fit: cover;
+      min-height: 200px;
+      min-width: 200px;
+    }
   }
 }

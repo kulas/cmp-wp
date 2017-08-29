@@ -2,9 +2,24 @@
   padding-top: $large-spacing;
   display: flex;
   // flex-wrap: wrap;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE fix
+    min-width: 100%;
+  }
 
   @include grid-media($nav-break) {
     padding: 0;
+  }
+
+  .content-container {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      // min-width: 100%;
+      min-width: $max-width;
+      margin: auto;
+
+      @include grid-media($extra-large) {
+        min-width: 1136px;
+      }
+    }
   }
 
   .issue {

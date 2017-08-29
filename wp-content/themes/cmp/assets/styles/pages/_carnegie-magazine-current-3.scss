@@ -6,6 +6,18 @@
   margin: auto;
   max-width: $max-width;
 
+  .content-container {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      // min-width: 100%;
+      min-width: $max-width;
+      margin: auto;
+
+      @include grid-media($extra-large) {
+        min-width: 1136px;
+      }
+    }
+  }
+
   hr {
     padding: 0;
     margin: 0 0 0.5em;

@@ -6,8 +6,9 @@
     margin-bottom: $base-spacing;
   }
 
-  .featured-articles-title {
+  h5.uppercase-robot.featured-articles-title {
     padding-bottom: 0.5em;
+
     @include grid-media($medium) {
       display: none;
     }
@@ -19,6 +20,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+     display: block;
+   }
   }
 
   .article__author,
@@ -116,6 +121,8 @@
     flex-basis: 49%;
     padding-bottom: $base-spacing;
     display: flex;
+    -ms-overflow-x: hidden;
+
     @include grid-media($medium) {
       display: none;
     }
@@ -127,6 +134,7 @@
     }
 
     .article__text-box {
+
       h4 {
         font-family: 'Roboto';
         text-transform: uppercase;
@@ -144,5 +152,11 @@
         font-size: 0.9em;
       }
     }
+  }
+}
+
+.articles__featured.content-container {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    display: block
   }
 }

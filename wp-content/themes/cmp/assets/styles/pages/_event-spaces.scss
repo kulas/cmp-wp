@@ -48,10 +48,20 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      background-position:center;
+      background-size:cover;
 
       img {
         object-fit: cover;
+        object-position: center;
         min-height: 275px;
+        // display: none;
+      }
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // IE Fix
+        img {
+          display: none;
+        }
       }
     }
   }

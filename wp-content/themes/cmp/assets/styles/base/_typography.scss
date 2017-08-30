@@ -164,6 +164,11 @@ h2.robot-uppercase {
   font-weight: 400;
 }
 
+.robot--green {
+  @extend .robot;
+  color: $base-color;
+}
+
 h1 > a,
 a > h1 {
   color: black;
@@ -231,4 +236,11 @@ ul.post-categories > li {
 ul.post-categories > li > a {
   @extend .small-uppercase;
   color: grey;
+}
+
+.black-link {
+  color: black !important;
+  &:hover {
+    color: $base-color !important;
+  }
 }

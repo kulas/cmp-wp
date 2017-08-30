@@ -33,11 +33,11 @@
       top: -.875em;
 
     h5 {
-        display: inline;
-        font-family: 'Roboto', sans-serif;
-        text-transform: uppercase;
-        padding: 0 1em;
-        background-color:white;
+      display: inline;
+      text-transform: uppercase;
+      padding: 0 1em;
+      background-color:white;
+      @extend .robot--green;
     }
   }
 }

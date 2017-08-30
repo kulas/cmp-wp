@@ -17,7 +17,7 @@
       @endphp
 
       <div class="activity">
-        <a aria-label="{{ the_sub_field('title') }}" href="{{ the_sub_field('link') }}" >
+        <a class="black-link" aria-label="{{ the_sub_field('title') }}" href="{{ the_sub_field('link') }}" >
           <div class="activity__image-container">
             <img class="activity__main-image" src="{{ the_sub_field('featured_image') }}">
             <img class="activity__square-image" src="{{ the_sub_field('square_image') }}">

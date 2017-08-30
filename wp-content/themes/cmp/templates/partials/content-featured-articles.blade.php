@@ -39,7 +39,7 @@
         @endphp
 
       </h3>
-      <a id="article__button" class="green-button" href="{{ the_permalink() }}">Read the Article</a>
+      <a id="article__button" class="green-button" href="{{ the_permalink() }}">Read More</a>
     </div>
 
     @php
@@ -49,7 +49,7 @@
   </div>
 
   <div class="articles__featured content-container">
-    <h5 class="uppercase-robot featured-articles-title">Featured Articles</h5>
+    <h5 class="uppercase-robot featured-articles-title">Featured Stories</h5>
     <div class="article-container">
 
     @php
@@ -63,7 +63,7 @@
       <div class="article">
         <img src="{{ the_field('square_image') }}">
         <div class="article__text-box">
-          <h4><a href="{{ the_permalink() }}">{{ the_title() }}</a></h4>
+          <a class="black-link" href="{{ the_permalink() }}"><h6 class="uppercase-robot">{{ the_title() }}</h6></a>
           <p>{{ the_field('summary') }}</p>
         </div>
       </div>
@@ -78,8 +78,8 @@
       <div class="article">
         <img src="/wp-content/themes/cmp/assets/images/carnegie-magazine.png" alt="carnegie magazine">
         <div class="article__text-box">
-          <h4><a href="/carnegie-magazine/">Additional Articles</a></h4>
-          <p>Read more from Carnegie Magazine.</p>
+          <h6 class="uppercase-robot"><a href="/carnegie-magazine/" class="black-link">Get the Whole Scoop</a></h6>
+          <p>Check out all the latest stories from CARNEGIE magazine and visit our archives.</p>
           <a class="green-button" href="/carnegie-magazine/" role="link">Read More Articles</a>
         </div>
       </div>

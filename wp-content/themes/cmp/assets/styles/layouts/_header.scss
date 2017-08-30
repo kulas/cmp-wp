@@ -33,7 +33,7 @@
   position: relative;
   max-width: $max-width;
   width: 100%;
-  height: 4em;
+  height: 45px;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -75,9 +75,9 @@
   a.green-button,
   button.green-button {
     margin-right:5px;
-    height:35px;
+    height:30px;
     position: relative;
-    top:5px;
+    top:2px;
     // text-decoration-color: none;
     border-radius:0;
     background-color: #95A064;
@@ -109,7 +109,8 @@
   }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE Fix
-    width:600px;
+    width:505px;
+    margin-right: 5px;
   }
 
   input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email {
@@ -118,9 +119,9 @@
     border: 0;
     border-radius: 0;
     font-size: .9em;
-    height:35px;
+    height:30px;
     position: relative;
-    top:10px;
+    top:7px;
     width:200px;
   }
 
@@ -129,12 +130,14 @@
     position: relative;
     border-radius:0;
     margin: 0 !important;
-    top: 10px;
+    top: 7px;
     // font-size: .75em !important;
     font-weight: 600;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE Fix
       padding-right: 4.6em;
+      width: 150px !important;
+      // padding: 0;
     }
   }
 }
@@ -223,7 +226,6 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
   position: relative;
   display: inline-block;
   height: 100%;
-  padding: 0 .5em;
   transition: all .3s;
   cursor: pointer;
   display: flex;
@@ -247,7 +249,6 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
 
   i {
     position: relative;
-    top: .2em;
     font-size: 1.2em;
     line-height: 1;
     &:before {
@@ -1004,7 +1005,7 @@ ul#menu-magazine-nav
     a {
       width:100%;
       display:block;
-      padding: $small-spacing;
+      padding: 0.7em;
       color: #000;
     }
 
@@ -1031,7 +1032,7 @@ ul#menu-magazine-nav
   ul.sub-menu {
     padding-left: 0;
     position: absolute;
-    top:3.5em;
+    top:45px;
     left: 0;
     background-color: #95A064;
     overflow: hidden;
@@ -1056,7 +1057,7 @@ ul#menu-magazine-nav
       color: white;
       text-align: left;
       a {
-        padding-left: 2.5em;
+        padding-left: 1.8em;
         overflow:hidden;
         letter-spacing: 0.5px;
         font-size: 0.8em;
@@ -1080,7 +1081,7 @@ ul#menu-magazine-nav
   .sub-menu > li.menu-item > ul.sub-menu {
     position: relative;
     left: 259px;
-    top: -3.2em;
+    top: -37px;
   }
 
   .sub-menu > li.menu-item > ul.sub-menu:hover {

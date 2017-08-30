@@ -36,7 +36,6 @@
             <h2 class="hero-header__words-box button--link">
               <a href="{{ $exhibit['link'] }}" aria-label="{{ $exhibit['title'] }}">
                 {{ $exhibit['title'] }}
-                <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
               </a>
             </h2>
             <div class="exhibit-preview__dates">
@@ -56,7 +55,7 @@
 
     <div class='section-hr large-only'><hr>
       <div class='section-hr__h5'>
-        <h5>Now Showing</h5>
+        <h5 class="robot--green">Now Showing</h5>
       </div>
     </div>
     <div class='exhibit-container'>
@@ -78,10 +77,9 @@
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">
             <div class="exhibit__words-box">
-              <a href="{{ $exhibit['link'] }}">
+              <a class="black-link" href="{{ $exhibit['link'] }}">
                 <h2 class="exhibit-preview__title button--link">
                   {{ $exhibit['title'] }}
-                  <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 </h2>
               </a>
               <p class="exhibit-preview__summary-text">

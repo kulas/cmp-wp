@@ -13,6 +13,19 @@ footer {
     // border: 1px solid white;
   }
 
+  .left-section {
+    flex-basis: 30%;
+
+    @include grid-media($large) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include grid-media($medium) {
+      display: block;
+    }
+  }
+
   @include grid-media($large) {
     min-height: 900px;
 
@@ -34,17 +47,11 @@ footer {
     color: darken($action-color, 20%);
   }
 
-  .footer-logo {
-    position: relative;
-    right: 2em;
-    @media only screen and (max-width: 900px) {
-      right: 0;
-    }
-    @media only screen and (min-width: 1136px) {
-      right: 3.4em;
+  img.footer-logo {
+    @include grid-media($large) {
+      max-height: 85px;
     }
   }
-
 
   .rad-container {
     // display:flex;
@@ -54,14 +61,14 @@ footer {
     z-index: 0;
 
     @include grid-media($medium) {
-      justify-content: center;
+      text-align: center;
       margin-left: 0;
       margin-bottom: 5em;
     }
   }
 
   .rad-logo {
-    height:100px;
+    height:80px;
     position: relative;
     top: -.5em;
 
@@ -83,10 +90,9 @@ footer {
     display:flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width:100%;
 
-    @include grid-media($large) {
-      display:block;
+    @include grid-media($small) {
+      display: block;
     }
   }
 
@@ -174,6 +180,10 @@ footer {
     .rad-container {
       flex-basis: 50%;
     }
+
+    .mobile-hr {
+      margin-top: 0;
+    }
   }
 
   .footer-links {
@@ -188,7 +198,7 @@ footer {
     }
 
   .footer-links-section {
-    flex-basis:50%;
+    // flex-basis:50%;
     padding:0px 5px;
     position: relative;
     left: 5px;
@@ -221,10 +231,15 @@ footer {
 
 
   .footer-links-section__small {
-    max-width:150px;
-
+    padding: $small-spacing 0;
+    // max-width:150px;
+    //
     @include grid-media($large) {
-      max-width:none;
+      padding: 0;
+    }
+
+    @include grid-media($medium) {
+      padding: $small-spacing 0;
     }
 
     a {
@@ -236,7 +251,7 @@ footer {
 
   .footer__left-div {
     display:flex;
-    flex-basis: 50%;
+    width: 100%;
   }
 
   .footer__right-div {
@@ -316,6 +331,11 @@ footer {
 
     @include grid-media($medium) {
       margin-left: 0;
+    }
+
+    @media screen and (min-width:0\0) { /* IE9 and IE10 fix */
+      position: relative;
+      left: 6em;
     }
 
     span.connect-1 {

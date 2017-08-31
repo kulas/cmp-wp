@@ -27,7 +27,7 @@
       <div class="activity">
         <a href="{{ the_sub_field('external_link') }} {{ the_sub_field('internal_link') }}">
           <div class="activity__image" style="background-image:url('{{ the_sub_field('image') }}')"></div>
-          <h3>{{ the_sub_field('title') }} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></h3>
+          <h3>{{ the_sub_field('title') }}</h3>
         </a>
         <p>{{ the_sub_field('description') }}</p>
       </div>

@@ -21,18 +21,17 @@
 
 
   &:focus {
-    outline: thin dotted #333;
+    //outline: thin dotted #333;
     outline-offset: -2px;
   }
 
   &:hover,
-  &:focus,
   &:active,
   &.active {
     color: #fff;
     background-color: $dark-color;
     border-color: $base-color;
-    outline: 0;
+    outline: none;
     text-decoration: none;
   }
 }

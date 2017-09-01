@@ -1,8 +1,7 @@
 // Lots of styling for the tabs plugin
-ul.nav.osc-res-nav.nav-tabs.osc-tabs-left-ul {
-
-
-
+.content-container.tabs-page {
+  padding: 0;
+  padding: $base-spacing;
 }
 
 .osc-res-tab .nav-tabs {

@@ -298,6 +298,7 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
 .quickview-btn:active i
 {
   transform: scale(.8);
+  outline: none;
 }
 
 .nav-icon.is-active i,
@@ -959,6 +960,7 @@ a.quickview-btn.nav-visit {
 #menu-primary-navigation-1 li:hover > a,
 #menu-primary-navigation li:active > a {
   color: white !important;
+  outline: none;
 }
 
 ul.desktop-nav {
@@ -994,6 +996,7 @@ ul#menu-magazine-nav
 
     &:active, &:hover, &.active {
       background: $nav-hover;
+      outline: none;
     }
 
     &:hover a{

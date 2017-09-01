@@ -2,8 +2,8 @@
 
 #featured-articles {
   .articles__featured {
-    margin-top: $base-spacing;
-    margin-bottom: $base-spacing;
+    // margin-top: $base-spacing;
+    // margin-bottom: $base-spacing;
   }
 
   h5.uppercase-robot.featured-articles-title {
@@ -71,6 +71,9 @@
     font-family: sans-serif;
     font-size: 1em;
     font-weight: 300;
+    @include grid-media($medium)  {
+      margin-bottom: $base-spacing;
+    }
 
     a {
       font-family: 'Lora', serif;

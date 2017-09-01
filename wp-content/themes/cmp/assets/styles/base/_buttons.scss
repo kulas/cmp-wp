@@ -21,7 +21,7 @@
 
 
   &:focus {
-    //outline: thin dotted #333;
+    outline: thin dotted #333;
     outline-offset: -2px;
   }
 
@@ -54,6 +54,7 @@
   &:hover,
   &:active,
   &.active{
+    outline: none;
     background-color: lighten($action-color, 10);
     border-color: $action-color;
   }

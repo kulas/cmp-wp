@@ -2,7 +2,7 @@
   <div class="top-bar">
     <div class="top-bar__left">
       <div class="top-bar__form">
-
+        <label for="128" class="label--hidden">Subscribe to our emails</label>
         @php
           echo do_shortcode("[contact-form-7 id='128' title='Email Form']"); //Sign up
         @endphp

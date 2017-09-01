@@ -60,7 +60,8 @@ a:not([role]) {
   &:active,
   &:hover {
     color: $dark-color;
-    outline: none;
+
+  //  border: 3px solid red;
   }
 }
 

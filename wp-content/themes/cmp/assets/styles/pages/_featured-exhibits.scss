@@ -6,11 +6,10 @@
   padding: 0 $base-spacing;
   max-width: $max-width;
   margin: auto;
-  margin-bottom: $base-spacing;
   justify-content: space-between;
 
   @include grid-media($medium) {
-    margin-bottom: $large-spacing;
+    margin-bottom: $base-spacing;
     padding: 0;
   }
 }
@@ -89,7 +88,7 @@
 // hero version
 .exhibit--hero {
   position: relative;
-  margin-bottom: $large-spacing;
+  margin-bottom: $medium-spacing;
 
   @include grid-media($medium) {
     margin-bottom: $base-spacing;

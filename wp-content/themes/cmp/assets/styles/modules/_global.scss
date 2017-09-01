@@ -9,12 +9,12 @@
     width: 100%;
     max-width: $max-width;
     margin: auto;
-    margin-bottom: $large-spacing;
+    margin-bottom: $medium-spacing;
     padding: 0 $base-spacing;
     text-align: center;
 
     @include grid-media($medium) {
-      margin-bottom: $base-spacing;
+      margin-bottom: $medium-spacing;
       padding:0;
     }
 

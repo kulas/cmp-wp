@@ -58,7 +58,6 @@ a:not([role]) {
   text-decoration: none;
 
   &:active,
-  &:focus,
   &:hover {
     color: $dark-color;
     outline: none;
@@ -88,7 +87,6 @@ hr {
     color: $base-color;
 
     &:active,
-    &:focus,
     &:hover  {
       color: lighten($inverse-action-color, 20%);
       outline: none;

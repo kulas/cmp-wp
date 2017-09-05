@@ -19,7 +19,7 @@ Template Name: More Things to Do
     @endphp
 
     <div class="activity">
-      <a href="{{ the_sub_field('link') }}">
+      <a href="{{ the_sub_field('link') }}" aria-label="{{ the_sub_field('title') }}">
         <div class="activity__main-image" style="background-image: url('{{the_sub_field("image")}}') "></div>
         <div class="activity__text-box">
           <h4>{{ the_sub_field('title') }}</h4>

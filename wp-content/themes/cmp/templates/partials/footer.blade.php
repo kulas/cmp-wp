@@ -63,7 +63,7 @@
         <div class="middle-row">
           <div class="email-subscribe">
 
-            <label for="128" class="label--hidden">Subscribe to our emails</label>
+            <label for="email-signup" class="label--hidden">Subscribe to our emails</label>
             @php
               echo do_shortcode("[contact-form-7 id='128' title='Email Form']");
             @endphp

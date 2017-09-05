@@ -25,8 +25,8 @@
     $image_credit = get_media_credit_html($image_id); //media credit for image
   @endphp
 
-    <a href="{{ $exhibit['link'] }}">
-      <div class="hero-header" style="background-image: url({{ $image_url }})">
+    <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
+      <div class="hero-header" style="background-image: url({{ $image_url }})" >
         <p class="media-credit">@php echo $image_credit; @endphp</p>
       </div>
     </a>

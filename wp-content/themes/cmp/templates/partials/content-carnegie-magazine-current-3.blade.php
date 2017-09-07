@@ -22,7 +22,7 @@
         <div class="also-article__left">
           <div class="article__image-container">
             <a href="{{ the_permalink() }}">
-              <img src="{{ the_field('square_image') }}">
+              <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
             </a>
           </div>
           <p class="feature-type">{{ the_field('feature_type') }}</p>

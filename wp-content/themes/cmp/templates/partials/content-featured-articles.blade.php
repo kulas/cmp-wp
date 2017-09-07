@@ -23,6 +23,8 @@
 
 
 
+
+
   <a href="{{ the_permalink() }}" aria-label="{{ the_title() }}">
     <div class="hero-header" style="background-image: url('{{ $featured_image_url }}')" ></div>
 

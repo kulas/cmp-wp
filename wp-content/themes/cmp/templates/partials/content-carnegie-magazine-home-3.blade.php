@@ -13,7 +13,7 @@
 
   <div class="carnegie-magazine-section-3">
     <div class="carnegie-magazine__big-picture">
-      <a href="{{ the_field('inside_museums_link') }}">
+      <a href="{{ the_field('inside_museums_link') }}" aria-label="{{ the_field('big_picture_title') }}">
         <div class="hero-header" style="background-image:url('{{ $inside_museums_image_url }}')">
         </div>
         <div class="content-container">

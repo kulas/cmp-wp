@@ -12,7 +12,7 @@
 @endphp
 
   <div class="carnegie-magazine-section-2">
-    <a href="{{ the_field('big_picture_link') }}">
+    <a href="{{ the_field('big_picture_link') }}" aria-label="{{get_field('big_picture_title')}}">
     <div class="carnegie-magazine__big-picture">
         <div class="hero-header" style="background-image:url('{{ $big_picture_image_url }}')">
         </div>
@@ -42,7 +42,7 @@
             <div class="facetime__left">
               <a href="{{ the_sub_field('link') }}">
                 <div class="face">
-                  <img src="{{ the_sub_field('image') }}">
+                  <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }} />
                   <p class="facetime__left__name">{{ the_sub_field('name') }}</p>
                 </div>
               </a>
@@ -63,7 +63,7 @@
 
               <div class="face">
                 <a href="{{ the_sub_field('link') }}">
-                  <img src="{{ the_sub_field('image') }}">
+                  <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }}" />
                   <p>{{ the_sub_field('name') }}</p>
                 </a>
               </div>

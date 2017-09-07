@@ -14,7 +14,7 @@
 @endphp
 
 <div class="carnegie-magazine__big-picture">
-  <a href="{{ the_field('big_picture_link') }}">
+  <a href="{{ the_field('big_picture_link') }}" aria-label="{{ the_field('big_picture_title') }}">
     <div class="hero-header" style="background-image:url('{{ $bigpicture_url }}')"></div>
     <div class="content-container">
       <h1 class="hero-header__words-box green-robot-link">{{ the_field('big_picture_title') }}</h1>

@@ -27,7 +27,7 @@
     "test": "yarn run lint"
   },
   "engines": {
-    "node": ">= 6.9.4"
+    "node": ">= 6.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",

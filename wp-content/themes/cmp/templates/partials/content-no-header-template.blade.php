@@ -1,29 +1,32 @@
-{{-- basic template with no header & has breadcrumb--}}
+{{-- No Header Template --}}
 
 @php
-  if ( have_posts() ) :
-  while ( have_posts() ) :
-  the_post();
+  if (have_posts()) : while (have_posts()) : the_post();
+
+  // $image = get_field('header_image');
+  // $image_id = $image['id'];
+  // $image_url = $image['url'];
+  // $image_credit = get_media_credit_html($image_id);
+
 @endphp
 
-<div class="no-header">
+<div class="basic-header magazine-sub-page">
 
-  <div class="content-container">
-    <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-    <div class="breadcrumb-container">
-      <div class="nav-breadcrumb">
+  {{-- <div class="hero-header" style="background-image:url('{{ $image_url }}')">
+    <p class="media-credit">@php echo $image_credit; @endphp</p>
+  </div> --}}
 
-        @php if(function_exists('bcn_display')) // breadcrumb
-          {
-              bcn_display();
-          }
-        @endphp
+    <div class="content-container">
+        <div class="main-text spaced">
+          {{ the_content() }}
 
-      </div>
-  </div>
-  <hr>
-    <div class="main-text">
-      {{ the_content() }}
+          @php
+            $tabs = the_field('tab_layout');
+            if ($tabs != null) {
+              include('partials.tabs');
+            }
+          @endphp
+
     </div>
   </div>
 </div>

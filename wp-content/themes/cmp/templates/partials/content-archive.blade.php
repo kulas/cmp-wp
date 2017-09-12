@@ -5,6 +5,19 @@
 <div class="content-container">
   <div class="magazine-archive">
     <div class="issue">
+      <div class="text">
+        @php
+          if ( have_posts() ) :
+          while ( have_posts() ) :
+          the_post();
+        @endphp
+
+        {{ the_content() }}
+
+        @php
+          endwhile; else: endif;
+        @endphp
+      </div>
 
       {{-- Obtains list of recently Archived magazine issues, loops through these issues to show cover story + blurb --}}
       @php
@@ -23,7 +36,7 @@
       </div>
 
       <div class="issue__content">
-        <a href="{{ the_permalink() }}"><h2>{{ the_title() }}</h2></a>
+        <a href="{{ the_permalink() }}"><h2 class="black-link">{{ the_title() }}</h2></a>
         <p class="small-uppercase--bold">Cover Story</p>
 
         {{-- Finds the information on the 'cover story' post for the relevant issue --}}
@@ -37,7 +50,7 @@
 
             <div class="tags">@php(the_tags( '', ' | ', '' ))</div>
               <a href="{{ the_permalink() }}">
-                <h2 class="green-robot-link">{{ the_title() }}</h2>
+                <h2 class="black-link robot">{{ the_title() }}</h2>
               </a>
               <p>{{ the_excerpt() }}</p>
               <p class="author">{{ the_field('author') }}</p>

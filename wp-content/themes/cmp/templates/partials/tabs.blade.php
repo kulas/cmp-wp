@@ -1,15 +1,4 @@
 <div class="content-container tabs-page">
-  <div class="main-text">
-    @php
-      if ( have_posts() ) :
-      while ( have_posts() ) :
-      the_post()
-    @endphp
-       {{ the_content() }}
-    @php
-      endwhile; else : endif;
-    @endphp
-  </div>
   @php
     if( have_rows('tab_layout') ):
   @endphp

@@ -1,4 +1,4 @@
-{{-- Join and Support landing page with member quotes --}}
+{{-- Join and Support page --}}
 
 <div class="join-support">
 
@@ -39,16 +39,16 @@
           @endphp
 
             <div class="sub-page">
+              <a href="{{ the_sub_field('link') }}">
                 <div class="sub-page__background" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
                   <div class="sub-page__title">
-                    <a href="{{ the_sub_field('link') }}">
                       <h3>{{ the_sub_field('title') }}</h3>
-                    </a>
                   </div>
-                  <h4 class="sub-page__quote">"{{ $rows[$i]['quote'] }}"</h4>
-              </div>
+                  {{-- <h4 class="sub-page__quote">"{{ $rows[$i]['quote'] }}"</h4> --}}
+                </div>
+              </a>
               {{ the_sub_field('description') }}
-          </div>
+            </div>
 
         @php
           $i = $i+1;

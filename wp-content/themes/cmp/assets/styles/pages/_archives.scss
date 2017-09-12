@@ -31,6 +31,11 @@
     @include grid-media($nav-break) {
       flex-basis: 100%;
     }
+
+    .text {
+      margin-bottom: $base-spacing;
+      margin-right: $base-spacing;
+    }
   }
 
   .issue__cover {
@@ -57,6 +62,10 @@
 
     @include grid-media($small) {
       flex-basis: 100%;
+    }
+
+    .black-link.robot {
+      margin: 0;
     }
   }
 

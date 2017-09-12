@@ -1,4 +1,4 @@
-{{--  Join Support Landing Page--subpages with no quotes (currently just used on Membership page) --}}
+{{--  Join Support Landing Page --}}
 
 {{-- This has the same basic layout as things to do page, thus the class. --}}
 <div class="things-to-do-page">
@@ -23,13 +23,13 @@
     </div>
   </div>
   <div class="content-container">
-    <div class="text-box">
+    <div class="main-text">
 
       @php
         if ( have_posts() ) :
         while ( have_posts() ) :
         the_post()
-      @endphp
+      @endphp      
 
          {{ the_content() }}
 

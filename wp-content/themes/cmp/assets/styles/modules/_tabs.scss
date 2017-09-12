@@ -1,7 +1,6 @@
 // Lots of styling for the tabs plugin
 .content-container.tabs-page {
-  padding: 0;
-  padding: $base-spacing;
+  padding: $small-spacing $base-spacing;
 }
 
 .osc-res-tab .nav-tabs {

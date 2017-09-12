@@ -5,7 +5,7 @@
       <div class="footer-links">
         <div class="left-section">
 
-              <img class="footer-logo" src="/wp-content/themes/cmp/assets/images/cmpfooter.png" alt="Carngie Museums of Pittsburgh">
+            <img class="footer-logo" src="@asset('images/cmpfooter.png')" alt="Carnegie Museums of Pittsburgh" />
               <div class="footer-links-section footer-links-section__small">
                 <a href="http://cmoa.org">Carnegie Museum of Art</a>
                 <a href="http://www.carnegiesciencecenter.org/">Carnegie Science Center</a>
@@ -95,7 +95,7 @@
           </div>
           <div class="rad-container">
             <a href="https://radworkshere.org/">
-              <img class="rad-logo" src="/wp-content/themes/cmp/assets/images/RAD-logo.png" alt="Allegheny Regional Asset District">
+              <img class="rad-logo" src="@asset('images/RAD-logo.png')" alt="Allegheny Regional Asset District" />
             </a>
           </div>
         </div>

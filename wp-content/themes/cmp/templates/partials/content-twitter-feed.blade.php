@@ -3,7 +3,7 @@
 <div id="twitter-feed" class="section--secondary">
   <div class="content-container">
     <div id="twitter-info">
-      <img src="/wp-content/themes/cmp/assets/images/twitter.png" alt="Twitter">
+      <img src="@asset('images/twitter.png')" alt="Twitter" />
       <h2>Twitter Feed</h2>
       <a href="https://twitter.com/carnegiemembers">@CarnegieMembers</a>
       <p>Keep up with the latest from Carnegie Museums</p>

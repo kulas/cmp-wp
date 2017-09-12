@@ -76,7 +76,7 @@
       @endphp
 
       <div class="article">
-        <img src="/wp-content/themes/cmp/assets/images/carnegie-magazine.png" alt="carnegie magazine">
+        <img src="@asset('images/carnegie-magazine.png')" alt="Carnegie Magazine" />
         <div class="article__text-box">
           <h6 class="uppercase-robot"><a href="/carnegie-magazine/" class="black-link">Get the Whole Scoop</a></h6>
           <p>Check out all the latest stories from CARNEGIE magazine and visit our archives.</p>

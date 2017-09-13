@@ -31,7 +31,12 @@
     <div class="main-text spaced">
       {{ the_content() }}
 
-      @include('partials.tabs')
+      @php
+        $tabs = the_field('tab_layout');
+        if ($tabs != null) {
+          include('partials.tabs');
+        }
+      @endphp
 
     </div>
   </div>

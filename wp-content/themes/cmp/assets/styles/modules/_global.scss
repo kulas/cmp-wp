@@ -97,6 +97,7 @@ hr {
 // Main text paragraph
 .main-text {
   padding-bottom: $small-spacing;
+  width: 100%;
 
   p {
     max-width:60%;
@@ -251,4 +252,12 @@ form.search-form {
 //Added to prevent stray fixed-width elements from overflowing on mobile.
 .content {
   overflow:hidden;
+}
+
+.magazine-sub-page {
+  padding-top: 3em;
+
+  @include grid-media($nav-break) {
+    padding-top: 0;
+  }
 }

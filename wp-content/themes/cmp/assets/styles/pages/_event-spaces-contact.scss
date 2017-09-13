@@ -5,14 +5,12 @@
   padding-bottom: $base-spacing;
 
   .contact-form {
-    // padding: $small-spacing 0;
-    // max-width: 60%;
-    // @include grid-media($medium) {
-    //   max-width: 100%;
-    // }
-
+    margin-top: $large-spacing;
     h2 {
       padding-bottom: $small-spacing;
+    }
+    p:nth-of-type(2) {
+      margin-bottom: $base-spacing;
     }
   }
 }

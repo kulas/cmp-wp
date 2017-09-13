@@ -15,7 +15,6 @@
     .event-space {
       position: relative;
       flex-basis: 49%;
-      // height:550px;
       margin-bottom: $small-spacing;
       @include grid-media($large) {
         flex-basis: 100%;
@@ -29,6 +28,7 @@
         background-color: white;
         display: inline-block;
         padding-right: 0.2em;
+
         padding-top: 0.1em;
         font-family: 'Roboto', sans-serif;
         @include grid-media($medium) {
@@ -59,11 +59,18 @@
         // display: none;
       }
 
+
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { // IE Fix
         img {
           display: none;
         }
       }
     }
+  }
+}
+
+.event-space {
+  h2 {
+    margin-top: $small-spacing;
   }
 }

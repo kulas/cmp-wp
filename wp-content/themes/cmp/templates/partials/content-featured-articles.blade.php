@@ -22,7 +22,7 @@
   @endphp
 
   <a href="{{ the_permalink() }}" aria-label="{{ the_title() }}">
-    <div class="hero-header" style="background-image: url('{{ $featured_image_url }}')" ></div>
+    <div class="hero-header" role="img" style="background-image: url('{{ $featured_image_url }}')" ></div>
   </a>
 
   <div class="content-container">
@@ -61,7 +61,7 @@
     @endphp
 
       <div class="article">
-        <img src="{{ the_field('square_image') }}" alt="{{ the_sub_field('image_alternate') }}">
+        <img src="{{ the_field('square_image') }}" alt="{{ the_title() }} ">
         <div class="article__text-box">
           <a class="black-link" href="{{ the_permalink() }}"><h6 class="uppercase-robot">{{ the_title() }}</h6></a>
           <p>{{ the_field('summary') }}</p>

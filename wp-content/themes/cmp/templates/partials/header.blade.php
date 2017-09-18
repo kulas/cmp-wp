@@ -9,8 +9,8 @@
 
       </div>
 
-      <a href="/join-support/membership"><button class="green-button">Join</button></a>
-      <a href="/join-support/donate"><button class="green-button">Donate</button></a>
+      <a href="/join-support/membership" class="green-button">Join</a>
+      <a href="/join-support/donate" class="green-button">Support</a>
     </div>
     <nav>
 

@@ -40,7 +40,9 @@
 
             <div class="sub-page">
 
+
                 <div class="sub-page__background" role="img" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
+
                   <div class="sub-page__title">
                       <h3>{{ the_sub_field('title') }}</h3>
                   </div>

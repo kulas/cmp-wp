@@ -17,7 +17,7 @@
     $header_image_credit = get_media_credit_html($header_image_id); //media credit for image
   @endphp
 
-  <div class="hero-header" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" aria-label="Carnegie Museums members sitting on a couch" style="background-image:url('{{ $header_image_url }}')">
     <p class="media-credit">@php echo $header_image_credit; @endphp</p>
   </div>
     <div class="content-container">
@@ -39,8 +39,8 @@
           @endphp
 
             <div class="sub-page">
-              <a href="{{ the_sub_field('link') }}">
-                <div class="sub-page__background" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
+
+                <div class="sub-page__background" role="img" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
                   <div class="sub-page__title">
                       <h3>{{ the_sub_field('title') }}</h3>
                   </div>

@@ -29,7 +29,7 @@
         <div class="event-space">
           <a href="{{ the_sub_field('link') }}">
             <div class="event-space__image-container" style="background-image: url('{{ the_sub_field("image")}} ')">
-              <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('image_alt')}}"/>
+              <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name')}}"/>
               <h2>{{ the_sub_field('name') }}</h2>
             </div>
           </a>

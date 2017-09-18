@@ -17,10 +17,10 @@
       @endphp
 
       <div class="activity">
-        <a class="black-link" aria-label="{{ the_sub_field('title') }}" href="{{ the_sub_field('link') }}" >
+        <a class="black-link" href="{{ the_sub_field('link') }}" >
           <div class="activity__image-container">
-            <img class="activity__main-image" src="{{ the_sub_field('featured_image') }}" alt="{{ the_sub_field('image_alternate') }}" >
-            <img class="activity__square-image" src="{{ the_sub_field('square_image') }}" alt="{{ the_sub_field('image_alternate') }}">
+            <img class="activity__main-image" src="{{ the_sub_field('featured_image') }} " alt="{{the_sub_field('title')}}" >
+            <img class="activity__square-image" src="{{ the_sub_field('square_image') }}" alt="{{the_sub_field('title')}}" >
           </div>
           <div class="activity__text-box">
             <h4>{{ the_sub_field('title') }}</h4>

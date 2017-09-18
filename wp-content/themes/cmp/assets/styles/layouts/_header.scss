@@ -72,17 +72,15 @@
       margin: 0;
     }
 
-  a.green-button,
-  button.green-button {
+  a.green-button {
     margin-right:5px;
     height:30px;
+    padding-top: 9px;
     position: relative;
     top:2px;
-    // text-decoration-color: none;
     border-radius:0;
     background-color: #95A064;
     font-weight: bold;
-
     @include grid-media($nav-break) {
       display: none;
     }

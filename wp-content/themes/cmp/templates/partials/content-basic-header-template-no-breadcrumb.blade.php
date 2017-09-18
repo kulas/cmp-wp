@@ -14,7 +14,7 @@
 @endphp
 
 <div class="basic-header">
-  <div class="hero-header" style="background-image:url('{{ $image_url }}')">
+  <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $image_url }}')">
     <p class="media-credit">@php echo $image_credit; @endphp</p>
   </div>
   <div class="content-container">

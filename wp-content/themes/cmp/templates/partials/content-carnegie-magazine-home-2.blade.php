@@ -14,7 +14,7 @@
   <div class="carnegie-magazine-section-2">
     <a href="{{ the_field('big_picture_link') }}" aria-label="{{get_field('big_picture_title')}}">
     <div class="carnegie-magazine__big-picture">
-        <div class="hero-header" style="background-image:url('{{ $big_picture_image_url }}')">
+        <div class="hero-header" role="img" style="background-image:url('{{ $big_picture_image_url }}')">
         </div>
         <div class="content-container">
             <h1 class="hero-header__words-box robot">{{ the_field('big_picture_title') }}</h1>

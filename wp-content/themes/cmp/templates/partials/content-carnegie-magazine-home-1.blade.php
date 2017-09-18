@@ -15,7 +15,7 @@
 @endphp
 
 <a href="{{ the_permalink() }}" class="" aria-label="{{ get_the_title($post_object) }}">
-  <div class="hero-header" style="background-image:url({{ $featured_image_url }})" ></div>
+  <div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})" ></div>
 </a>
 <div class="media-credit-container">
   <p class="media-credit">@php echo $featured_image_credit; @endphp</p>

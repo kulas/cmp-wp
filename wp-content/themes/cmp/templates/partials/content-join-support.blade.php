@@ -39,7 +39,7 @@
           @endphp
 
             <div class="sub-page">
-                <div class="sub-page__background" role="img" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
+                <div class="sub-page__background" role="" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
                   <div class="sub-page__title">
                     <a href="{{ the_sub_field('link') }}">
                       <h3>{{ the_sub_field('title') }}</h3>

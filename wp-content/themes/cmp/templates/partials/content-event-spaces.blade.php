@@ -12,7 +12,7 @@
 @endphp
 
 <div class="event-spaces">
-  <div class="hero-header" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $header_image_url }}')">
     <p class="media-credit">@php echo $header_image_credit; @endphp</p>
   </div>
   <div class="content-container">

@@ -98,7 +98,8 @@
     }
   }
 
-  .event-space:hover > .event-space__image-container > .event-space__description {
+  .event-space:hover > .event-space__image-container > .event-space__description,
+  .event-space:focus > .event-space__image-container > .event-space__description {
     opacity: 0.8;
   }
 }

@@ -260,4 +260,8 @@ form.search-form {
   @include grid-media($nav-break) {
     padding-top: 0;
   }
+
+  .nav-breadcrumb {
+    display: none;
+  }
 }

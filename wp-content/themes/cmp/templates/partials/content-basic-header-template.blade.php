@@ -30,15 +30,8 @@
   <hr>
     <div class="main-text spaced">
       {{ the_content() }}
-
-      @php
-        $tabs = the_field('tab_layout');
-        if ($tabs != null) {
-          include('partials.tabs');
-        }
-      @endphp
-
     </div>
+    @include('partials.tabs')
   </div>
 </div>
 

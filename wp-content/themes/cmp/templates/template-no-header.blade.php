@@ -6,6 +6,6 @@
 
 @section('content')
 
-  @include('partials.content-no-header')
+  @include('partials.content-no-header-template')
 
 @endsection

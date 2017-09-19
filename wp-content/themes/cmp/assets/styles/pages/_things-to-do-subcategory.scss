@@ -9,10 +9,6 @@
     }
   }
 
-  .nav-breadcrumb {
-    border-top: 1px solid #CCCCCC;
-  }
-
   .large-title {
     @include grid-media($medium) {
       padding: 0 1em 1em;

@@ -5,6 +5,10 @@ article {
   .article-meta {
     display: flex;
     justify-content: space-between;
+
+    p {
+      padding-bottom: 0 !important;
+    }
   }
 
   .article-meta__main,
@@ -50,7 +54,8 @@ article {
     }
 
     .article__summary {
-      font-weight: lighter;
+      font-size: 1.2em;
+      font-weight: 400;
     }
   }
 
@@ -63,7 +68,7 @@ article {
   //   overflow: hidden;
   // }
 
-  //Tons of formatting to ensure all the things in the WYSWIG editor box format coorrectly.
+  //Tons of formatting to ensure all the things in the WYSWIG editor box format correctly.
   .entry-content {
     padding: 0 1em;
     max-width: $max-width;

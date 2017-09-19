@@ -13,9 +13,6 @@
       padding-right: $small-spacing;
       border-right: 1px solid #D3D3D3;
 
-      > p {
-        padding-bottom: $small-spacing;
-      }
       @media (max-width: 1100px) {
         flex-basis: 100%;
         border: none;

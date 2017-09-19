@@ -90,7 +90,7 @@
             <hr class="mobile-hr">
             <div class="copyright">
               <p>©2017 Carnegie Museums of Pittsburgh</p>
-              <a href="#">Privacy Policy</a>
+              <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </div>
           <div class="rad-container">

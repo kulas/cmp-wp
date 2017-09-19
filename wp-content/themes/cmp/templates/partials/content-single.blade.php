@@ -17,7 +17,7 @@
       if ($header_image != null) {
     @endphp
 
-      <div class="hero-header" style="background-image: url('{{ $header_image_url }}')">
+      <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')">
         <p class="media-credit">@php echo $header_image_credit; @endphp</p>
       </div>
 
@@ -25,7 +25,7 @@
       } else {
     @endphp
 
-      <div class="hero-header" style="background-image: url('{{ $header_image_url }}'); height:50px;"></div>
+      <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}'); height:50px;"></div>
 
     @php
       }

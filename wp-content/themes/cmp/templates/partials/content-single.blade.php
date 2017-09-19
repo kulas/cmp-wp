@@ -114,7 +114,7 @@
                 @php(the_tags( '', ' | ', '' ))
 
               </div>
-              <div class="image-container" style="background-image:url({{ $featured_image_url }})"></div>
+              <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
               <a href="{{ the_permalink() }}">{{ the_title() }} </a>
               <div class="excerpt">{{ the_excerpt() }}</div>
               <p class="author">{{ the_field('author') }}</p>

@@ -13,7 +13,7 @@
     $header_image_credit = get_media_credit_html($header_image_id); //media credit for image
   @endphp
 
-  <div class="hero-header" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" style="background-image:url('{{ $header_image_url }}')">
     <p class="media-credit">@php echo $header_image_credit; @endphp</p>
   </div>
   <div class="content-container">

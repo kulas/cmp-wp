@@ -26,7 +26,7 @@
   @endphp
 
     <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
-      <div class="hero-header" role="img" style="background-image: url({{ $image_url }})" >
+      <div class="hero-header" role="img" aria-label="{{$exhibit['title']}}" style="background-image: url({{ $image_url }})" >
         <p class="media-credit">@php echo $image_credit; @endphp</p>
       </div>
     </a>

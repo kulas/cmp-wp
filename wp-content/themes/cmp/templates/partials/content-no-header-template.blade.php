@@ -10,24 +10,21 @@
 
 @endphp
 
-<div class="basic-header magazine-sub-page">
-
-  {{-- <div class="hero-header" style="background-image:url('{{ $image_url }}')">
-    <p class="media-credit">@php echo $image_credit; @endphp</p>
-  </div> --}}
-
+<div class="basic-header">
     <div class="content-container">
         <div class="main-text spaced">
+          <div class="nav-breadcrumb">
+            @php
+              if (function_exists('bcn_display')) //The breadcrumb plugin
+                {
+                    bcn_display();
+                }
+            @endphp
+          </div>
+          <h1>{{ the_title() }}</h1>
           {{ the_content() }}
-
-          @php
-            $tabs = the_field('tab_layout');
-            if ($tabs != null) {
-              include('partials.tabs');
-            }
-          @endphp
-
     </div>
+    @include('partials.tabs')
   </div>
 </div>
 

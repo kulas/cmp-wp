@@ -49,14 +49,19 @@
 
   .wpcf7-list-item {
     font-weight: 300;
+
+    input[type="checkbox"] {
+      position: relative;
+      top: 5px;
+    }
   }
 
   .wpcf7-checkbox {
     display: block;
-    margin-bottom: $base-spacing;
+    // margin-bottom: $base-spacing;
 
     .wpcf7-list-item {
-      margin-bottom: $small-spacing;
+      // margin-bottom: $small-spacing;
       margin-left: 0;
 
       label {

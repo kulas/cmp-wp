@@ -251,7 +251,7 @@ form.search-form {
 
 //Added to prevent stray fixed-width elements from overflowing on mobile.
 .content {
-  overflow:hidden;
+  overflow-x:hidden;
 }
 
 .magazine-sub-page {
@@ -259,5 +259,9 @@ form.search-form {
 
   @include grid-media($nav-break) {
     padding-top: 0;
+  }
+
+  .nav-breadcrumb {
+    display: none;
   }
 }

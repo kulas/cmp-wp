@@ -22,6 +22,7 @@
     <div class="main-text">
       {{ the_content() }}
     </div>
+    @include('partials.tabs')
   </div>
 </div>
 

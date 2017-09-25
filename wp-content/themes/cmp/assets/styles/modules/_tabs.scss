@@ -1,7 +1,8 @@
 // Lots of styling for the tabs plugin
-.content-container.tabs-page {
-  padding: $small-spacing $base-spacing;
-}
+
+// .content-container.tabs-page {
+//   padding: $small-spacing $base-spacing;
+// }
 
 .osc-res-tab .nav-tabs {
   border: none !important;
@@ -101,6 +102,7 @@ ul.tab-content {
 
 .tabbed-content {
   overflow: hidden;
+  width: 100% !important;
 }
 
 .tabs-list {
@@ -118,6 +120,10 @@ ul.tab-content {
     display: inline-block;
   }
 
+  .tab:last-child > .tab__link {
+    border-right: 2px solid $base-color;
+  }
+
   .tab__link {
     display: block;
     padding: 0.66em 1em;
@@ -126,6 +132,11 @@ ul.tab-content {
     text-decoration: none;
     text-transform: uppercase;
     transition: all .3s;
+    border-top: 2px solid $base-color;
+    border-left: 2px solid $base-color;
+    border-right: 1px solid $base-color;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     &:hover, &[aria-selected="true"] {
       background-color: $base-color;

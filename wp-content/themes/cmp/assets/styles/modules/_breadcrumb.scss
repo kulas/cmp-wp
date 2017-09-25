@@ -34,12 +34,18 @@ hr.breadcrumb-hr {
   margin: 0;
 }
 
-//Hides breadcrumb on main things to do page
-body.page-template.page-template-templates.page-template-template-things-to-do-blade.page-template-templatestemplate-things-to-do-blade-php.page.page-id-194.page-parent.logged-in.admin-bar.things-to-do.customize-support {
-
+//Hides breadcrumb on several pages.
+body.page-template.page-template-templates.page-template-template-things-to-do-blade.page-template-templatestemplate-things-to-do-blade-php.page.page-id-194.page-parent.logged-in.admin-bar.things-to-do.customize-support,
+body.page-template.page-template-templates.page-template-template-no-header-blade.page-template-templatestemplate-no-header-blade-php.page.page-id-2152.logged-in.admin-bar.privacy-policy.customize-support,
+body.page-template.page-template-templates.page-template-template-basic-header-blade.page-template-templatestemplate-basic-header-blade-php.page.page-id-2076.page-parent.logged-in.admin-bar.opportunities.customize-support {
   .nav-breadcrumb,
   .breadcrumb-container {
     display: none;
   }
+}
 
+body.page-template.page-template-templates.page-template-template-basic-header-blade.page-template-templatestemplate-basic-header-blade-php.page.page-id-2076.page-parent.logged-in.admin-bar.opportunities.customize-support {
+  hr {
+    display: none;
+  }
 }

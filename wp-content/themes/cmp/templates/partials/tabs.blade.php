@@ -1,4 +1,3 @@
-<div class="content-container tabs-page">
   @php
     if( have_rows('tab_layout') ):
   @endphp
@@ -57,4 +56,3 @@
   @php
     endif;
   @endphp
-</div>

@@ -16,12 +16,12 @@
           the_row();
         @endphp
 
-          <div class="event-space">
-            <a class="event-space__image-container" style="background-image:url('{{ the_sub_field('image') }}')" href="">
+          <div class="event-space" tabindex="0" aria-label="{{ the_sub_field('name') }}">
+            <div class="event-space__image-container" style="background-image:url('{{ the_sub_field('image') }}')">
               <div class="event-space__description">
                 {{ the_sub_field('detailed_description') }}
               </div>
-            </a>
+            </div>
             <h2>{{ the_sub_field('name') }}</h2>
           </div>
 

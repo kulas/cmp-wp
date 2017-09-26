@@ -22,7 +22,7 @@
           <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
           <a href="{{ the_permalink() }}">
           <div class="article__image-container">
-            <img src="{{ the_field('square_image') }}">
+            <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
           </div>
             <h3 class="green-robot-link">{{ the_title() }}</h3>
           </a>

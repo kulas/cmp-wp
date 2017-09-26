@@ -3,7 +3,7 @@
 <div class="generic-article tag-partial">
   <article @php(post_class())>
       <div class="article__image">
-        <img src="{{ the_field('square_image') }}">
+        <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}" />
       </div>
       <div class="article__content">
       <header>

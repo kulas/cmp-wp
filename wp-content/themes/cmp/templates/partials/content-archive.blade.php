@@ -32,7 +32,7 @@
       @endphp
 
       <div class="issue__cover">
-        <img src="{{ the_field('current_issue_cover') }}">
+        <img src="{{ the_field('current_issue_cover') }}" alt="{{ the_field('current_issue_title') }}">
       </div>
 
       <div class="issue__content">

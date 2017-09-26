@@ -25,8 +25,9 @@
     $image_credit = get_media_credit_html($image_id); //media credit for image
   @endphp
 
-    <a href="{{ $exhibit['link'] }}">
-      <div class="hero-header" style="background-image: url({{ $image_url }})">
+    <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
+
+      <div class="hero-header" role="img" style="background-image: url({{ $image_url }})" >
         <p class="media-credit">@php echo $image_credit; @endphp</p>
       </div>
     </a>
@@ -68,7 +69,7 @@
     {{-- Callout blocks/4 featutred exhibits --}}
     <div class='exhibit'>
       <a aria-label="{{$exhibit['title']}}" href="{{ $exhibit['link'] }}" >
-        <div class="exhibit__image" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})">
+        <div class="exhibit__image" role="img" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})">
           <div class="exhibit-preview__dates">
             <p class="start-date">{{ $exhibit['dates'] }}</p>
           </div>

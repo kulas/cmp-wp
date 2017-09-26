@@ -72,17 +72,15 @@
       margin: 0;
     }
 
-  a.green-button,
-  button.green-button {
+  a.green-button {
     margin-right:5px;
     height:30px;
+    padding-top: 9px;
     position: relative;
     top:2px;
-    // text-decoration-color: none;
     border-radius:0;
     background-color: #95A064;
     font-weight: bold;
-
     @include grid-media($nav-break) {
       display: none;
     }
@@ -290,9 +288,7 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
 
 
 // nav icon active states
-.nav-icon:active,
-.nav-icon:focus
- {
+.nav-icon:active {
   outline: none;
 }
 
@@ -300,6 +296,7 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
 .quickview-btn:active i
 {
   transform: scale(.8);
+  outline: none;
 }
 
 .nav-icon.is-active i,
@@ -961,6 +958,7 @@ a.quickview-btn.nav-visit {
 #menu-primary-navigation-1 li:hover > a,
 #menu-primary-navigation li:active > a {
   color: white !important;
+  outline: none;
 }
 
 ul.desktop-nav {
@@ -996,6 +994,7 @@ ul#menu-magazine-nav
 
     &:active, &:hover, &.active {
       background: $nav-hover;
+      outline: none;
     }
 
     &:hover a{

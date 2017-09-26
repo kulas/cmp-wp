@@ -2,15 +2,15 @@
   <div class="top-bar">
     <div class="top-bar__left">
       <div class="top-bar__form">
-
+        <label for="128" class="label--hidden">Subscribe to our emails</label>
         @php
           echo do_shortcode("[contact-form-7 id='128' title='Email Form']"); //Sign up
         @endphp
 
       </div>
 
-      <a href="/join-support/membership"><button class="green-button">Join</button></a>
-      <a href="/join-support/donate"><button class="green-button">Donate</button></a>
+      <a href="/join-support/membership" class="green-button">Join</a>
+      <a href="/join-support/donate" class="green-button">Support</a>
     </div>
     <nav>
 
@@ -91,11 +91,12 @@
 
       {{-- <legend class="screen-reader-text">Search form</legend> --}}
       <fieldset>
-        <input type="text" id="search-field" placeholder="search" name="s" value="">
+        <label for="search-field" class="label--hidden">Search site</label>
+        <input type="text" id="search-field" placeholder="search" name="search" value="">
 
         {{-- <label for="search-field"> Search</label> --}}
       </fieldset>
-      <button type="submit" class="btn" title="Start search"><i class="icon-search button"></i></button>
+      <button type="submit" class="btn" aria-label="Start search" value="search site"><i class="icon-search button"></i></button>
     </form>
   </div>
 </header>

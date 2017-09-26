@@ -6,7 +6,7 @@
   <div class="content-container">
     <div class="current-issue">
       <div class="current-issue__left">
-        <img src="{{ the_field('current_issue_cover') }}">
+        <img src="{{ the_field('current_issue_cover') }}" alt="{{ the_field('current_issue_title') }}">
       </div>
       <div class="current-issue__right">
 
@@ -45,7 +45,7 @@
 
                 <div class="archive">
                   <a href="{{ the_sub_field('issue_link') }}">
-                    <img src="{{ the_sub_field('cover_photo') }}">
+                    <img src="{{ the_sub_field('cover_photo') }}" alt="{{ the_sub_field('issue_title') }}">
                     <p class="small-uppercase--bold center">{{ the_sub_field('issue_title') }}</p>
                   </a>
                 </div>

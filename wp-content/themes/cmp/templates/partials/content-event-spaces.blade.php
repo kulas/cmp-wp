@@ -12,7 +12,7 @@
 @endphp
 
 <div class="event-spaces">
-  <div class="hero-header" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $header_image_url }}')">
     <p class="media-credit">@php echo $header_image_credit; @endphp</p>
   </div>
   <div class="content-container">
@@ -28,8 +28,8 @@
 
         <div class="event-space">
           <a href="{{ the_sub_field('link') }}">
-            <div class="event-space__image-container" style="background-image: url('{{ the_sub_field("image")}} ')">
-              <img src="{{ the_sub_field('image') }}" />
+            <div class="event-space__image-container" role="img" style="background-image: url('{{ the_sub_field("image")}} ')">
+              <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name')}}"/>
               <h2>{{ the_sub_field('name') }}</h2>
             </div>
           </a>

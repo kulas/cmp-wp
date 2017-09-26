@@ -26,13 +26,12 @@
   }
 
   &:hover,
-  &:focus,
   &:active,
   &.active {
     color: #fff;
     background-color: $dark-color;
     border-color: $base-color;
-    outline: 0;
+    outline: none;
     text-decoration: none;
   }
 }
@@ -55,6 +54,7 @@
   &:hover,
   &:active,
   &.active{
+    outline: none;
     background-color: lighten($action-color, 10);
     border-color: $action-color;
   }

@@ -14,8 +14,8 @@
   $featured_image_credit = get_media_credit_html($featured_image_id); //media credit for image
 @endphp
 
-<a href="{{ the_permalink() }}">
-  <div class="hero-header" style="background-image:url({{ $featured_image_url }})"></div>
+<a href="{{ the_permalink() }}" class="" aria-label="{{ get_the_title($post_object) }}">
+  <div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})" ></div>
 </a>
 <div class="media-credit-container">
   <p class="media-credit">@php echo $featured_image_credit; @endphp</p>
@@ -58,7 +58,7 @@
           <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
           <a href="{{ the_permalink() }}">
             <div class="article__image-container">
-              <img src="{{ $featured_image_url }}">
+              <img src="{{ $featured_image_url }}" alt="{{ the_title() }}">
             </div>
             <h3 class="robot--bold">{{ the_title() }}</h3>
           </a>
@@ -97,7 +97,7 @@
         <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
         <a href="{{ the_permalink() }}">
           <div class="article__image-container">
-            <img src="{{ get_field('square_image') }}">
+            <img src="{{ get_field('square_image') }}" alt="{{the_title()}}">
           </div>
           <h3>{{ the_title() }}</h3>
         </a>
@@ -120,12 +120,13 @@
       endif;
     @endphp
 
+
     {{-- Sidebar section --}}
     <div class="magazine-featured-articles__sidebar">
       <h3 class="uppercase-robot--large center">Current Issue</h3>
       <div class="magazine-featured-articles__sidebar__container">
         <a href="/carnegie-magazine/current-issue">
-          <img src={{ the_field('current_issue') }} />
+          <img src="{{ the_field('current_issue') }}" alt="{{ the_field('current_issue_title') }}"/>
         </a>
         <h3 class="uppercase-robot--large center">Sign up<br /> to receive<br /> more stories<br /> in your email</h3>
         <button class="grey-button">Enter Your Email</button>
@@ -147,7 +148,7 @@
               <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
               <a href="{{ the_permalink() }}">
                 <div class="article__image-container">
-                  <img src="{{ $featured_image_url }}">
+                  <img src="{{ $featured_image_url }}" alt="{{ the_title() }}">
                 </div>
                 <h4 class="robot--bold">{{ the_title() }}</h4>
               </a>

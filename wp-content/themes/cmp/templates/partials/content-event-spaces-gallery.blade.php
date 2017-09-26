@@ -28,7 +28,7 @@
 
           <div class="event-space">
             <div class="event-space__image-container">
-              <img src="{{ the_sub_field('image') }}" />
+              <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }}"/>
             </div>
             <h2>{{ the_sub_field('name') }}</h2>
           </div>

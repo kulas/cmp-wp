@@ -6,30 +6,26 @@
   the_post();
 @endphp
 
-<div class="event-spaces-gallery">
+<div class="things-to-do-page">
   <div class="content-container">
-      <div class="spaces">
+    @php
+      if( have_rows('event_space') ): // Loops through Event Space custom field repeater
+      while ( have_rows('event_space') ) :
+      the_row();
+    @endphp
 
-        @php
-          if( have_rows('event_space') ): // Loops through Event Space custom field repeater
-          while ( have_rows('event_space') ) :
-          the_row();
-        @endphp
-
-          <div class="event-space" tabindex="0" aria-label="{{ the_sub_field('name') }}">
-            <div class="event-space__image-container" style="background-image:url('{{ the_sub_field('image') }}')">
-              <div class="event-space__description">
-                {{ the_sub_field('detailed_description') }}
-              </div>
-            </div>
-            <h2>{{ the_sub_field('name') }}</h2>
+      <div class="activity">
+        <div class="activity__image" role="img" aria-label="{{ the_sub_field('title') }}" style="background-image:url('{{ the_sub_field('image') }}')">
+          <div class="activity__title">
+            <h3>{{ the_sub_field('name') }}</h3>
           </div>
+        </div>
+        <p>{{ the_sub_field('detailed_description') }}</p>
+      </div>
 
-        @php
-          endwhile; else : endif;
-        @endphp
-
-    </div>
+    @php
+      endwhile; else : endif;
+    @endphp
   </div>
 </div>
 

@@ -41,7 +41,7 @@
             <div class="sub-page">
 
 
-
+              <a href="{{ the_sub_field('link') }}">
                 <div class="sub-page__background" role="img" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
 
                   <div class="sub-page__title">

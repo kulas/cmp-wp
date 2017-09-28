@@ -88,6 +88,10 @@
   font-size:.9em;
   margin-top:5px;
   margin-bottom: $small-spacing;
+
+  + .green-button {
+    margin-left: $small-spacing / 2;
+  }
 }
 
 .arrow-button {

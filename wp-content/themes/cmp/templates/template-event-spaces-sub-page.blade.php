@@ -6,7 +6,7 @@
 
 @section('content')
 
-  @include('partials.content-basic-header-template')
+  @include('partials.content-basic-header-template-no-breadcrumb')
   @include('partials.content-event-spaces-gallery-description')
   @include('partials.content-event-spaces-contact')
 

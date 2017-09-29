@@ -23,13 +23,14 @@
     </div>
   </div>
   <div class="content-container">
+
     <div class="main-text">
 
       @php
         if ( have_posts() ) :
         while ( have_posts() ) :
         the_post()
-      @endphp      
+      @endphp
 
          {{ the_content() }}
 

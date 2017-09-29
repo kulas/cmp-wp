@@ -27,7 +27,7 @@
 
     </div>
   </div>
-  <hr>
+  <hr class="breadcrumb-hr">
     <div class="main-text spaced">
       {{ the_content() }}
     </div>

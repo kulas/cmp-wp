@@ -31,7 +31,8 @@
 }
 
 hr.breadcrumb-hr {
-  margin: 0;
+  margin-top: 0 !important;
+  margin-bottom: $small-spacing;
 }
 
 //Hides breadcrumb on several pages.
@@ -44,7 +45,8 @@ body.page-template.page-template-templates.page-template-template-basic-header-b
   }
 }
 
-body.page-template.page-template-templates.page-template-template-basic-header-blade.page-template-templatestemplate-basic-header-blade-php.page.page-id-2076.page-parent.logged-in.admin-bar.opportunities.customize-support {
+body.page-template.page-template-templates.page-template-template-basic-header-blade.page-template-templatestemplate-basic-header-blade-php.page.page-id-2076.page-parent.logged-in.admin-bar.opportunities.customize-support,
+body.page-template.page-template-templates.page-template-template-landing-page-with-subpages-blade.page-template-templatestemplate-landing-page-with-subpages-blade-php.page.page-id-1726.page-child.parent-pageid-294.logged-in.admin-bar.our-museums.customize-support {
   hr {
     display: none;
   }

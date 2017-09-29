@@ -13,14 +13,14 @@
 <div class="basic-header">
     <div class="content-container">
         <div class="main-text spaced">
-          <div class="nav-breadcrumb">
+          {{-- <div class="nav-breadcrumb">
             @php
               if (function_exists('bcn_display')) //The breadcrumb plugin
                 {
                     bcn_display();
                 }
             @endphp
-          </div>
+          </div> --}}
           <h1>{{ the_title() }}</h1>
           {{ the_content() }}
     </div>

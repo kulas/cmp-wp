@@ -20,6 +20,7 @@
 
   p.breadcrumb-spacer {
     margin-top:3px;
+    margin-bottom: $small-spacing;
     padding:0px 5px;
     font-size: .8em;
     font-weight:300;
@@ -32,7 +33,7 @@
 
 hr.breadcrumb-hr {
   margin-top: 0 !important;
-  margin-bottom: $small-spacing;
+  margin-bottom: $small-spacing * 1.5;
 }
 
 //Hides breadcrumb on several pages.

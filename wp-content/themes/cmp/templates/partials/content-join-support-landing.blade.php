@@ -24,20 +24,22 @@
   </div>
   <div class="content-container">
 
-    <div class="main-text">
+    <div class="content-wrapper">
+      <div class="l-long">
 
-      @php
-        if ( have_posts() ) :
-        while ( have_posts() ) :
-        the_post()
-      @endphp
+        @php
+          if ( have_posts() ) :
+          while ( have_posts() ) :
+          the_post()
+        @endphp
 
-         {{ the_content() }}
+          {{ the_content() }}
 
-      @php
-        endwhile; else : endif;
-      @endphp
+        @php
+          endwhile; else : endif;
+        @endphp
 
+      </div>
     </div>
   <hr>
 
@@ -62,5 +64,6 @@
       endwhile; else : endif;
     @endphp
 
+  <hr>
   </div>
 </div>

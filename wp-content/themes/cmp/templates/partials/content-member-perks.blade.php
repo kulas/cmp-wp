@@ -2,7 +2,6 @@
 
 <div class="member-perks">
   <div class="content-container">
-    <hr />
     <div class="sub-page-container">
 
       @php
@@ -19,7 +18,7 @@
         <a href="{{ the_sub_field('link') }}">
           <img class="sub-page__image" src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('title') }}">
           <div class="sub-page__text-box">
-            <h4>{{ the_sub_field('title') }}</h4>
+            <h3>{{ the_sub_field('title') }}</h3>
           </div>
         </a>
       </div>
@@ -32,8 +31,12 @@
         }
         endwhile; else : endif;
       @endphp
+  </div>
+</div>
 
-    <div class="contact-us">
+<div class="content-container">
+  <div class="content-wrapper">
+    <div class="contact-us l-long">
       <h3>Contact Us</h3>
       <div class="main-text">
 

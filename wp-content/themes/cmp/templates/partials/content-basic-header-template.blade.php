@@ -14,25 +14,38 @@
   <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $image_url }}')">
     <p class="media-credit">@php echo $image_credit; @endphp</p>
   </div>
-    <div class="content-container">
-      <h1 class="hero-header__words-box">{{ the_title() }} </h1>
-      <div class="breadcrumb-container">
-        <div class="nav-breadcrumb">
+  <div class="content-container">
+    <h1 class="hero-header__words-box">{{ the_title() }} </h1>
+    <div class="breadcrumb-container">
+      <div class="nav-breadcrumb">
 
-          @php //This displays the breadcrumb (e.g. Things to Do > Nights at the Museums)
-            if (function_exists('bcn_display')) {
-              bcn_display();
-            }
-          @endphp
+        @php //This displays the breadcrumb (e.g. Things to Do > Nights at the Museums)
+          if (function_exists('bcn_display')) {
+            bcn_display();
+          }
+        @endphp
 
+      </div>
     </div>
-  </div>
   <hr class="breadcrumb-hr">
-    <div class="main-text spaced">
+  <div class="content-wrapper">
+    <div class="l-long">
       {{ the_content() }}
     </div>
-    @include('partials.tabs')
+    <div class="l-short">
+      @php
+        if( have_rows('sidebar_content') ):
+        while( have_rows('sidebar_content') ):
+        the_row();
+      @endphp
+      <h3>{{ the_sub_field('heading') }}</h3>
+      {{ the_sub_field('text') }}
+      @php
+        endwhile; endif;
+      @endphp
+    </div>
   </div>
+  @include('partials.tabs')
 </div>
 
 @php

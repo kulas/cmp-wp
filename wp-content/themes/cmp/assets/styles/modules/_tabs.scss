@@ -181,6 +181,7 @@ ul.tab-content {
 .tab__trip {
   display: grid;
   grid-template-columns: 1fr 3fr;
+  grid-gap: $base-spacing;
   margin-bottom: $base-spacing;
   padding-bottom: $small-spacing;
   border-bottom: 1px solid $light-gray;
@@ -196,11 +197,18 @@ ul.tab-content {
   &:last-child {
     border-bottom: none;
   }
+
+  .tab__body {
+    grid-column-start: 2;
+
+    @include grid-media($small) {
+      grid-column-start: span 2;
+    }
+  }
 }
 
 .tab__trip-image {
   grid-column-start: 1;
-  margin-right: $small-spacing;
 
   @include grid-media($small) {
     grid-column-start: span 2;
@@ -208,14 +216,8 @@ ul.tab-content {
   }
 }
 
-.tab__body {
-  grid-column-start: 2;
-
-  @include grid-media($small) {
-    grid-column-start: span 2;
-  }
-
-  p {
-    margin-bottom: 0.5em; // we can remove this once the tab plugin is removed
-  }
+.tab__text {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-gap: $base-spacing;
 }

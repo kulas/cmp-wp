@@ -28,8 +28,13 @@
             while(have_rows('tab_body_layout')): the_row();
               if(get_row_layout() == 'text'):
           @endphp
-            <div class="tab__body">
-              {!! get_sub_field('tab_copy') !!}
+            <div class="tab__text">
+              <div class="tab__body">
+                {!! get_sub_field('tab_copy') !!}
+              </div>
+              <div class="tab__sidebar">
+                {!! get_sub_field('tab_sidebar') !!}
+              </div>
             </div>
           @php
             elseif(get_row_layout() == 'trip'):

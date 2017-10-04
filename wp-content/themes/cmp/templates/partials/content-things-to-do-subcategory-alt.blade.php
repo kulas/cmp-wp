@@ -2,6 +2,10 @@
 
 <div class="things-to-do-subcategory">
   <div class="content-container">
+    <div class="large-title">
+      <h1>{{ the_title() }}</h1>
+    </div>
+
     <div class="nav-breadcrumb">
 
       @php
@@ -11,9 +15,6 @@
         }
       @endphp
 
-    </div>
-    <div class="large-title">
-      <h1>{{ the_title() }}</h1>
     </div>
     <hr>
     <div class="activity-container">

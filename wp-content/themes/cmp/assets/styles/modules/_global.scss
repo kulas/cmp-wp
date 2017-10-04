@@ -96,7 +96,6 @@ hr {
 
 .content-wrapper {
   @include grid-collapse;
-  margin-bottom: $small-spacing;
 }
 
 // Main text paragraph
@@ -118,7 +117,6 @@ hr {
   justify-content: space-between;
   flex-wrap: nowrap;
   position: relative;
-  margin-bottom: $base-spacing;
 
   @include grid-media($medium) {
     flex-wrap: wrap;

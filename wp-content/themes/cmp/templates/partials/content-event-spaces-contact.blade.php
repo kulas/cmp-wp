@@ -7,8 +7,8 @@
 @endphp
 
 <div class="content-container">
+  <hr>
   <div class="event-spaces-contact">
-    <hr>
       <div class="main-text">
         {{ the_field('event_space_notes') }}
       </p>

@@ -56,8 +56,8 @@
                 <h3>{{ the_sub_field('title') }}</h3>
             </div>
         </div>
-      </a>
-      <p>{{ the_sub_field('description') }}</p>
+        </a>
+        {{ the_sub_field('description') }}
       </div>
 
     @php

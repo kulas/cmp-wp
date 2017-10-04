@@ -18,8 +18,22 @@
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>
 
-    <div class="main-text spaced">
-      {{ the_content() }}
+    <div class="content-wrapper">
+      <div class="l-long">
+        {{ the_content() }}
+      </div>
+      <div class="l-short">
+        @php
+          if( have_rows('sidebar_content') ):
+          while( have_rows('sidebar_content') ):
+          the_row();
+        @endphp
+        <h3>{{ the_sub_field('heading') }}</h3>
+        {{ the_sub_field('text') }}
+        @php
+          endwhile; endif;
+        @endphp
+      </div>
     </div>
     <hr>
   </div>
@@ -32,14 +46,14 @@
   @endphp
 
     <div class="activity">
-        <a href="{{ the_sub_field('external_link') }} {{ the_sub_field('internal_link') }}">
-          <div class="activity__image" role="img" aria-label="{{ the_sub_field('title') }}" style="background-image:url('{{ the_sub_field('image') }}')">
-            <div class="activity__title">
-              <h3>{{ the_sub_field('title') }}</h3>
-            </div>
+      <a href="{{ the_sub_field('external_link') }} {{ the_sub_field('internal_link') }}">
+        <div class="activity__image" role="img" aria-label="{{ the_sub_field('title') }}" style="background-image:url('{{ the_sub_field('image') }}')">
+          <div class="activity__title">
+            <h3>{{ the_sub_field('title') }}</h3>
           </div>
-        </a>
-      <p>{{ the_sub_field('description') }}</p>
+        </div>
+      </a>
+      {{ the_sub_field('description') }}
     </div>
 
   @php

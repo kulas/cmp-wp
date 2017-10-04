@@ -1,4 +1,52 @@
 .item-grid {
+  justify-content: space-between;
   margin-top: $small-spacing;
-  margin-bottom: $large-spacing;
+  margin-bottom: $small-spacing;
+
+  .activity {
+    flex-basis: 48%;
+    padding-bottom: 2em;
+
+    @include grid-media($medium) {
+      flex-basis: 100%;
+    }
+
+    h3 {
+      font-family: $base-font-family;
+      font-size: 1.5em;
+      @include grid-media($large) {
+        font-size: 1em;
+      }
+      @include grid-media($medium) {
+        font-size: 1.3em;
+      }
+    }
+
+    .activity__title {
+      padding-top: 0.75em;
+      padding-right: 0.75em;
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      background-color: white;
+
+      h3 {
+        margin: 0;
+        line-height: 1;
+      }
+    }
+  }
+
+  .activity__image {
+    position: relative;
+    height: 175px;
+    background-size: cover;
+    background-position: center;
+    overflow: visible;
+    margin-bottom: 1em;
+  }
+
+  hr {
+    margin: 0 0 $small-spacing 0;
+  }
 }

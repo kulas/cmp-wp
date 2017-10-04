@@ -1,13 +1,6 @@
 // Deepest level inside page in 'Things to Do section'
 
 .things-to-do-subcategory {
-  .content-container {
-    display: block;
-    padding: 0 $base-spacing $small-spacing;
-    @include grid-media($medium) {
-      padding: 0 !important;
-    }
-  }
 
   .large-title {
     @include grid-media($medium) {
@@ -79,4 +72,9 @@
 
 .text-box {
   width: 100%;
+}
+
+.large-title {
+  margin-top: $small-spacing * 1.5;
+  margin-bottom: $small-spacing / 2;
 }

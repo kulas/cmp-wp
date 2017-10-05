@@ -1,0 +1,20 @@
+.expert-list__museum {
+  margin-bottom: $small-spacing;
+}
+
+.expert {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-column-gap: $small-spacing;
+  margin-bottom: $small-spacing;
+}
+
+.expert__photo {
+  grid-row-start: span 2;
+}
+
+// .expert__details {
+//   grid-row-start: 2;
+//   grid-column-start: 2;
+// }

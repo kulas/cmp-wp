@@ -27,25 +27,26 @@
 
       </div>
     </div>
-  <hr class="breadcrumb-hr">
-  <div class="content-wrapper">
-    <div class="l-long">
-      {{ the_content() }}
+    <hr class="breadcrumb-hr">
+    <div class="content-wrapper">
+      <div class="l-long">
+        {{ the_content() }}
+      </div>
+      <div class="l-short">
+        @php
+          if( have_rows('sidebar_content') ):
+          while( have_rows('sidebar_content') ):
+          the_row();
+        @endphp
+        <h3>{{ the_sub_field('heading') }}</h3>
+        {{ the_sub_field('text') }}
+        @php
+          endwhile; endif;
+        @endphp
+      </div>
     </div>
-    <div class="l-short">
-      @php
-        if( have_rows('sidebar_content') ):
-        while( have_rows('sidebar_content') ):
-        the_row();
-      @endphp
-      <h3>{{ the_sub_field('heading') }}</h3>
-      {{ the_sub_field('text') }}
-      @php
-        endwhile; endif;
-      @endphp
-    </div>
+    @include('partials.tabs')
   </div>
-  @include('partials.tabs')
 </div>
 
 @php

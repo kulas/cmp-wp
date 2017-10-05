@@ -19,7 +19,7 @@ $dark-gray: #333;
 $medium-dark-gray: #666;
 $medium-gray: #999;
 $light-gray: #ccc;
-$base-color: #96A061;
+$base-color: #d73b23;
 $dark-color: darken($base-color, 15);
 
 // Font Colors
@@ -39,5 +39,7 @@ $base-border: 1px solid $base-border-color;
 $inverse-border: 1px solid $dark-gray;
 
 //Nav colors
-$nav-dropdown: #6F774A;
-$nav-hover: #95A064;
+// $nav-dropdown: #95A064;
+// $nav-hover: #6e7649;
+$nav-dropdown: $base-color;
+$nav-hover: $dark-color;

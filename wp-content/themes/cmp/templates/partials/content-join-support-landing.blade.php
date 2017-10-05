@@ -1,5 +1,11 @@
 {{--  Join Support Landing Page --}}
 
+@php
+  if ( have_posts() ) :
+  while ( have_posts() ) :
+  the_post();
+@endphp
+
 {{-- This has the same basic layout as things to do page, thus the class. --}}
 <div class="things-to-do-page">
 
@@ -18,31 +24,29 @@
     <p class="media-credit">@php echo $header_image_credit; @endphp</p>
   </div>
   <div class="content-container">
-    <div>
-      <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-    </div>
-  </div>
-  <div class="content-container">
-
+    <h1 class="hero-header__words-box">{{ the_title() }}</h1>
+  
     <div class="content-wrapper">
       <div class="l-long">
-
+        {{ the_content() }}
+      </div>
+      <div class="l-short">
         @php
-          if ( have_posts() ) :
-          while ( have_posts() ) :
-          the_post()
+          if( have_rows('sidebar_content') ):
+          while( have_rows('sidebar_content') ):
+          the_row();
         @endphp
-
-          {{ the_content() }}
-
+        <h3>{{ the_sub_field('heading') }}</h3>
+        {{ the_sub_field('text') }}
         @php
-          endwhile; else : endif;
+          endwhile; endif;
         @endphp
-
       </div>
     </div>
-  <hr>
+    <hr>
+  </div>
 
+  <div class="content-container item-grid">
     @php
       if( have_rows('activity') ): //In this case, it's looping through sub-pages (sorry, uses the same custom field)
       while ( have_rows('activity') ) :
@@ -55,7 +59,7 @@
             <div class="activity__title">
                 <h3>{{ the_sub_field('title') }}</h3>
             </div>
-        </div>
+          </div>
         </a>
         {{ the_sub_field('description') }}
       </div>
@@ -64,6 +68,10 @@
       endwhile; else : endif;
     @endphp
 
-  <hr>
+    <hr />
   </div>
 </div>
+
+@php
+  endwhile; else : endif;
+@endphp

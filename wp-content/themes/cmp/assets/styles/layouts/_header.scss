@@ -79,7 +79,7 @@
     position: relative;
     top:2px;
     border-radius:0;
-    background-color: #95A064;
+    background-color: $nav-dropdown;
     font-weight: bold;
     @include grid-media($nav-break) {
       display: none;
@@ -993,7 +993,7 @@ ul#menu-magazine-nav
     text-align: center;
 
     &:active, &:hover, &.active {
-      background: $nav-hover;
+      background: $nav-dropdown;
       outline: none;
     }
 
@@ -1014,12 +1014,12 @@ ul#menu-magazine-nav
   }
 
   .sub-menu > li.menu-item:hover {
-    background-color: #6e7649;
+    background-color: $nav-hover;
   }
 
   > li.current-menu-item,
   > li.current-page-ancestor {
-    background: $nav-hover;
+    background: $nav-dropdown;
   }
 
   li.current-menu-item > a,
@@ -1033,7 +1033,7 @@ ul#menu-magazine-nav
     position: absolute;
     top: 46px;
     left: 0;
-    background-color: #95A064;
+    background-color: $nav-dropdown;
     overflow: hidden;
     z-index: 1003;
     height:0;
@@ -1050,7 +1050,7 @@ ul#menu-magazine-nav
 
     > li {
       transition: 0.4s all;
-      background: #95A064;
+      background: $nav-dropdown;
       width: 260px;
       height:50px;
       color: white;

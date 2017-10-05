@@ -2,6 +2,7 @@
 
 .no-header {
   @extend .basic-header;
+  margin-top: $small-spacing;
 
   .hero-header__words-box {
     margin-top: 0;

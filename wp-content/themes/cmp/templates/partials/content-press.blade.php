@@ -29,7 +29,7 @@
           ));
           foreach($terms as $term):
         @endphp
-        <div class="expert-list">
+        <div class="expert-list" id="{{ $term->slug }}">
           <h3 class="expert-list__museum">{{ $term->name }}</h3>
           @php
             $expert_args = array(

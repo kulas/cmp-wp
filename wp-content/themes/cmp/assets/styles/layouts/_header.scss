@@ -1112,17 +1112,15 @@ ul#menu-magazine-nav {
 
   li.menu-item,
   ul.sub-menu > li.menu-item {
-    background-color: black;
-    opacity: 0.8;
+    background-color: rgba(0,0,0,.7);
   }
 
   li.menu-item:hover {
-    background-color: black;
-    opacity: 1;
+    background-color: rgba(0,0,0,.9);
   }
 
   li.current-menu-item {
-    background-color: black;
+    background-color: rgba(0,0,0,.9);
   }
 }
 

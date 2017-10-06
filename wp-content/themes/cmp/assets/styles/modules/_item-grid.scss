@@ -44,6 +44,10 @@
     background-position: center;
     overflow: visible;
     margin-bottom: 1em;
+
+    &.tall {
+      height: 275px;
+    }
   }
 
   hr {

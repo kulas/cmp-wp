@@ -1,12 +1,6 @@
 {{-- Homepage Featured Exhibits/Now Showing section --}}
 
 <div id="featured-exhibits">
-  <div class='section-hr small-only'>
-    <hr/>
-    <div class='section-hr__h5'>
-      <h5>Now Showing</h5>
-    </div>
-  </div>
 
   @php //This fun thing randomizes the order of the featured exhibits, so a different one is the hero image/exhibit each page refresh.
     $count = 0;
@@ -54,11 +48,6 @@
       if ($count==1) { // Displays 'Now Showing' hr after the featured exhibit.
     @endphp
 
-    <div class='section-hr large-only'><hr>
-      <div class='section-hr__h5'>
-        <h5 class="robot--green">Now Showing</h5>
-      </div>
-    </div>
     <div class='exhibit-container'>
 
     @php

@@ -30,7 +30,7 @@
         <div class="museum">
           <a class="black-link" href="http://www.warhol.org/">
             <img src="@asset('images/wm.png')" alt="Andy Warhol Museum" />
-            <h4>Andy Warhol Museum</h4>
+            <h4>The Andy Warhol Museum</h4>
           </a>
         </div>
       </div>

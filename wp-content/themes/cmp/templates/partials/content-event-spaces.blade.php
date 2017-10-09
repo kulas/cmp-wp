@@ -46,7 +46,7 @@
 
       <div class="activity">
         <a href="{{ the_sub_field('link') }}">
-          <div class="activity__image" role="img" aria-label="{{ the_sub_field('name') }}" style="background-image:url('{{ the_sub_field('image') }}')">
+          <div class="activity__image tall" role="img" aria-label="{{ the_sub_field('name') }}" style="background-image:url('{{ the_sub_field('image') }}')">
             <div class="activity__title">
               <h3>{{ the_sub_field('name') }}</h3>
             </div>

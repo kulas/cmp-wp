@@ -14,7 +14,7 @@
   <header>
 
     @php
-      if ($header_image != null) {
+      if ($header_image != null):
     @endphp
 
       <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')">
@@ -22,19 +22,25 @@
       </div>
 
     @php
-      } else {
+      else:
     @endphp
 
       <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}'); height:50px;"></div>
 
     @php
-      }
+      endif
     @endphp
 
     <div class="title-box">
       <h1 class="entry-title">{{ get_the_title() }}</h1>
       <p class="article__summary">{{ get_the_excerpt() }}</p>
-      <p class="author">By {{ the_field('author') }}</p>
+      @php
+        if(get_field('author')):
+      @endphp
+        <p class="author">{{ the_field('author') }}</p>
+      @php
+        endif
+      @endphp
     </div>
   </header>
   <div class="entry-content">

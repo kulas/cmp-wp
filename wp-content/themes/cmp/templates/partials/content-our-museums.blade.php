@@ -9,30 +9,20 @@
   </div>
     <div class="content-container">
       <div class="museum-container">
-        <div class="museum">
-          <a class="black-link" href="http://www.cmoa.org">
-            <img src="@asset('images/cmoa.png')" alt="Carnegie Museum of Art" />
-            <h4>Carnegie Museum of Art</h4>
-          </a>
-        </div>
-        <div class="museum">
-          <a class="black-link" href="http://www.carnegiemnh.org/">
-            <img src="@asset('images/cmnh.png')" alt="Carnegie Museum of Natural History" />
-            <h4>Carnegie Museum of Natural History</h4>
-          </a>
-        </div>
-        <div class="museum">
-          <a class="black-link" href="http://www.carnegiesciencecenter.org/">
-            <img src="@asset('images/csc.png')" alt="Carnegie Science Center" />
-            <h4>Carnegie Science Center</h4>
-          </a>
-        </div>
-        <div class="museum">
-          <a class="black-link" href="http://www.warhol.org/">
-            <img src="@asset('images/wm.png')" alt="Andy Warhol Museum" />
-            <h4>The Andy Warhol Museum</h4>
-          </a>
-        </div>
+        @php
+          if( have_rows('museum') ):
+            while ( have_rows('museum') ) : the_row();
+            $image = get_sub_field('museum_image');
+        @endphp
+          <div class="museum">
+            <a class="black-link" href="{{ the_sub_field('musuem_link') }}">
+              <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+              <h4>{{ the_sub_field('museum_name') }}</h4>
+            </a>
+          </div>
+        @php
+          endwhile; endif;
+        @endphp
       </div>
     </div>
 </div>

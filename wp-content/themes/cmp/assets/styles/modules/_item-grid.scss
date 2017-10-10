@@ -11,6 +11,13 @@
       flex-basis: 100%;
     }
 
+    a h3, a h4 {
+      color: $dark-gray;
+      &:hover {
+        color: $dark-color;
+      }
+    }
+
     h3 {
       font-family: $base-font-family;
       font-size: 1.5em;
@@ -33,7 +40,6 @@
       h3 {
         margin: 0;
         line-height: 1;
-        color: $dark-gray;
       }
     }
   }

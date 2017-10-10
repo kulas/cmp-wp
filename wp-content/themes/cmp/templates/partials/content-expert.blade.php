@@ -16,5 +16,6 @@
       <strong>Area of focus:</strong>
       <span class="expert__focus">{{ the_field('area_of_focus') }}</span>
     </p>
+    {{ the_content() }}
   </div>
 </div>

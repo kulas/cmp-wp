@@ -9,6 +9,7 @@ function specialties_list($atts) {
     'hide_empty' => true,
     'orderby' => 'name'
   ));
+
   $specialty_links = array_map(function($specialty) {
     return '<li><a href="'.get_term_link($specialty).'">'.$specialty->name.'</a></li>';
   }, $terms);

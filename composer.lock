@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "53a0cf0e8d13663edf1aa2d06641b775",
+    "content-hash": "06a1c9ff36db7df88090139242a5558e",
     "packages": [
         {
             "name": "composer/installers",
@@ -304,6 +304,26 @@
                 "wordpress wp bcrypt password"
             ],
             "time": "2016-03-01T16:27:06+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/accordion-shortcodes",
+            "version": "2.3.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/accordion-shortcodes/",
+                "reference": "tags/2.3.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/accordion-shortcodes.2.3.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/accordion-shortcodes/"
         },
         {
             "name": "wpackagist-plugin/add-category-to-pages",

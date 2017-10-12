@@ -1,0 +1,23 @@
+.accordion p:empty {
+  display: none;
+}
+
+.accordion-title {
+  @extend .tab__title;
+  display: block;
+  margin-bottom: 0;
+  font-size: 1em;
+  padding: 0.75rem 1rem;
+  background-color: $dark-gray;
+
+  &[aria-expanded="true"] {
+    border-top: 1px solid #fff;
+  }
+}
+
+.accordion-content {
+  padding: $small-spacing;
+  padding-bottom: $small-spacing / 2;
+  font-weight: 300;
+  border: 1px solid $medium-dark-gray;
+}

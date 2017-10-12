@@ -163,16 +163,31 @@ ul.tab-content {
 }
 
 .tab__title {
+  position: relative;
   display: none;
   width: 100%;
   margin-bottom: 0.25em;
-  padding: $small-spacing;
+  padding: $small-spacing $base-spacing;
   font-family: $base-font-family;
-  font-size: 1.335em;
+  font-size: 1.25em;
   background-color: $action-color;
   color: #fff;
   border: none;
   cursor: pointer;
+
+  &:after {
+    @include icon;
+    content: "\e901";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    font-size: 0.75em;
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  &[aria-expanded="true"]:after {
+    transform: translateY(-50%) rotate(180deg);
+  }
 
   @include grid-media($medium) {
     display: block;
@@ -221,4 +236,12 @@ ul.tab-content {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: $base-spacing;
+
+  @include grid-media($medium) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tabbed-content hr {
+  margin: $small-spacing * 1.5 0;
 }

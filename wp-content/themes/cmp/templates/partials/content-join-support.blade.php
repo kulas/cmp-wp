@@ -14,11 +14,14 @@
     $header_image = $row['image']; //gets full image array
     $header_image_url = $header_image['url']; //url of image
     $header_image_id = $header_image['id']; //id of image
-    $header_image_credit = get_media_credit_html($header_image_id); //media credit for image
+    $header_image_credit = get_media_credit_html($header_image_id, false); //media credit for image
   @endphp
 
   <div class="hero-header" role="img" aria-label="Carnegie Museums members sitting on a couch" style="background-image:url('{{ $header_image_url }}')">
-    <p class="media-credit">@php echo $header_image_credit; @endphp</p>
+    <div class="media-details">
+      <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
+      <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
+    </div>
   </div>
     <div class="content-container">
       <h1 class="hero-header__words-box">{{ the_title() }}</h1>

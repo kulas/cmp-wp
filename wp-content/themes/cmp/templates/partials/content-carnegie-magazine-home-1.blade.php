@@ -11,14 +11,14 @@
   $featured_image = get_field('featured_image'); //gets full image array
   $featured_image_url = $featured_image['url']; //url of image
   $featured_image_id = $featured_image['id']; //id of image
-  $featured_image_credit = get_media_credit_html($featured_image_id); //media credit for image
+  $featured_image_credit = get_media_credit_html($featured_image_id, false); //media credit for image
 @endphp
 
-<a href="{{ the_permalink() }}" class="" aria-label="{{ get_the_title($post_object) }}">
-  <div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})" ></div>
-</a>
-<div class="media-credit-container">
-  <p class="media-credit">@php echo $featured_image_credit; @endphp</p>
+<div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})" >
+  <div class="media-details">
+    <p class="media-details__caption">@php echo $featured_image['caption']; @endphp</p>
+    <p class="media-details__credit">@php echo $featured_image_credit; @endphp</p>
+  </div>
 </div>
 <div class="magazine-featured-articles">
   <div class="magazine-featured-articles__main">
@@ -63,7 +63,7 @@
             <h3 class="robot--bold">{{ the_title() }}</h3>
           </a>
           <p>{{ the_excerpt() }}</p>
-          <p class="author">By {{ the_field('author') }}</p>
+          <p class="author">{{ the_field('author') }}</p>
         </div>
 
           {{-- Resets postdata, checks to see if there are more posts in repeater, loops if there area --}}
@@ -172,6 +172,4 @@
 
         </div>
       </div>
-    </div>
-  </div>
-</div>
+

@@ -15,7 +15,7 @@
             $image = get_sub_field('museum_image');
         @endphp
           <div class="museum">
-            <a class="black-link" href="{{ the_sub_field('musuem_link') }}">
+            <a class="black-link" href="{{ the_sub_field('museum_link') }}">
               <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
               <h4>{{ the_sub_field('museum_name') }}</h4>
             </a>

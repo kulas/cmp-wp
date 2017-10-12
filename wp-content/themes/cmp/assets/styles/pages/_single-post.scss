@@ -102,7 +102,7 @@ article {
 
     img,
     p > img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
       padding-bottom: 0;
     }
@@ -127,6 +127,10 @@ article {
     img.alignright {
       padding: 0.5em 0 0.5em 0.5em;
       float: right;
+    }
+
+    img.alignnone {
+      padding: 0.5em 0;
     }
 
     blockquote {

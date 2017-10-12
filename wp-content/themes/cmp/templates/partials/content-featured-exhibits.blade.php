@@ -16,13 +16,16 @@
     $image = $exhibit['exhibit_image']; //gets full image array
     $image_url = $image['url']; //url of image
     $image_id = $image['id']; //id of image
-    $image_credit = get_media_credit_html($image_id); //media credit for image
+    $image_credit = get_media_credit_html($image_id, false); //media credit for image
   @endphp
 
     <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
 
       <div class="hero-header" role="img" style="background-image: url({{ $image_url }})" >
-        <p class="media-credit">@php echo $image_credit; @endphp</p>
+        <div class="media-details">
+          <p class="media-details__caption">@php echo $image['caption']; @endphp</p>
+          <p class="media-details__credit">@php echo $image_credit; @endphp</p>
+        </div>
       </div>
     </a>
       <div class='exhibit-container exhibit--hero'>

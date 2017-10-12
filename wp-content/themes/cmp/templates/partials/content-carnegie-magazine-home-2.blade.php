@@ -8,18 +8,21 @@
   $big_picture_image = get_field('big_picture_image'); //gets full image array
   $big_picture_image_url = $big_picture_image['url']; //url of image
   $big_picture_image_id = $big_picture_image['id']; //id of image
-  $big_picture_image_credit = get_media_credit_html($big_picture_image_id); //media credit for image
+  $big_picture_image_credit = get_media_credit_html($big_picture_image_id, false); //media credit for image
 @endphp
 
   <div class="carnegie-magazine-section-2">
-    <a href="{{ the_field('big_picture_link') }}" aria-label="{{get_field('big_picture_title')}}">
     <div class="carnegie-magazine__big-picture">
+      <a href="{{ the_field('big_picture_link') }}" aria-label="{{get_field('big_picture_title')}}">
         <div class="hero-header" role="img" style="background-image:url('{{ $big_picture_image_url }}')">
+          <div class="media-details">
+            <p class="media-details__caption">@php echo $big_picture_image['caption']; @endphp</p>
+            <p class="media-details__credit">@php echo $big_picture_image_credit; @endphp</p>
+          </div>
         </div>
-        <div class="content-container">
-            <h1 class="hero-header__words-box robot">{{ the_field('big_picture_title') }}</h1>
-            <p class="media-credit">@php echo $big_picture_image_credit; @endphp</p>
-          </a>
+      </a>
+      <div class="content-container">
+        <h1 class="hero-header__words-box robot">{{ the_field('big_picture_title') }}</h1>
         <p>{{ the_field('big_picture_text') }}</p>
         <hr />
       </div>
@@ -42,7 +45,7 @@
             <div class="facetime__left">
               <a href="{{ the_sub_field('link') }}">
                 <div class="face">
-                  <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }} />
+                  <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }}" />
                   <p class="facetime__left__name">{{ the_sub_field('name') }}</p>
                 </div>
               </a>

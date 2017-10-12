@@ -186,16 +186,16 @@ hr {
 }
 
 //Media credit for large hero images.
-.media-credit {
-  float: right;
+.media-details {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  margin: 3px 0;
   padding-bottom: 0;
-  padding-right: .5em;
   color: black;
   font-size: 0.7em;
-  font-weight: lighter;
-  width:100%;
-  position: absolute;
-  bottom: -2em;
   z-index: 1;
 
   > a {
@@ -203,7 +203,29 @@ hr {
   }
 
   @include grid-media($medium) {
-    display: none;
+    flex-wrap: wrap;
+  }
+}
+
+.media-details__caption {
+  font-weight: 400;
+
+  @include grid-media($medium) {
+    margin-bottom: 0;
+  }
+}
+
+.media-details__credit {
+  font-weight: lighter;
+  text-align: right;
+}
+
+.media-details__caption + .media-details__credit {
+  max-width: 40%;
+
+  @include grid-media($medium) {
+    max-width: none;
+    text-align: left;
   }
 }
 

@@ -89,13 +89,17 @@ img.alignright {
 }
 
 // All hrs.
-hr {
-  width:100%;
-  margin: .5em 0em;
-}
+// hr {
+//   width:100%;
+//   margin: .5em 0em;
+// }
 
 .content-wrapper {
   @include grid-collapse;
+}
+
+.content-wrapper hr {
+  margin: $small-spacing * 1.5 0;
 }
 
 // Main text paragraph

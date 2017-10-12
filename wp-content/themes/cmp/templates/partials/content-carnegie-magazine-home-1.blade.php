@@ -28,7 +28,7 @@
           <h1 class="robot--bold">{{ the_title() }}</h1>
         </a>
         <p class="main-article-content__excerpt">{{ the_excerpt() }}</p>
-        <p class="author">By {{ the_field('author') }}</p>
+        <p class="author">{{ the_field('author') }}</p>
 
         @php
           wp_reset_postdata(); //This resets the post object so the rest of the page works normally
@@ -102,7 +102,7 @@
           <h3>{{ the_title() }}</h3>
         </a>
         <p>{{ the_excerpt() }}</p>
-        <p class="author">By {{ the_field('author') }}</p>
+        <p class="author">{{ the_field('author') }}</p>
       </div>
 
       {{-- Resets postdata, checks to see if there are more posts in repeater, loops if there area --}}
@@ -153,7 +153,7 @@
                 <h4 class="robot--bold">{{ the_title() }}</h4>
               </a>
               <p>{{ the_excerpt() }}</p>
-              <p class="author">By {{ the_field('author') }}</p>
+              <p class="author">{{ the_field('author') }}</p>
             </div>
 
             {{-- Resets postdata, checks to see if there are more posts in repeater, loops if there area --}}

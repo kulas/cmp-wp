@@ -27,7 +27,7 @@
             <h3 class="green-robot-link">{{ the_title() }}</h3>
           </a>
           <p>{{ the_excerpt() }}</p>
-          <p class="author">By {{ the_field('author') }}</p>
+          <p class="author">{{ the_field('author') }}</p>
         </div>
 
         @php

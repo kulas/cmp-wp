@@ -7,7 +7,7 @@
 
 .section--primary {
   position: relative;
-  padding: $small-spacing 0;
+  padding: $small-spacing 0 $base-spacing 0;
   background:  $base-background-color;
   z-index: 99;
 

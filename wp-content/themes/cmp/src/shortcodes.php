@@ -21,6 +21,30 @@ function specialties_list($atts) {
 }
 
 /**
+ * Fixes empty <p> and <br> tags showing before and after shortcodes in the
+ * output content.
+ */
+function the_content_shortcode_fix($content) {
+  $array = array(
+      '<p>['    => '[',
+      ']</p>'   => ']',
+      ']<br />' => ']',
+      ']<br>'   => ']'
+  );
+  return strtr($content, $array);
+}
+add_filter('the_content', 'App\\the_content_shortcode_fix');
+
+function acf_content( $value, $post_id, $field )
+{
+    // run the_content filter on all textarea values
+    $value = apply_filters('the_content', $value);
+    return $value;
+}
+add_filter('acf/format_value/name=tab_copy', 'App\\acf_content', 10, 3);
+add_filter('acf/format_value/name=trip_copy', 'App\\acf_content', 10, 3);
+
+/**
  * Register shortcodes
  */
 function register_shortcodes() {

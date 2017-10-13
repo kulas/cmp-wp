@@ -183,6 +183,7 @@ ul.tab-content {
     right: 1em;
     font-size: 0.75em;
     transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.2s;
   }
 
   &[aria-expanded="true"]:after {

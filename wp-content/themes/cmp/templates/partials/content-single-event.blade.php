@@ -6,14 +6,14 @@
   the_post();
 @endphp
 
-<div class="basic-header single-event">
+<div class="no-header single-event">
   <div class="content-container">
-    <h2>{{ get_the_title() }}</h2>
-    <div class="event-container">
-      <div class="event__description">
+    <div class="content-wrapper">
+      <div class="l-long">
+        <h2>{{ get_the_title() }}</h2>
         {{ the_content() }}
       </div>
-      <div class="event__image">
+      <div class="l-short">
         {{ the_post_thumbnail() }}
       </div>
     </div>

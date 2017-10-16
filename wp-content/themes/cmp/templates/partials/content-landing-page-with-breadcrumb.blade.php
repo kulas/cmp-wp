@@ -22,43 +22,63 @@
   </div>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-    <div class="nav-breadcrumb">
-
-      @php
-        if (function_exists('bcn_display')) //The breadcrumb plugin
-          {
-              bcn_display();
-          }
-      @endphp
-
-    </div>
-    <hr class="breadcrumb-hr">
-      <div class="main-text">{{ the_content() }}</div>
-      <div class="spaces">
-
-      @php
-        if( have_rows('event_space') ):
-        while ( have_rows('event_space') ) : the_row(); // loops through sub-pages
-      @endphp
-
-        <div class="event-space">
-            <a href="{{ the_sub_field('link') }}">
-
-            <div class="event-space__image-container" role="img" style="background-image:url('{{ the_sub_field("image") }}')">
-
-              <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }}" />
-              <h2>{{ the_sub_field('name') }}</h2>
-            </div>
-          </a>
-          <p>{{ the_sub_field('description') }}</p>
-        </div>
+    <div class="breadcrumb-container">
+      <div class="nav-breadcrumb">
 
         @php
-          endwhile; else : endif; // end sub-page loop
+          if (function_exists('bcn_display')) //The breadcrumb plugin
+            {
+                bcn_display();
+            }
         @endphp
 
       </div>
     </div>
+
+    <div class="content-wrapper">
+      <div class="l-long">
+        {{ the_content() }}
+      </div>
+      <div class="l-short">
+        @php
+          if( have_rows('sidebar_content') ):
+          while( have_rows('sidebar_content') ):
+          the_row();
+        @endphp
+        <h3>{{ the_sub_field('heading') }}</h3>
+        {{ the_sub_field('text') }}
+        @php
+          endwhile; endif;
+        @endphp
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <div class="content-container item-grid">
+
+    @php
+      if( have_rows('event_space') ):
+      while ( have_rows('event_space') ) : the_row(); // loops through sub-pages
+    @endphp
+
+      <div class="activity">
+        <a href="{{ the_sub_field('link') }}">
+          <div class="activity__image" role="img" aria-label="{{ the_sub_field('name') }}" style="background-image:url('{{ the_sub_field('image') }}')">
+            <div class="activity__title">
+              <h3>{{ the_sub_field('name') }}</h3>
+            </div>
+          </div>
+        </a>
+        {{ the_sub_field('description') }}
+      </div>
+
+      @php
+        endwhile; else : endif; // end sub-page loop
+      @endphp
+
+    </div>
+  </div>
 
   @php
     endwhile; else : endif;

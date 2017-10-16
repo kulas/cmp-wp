@@ -8,9 +8,7 @@
   }
 
   .activity__image {
-    flex-basis: 33%;
-    max-height: 200px;
-    height: 100%;
+    flex-basis: 50%;
     margin-right: $small-spacing;
     overflow: hidden;
     object-fit: fill;
@@ -24,7 +22,6 @@
   }
 
   .activity__content {
-    // flex-basis: 66%;
     @include grid-media($medium) {
       flex-basis: 100%;
     }

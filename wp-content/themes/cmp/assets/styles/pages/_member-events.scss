@@ -5,15 +5,22 @@
     display: flex;
     align-items: flex-start;
     padding: $small-spacing 0;
+
+    @include grid-media($medium) {
+      flex-wrap: wrap;
+    }
   }
 
   .activity__image {
-    flex-basis: 50%;
+    flex-basis: 33%;
     margin-right: $small-spacing;
     overflow: hidden;
     object-fit: fill;
+
     @include grid-media($medium) {
-      display: none;
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: $small-spacing / 2;
     }
   }
 
@@ -22,6 +29,8 @@
   }
 
   .activity__content {
+    flex-basis: 66%;
+
     @include grid-media($medium) {
       flex-basis: 100%;
     }

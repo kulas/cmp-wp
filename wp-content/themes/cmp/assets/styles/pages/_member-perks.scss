@@ -1,6 +1,8 @@
 // Second section on all Membership & Donation inside pages, with 4 links to other membership/donation pages.
 
 .member-perks {
+  padding-bottom: $small-spacing;
+
   .sub-page-container {
     display: flex;
     justify-content: space-between;

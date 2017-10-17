@@ -24,6 +24,10 @@ ul {
   }
 }
 
+main li:not(.tab) {
+  margin-bottom: $small-spacing / 2;
+}
+
 
 dl {
   margin-bottom: $base-spacing / 2;

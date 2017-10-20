@@ -1,14 +1,6 @@
 // Big Picture & Magazine Signup on Current Issue page
 
 .carnegie-magazine__big-picture {
-  .content-container {
-    padding: 0 3em;
-
-    @include grid-media($medium) {
-      padding: 0 1em;
-    }
-  }
-
   .media-credit {
     max-width: 20%;
     position: relative;
@@ -18,8 +10,6 @@
 }
 
 h1.hero-header__words-box.green-robot-link {
-  padding-left: 0.7em;
-
   @include grid-media($medium) {
     padding: 0;
     margin: 0 0 $small-spacing 0;

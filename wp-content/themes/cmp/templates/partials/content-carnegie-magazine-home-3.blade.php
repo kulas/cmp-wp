@@ -23,7 +23,11 @@
       </a>
       <div class="content-container">
         <h1 class="hero-header__words-box robot">{{ the_field('inside_museums_title') }}</h1>
-        <p class="inside-museums-text">{{ the_field('inside_museums_text') }}</p>
+        <div class="content-wrapper">
+          <div class="l-long">
+            <p class="inside-museums-text">{{ the_field('inside_museums_text') }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

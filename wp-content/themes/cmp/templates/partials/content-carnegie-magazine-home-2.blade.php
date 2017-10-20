@@ -23,7 +23,11 @@
       </a>
       <div class="content-container">
         <h1 class="hero-header__words-box robot">{{ the_field('big_picture_title') }}</h1>
-        <p>{{ the_field('big_picture_text') }}</p>
+        <div class="content-wrapper">
+          <div class="l-long">
+            <p>{{ the_field('big_picture_text') }}</p>
+          </div>
+        </div>
         <hr />
       </div>
     </div>
@@ -89,6 +93,7 @@
 
         </div>
         <p class="facetime__text">{{ the_field('facetime_text') }}</p>
+        <hr />
       </div>
     </div>
   </div>

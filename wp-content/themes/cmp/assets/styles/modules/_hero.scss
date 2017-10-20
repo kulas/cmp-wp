@@ -1,8 +1,6 @@
 .hero-header {
     height: 500px;
-    width:100%;
-    max-width: 1136px;
-    margin: auto;
+    margin: auto $base-spacing;
     margin-bottom:10px;
     background-size:cover;
     background-position: center center;
@@ -15,6 +13,8 @@
     }
     @include grid-media($large) {
       height: 300px;
+      margin-left: auto;
+      margin-right: auto;
     }
     @include grid-media($medium) {
       height: 200px;
@@ -30,11 +30,15 @@
   // display: inline-block;
   max-width: 100%;
   margin-top: -1.5em;
-  padding: .3em .7em .3em 0;
+  padding: .3em .7em;
   font-size: 2em;
   margin-bottom:0;
 
   @include grid-media($extra-large) {
+    padding-left: 0;
+  }
+
+  @include grid-media($large) {
     padding-left: .7em;
   }
 

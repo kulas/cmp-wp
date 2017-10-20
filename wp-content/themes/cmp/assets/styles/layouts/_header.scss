@@ -81,8 +81,13 @@
     border-radius:0;
     background-color: $nav-dropdown;
     font-weight: bold;
+    transition: background-color 0.2s;
     @include grid-media($nav-break) {
       display: none;
+    }
+
+    &:hover {
+      background-color: $dark-color;
     }
   }
 

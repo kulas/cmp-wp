@@ -167,6 +167,6 @@ export default {
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
-    $('a').not(`[href*="${window.location.host}"]`).attr('target', '_blank');
+    $('a[href^="http"]').not(`[href*="${window.location.host}"]`).attr('target', '_blank');
   },
 };

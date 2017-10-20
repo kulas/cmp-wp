@@ -9,6 +9,7 @@
     margin-bottom: $small-spacing;
     overflow: hidden;
     @include grid-media($medium) {
+      margin-bottom: $base-spacing;
     }
   }
 

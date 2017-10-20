@@ -17,6 +17,10 @@
     overflow: hidden;
     object-fit: fill;
 
+    &.leader {
+      flex-basis: 20%;
+    }
+
     @include grid-media($medium) {
       flex-basis: 100%;
       margin-right: 0;

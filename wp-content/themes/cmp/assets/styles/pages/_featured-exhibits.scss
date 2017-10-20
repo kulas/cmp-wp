@@ -21,16 +21,11 @@
   width: 48%;
   margin-bottom: $base-spacing;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-
   @include grid-media($medium) {
     width: 100%;
-    margin-bottom: $medium-spacing;
 
-    &.last-child {
-      margin-bottom: $base-spacing;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

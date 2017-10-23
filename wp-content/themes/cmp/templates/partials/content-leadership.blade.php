@@ -41,7 +41,7 @@
           the_row();
         @endphp
           <div class="event">
-            <div class="activity__image">
+            <div class="activity__image leader">
               <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }}" />
             </div>
             <div class="activity__content">

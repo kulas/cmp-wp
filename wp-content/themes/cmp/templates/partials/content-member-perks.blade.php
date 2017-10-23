@@ -15,12 +15,12 @@
       @endphp
 
       <div class="sub-page">
-        <a href="{{ the_sub_field('link') }}">
+        <a class="sub-page__image-link" href="{{ the_sub_field('link') }}">
           <img class="sub-page__image" src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('title') }}">
-          <div class="sub-page__text-box">
-            <h3>{{ the_sub_field('title') }}</h3>
-          </div>
         </a>
+        <div class="sub-page__text-box">
+          <h3><a href="{{ the_sub_field('link') }}">{{ the_sub_field('title') }}</a></h3>
+        </div>
       </div>
 
       @php

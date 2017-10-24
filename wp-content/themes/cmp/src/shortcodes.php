@@ -20,6 +20,24 @@ function specialties_list($atts) {
   return $output;
 }
 
+function museums_list($atts) {
+  $terms = get_terms( array(
+    'post_type' => 'expert',
+    'taxonomy' => 'museums',
+    'hide_empty' => true,
+    'orderby' => 'name'
+  ));
+
+  $museum_links = array_map(function($museum) {
+    return '<li><a href="'.get_term_link($museum).'">'.$museum->name.'</a></li>';
+  }, $terms);
+
+  $output = "<ul>";
+  $output .= implode("", $museum_links);
+  $output .= "</ul>";
+  return $output;
+}
+
 /**
  * Fixes empty <p> and <br> tags showing before and after shortcodes in the
  * output content.
@@ -49,6 +67,7 @@ add_filter('acf/format_value/name=trip_copy', 'App\\acf_content', 10, 3);
  */
 function register_shortcodes() {
   add_shortcode('specialties_list', 'App\\specialties_list');
+  add_shortcode('museums_list', 'App\\museums_list');
 }
 add_action('init', 'App\\register_shortcodes');
 

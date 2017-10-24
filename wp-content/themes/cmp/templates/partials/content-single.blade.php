@@ -1,38 +1,37 @@
 {{-- Oh boy, this is the template for a single Carnegie Magazine article AKA blog post. Sorry. --}}
 
-<article @php(post_class())>
 
-  @php
+@php
 
-    $header_image = get_field('featured_image'); //gets full image array
-    $header_image_url = $header_image['url']; //url of image
-    $header_image_id = $header_image['id']; //id of image
-    $header_image_credit = get_media_credit_html($header_image_id, false); //media credit for image
+  $header_image = get_field('featured_image'); //gets full image array
+  $header_image_url = $header_image['url']; //url of image
+  $header_image_id = $header_image['id']; //id of image
+  $header_image_credit = get_media_credit_html($header_image_id, false); //media credit for image
 
-  @endphp
+@endphp
 
-  <header>
+@php
+  if ($header_image != null):
+@endphp
 
-    @php
-      if ($header_image != null):
-    @endphp
+  <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')">
+    <div class="media-details">
+      <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
+      <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
+    </div>
+  </div>
 
-      <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')">
-        <div class="media-details">
-          <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
-          <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
-        </div>
-      </div>
+@php
+  else:
+@endphp
 
-    @php
-      else:
-    @endphp
+  <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}'); height:50px;"></div>
 
-      <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}'); height:50px;"></div>
+@php
+  endif
+@endphp
 
-    @php
-      endif
-    @endphp
+  <article @php(post_class())>
 
     <div class="title-box">
       <h1 class="entry-title">{{ get_the_title() }}</h1>
@@ -45,7 +44,6 @@
         endif
       @endphp
     </div>
-  </header>
   <div class="entry-content">
     <hr>
 

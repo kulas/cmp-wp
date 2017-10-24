@@ -67,10 +67,13 @@
   display: flex;
   justify-content: space-between;
 
-  form.wpcf7-form {
-      padding: 0 !important;
-      margin: 0;
+  form {
+    padding: 0 !important;
+    margin: 0;
+    p {
+      display: flex;
     }
+  }
 
   a.green-button {
     margin-right:5px;
@@ -96,10 +99,6 @@
   }
 }
 
-#wpcf7-f128-o1 p {
-  display: flex;
-}
-
 .top-bar__form {
   position: relative;
   display: flex;
@@ -116,7 +115,7 @@
     margin-right: 5px;
   }
 
-  input.wpcf7-form-control.wpcf7-text.wpcf7-email.wpcf7-validates-as-email {
+  input[type="email"] {
     margin: 0 !important;
     padding: .5em;
     border: 0;
@@ -128,7 +127,7 @@
     width:200px;
   }
 
-  input.wpcf7-form-control.wpcf7-submit {
+  input[type="submit"] {
     @extend .green-button;
     position: relative;
     border-radius:0;

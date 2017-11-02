@@ -19,31 +19,33 @@
     $image_credit = get_media_credit_html($image_id, false); //media credit for image
   @endphp
 
-    <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
+    <div class="hero-header" role="img">
+      <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
+        <img src="{{ $image_url }}" alt="{{ $image['alt'] }}" />
+      </a>
+    </div>
 
-      <div class="hero-header" role="img" style="background-image: url({{ $image_url }})" >
-        <div class="media-details">
-          <p class="media-details__caption">@php echo $image['caption']; @endphp</p>
-          <p class="media-details__credit">@php echo $image_credit; @endphp</p>
+    <div class="media-details">
+      <p class="media-details__caption">{{ $image['caption'] }}</p>
+      <p class="media-details__credit">{{ $image_credit }}</p>
+    </div>
+  
+    <div class='exhibit-container exhibit--hero'>
+      <div class="exhibit__preview">
+        <div class="exhibit-preview__summary">
+          <h2 class="hero-header__words-box button--link">
+            <a href="{{ $exhibit['link'] }}" aria-label="{{ $exhibit['title'] }}">
+              {{ $exhibit['title'] }}
+            </a>
+          </h2>
+          <div class="exhibit-preview__dates">
+              <p class="start-date">{{ $exhibit['dates'] }}</p>
+          </div>
+          <p class="exhibit-preview__summary-text">
+            {{ $exhibit['summary'] }}
+          </p>
         </div>
       </div>
-    </a>
-      <div class='exhibit-container exhibit--hero'>
-        <div class="exhibit__preview">
-          <div class="exhibit-preview__summary">
-            <h2 class="hero-header__words-box button--link">
-              <a href="{{ $exhibit['link'] }}" aria-label="{{ $exhibit['title'] }}">
-                {{ $exhibit['title'] }}
-              </a>
-            </h2>
-            <div class="exhibit-preview__dates">
-                <p class="start-date">{{ $exhibit['dates'] }}</p>
-            </div>
-            <p class="exhibit-preview__summary-text">
-              {{ $exhibit['summary'] }}
-            </p>
-          </div>
-        </div>
     </div>
 
     @php

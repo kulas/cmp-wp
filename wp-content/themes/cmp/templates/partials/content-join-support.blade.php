@@ -18,69 +18,63 @@
   @endphp
 
   <div class="hero-header" role="img" aria-label="Carnegie Museums members sitting on a couch" style="background-image:url('{{ $header_image_url }}')">
-    <div class="media-details">
-      <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
-      <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
-    </div>
   </div>
-    <div class="content-container">
-      <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-      <div class="content-wrapper">
-        <div class="l-long">
-          {{ the_content() }}
-        </div>
-        <div class="l-short">
-          @php
-            if( have_rows('sidebar_content') ):
-            while( have_rows('sidebar_content') ):
-            the_row();
-          @endphp
-          <h3>{{ the_sub_field('heading') }}</h3>
-          {{ the_sub_field('text') }}
-          @php
-            endwhile; endif;
-          @endphp
-        </div>
+  <div class="media-details">
+    <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
+    <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
+  </div>
+  <div class="content-container">
+    <h1 class="hero-header__words-box">{{ the_title() }}</h1>
+    <div class="content-wrapper">
+      <div class="l-long">
+        {{ the_content() }}
       </div>
-
-      <hr>
-
-        <div class="sub-pages">
-
-          @php
-            $i = 1; // part of image shuffling mechanism
-
-            if( have_rows('sub-pages') ):
-            while ( have_rows('sub-pages') ) :
-            the_row()
-          @endphp
-
-            <div class="sub-page">
-
-
-              <a href="{{ the_sub_field('link') }}">
-                <div class="sub-page__background" role="img" style="background-image:url('{{ $rows[$i]['image']['url'] }}'">
-
-                  <div class="sub-page__title">
-                      <h3>{{ the_sub_field('title') }}</h3>
-                  </div>
-                  {{-- <h4 class="sub-page__quote">"{{ $rows[$i]['quote'] }}"</h4> --}}
-                </div>
-              </a>
-              {{ the_sub_field('description') }}
-            </div>
-
+      <div class="l-short">
         @php
-          $i = $i+1;
-          endwhile; else : endif;
+          if( have_rows('sidebar_content') ):
+          while( have_rows('sidebar_content') ):
+          the_row();
         @endphp
-
+        <h3>{{ the_sub_field('heading') }}</h3>
+        {{ the_sub_field('text') }}
+        @php
+          endwhile; endif;
+        @endphp
       </div>
     </div>
+    <hr>
+  </div>
 
-  @php
-    $i = $i+1;
-    endwhile; else : endif;
-  @endphp
+  <div class="content-container item-grid">
+
+    @php
+      $i = 1; // part of image shuffling mechanism
+
+      if( have_rows('sub-pages') ):
+      while ( have_rows('sub-pages') ) :
+      the_row()
+    @endphp
+
+      <div class="activity">
+        <a href="{{ the_sub_field('link') }}">
+          <div class="activity__image" role="img" aria-label="{{ the_sub_field('title') }}" style="background-image:url('{{ $rows[$i]['image']['url'] }}')">
+            <div class="activity__title">
+              <h3>{{ the_sub_field('title') }}</h3>
+            </div>
+          </div>
+        </a>
+        {{ the_sub_field('description') }}
+      </div>
+
+    @php
+      $i = $i+1;
+      endwhile; else : endif;
+    @endphp
+
+  </div>
+
+@php
+  endwhile; else : endif;
+@endphp
 
 </div>

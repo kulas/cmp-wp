@@ -15,10 +15,10 @@
 @endphp
 
   <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')">
-    <div class="media-details">
-      <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
-      <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
-    </div>
+  </div>
+  <div class="media-details">
+    <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
+    <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
   </div>
 
 @php

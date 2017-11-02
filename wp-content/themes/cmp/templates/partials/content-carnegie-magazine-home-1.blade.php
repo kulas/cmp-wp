@@ -14,11 +14,11 @@
   $featured_image_credit = get_media_credit_html($featured_image_id, false); //media credit for image
 @endphp
 
-<div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})" >
-  <div class="media-details">
-    <p class="media-details__caption">@php echo $featured_image['caption']; @endphp</p>
-    <p class="media-details__credit">@php echo $featured_image_credit; @endphp</p>
-  </div>
+<div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})">
+</div>
+<div class="media-details">
+  <p class="media-details__caption">{{ $featured_image['caption'] }}</p>
+  <p class="media-details__credit">{{ $featured_image_credit }}</p>
 </div>
 <div class="magazine-featured-articles">
   <div class="magazine-featured-articles__main">

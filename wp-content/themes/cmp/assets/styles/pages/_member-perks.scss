@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE Fix
       min-width:100%;
@@ -39,7 +40,7 @@
     object-fit: cover;
   }
 
-  .contact-us {
+  div.contact-us {
     padding-bottom: $base-spacing;
   }
 
@@ -49,7 +50,7 @@
   }
 }
 
-.contact-us {
+div.contact-us {
   margin-top: $small-spacing;
   margin-bottom: $base-spacing;
 }

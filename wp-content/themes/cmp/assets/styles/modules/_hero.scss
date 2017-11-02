@@ -7,6 +7,7 @@
     // z-index:1002;
     position: relative;
     // top: -1px;
+    overflow: hidden;
 
     @include grid-media($extra-large) {
       height:400px;
@@ -22,6 +23,12 @@
     @include grid-media($small) {
       height: 200px;
     }
+
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); // vertically align?
+    }
 }
 
 .hero-header__words-box {
@@ -29,25 +36,11 @@
   background: #fff;
   // display: inline-block;
   max-width: 100%;
-  margin-top: -1.5em;
-  padding: .3em .7em;
   font-size: 2em;
-  margin-bottom:0;
-
-  @include grid-media($extra-large) {
-    padding-left: 0;
-  }
-
-  @include grid-media($large) {
-    padding-left: .7em;
-  }
 
   @include grid-media($medium) {
     max-width: 100%;
     font-size: 1.25em;
-    margin-top: -1.25em;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   + .text-box {
@@ -58,6 +51,8 @@
 h1.hero-header__words-box {
   font-size: 3em;
   font-weight: 400;
+  margin-top: $small-spacing / 2;
+  margin-bottom: $small-spacing / 2;
 
   @include grid-media($large) {
     font-size: 2.5em;
@@ -66,12 +61,12 @@ h1.hero-header__words-box {
   @include grid-media($medium) {
     font-size: 2em;
     width: 100%;
-    margin: 0;
+    margin-bottom: 0;
     margin-bottom: 0.25em;
   }
 
   @include grid-media($small) {
-    font-size: 1.75em;
+    // font-size: 1.75em;
     padding-bottom: 0;
   }
 }

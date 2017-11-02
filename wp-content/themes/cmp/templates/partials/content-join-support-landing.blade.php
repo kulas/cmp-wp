@@ -21,10 +21,10 @@
   @endphp
 
   <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $header_image_url }}')">
-    <div class="media-details">
-      <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
-      <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
-    </div>
+  </div>
+  <div class="media-details">
+    <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
+    <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
   </div>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>

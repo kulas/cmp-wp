@@ -193,10 +193,8 @@ img.alignright {
 .media-details {
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 100%;
   width: 100%;
-  margin: 3px 0;
+  padding: 0 $base-spacing;
   padding-bottom: 0;
   color: black;
   font-size: 0.7em;
@@ -208,7 +206,12 @@ img.alignright {
 
   @include grid-media($medium) {
     flex-wrap: wrap;
+    padding: 0 $small-spacing;
   }
+}
+
+.media-details__caption, .media-details__credit {
+  margin-bottom: 8px;
 }
 
 .media-details__caption {
@@ -216,6 +219,10 @@ img.alignright {
 
   @include grid-media($medium) {
     margin-bottom: 0;
+  }
+
+  &:empty + .media-details__credit:empty {
+    display: none;
   }
 }
 
@@ -225,11 +232,13 @@ img.alignright {
 }
 
 .media-details__caption + .media-details__credit {
-  max-width: 40%;
+  margin-left: $base-spacing;
 
   @include grid-media($medium) {
     max-width: none;
     text-align: left;
+    margin-top: $small-spacing / 2;
+    margin-left: 0;
   }
 }
 

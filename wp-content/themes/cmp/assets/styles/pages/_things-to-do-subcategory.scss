@@ -3,9 +3,9 @@
 .things-to-do-subcategory {
 
   .large-title {
-    @include grid-media($medium) {
-      padding: 0 1em 1em;
-    }
+    // @include grid-media($medium) {
+    //   padding: 0 1em 1em;
+    // }
 
     h1 {
       font-size: 4em;
@@ -14,13 +14,6 @@
       @include grid-media($medium) {
         font-size: 3em;
       }
-    }
-  }
-
-  hr {
-    @include grid-media($medium) {
-      width: 95%;
-      margin: auto;
     }
   }
 
@@ -77,4 +70,8 @@
 .large-title {
   margin-top: $small-spacing * 1.5;
   margin-bottom: $small-spacing / 2;
+
+  @include grid-media($medium) {
+    margin-bottom: 0;
+  }
 }

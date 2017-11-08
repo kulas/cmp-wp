@@ -1,93 +1,96 @@
 {{-- Featured Articles section of the homepage --}}
 
-<div id="featured-articles" class="section--primary">
-  <div class="section-hr">
-    <hr>
-    <div class="section-hr__h5">
-      <h5>Carnegie Magazine</h5>
-    </div>
-  </div>
-
-  @php
-    global $post;
-    $post_object = get_field('main_featured_article'); // Gets main featured article custom field post object.
-    if( $post_object ):
-    $post = $post_object;
-    setup_postdata( $post );
-
-    $featured_image = get_field('featured_image'); //gets full image array
-    $featured_image_url = $featured_image['url']; //url of image
-    $featured_image_id = $featured_image['id']; //id of image
-    $featured_image_credit = get_media_credit_html($featured_image_id, false); //media credit for image
-  @endphp
-
-
-
-  <a href="{{ the_permalink() }}" aria-label="{{ the_title() }}">
-
-    <div class="hero-header" role="img" style="background-image: url('{{ $featured_image_url }}')" ></div>
-
-
-  </a>
-
-  <div class="content-container">
-    <h1 class="hero-header__words-box">{{ the_title() }}</h2>
-    <div class="words-box">
-      <h3 class="article__author">{{ the_field('author') }}</h3>
-      <h2 class="article__quote">{{ the_field('quote') }}</h2>
-      <h3 class="article__summary">
-
-        @php
-          $excerpt = get_the_excerpt();
-          $output = '<p>'.$excerpt.' <a href="'.get_permalink().'">Read Article ></a></p>'; // This allows the read article link on mobile can be inline with the description.
-          echo $output;
-        @endphp
-
-      </h3>
-      <a id="article__button" class="green-button" href="{{ the_permalink() }}">Read More</a>
-    </div>
-
-    @php
-      wp_reset_postdata(); // Resets data from main featured article post object
-      endif;
-    @endphp
-  </div>
-
-  <div class="articles__featured content-container">
-    <h5 class="uppercase-robot featured-articles-title">Featured Stories</h5>
-    <div class="article-container">
-
-    @php
-      if( have_rows('featured_articles') ):
-      while ( have_rows('featured_articles') ) : the_row(); // Gets featured article post objects; loops through featured posts repeater
-      $post_object = get_sub_field('article');
-      if( $post_object ):
-      $post = $post_object; setup_postdata( $post );
-    @endphp
-
-      <div class="article">
-        <img src="{{ the_field('square_image') }}" alt="{{ the_title() }} ">
-        <div class="article__text-box">
-          <a class="black-link" href="{{ the_permalink() }}"><h6 class="uppercase-robot">{{ the_title() }}</h6></a>
-          <p>{{ the_field('summary') }}</p>
-        </div>
+<div id="featured-articles">
+  <div class="section--primary">
+    <div class="section-hr">
+      <hr>
+      <div class="section-hr__h5">
+        <h5>Carnegie Magazine</h5>
       </div>
+    </div>
 
-      @php // Resets postdata and continues looping through the featured articles repeater.
-        wp_reset_postdata();
+    @php
+      if( have_rows('home_featured_articles') ):
+      while ( have_rows('home_featured_articles') ) : the_row();
+    @endphp
+
+      @php
+        if( get_row_layout() == 'main_feature'):
+
+        $featured_image = get_sub_field('hero_image'); //gets full image array
+        $featured_image_url = $featured_image['url']; //url of image
+        $featured_image_id = $featured_image['id']; //id of image
+        $featured_image_credit = get_media_credit_html($featured_image_id, false); //media credit for image
+
+        $article = get_sub_field('article');
+      @endphp
+
+        <a href="{{ get_permalink($article) }}" aria-label="{{ get_sub_field('title') }}">
+          <div class="hero-header" role="img" style="background-image: url('{{ $featured_image_url }}')" ></div>
+        </a>
+
+        <div class="content-container">
+          <h1 class="hero-header__words-box"><a href="{{ get_permalink($article) }}" class="black-link">{{ get_sub_field('title') }}</a></h1>
+        </div>
+
+        <div class="content-container">
+          <div class="words-box">
+            <h3 class="article__author">{{ the_sub_field('by_line') }}</h3>
+            <h3 class="article__summary">
+              {{ the_sub_field('lead_text') }}
+            </h3>
+            <a id="article__button" class="green-button" href="{{ get_permalink($article) }}">Read Article</a>
+          </div>
+        </div>
+      @php
         endif;
         endwhile;
         endif;
       @endphp
+  </div>
 
-      <div class="article">
-        <img src="@asset('images/carnegie-magazine.png')" alt="Carnegie Magazine" />
-        <div class="article__text-box">
-          <h6 class="uppercase-robot"><a href="/carnegie-magazine/" class="black-link">Get the Whole Scoop</a></h6>
-          <p>Check out all the latest stories from CARNEGIE magazine and visit our archives.</p>
-          <a class="green-button" href="/carnegie-magazine/" role="link">Read More Articles</a>
+  @php
+    if( have_rows('home_featured_articles') ):
+  @endphp
+  <div class="section--primary">
+    <div class="articles__featured">
+      <div class="section-hr">
+        <hr>
+        <div class="section-hr__h5">
+          <h5>Featured Stories</h5>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="article-container">
+    
+          @php
+            while ( have_rows('home_featured_articles') ) : the_row();
+            if( get_row_layout() == 'featured_story'):
+
+            $image = get_sub_field('image');
+            $article = get_sub_field('article');
+          @endphp
+
+            <div class="article">
+              <div class="img">
+                <a href="{{ get_permalink($article) }}"><img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" /></a>
+              </div>
+              <div class="article__text-box">
+                <h4><a class="black-link" href="{{ get_permalink($article) }}">{{ get_sub_field('title') }}</a></h4>
+                {{ the_sub_field('lead_text') }}
+              </div>
+            </div>
+
+          @php
+            endif;
+            endwhile;
+          @endphp
         </div>
       </div>
     </div>
   </div>
+  @php
+    endif;
+  @endphp
 </div>

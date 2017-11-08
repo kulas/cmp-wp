@@ -1,7 +1,17 @@
 // This is the Featured Articles section on the homepage, under 'Carnegie Magazine'
 
 #featured-articles {
+  margin-bottom: $small-spacing;
+
+  @include grid-media($medium) {
+    margin-bottom: $base-spacing;
+  }
+
   .articles__featured {
+
+    @include grid-media($medium) {
+      display: none;
+    }
     // margin-top: $base-spacing;
     // margin-bottom: $base-spacing;
   }
@@ -26,27 +36,22 @@
    }
   }
 
-  .article__author,
-  .article__summary,
-  .readmore-link {
-    display: none;
+  #article__button {
     @include grid-media($medium) {
       display: block;
-    }
-  }
-  @include grid-media($medium) {
-    #article__button,
-    .article__quote {
-      display: none;
+      width: 100%;
     }
   }
 
   .article__title {
-    text-align: center;
     font-weight: 300;
     margin-top: 0.5em;
     margin-bottom: 0;
     padding: 0;
+
+    @include grid-media($medium) {
+      text-align: center;
+    }
   }
 
   h1.hero-header__words-box {
@@ -57,22 +62,24 @@
   }
 
   .article__author {
-    text-align: center;
     font-size: 1em;
-    font-weight: bold;
-    margin: 0;
+    margin: 0 0 $small-spacing 0;
     padding: 0;
     font-style: italic;
     color: #7a7a7a;
+
+    @include grid-media($medium)  {
+      text-align: center;
+    }
   }
 
   .article__summary {
-    padding: 1em 1em 0;
     font-family: sans-serif;
     font-size: 1em;
     font-weight: 300;
+
     @include grid-media($medium)  {
-      margin-bottom: $base-spacing;
+      text-align: center;
     }
 
     a {
@@ -130,20 +137,26 @@
       display: none;
     }
 
-    img {
-      height: 100px;
-      width: 100px;
+    .img {
+      max-height: 150px;
+      width: 25%;
       margin-right: 1em;
+      overflow: hidden;
+
+      img {
+        // position: relative;
+        // top: 50%;
+        // transform: translateY(-50%);
+      }
     }
 
     .article__text-box {
-
+      width: 75%;
       h4 {
+        margin-bottom: $small-spacing / 2;
         font-family: 'Roboto';
         text-transform: uppercase;
-        font-size: 1.3em;
-        padding: 0;
-        margin: 0;
+        font-size: 1em;
         font-weight: 400;
       }
 

@@ -189,7 +189,7 @@ ul.top-bar-nav {
   button {
     position: relative;
     height: 100%;
-    padding: 1em $small-spacing;
+    padding: $small-spacing $small-spacing $small-spacing / 2 $small-spacing;
     background: none;
     color: $dark-gray;
     font-weight: 800;
@@ -208,19 +208,21 @@ ul.top-bar-nav {
   display: flex;
   justify-content: flex-end;
   width: 100px;
+
+  button {
+    border-radius: 0;
+  }
 }
 
 button.nav-icon.nav-icon-search.quickview-btn {
   @include grid-media($nav-break) {
     background: gray;
-    padding: $small-spacing;
   }
 }
 
 button.nav-icon.nav-icon-hamburger.quickview-btn {
   @include grid-media($nav-break) {
     background: $base-color;
-    padding: $small-spacing;
   }
 }
 
@@ -832,6 +834,8 @@ a.quickview-btn.nav-visit {
     flex: 0 1 20%;
     background: $base-color;
     font-size: 1em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     &:hover, &:focus {
       background: $dark-color;
     }

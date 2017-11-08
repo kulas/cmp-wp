@@ -6,7 +6,7 @@
         <form name="survey_11603" id="survey_11603" method="POST" action="http://members.carnegiemuseums.org/site/Survey">
           <p>
             <input type="email" name="cons_email" id="cons_email" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" />
-            <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" id="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="Button" />
+            <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" id="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button" />
             <input type="hidden" name="cons_info_component" id="cons_info_component" value="t" />
             <input type="hidden" name="SURVEY_ID" id="SURVEY_ID" value="11603" />
             <input type="hidden" name="USER_HAS_TAKEN" id="USER_HAS_TAKEN" value="null" />

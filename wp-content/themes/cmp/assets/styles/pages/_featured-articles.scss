@@ -7,6 +7,12 @@
     margin-bottom: $base-spacing;
   }
 
+  .media-details {
+    p:empty {
+      display: none;
+    }
+  }
+
   .articles__featured {
 
     @include grid-media($medium) {

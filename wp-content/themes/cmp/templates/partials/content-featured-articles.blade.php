@@ -29,6 +29,11 @@
           <div class="hero-header" role="img" style="background-image: url('{{ $featured_image_url }}')" ></div>
         </a>
 
+        <div class="media-details">
+          <p class="media-details__caption">{{ $featured_image['caption'] }}</p>
+          <p class="media-details__credit">{{ $featured_image_credit }}</p>
+        </div>
+
         <div class="content-container">
           <h1 class="hero-header__words-box"><a href="{{ get_permalink($article) }}" class="black-link">{{ get_sub_field('title') }}</a></h1>
         </div>

@@ -31,7 +31,7 @@ export default {
     $('.quickview-btn').removeClass('is-deactivated');
     quickviewBtn.attr("aria-expanded","true");
     $('.quickview').not( $(quickviewTarget) ).removeClass('is-active');
-    $(quickviewTarget).addClass('is-active');
+    $(quickviewTarget).addClass('is-active').find('input:first').focus();
     quickviewState = quickviewTarget;
     // ga('send', 'event', quickviewTarget, 'open', 'navigation');
     // ga('unified.send', 'event', quickviewTarget, 'open', 'navigation');

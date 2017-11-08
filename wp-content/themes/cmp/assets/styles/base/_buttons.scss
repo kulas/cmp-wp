@@ -9,7 +9,7 @@
   background-color: $action-color;
   border: 1px solid  $action-color;
   border-radius: $base-border-radius;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
@@ -123,4 +123,8 @@
   width: 100% !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+span[class^="button"] > a {
+  color: #fff !important;
 }

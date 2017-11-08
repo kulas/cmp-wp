@@ -386,6 +386,7 @@ footer {
 
     @include grid-media($medium) {
       display:flex;
+      align-items: center;
     }
 
     > a {

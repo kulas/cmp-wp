@@ -24,38 +24,37 @@
     flex-basis: 25%;
   }
 
-  .main-article-content p {
-    max-width: 90%;
-    @include grid-media($medium) {
-      max-width: 100%;
-    }
+  hr {
+    // margin: $base-spacing 0;
   }
 
-  hr {
-    margin-top: $small-spacing;
-    margin-bottom: 0.5em;
+  .main-article-content {
+    margin-bottom: $small-spacing;
   }
 
   .article {
-    display: block;
     padding-bottom: $base-spacing;
-
-    p {
-      max-width: 90%;
-      @include grid-media($medium) {
-        max-width: 100%;
-      }
-    }
   }
 
   .featured-stories {
+    margin-top: $small-spacing;
     .article {
       padding-bottom: $small-spacing;
+      
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      p {
+        margin-bottom: $small-spacing / 2;
+      }
     }
 
     .article__image-container {
       height: 275px;
       overflow: hidden;
+      margin-bottom: $small-spacing / 2;
+
       @include grid-media($large) {
         height: auto;
       }
@@ -73,23 +72,20 @@
   }
 
   .magazine-featured-articles__section-3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    
+    margin-top: $small-spacing;
     padding: 0 $base-spacing;
     @include grid-media($medium) {
       padding: 0 $small-spacing;
     }
 
     .article {
-      flex-basis: 49%;
-      @include grid-media($medium) {
-        flex-basis: 100%;
-      }
 
       .article__image-container {
         height: 275px;
+        margin-bottom: $small-spacing / 2;
         overflow: hidden;
+
         @include grid-media($large) {
           height: 200px;
         }
@@ -128,8 +124,9 @@
   }
 
   h3, h4 {
-    margin-bottom: 0;
-    margin-top: .25em;
+    margin-bottom: 0.5rem;
+    // margin-top: .25em;
+    font-family: $base-font-family;
   }
 
   a > h3 {

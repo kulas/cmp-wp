@@ -93,3 +93,8 @@ body {
     display: none !important;
   }
 }
+
+.l-collapse {
+  @include grid-collapse;
+  @include grid-container;
+}

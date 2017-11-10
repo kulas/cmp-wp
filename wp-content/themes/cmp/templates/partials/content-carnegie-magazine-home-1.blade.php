@@ -24,10 +24,8 @@
   <div class="magazine-featured-articles__main">
     <div class="content-container">
       <div class="main-article-content">
-        <a href="{{ the_permalink() }}">
-          <h1 class="robot--bold">{{ the_title() }}</h1>
-        </a>
-        <p class="main-article-content__excerpt">{{ the_excerpt() }}</p>
+        <h1 class="sans-serif"><a href="{{ the_permalink() }}" class="black-link">{{ the_title() }}</a></h1>
+        {{ the_excerpt() }}
         <p class="author">{{ the_field('author') }}</p>
 
         @php
@@ -37,34 +35,35 @@
         {{-- End cover story section --}}
 
       </div>
+
       <hr />
-      <h2 class="uppercase-robot--large">Featured Stories</h2>
 
       {{-- Featured stories section --}}
       <div class="featured-stories">
-      {{-- And this nightmare is what allows you to loop through a repeater of post objects --}}
-        @php
-          if( have_rows('secondary_featured_articles') ):
-          while ( have_rows('secondary_featured_articles') ) : the_row();
-          $post_object = get_sub_field('article');
-          if( $post_object ):
-          $post = $post_object; setup_postdata( $post );
+        <h2 class="uppercase-robot--large">Featured Stories</h2>
+        {{-- And this nightmare is what allows you to loop through a repeater of post objects --}}
+          @php
+            if( have_rows('secondary_featured_articles') ):
+            while ( have_rows('secondary_featured_articles') ) : the_row();
+            $post_object = get_sub_field('article');
+            if( $post_object ):
+            $post = $post_object; setup_postdata( $post );
 
-          $featured_image = get_field('featured_image'); //gets full image array
-          $featured_image_url = $featured_image['url']; //url of image
-        @endphp
+            $featured_image = get_field('featured_image'); //gets full image array
+            $featured_image_url = $featured_image['url']; //url of image
+          @endphp
 
-        <div class="article">
-          <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
-          <a href="{{ the_permalink() }}">
-            <div class="article__image-container">
-              <img src="{{ $featured_image_url }}" alt="{{ the_title() }}">
-            </div>
-            <h3 class="robot--bold">{{ the_title() }}</h3>
-          </a>
-          <p>{{ the_excerpt() }}</p>
-          <p class="author">{{ the_field('author') }}</p>
-        </div>
+          <div class="article">
+            <div class="categories">@php(the_tags( '', '', '' ))</div>
+            <a href="{{ the_permalink() }}">
+              <div class="article__image-container">
+                <img src="{{ $featured_image_url }}" alt="{{ the_title() }}">
+              </div>
+            </a>
+            <h3 class="sans-serif"><a href="{{ the_permalink() }}" class="black-link">{{ the_title() }}</a></h3>
+            {{ the_excerpt() }}
+            <p class="author">{{ the_field('author') }}</p>
+          </div>
 
           {{-- Resets postdata, checks to see if there are more posts in repeater, loops if there area --}}
           @php
@@ -73,8 +72,8 @@
             endwhile;
           @endphp
 
-          <hr />
       </div>
+      <hr />
 
     @php
       endif;
@@ -83,7 +82,7 @@
     </div>
 
     {{-- 'Square' section of featued articles  --}}
-    <div class="magazine-featured-articles__section-3">
+    <div class="magazine-featured-articles__section-3 l-collapse">
 
       @php
         if( have_rows('featured_articles_3') ):
@@ -93,15 +92,15 @@
         $post = $post_object; setup_postdata( $post );
       @endphp
 
-      <div class="article">
-        <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
+      <div class="article l-split">
+        <div class="categories">@php(the_tags( '', '', '' ))</div>
         <a href="{{ the_permalink() }}">
           <div class="article__image-container">
             <img src="{{ get_field('square_image') }}" alt="{{the_title()}}">
           </div>
-          <h3>{{ the_title() }}</h3>
         </a>
-        <p>{{ the_excerpt() }}</p>
+        <h3><a href="{{ the_permalink() }}" class="black-link">{{ the_title() }}</a></h3>
+        {{ the_excerpt() }}
         <p class="author">{{ the_field('author') }}</p>
       </div>
 
@@ -145,14 +144,14 @@
           @endphp
 
             <div class="article">
-              <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
+              <div class="categories">@php(the_tags( '', '', '' ))</div>
               <a href="{{ the_permalink() }}">
                 <div class="article__image-container">
                   <img src="{{ $featured_image_url }}" alt="{{ the_title() }}">
                 </div>
-                <h4 class="robot--bold">{{ the_title() }}</h4>
+                <h4 class="sans-serif">{{ the_title() }}</h4>
               </a>
-              <p>{{ the_excerpt() }}</p>
+              {{ the_excerpt() }}
               <p class="author">{{ the_field('author') }}</p>
             </div>
 

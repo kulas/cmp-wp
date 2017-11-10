@@ -110,12 +110,23 @@ hr {
   }
 }
 
-.categories a,
-.categories p {
-  text-transform: uppercase;
-  font-size: .8em;
-  font-weight: 300;
-  color: grey;
+.categories {
+  margin-bottom: 5px;
+    a {
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 300;
+    color: $medium-gray;
+
+    + a {
+      &:before {
+        content: "|";
+        margin: 0 $small-spacing / 2;
+        font-size: 1.2em;
+        color: $medium-dark-gray;
+      }
+    }
+  }
 }
 
 h2.robot-uppercase {
@@ -156,23 +167,12 @@ h2.robot-uppercase {
 .author {
   font-style: italic;
   font-size:.9em;
-  padding-top:.5em;
   margin-bottom: 0;
   font-weight: lighter;
 }
 
-.robot {
-  font-family: 'Roboto', sans-serif !important;
-}
-
-.robot--bold {
-  font-family: 'Roboto', sans-serif !important;
-  font-weight: 400;
-}
-
-.robot--green {
-  @extend .robot;
-  color: $base-color;
+.robot, .sans-serif {
+  font-family: $base-font-family;
 }
 
 h1 > a,

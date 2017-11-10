@@ -37,7 +37,8 @@
       text-transform: uppercase;
       padding: 0 1em;
       background-color:white;
-      @extend .robot--green;
+      color: $base-color;
+      font-family: $base-font-family;
     }
   }
 }

@@ -19,7 +19,7 @@
         @endphp
 
         <div class="article">
-          <div class="categories">@php(the_tags( '', ' | ', '' ))</div>
+          <div class="categories">@php(the_tags( '', '', '' ))</div>
           <a href="{{ the_permalink() }}">
           <div class="article__image-container">
             <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">

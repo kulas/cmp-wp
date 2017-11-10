@@ -4,10 +4,7 @@
   padding-bottom: $base-spacing;
   margin-bottom: $base-spacing;
 
-  .media-credit {
-    max-width: 20%;
-    position: relative;
-    bottom: 4em;
-    left: 2em;
+  .hero-header__words-box {
+    margin-top: 0;
   }
 }

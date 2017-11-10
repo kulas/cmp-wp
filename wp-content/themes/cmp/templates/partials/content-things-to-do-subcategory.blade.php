@@ -1,5 +1,11 @@
 {{-- Things to Do Subcategory --}}
 
+@php
+  if ( have_posts() ) :
+  while ( have_posts() ) :
+  the_post();
+@endphp
+
 <div class="things-to-do-subcategory">
   <div class="content-container">
     <div class="large-title">
@@ -42,3 +48,9 @@
 
   </div>
 </div>
+
+@include('partials.content-more-things-to-do');
+
+@php
+  endwhile; else : endif;
+@endphp

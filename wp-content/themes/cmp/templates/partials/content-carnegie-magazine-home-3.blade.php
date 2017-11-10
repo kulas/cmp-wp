@@ -19,7 +19,7 @@
       </a>
       <div class="media-details">
         <p class="media-details__caption">{{ $inside_museums_image['caption'] }}</p>
-        <p class="media-details__credit">{{ echo $inside_museums_image_credit }}</p>
+        <p class="media-details__credit">{{ $inside_museums_image_credit }}</p>
       </div>
       <div class="content-container">
         <h1 class="hero-header__words-box robot">{{ the_field('inside_museums_title') }}</h1>

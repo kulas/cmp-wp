@@ -89,7 +89,7 @@
 
             <hr class="mobile-hr">
             <div class="copyright">
-              <p>©2017 Carnegie Museums of Pittsburgh</p>
+              <p>©{{ date("Y") }} Carnegie Museums of Pittsburgh</p>
               <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </div>
@@ -105,8 +105,8 @@
   </div>
 
   <div class="sticky-join-donate">
-    <a href="/join-support/membership/" class="sticky-join-donate__join">Join</a>
-    <a href="/join-support/donate/" class="sticky-join-donate__donate">Donate</a>
+    <a href="/join-support/membership/joinrenew" class="sticky-join-donate__join">Join</a>
+    <a href="https://secure2.convio.net/cmp/site/Donation2;jsessionid=ECDA1B790F2D30313CA854DEFD21A947.app274b?df_id=14000&14000.donation=form1" class="sticky-join-donate__donate">Donate</a>
   </div>
 
 </footer>

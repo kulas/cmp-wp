@@ -34,11 +34,11 @@
           <p class="media-details__credit">{{ $featured_image_credit }}</p>
         </div>
 
-        <div class="content-container">
+        <div class="container pad">
           <h1 class="hero-header__words-box"><a href="{{ get_permalink($article) }}" class="black-link">{{ get_sub_field('title') }}</a></h1>
         </div>
 
-        <div class="content-container">
+        <div class="container pad">
           <div class="words-box">
             <h3 class="article__author">{{ the_sub_field('by_line') }}</h3>
             <h3 class="article__summary">

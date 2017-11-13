@@ -9,10 +9,11 @@
     margin-bottom: $base-spacing;
   }
 
-  h1.hero-header__words-box.robot {
+  h1.hero-header__words-box.sans-serif {
     margin-top: 0;
     margin-bottom: $small-spacing;
     line-height: 1.1;
+    letter-spacing: -1px;
 
     @include grid-media($medium) {
       margin-top: $small-spacing / 2;

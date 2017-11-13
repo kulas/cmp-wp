@@ -34,7 +34,7 @@ article {
   }
 
   .title-box {
-    padding: 1em;
+    padding: 0 $base-spacing $small-spacing $base-spacing;
     text-align: center;
     max-width: 1000px;
     margin: auto;
@@ -44,13 +44,14 @@ article {
     }
 
     h1.entry-title {
-      font-family: 'Roboto', serif;
+      font-family: $base-font-family;
       font-size: 3em;
       font-weight: 400;
       margin: 0;
       padding-bottom: $small-spacing;
       max-width: 1000px;
       margin: auto;
+      letter-spacing: -1px;
     }
 
     .article__summary {

@@ -32,12 +32,16 @@ body {
   position: relative;
   max-width: $max-width;
   margin: auto;
+
+  &.pad {
+    padding: 0 $base-spacing;
+  }
 }
 
 .content-container {
   display:flex;
   flex-wrap: wrap;
-  padding: 0em $base-spacing;
+  padding: 0 $base-spacing;
   max-width: $max-width;
   margin:auto;
 

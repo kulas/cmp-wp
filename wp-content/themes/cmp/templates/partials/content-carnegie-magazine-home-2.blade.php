@@ -22,7 +22,7 @@
         <p class="media-details__credit">{{ $big_picture_image_credit }}</p>
       </div>
       <div class="content-container">
-        <h1 class="hero-header__words-box robot">{{ the_field('big_picture_title') }}</h1>
+        <h1 class="hero-header__words-box sans-serif">{{ the_field('big_picture_title') }}</h1>
         <div class="content-wrapper">
           <div class="l-long">
             <p>{{ the_field('big_picture_text') }}</p>

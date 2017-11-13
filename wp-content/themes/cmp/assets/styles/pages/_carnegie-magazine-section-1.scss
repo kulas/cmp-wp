@@ -32,6 +32,9 @@
     margin-bottom: $small-spacing;
     h1 {
       font-size: 3em;
+      &.sans-serif {
+        letter-spacing: -1px;
+      }
     }
   }
 

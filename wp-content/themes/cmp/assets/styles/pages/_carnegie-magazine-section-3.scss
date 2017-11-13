@@ -4,7 +4,11 @@
   padding-bottom: $base-spacing;
   margin-bottom: $base-spacing;
 
-  .hero-header__words-box {
+  h1.hero-header__words-box {
     margin-top: 0;
+
+    &.sans-serif {
+      letter-spacing: -1px;
+    }
   }
 }

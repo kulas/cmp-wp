@@ -14,7 +14,7 @@ footer {
   }
 
   .left-section {
-    flex-basis: 30%;
+    flex-basis: 35%;
 
     @include grid-media($large) {
       display: flex;
@@ -197,57 +197,57 @@ footer {
       display:block;
     }
 
-  .footer-links-section {
-    // flex-basis:50%;
-    padding:0px 5px;
-    position: relative;
-    left: 5px;
+    .footer-links-section {
+      // flex-basis:50%;
+      padding:0px 5px;
+      position: relative;
+      left: 5px;
 
-    @include grid-media($medium) {
-      left: 0;
+      @include grid-media($medium) {
+        left: 0;
+      }
+
+      a {
+        padding-bottom:15px;
+        display:block;
+        color:white;
+        text-transform: uppercase;
+        font-size:1.3em;
+      }
     }
 
-    a {
-      padding-bottom:15px;
-      display:block;
-      color:white;
-      text-transform: uppercase;
-      font-size:1.3em;
-    }
-  }
 
+    .middle-row,
+    .bottom-row__links,
+    .hr-break,
+    .copyright {
+      position: relative;
+      left: 9px;
 
-  .middle-row,
-  .bottom-row__links,
-  .hr-break,
-  .copyright {
-    position: relative;
-    left: 9px;
-
-    @include grid-media($medium) {
-      left: 0;
-    }
-  }
-
-
-  .footer-links-section__small {
-    padding: $small-spacing 0;
-    // max-width:150px;
-    //
-    @include grid-media($large) {
-      padding: 0;
+      @include grid-media($medium) {
+        left: 0;
+      }
     }
 
-    @include grid-media($medium) {
+
+    .footer-links-section__small {
       padding: $small-spacing 0;
-    }
+      // max-width:150px;
+      //
+      @include grid-media($large) {
+        padding: 0;
+      }
 
-    a {
-      font-size:.8em;
-      color:#CACFD2;
+      @include grid-media($medium) {
+        padding: $small-spacing 0;
+      }
+
+      a {
+        font-size:.8em;
+        color:#CACFD2;
+      }
     }
   }
-}
 
   .footer__left-div {
     display:flex;
@@ -406,7 +406,9 @@ footer {
   }
 
   //IE Fixes
-.right-section {
+  .right-section {
+    flex-grow: 2;
+
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       min-width: 750px;
 
@@ -417,6 +419,18 @@ footer {
       @include grid-media($medium) {
         min-width:400px;
       }
+    }
+  }
+
+  form {
+    input[type="text"], input[type="email"] {
+      padding: $small-spacing / 2;
+      font-size: 0.9em;
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      width: 100px;
     }
   }
 }

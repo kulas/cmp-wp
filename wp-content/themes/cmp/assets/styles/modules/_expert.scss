@@ -28,3 +28,13 @@
 .expert__name {
   grid-row-start: 1;
 }
+
+@supports not (grid-gap: $base-spacing) {
+  .expert__photo {
+    -ms-grid-row-span: 2;
+  }
+
+  .expert__details {
+    -ms-grid-row: 2;
+  }
+}

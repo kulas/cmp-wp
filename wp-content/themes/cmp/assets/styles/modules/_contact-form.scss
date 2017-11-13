@@ -53,6 +53,7 @@
     input[type="checkbox"] {
       position: relative;
       top: 5px;
+      height: auto;
     }
   }
 
@@ -62,18 +63,10 @@
 
     .wpcf7-list-item {
       // margin-bottom: $small-spacing;
+      display: flex;
+      align-items: flex-start;
       margin-left: 0;
-
-      label {
-        display: grid;
-        grid-template-columns: 1fr 11fr;
-        align-items: flex-start;
-        font-weight: 300;
-
-        input {
-          margin-top: 5px;
-        }
-      }
+      margin-bottom: $small-spacing;
     }
   }
 }

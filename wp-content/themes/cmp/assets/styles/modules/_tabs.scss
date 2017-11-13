@@ -246,3 +246,19 @@ ul.tab-content {
 .tabbed-content hr {
   margin: $small-spacing * 1.5 0;
 }
+
+@supports not (grid-gap: $base-spacing) {
+  .tab__trip-image, .tab__text .tab__body {
+    margin-right: $base-spacing;
+  }
+
+  .tab__text {
+    .tab__body {
+      grid-column-start: 1;
+    }
+
+    .tab__sidebar {
+      grid-column-start: 2;
+    }
+  }
+}

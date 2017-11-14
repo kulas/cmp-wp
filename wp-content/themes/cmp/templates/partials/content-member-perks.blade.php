@@ -37,18 +37,7 @@
 <div class="content-container">
   <div class="content-wrapper">
     <div class="contact-us l-long">
-      <h3>Contact Us</h3>
-      <div class="main-text">
-
-        @php
-          $page_id = 292;
-          $contact = ( get_field( 'contact_us', $page_id ) ) // Gets content from Join & Support page so it's the same on all subpages
-        @endphp
-
-        @php
-          echo $contact;
-        @endphp
-
+      {!! get_field('membership_callout_text') !!}
     </div>
   </div>
 </div>

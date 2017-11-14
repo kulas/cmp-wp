@@ -4,10 +4,6 @@
   <div class="content-container">
     <div class="sub-page-container">
 
-      @php
-        $count = 0 // Part of the counter
-      @endphp
-
       @php // Has to be a separate block for some reason.
         if( have_rows('sub_page') ):
         while ( have_rows('sub_page') ) :
@@ -24,20 +20,22 @@
       </div>
 
       @php
-        $count = $count + 1; // This is weird but ensures only the 'Contact Us' section appears on the Membership landing page.
-        if ($count > 3) {
-          echo "</div>";
-          echo "<hr />";
-        }
         endwhile; else : endif;
       @endphp
   </div>
 </div>
 
+@php
+  if(get_field('membership_callout_text')):
+@endphp
 <div class="content-container">
+  <hr />
   <div class="content-wrapper">
     <div class="contact-us l-long">
       {!! get_field('membership_callout_text') !!}
     </div>
   </div>
 </div>
+@php
+  endif;
+@endphp

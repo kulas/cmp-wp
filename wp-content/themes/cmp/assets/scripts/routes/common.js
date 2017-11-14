@@ -116,7 +116,7 @@ export default {
     $('.quickview-nav__expand').click(function() {
       var menuBtn = $(this);
       // var menuTree = $(this).next();
-      $('.quickview-nav__expand').not(menuBtn).removeClass('is-active');
+      $(this).closest('ul').find('.quickview-nav__expand').not(menuBtn).removeClass('is-active');
       menuBtn.toggleClass('is-active');
     });
 

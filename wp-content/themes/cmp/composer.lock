@@ -4,9 +4,73 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9fa5c6956d3ed29ca107f717891465c6",
-    "content-hash": "f00026ba7588607051943fd388bead9b",
+    "content-hash": "3e66162f88de6479b6b86a5bace91d65",
     "packages": [
+        {
+            "name": "cocur/slugify",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cocur/slugify.git",
+                "reference": "1fdf2b1219a199301db3d7c60c16d895bba6ccde"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/1fdf2b1219a199301db3d7c60c16d895bba6ccde",
+                "reference": "1fdf2b1219a199301db3d7c60c16d895bba6ccde",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "laravel/framework": "~5.1",
+                "latte/latte": "~2.2",
+                "league/container": "^2.2.0",
+                "mikey179/vfsstream": "~1.6",
+                "mockery/mockery": "~0.9",
+                "nette/di": "~2.2",
+                "phpunit/phpunit": "~4.8|~5.2",
+                "pimple/pimple": "~1.1",
+                "plumphp/plum": "~0.1",
+                "silex/silex": "~1.3",
+                "symfony/config": "~2.4|~3.0",
+                "symfony/dependency-injection": "~2.4|~3.0",
+                "symfony/http-kernel": "~2.4|~3.0",
+                "twig/twig": "~1.26|~2.0",
+                "zendframework/zend-modulemanager": "~2.2",
+                "zendframework/zend-servicemanager": "~2.2",
+                "zendframework/zend-view": "~2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cocur\\Slugify\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivo Bathke",
+                    "email": "ivo.bathke@gmail.com"
+                },
+                {
+                    "name": "Florian Eckerstorfer",
+                    "email": "florian@eckerstorfer.co",
+                    "homepage": "https://florian.ec"
+                }
+            ],
+            "description": "Converts a string into a slug.",
+            "keywords": [
+                "slug",
+                "slugify"
+            ],
+            "time": "2017-09-24T10:29:04+00:00"
+        },
         {
             "name": "composer/installers",
             "version": "v1.2.0",
@@ -112,7 +176,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13 20:53:52"
+            "time": "2016-08-13T20:53:52+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -179,7 +243,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06 14:35:42"
+            "time": "2015-11-06T14:35:42+00:00"
         },
         {
             "name": "illuminate/config",
@@ -223,7 +287,7 @@
             ],
             "description": "The Illuminate Config package.",
             "homepage": "https://laravel.com",
-            "time": "2017-02-04 20:27:32"
+            "time": "2017-02-04T20:27:32+00:00"
         },
         {
             "name": "illuminate/container",
@@ -266,7 +330,7 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2017-01-28 17:55:54"
+            "time": "2017-01-28T17:55:54+00:00"
         },
         {
             "name": "illuminate/contracts",
@@ -308,7 +372,7 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2017-02-21 14:21:59"
+            "time": "2017-02-21T14:21:59+00:00"
         },
         {
             "name": "illuminate/events",
@@ -353,7 +417,7 @@
             ],
             "description": "The Illuminate Events package.",
             "homepage": "https://laravel.com",
-            "time": "2017-02-10 21:05:38"
+            "time": "2017-02-10T21:05:38+00:00"
         },
         {
             "name": "illuminate/filesystem",
@@ -403,7 +467,7 @@
             ],
             "description": "The Illuminate Filesystem package.",
             "homepage": "https://laravel.com",
-            "time": "2017-01-03 14:19:43"
+            "time": "2017-01-03T14:19:43+00:00"
         },
         {
             "name": "illuminate/support",
@@ -460,7 +524,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2017-02-15 19:29:24"
+            "time": "2017-02-15T19:29:24+00:00"
         },
         {
             "name": "illuminate/view",
@@ -508,7 +572,7 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2017-02-22 15:30:41"
+            "time": "2017-02-22T15:30:41+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -556,7 +620,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-02-27 17:11:23"
+            "time": "2017-02-27T17:11:23+00:00"
         },
         {
             "name": "psr/log",
@@ -603,7 +667,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "symfony/debug",
@@ -660,7 +724,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-16 16:34:18"
+            "time": "2017-02-16T16:34:18+00:00"
         },
         {
             "name": "symfony/finder",
@@ -709,7 +773,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02 20:32:22"
+            "time": "2017-01-02T20:32:22+00:00"
         }
     ],
     "packages-dev": [
@@ -789,7 +853,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-02-02 03:30:00"
+            "time": "2017-02-02T03:30:00+00:00"
         }
     ],
     "aliases": [],

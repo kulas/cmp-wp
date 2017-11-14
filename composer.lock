@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "06a1c9ff36db7df88090139242a5558e",
+    "content-hash": "07d250458ac71e97740e5f8e8452d9db",
     "packages": [
         {
             "name": "composer/installers",
@@ -704,6 +704,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/simple-page-tester/"
+        },
+        {
+            "name": "wpackagist-plugin/sumome",
+            "version": "1.27",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/sumome/",
+                "reference": "tags/1.27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/sumome.1.27.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/sumome/"
         },
         {
             "name": "wpackagist-plugin/tinymce-advanced",

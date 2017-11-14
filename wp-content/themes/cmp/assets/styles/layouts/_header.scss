@@ -924,6 +924,12 @@ a.quickview-btn.nav-visit {
 
 }
 
+.mobile-nav-container {
+  li.plan-a-visit {
+    display: none;
+  }
+}
+
 
 // Desktop Nav
 ////////////////////////////////////////////////////////////////
@@ -936,6 +942,10 @@ a.quickview-btn.nav-visit {
   display: block;
 
   @include grid-media($nav-break) {
+    display: none;
+  }
+
+  li.carnegie-magazine .sub-menu {
     display: none;
   }
 }
@@ -1143,18 +1153,6 @@ ul#menu-magazine-nav .current-menu-item {
 ul#menu-magazine-nav li.menu-item:hover > ul.sub-menu {
   background: black !important;
 }
-
-  //hides magazine submenu on desktop
-li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.menu-item-310 {
-  >ul.sub-menu {
-    display: none;
-  }
-  @include grid-media($nav-break) {
-    display: inherit;
-  }
-}
-
-
 
   // a.is-active,
   // button.is-active {

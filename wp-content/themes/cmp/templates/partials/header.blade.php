@@ -71,27 +71,8 @@
 <!-- quickview tray -->
 <header class="quickview-container">
 
-  <!-- quick visit -->
-  <div class="quickview quickview-visit" id="visit">
-    <figure itemprop="hoursAvailable" itemtype="http://schema.org/OpeningHoursSpecification" class="quickview-visit--details">
-      <figcaption>Hours</figcaption>
-    </figure>
-    <figure class="quickview-visit--details">
-      <figcaption>Admission</figcaption>
-      <div class="quickview-visit--admission">
-        <h3 class="featured-price">50% off regular admission
-          weekdays after 3pm</h3>
-      </div>
-    </figure>
-    <figure class="quickview-visit--callouts">
-      <figcaption>What's going on?</figcaption>
-        <aside>
-        </aside>
-    </figure>
-  </div>
-
   <!-- mobile nav  -->
-  <nav class="quickview quickview-nav" id="quickview-nav" role='navigation' aria-label="Global navigation" >
+  <nav class="quickview quickview-nav mobile-nav-container" id="quickview-nav" role='navigation' aria-label="Global navigation" >
     @php
       if (has_nav_menu('primary_navigation')) :
         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => '']);

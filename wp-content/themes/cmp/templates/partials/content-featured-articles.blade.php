@@ -44,7 +44,6 @@
             <h3 class="article__summary">
               {{ the_sub_field('lead_text') }}
             </h3>
-            <a id="article__button" class="green-button" href="{{ get_permalink($article) }}">Read Article</a>
           </div>
         </div>
       @php

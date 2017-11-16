@@ -22,18 +22,14 @@
         <div class="current-issue__cover-story">
           <h2 class="issue-title">{{ the_field('current_issue_title') }}</h2>
           <p class="small-uppercase--bold">Cover Story</p>
-          <div class="tags">@php(the_tags( '', ' | ', '' ))</div>
-            <a href="{{ the_permalink() }}">
-              <h3 class="green-robot-link">{{ the_title() }}</h3>
-            </a>
-            <p>{{ the_excerpt() }}</p>
-            <p class="author">{{ the_field('author') }}</p>
+          <h3 class="sans-serif"><a href="{{ the_permalink() }}">{{ the_title() }}</a></h3>
+          <p>{{ the_field('quote') }}</p>
+          <p class="author">{{ the_field('author') }}</p>
+        </div>
 
         @php
           wp_reset_postdata(); endif; // Resets postdata for cover story
         @endphp
-
-        </div>
 
         <div class="magazine-archives">
           <p class="uppercase-bold center">Magazine Archives</p>

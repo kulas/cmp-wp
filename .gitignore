@@ -117,6 +117,10 @@ tests/_output/*
 
 # WP plugins
 wp-content/plugins/*
+!wp-content/plugins/advanced-custom-fields-pro
+!wp-content/plugins/wp-migrate-db-pro
+!wp-content/plugins/wp-migrate-db-pro-media-files
+!wp-content/plugins/wp-migrate-db-pro-multisite-tools
 
 # Sage
 dist

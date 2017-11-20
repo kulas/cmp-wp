@@ -1,9 +1,13 @@
 require('waypoints/lib/jquery.waypoints');
 import setupTabs from '../tabs';
+import objectFitImages from 'object-fit-images';
 
 export default {
   init() {
     // JavaScript to be fired on all pages
+
+    // object fit polyfill
+    objectFitImages();
 
   // main navigation
   ////////////////////////////////////////////////////////////////////////////////

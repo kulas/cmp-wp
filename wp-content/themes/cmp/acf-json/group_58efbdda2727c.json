@@ -16,7 +16,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "by Jane Doe",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -84,6 +84,25 @@
             "mime_types": ""
         },
         {
+            "key": "field_5a1317b809553",
+            "label": "Hide Hero Header",
+            "name": "hide_hero_header",
+            "type": "true_false",
+            "instructions": "Check to hide the hero header for this article. The featured image may still be used elsewhere.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hide",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_59024c4367b33",
             "label": "Square Image",
             "name": "square_image",
@@ -125,5 +144,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510947357
+    "modified": 1511200830
 }

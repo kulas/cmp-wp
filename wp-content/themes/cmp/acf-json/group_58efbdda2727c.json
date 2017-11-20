@@ -1,0 +1,129 @@
+{
+    "key": "group_58efbdda2727c",
+    "title": "Individual Article",
+    "fields": [
+        {
+            "key": "field_5956877a43ce9",
+            "label": "Author",
+            "name": "author",
+            "type": "text",
+            "instructions": "Author of the article.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_595fcc3ac41b7",
+            "label": "Feature Type",
+            "name": "feature_type",
+            "type": "text",
+            "instructions": "Feature type--specifically for the Current Issue page in the Carnegie Magazine section. (E.g. STEM, Newsworthy, President's Note)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_58f67c4034017",
+            "label": "Quote",
+            "name": "quote",
+            "type": "textarea",
+            "instructions": "A quote from the article to be featured on certain sections of the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_58efbe464a5bb",
+            "label": "Featured Image",
+            "name": "featured_image",
+            "type": "image",
+            "instructions": "The main hero image for the article--should be a high quality, large banner image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_59024c4367b33",
+            "label": "Square Image",
+            "name": "square_image",
+            "type": "image",
+            "instructions": "Upload a cropped, square or slightly rectangular version of the main hero image, for use in lists of featured articles.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1510947357
+}

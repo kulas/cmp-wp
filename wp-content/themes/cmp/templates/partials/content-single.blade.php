@@ -11,7 +11,7 @@
 @endphp
 
 @php
-  if ($header_image != null):
+  if (!empty($header_image)):
 @endphp
 
   <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')">
@@ -35,14 +35,12 @@
 
     <div class="title-box">
       <h1 class="entry-title">{{ get_the_title() }}</h1>
-      <p class="article__summary">{{ get_the_excerpt() }}</p>
-      @php
-        if(get_field('author')):
-      @endphp
+      @if (trim($post->post_excerpt))
+        <p class="article__summary">{{{ get_the_excerpt() }}}</p>
+      @endif
+      @if (get_field('author'))
         <p class="author">{{ the_field('author') }}</p>
-      @php
-        endif
-      @endphp
+      @endif
     </div>
   <div class="entry-content">
     <hr>

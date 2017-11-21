@@ -30,62 +30,43 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "templates\/template-basic-header.blade.php"
-            }
-        ],
-        [
+                "value": "page"
+            },
             {
                 "param": "page_template",
-                "operator": "==",
-                "value": "templates\/template-join-support-simple-header.blade.php"
-            }
-        ],
-        [
+                "operator": "!=",
+                "value": "templates\/template-no-header.blade.php"
+            },
             {
                 "param": "page_template",
-                "operator": "==",
-                "value": "templates\/template-join-support-simple-header-no-breadcrumb.blade.php"
-            }
-        ],
-        [
+                "operator": "!=",
+                "value": "templates\/template-join-support-no-header.blade.php"
+            },
             {
                 "param": "page_template",
-                "operator": "==",
-                "value": "templates\/template-event-spaces-sub-page.blade.php"
-            }
-        ],
-        [
+                "operator": "!=",
+                "value": "templates\/template-carnegie-magazine-home.blade.php"
+            },
             {
                 "param": "page_template",
-                "operator": "==",
-                "value": "templates\/template-plan-visit.blade.php"
-            }
-        ],
-        [
+                "operator": "!=",
+                "value": "templates\/template-carnegie-magazine-current.blade.php"
+            },
             {
                 "param": "page_template",
-                "operator": "==",
-                "value": "default"
-            }
-        ],
-        [
+                "operator": "!=",
+                "value": "templates\/template-archive.blade.php"
+            },
             {
                 "param": "page_template",
-                "operator": "==",
-                "value": "templates\/template-event-spaces-gallery.blade.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "templates\/template-event-spaces.blade.php"
+                "operator": "!=",
+                "value": "templates\/template-magazine-subpage.blade.php"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": -1,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -93,5 +74,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510947354
+    "modified": 1511298543
 }

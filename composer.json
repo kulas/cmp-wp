@@ -45,6 +45,7 @@
     "wpackagist-plugin/google-analytics-for-wordpress": "6.2.1",
     "wpackagist-plugin/simple-page-tester": "1.4.4",
     "wpackagist-plugin/accordion-shortcodes": "2.3.3",
-    "wpackagist-plugin/sumome": "1.27"
+    "wpackagist-plugin/sumome": "1.27",
+    "wpackagist-plugin/autodescription": "^3.0"
   }
 }

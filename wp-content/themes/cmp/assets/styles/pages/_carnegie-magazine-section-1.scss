@@ -46,7 +46,7 @@
     margin-top: $small-spacing;
     .article {
       padding-bottom: $small-spacing;
-      
+
       &:last-child {
         padding-bottom: 0;
       }
@@ -78,26 +78,35 @@
   }
 
   .magazine-featured-articles__section-3 {
-    
     margin-top: $small-spacing;
     padding: 0 $base-spacing;
+    display: flex;
+    flex-wrap: wrap;
+
     @include grid-media($medium) {
       padding: 0 $small-spacing;
     }
 
     .article {
-
       .article__image-container {
         height: 275px;
         margin-bottom: $small-spacing / 2;
         overflow: hidden;
+        display: flex;
+        position: relative;
 
         @include grid-media($large) {
           height: 200px;
         }
 
         img {
-          width: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          object-fit: cover;
+          font-family: 'object-fit: cover;'; // polyfill
         }
       }
     }

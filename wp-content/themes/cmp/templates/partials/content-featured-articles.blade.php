@@ -58,16 +58,9 @@
   @endphp
   <div class="section--primary">
     <div class="articles__featured">
-      <div class="section-hr">
-        <hr>
-        <div class="section-hr__h5">
-          <h5>Featured Stories</h5>
-        </div>
-      </div>
-
       <div class="content-container">
         <div class="article-container">
-    
+
           @php
             while ( have_rows('home_featured_articles') ) : the_row();
             if( get_row_layout() == 'featured_story'):

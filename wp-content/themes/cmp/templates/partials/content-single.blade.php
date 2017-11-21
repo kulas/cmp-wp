@@ -7,42 +7,30 @@
   $header_image_url = $header_image['url']; //url of image
   $header_image_id = $header_image['id']; //id of image
   $header_image_credit = get_media_credit_html($header_image_id, false); //media credit for image
+  $hide_hero_header = get_field('hide_hero_header');
 
 @endphp
 
-@php
-  if ($header_image != null):
-@endphp
-
-  <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')">
-  </div>
+@if (!empty($header_image) && empty($hide_hero_header))
+  <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')"></div>
   <div class="media-details">
     <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
     <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
   </div>
-
-@php
-  else:
-@endphp
-
-  <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}'); height:50px;"></div>
-
-@php
-  endif
-@endphp
+@else
+  <div class="hero-header" style="height: 50px;"></div>
+@endif
 
   <article @php(post_class())>
 
     <div class="title-box">
       <h1 class="entry-title">{{ get_the_title() }}</h1>
-      <p class="article__summary">{{ get_the_excerpt() }}</p>
-      @php
-        if(get_field('author')):
-      @endphp
+      @if (trim($post->post_excerpt))
+        <p class="article__summary">{{{ get_the_excerpt() }}}</p>
+      @endif
+      @if (get_field('author'))
         <p class="author">{{ the_field('author') }}</p>
-      @php
-        endif
-      @endphp
+      @endif
     </div>
   <div class="entry-content">
     <hr>
@@ -121,7 +109,9 @@
                 @php(the_tags( '', ' | ', '' ))
 
               </div>
-              <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
+              @if ($featured_image_url)
+                <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
+              @endif
               <a href="{{ the_permalink() }}">{{ the_title() }} </a>
               <div class="excerpt">{{ the_excerpt() }}</div>
               <p class="author">{{ the_field('author') }}</p>

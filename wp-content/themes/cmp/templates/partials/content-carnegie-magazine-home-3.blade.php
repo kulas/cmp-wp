@@ -22,10 +22,10 @@
         <p class="media-details__credit">{{ $inside_museums_image_credit }}</p>
       </div>
       <div class="content-container">
-        <h1 class="hero-header__words-box robot">{{ the_field('inside_museums_title') }}</h1>
+        <h1 class="hero-header__words-box robot">{{ the_field('inside_the_museums_title') }}</h1>
         <div class="content-wrapper">
           <div class="l-long">
-            <p class="inside-museums-text">{{ the_field('inside_museums_text') }}</p>
+            <p class="inside-museums-text">{{ the_field('inside_the_museums_text') }}</p>
           </div>
         </div>
       </div>

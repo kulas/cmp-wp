@@ -193,6 +193,7 @@ img.alignright {
 //Media credit for large hero images.
 .media-details {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   padding: 0 $base-spacing;
@@ -200,46 +201,34 @@ img.alignright {
   color: black;
   font-size: 0.7em;
   z-index: 1;
+  margin-bottom: ($small-spacing / 2);
 
   > a {
     display: none;
   }
-
-  @include grid-media($medium) {
-    flex-wrap: wrap;
-    padding: 0 $small-spacing;
-  }
 }
 
-.media-details__caption, .media-details__credit {
-  margin-bottom: $small-spacing;
+.media-details__caption,
+.media-details__credit {
+  width: 100%;
+  margin-bottom: ($small-spacing / 2);
 }
 
 .media-details__caption {
   font-weight: 400;
+  order: 2;
 
-  @include grid-media($medium) {
-    margin-bottom: 0;
-  }
-
-  &:empty + .media-details__credit:empty {
+  &:empty {
     display: none;
   }
 }
 
 .media-details__credit {
   font-weight: lighter;
-  text-align: right;
-}
+  order: 1;
 
-.media-details__caption + .media-details__credit {
-  margin-left: $base-spacing;
-
-  @include grid-media($medium) {
-    max-width: none;
-    text-align: left;
-    margin-top: $small-spacing / 2;
-    margin-left: 0;
+  &:empty {
+    display: none;
   }
 }
 

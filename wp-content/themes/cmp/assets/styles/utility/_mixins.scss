@@ -1,6 +1,8 @@
 // GLOBAL MIXINS
 ////////////////////////////////////////////////////////////////
 
+@import "../../../node_modules/object-fit-images/preprocessors/mixin";
+
 @mixin font-smoothing($value: on) {
     @if $value == on {
         -webkit-font-smoothing: antialiased;

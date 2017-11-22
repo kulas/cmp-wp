@@ -23,7 +23,7 @@
     margin-right: $small-spacing;
 
     img {
-      object-fit: cover;
+      @include object-fit(cover);
       min-height: 200px;
       min-width: 200px;
     }

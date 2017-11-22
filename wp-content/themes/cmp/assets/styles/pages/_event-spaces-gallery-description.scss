@@ -79,7 +79,7 @@
           color: white;
           font-size: 0.8em;
           font-weight: 300;
-          object-fit: contain;
+          @include object-fit(contain);
           margin: 0;
           // padding: 0.5em 1em;
           @include grid-media($large) {
@@ -94,7 +94,7 @@
       }
 
       img {
-        object-fit: cover;
+        @include object-fit(cover);
       }
     }
   }

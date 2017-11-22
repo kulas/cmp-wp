@@ -22,6 +22,9 @@
     <div class="hero-header" role="img">
       <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
         <img src="{{ $image_url }}" alt="{{ $image['alt'] }}" />
+        <div class="hero-header__mobile-tag">
+          <p class="start-date">{{ $exhibit['dates'] }}</p>
+        </div>
       </a>
     </div>
 
@@ -29,7 +32,7 @@
       <p class="media-details__caption">{{ $image['caption'] }}</p>
       <p class="media-details__credit">{{ $image_credit }}</p>
     </div>
-  
+
     <div class='exhibit-container exhibit--hero'>
       <div class="exhibit__preview">
         <div class="exhibit-preview__summary">

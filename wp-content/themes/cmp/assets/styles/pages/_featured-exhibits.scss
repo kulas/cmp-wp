@@ -103,15 +103,8 @@
     }
 
     @include grid-media($medium) {
-      position: absolute;
-      bottom: 100%;
-      z-index: 99;
-      font-size: 1em;
-      margin-bottom: 0;
-
-      p {
-        padding: 0.5em $small-spacing !important;
-      }
+      // displayed inside hero image on mobile
+      display: none;
     }
   }
 

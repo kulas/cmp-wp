@@ -105,8 +105,7 @@
           right: 0;
           bottom: 0;
           left: 0;
-          object-fit: cover;
-          font-family: 'object-fit: cover;'; // polyfill
+          @include object-fit(cover);
         }
       }
     }

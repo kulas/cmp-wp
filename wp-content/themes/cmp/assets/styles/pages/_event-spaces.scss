@@ -46,7 +46,7 @@
       background-size:cover;
 
       img {
-        object-fit: cover;
+        @include object-fit(cover);
         object-position: center;
         min-height: 275px;
         min-width: 100%;

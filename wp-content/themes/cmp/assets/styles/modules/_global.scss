@@ -206,6 +206,10 @@ img.alignright {
   > a {
     display: none;
   }
+
+  @include grid-media($medium) {
+    padding: 0 $small-spacing;
+  }
 }
 
 .media-details__caption,

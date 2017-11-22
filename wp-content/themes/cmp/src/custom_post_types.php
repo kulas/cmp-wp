@@ -21,7 +21,9 @@ function create_experts() {
         'not_found_in_trash' => __( 'No experts found in Trash.' ),
       ),
       'public' => true,
-      'menu_icon' => 'dashicons-businessman'
+      'menu_icon' => 'dashicons-businessman',
+      'exclude_from_search' => true,
+      'publicly_queryable' => false
     )
   );
 
@@ -48,7 +50,7 @@ function create_experts() {
 			'rewrite' => array('slug' => 'specialty', 'with_front' => false)
 		)
   );
-  
+
   register_taxonomy(
 		'museums',
 		'expert',

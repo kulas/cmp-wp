@@ -8,7 +8,7 @@
   $big_picture_image = get_field('big_picture_image'); //gets full image array
   $big_picture_image_url = $big_picture_image['url']; //url of image
   $big_picture_image_id = $big_picture_image['id']; //id of image
-  $big_picture_image_credit = get_media_credit_html($big_picture_image_id, false); //media credit for image
+  $big_picture_image_credit = App\get_media_credit_html($big_picture_image_id, false); //media credit for image
 @endphp
 
   <div class="carnegie-magazine-section-2">

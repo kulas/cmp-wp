@@ -10,7 +10,7 @@
   $bigpicture_image = get_field('big_picture_image'); //gets full image array
   $bigpicture_id = $bigpicture_image['id']; //id of image
   $bigpicture_url = $bigpicture_image['url']; //url of image
-  $bigpicture_credit = get_media_credit_html($bigpicture_id, false); //media credit for image
+  $bigpicture_credit = App\get_media_credit_html($bigpicture_id, false); //media credit for image
 @endphp
 
 <div class="carnegie-magazine__big-picture">

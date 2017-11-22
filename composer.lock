@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "43dc075439e682c4820b427c6d848cff",
+    "content-hash": "bf9663aa26232c1511b2ed142a56995d",
     "packages": [
         {
             "name": "composer/installers",
@@ -356,7 +356,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/autodescription.zip?timestamp=1511195613",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -624,26 +624,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/jquery-font-resizer/"
-        },
-        {
-            "name": "wpackagist-plugin/media-credit",
-            "version": "3.1.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/media-credit/",
-                "reference": "tags/3.1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-credit.3.1.7.zip",
-                "reference": "tags/3.1.7",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/media-credit/"
         },
         {
             "name": "wpackagist-plugin/ml-slider",

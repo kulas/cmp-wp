@@ -24,12 +24,18 @@
     display: flex;
     overflow: hidden;
     width: 75%;
+    justify-content: space-between;
+
     @include grid-media($large) {
       width: 100%;
     }
 
     p {
       font-weight: bold;
+    }
+
+    @include grid-media($medium) {
+      flex-wrap: wrap;
     }
   }
 
@@ -40,27 +46,46 @@
   }
 
   .facetime__left {
-    margin-right: $small-spacing;
+    width: 70%;
 
     .facetime__left__name {
       font-size: 1.5em;
     }
 
-    img {
-      max-height: 672px;
-
-      @include grid-media($small) {
-        max-height: 575px;
-      }
+    @include grid-media($medium) {
+      width: 100%;
+      margin-right: 0;
     }
   }
 
   .facetime__right {
-    flex-basis: 30%;
+    width: calc(30% - #{$small-spacing});
     flex-flow: column;
 
+    @include grid-media($medium) {
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+
+      .face + .face {
+        margin-left: $small-spacing;
+      }
+    }
+
     @include grid-media($small) {
-      flex-basis: 40%;
+      display: block;
+
+      .face {
+        & + .face {
+          margin-left: 0;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          max-height: none;
+        }
+      }
     }
 
     img {
@@ -69,10 +94,7 @@
   }
 
   p.facetime__text {
-    max-width: 48%;
-    @include grid-media($medium) {
-      max-width: 100%;
-    }
+    font-weight: 300;
   }
 
   .media-credit {

@@ -53,6 +53,7 @@
                   <p class="facetime__left__name">{{ the_sub_field('name') }}</p>
                 </div>
               </a>
+              <p class="facetime__text">{{ the_field('facetime_text') }}</p>
             </div>
 
             @php
@@ -92,7 +93,6 @@
           @endphp
 
         </div>
-        <p class="facetime__text">{{ the_field('facetime_text') }}</p>
         <hr />
       </div>
     </div>

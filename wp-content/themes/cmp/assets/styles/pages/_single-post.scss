@@ -378,21 +378,41 @@ article {
 .magazine-subscribe {
   max-width: 60%;
   text-align: center;
-  padding-bottom: $base-spacing;
+  margin-bottom: $base-spacing;
+  padding: $small-spacing;
+  border: 1px solid $light-gray;
+
   @include grid-media($large) {
     max-width: 100%;
   }
 
-  p.uppercase-robot {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  p.label {
+    padding-bottom: 0;
   }
 
-  .grey-button {
-    text-transform: uppercase;
-    color: black;
-    font-size: 0.9em;
+  .form-items {
+    display: flex;
+    justify-content: center;
+
+    @include grid-media($small) {
+      flex-wrap: wrap;
+    }
+    
+    input {
+      width: auto;
+
+      @include grid-media($small) {
+        flex-basis: 100%;
+      }
+
+      &[type="text"] {
+        flex-basis: 50%;
+
+        @include grid-media($small) {
+          flex-basis: 100%;
+        }
+      }
+    }
   }
 }
 

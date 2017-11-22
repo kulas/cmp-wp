@@ -130,10 +130,8 @@
   </div>
 
   <div class="magazine-subscribe">
-    <p class="uppercase-robot">Sign up</br>
-    to receive</br>
-    more stories</p>
-    <button class="grey-button">Subscribe</button>
+    <p class="serif label"><strong>Sign up to receive more stories in your email</strong></p>
+    @include('partials/magazine-signup-form')
   </div>
 
   <div class="bottom-tags">

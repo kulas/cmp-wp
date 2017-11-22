@@ -87,7 +87,7 @@
       {{-- <legend class="screen-reader-text">Search form</legend> --}}
       <fieldset>
         <label for="search-field" class="label--hidden">Search site</label>
-        <input type="text" id="search-field" placeholder="search" name="search" value="">
+        <input type="text" id="search-field" placeholder="search" name="s" value="">
 
         {{-- <label for="search-field"> Search</label> --}}
       </fieldset>

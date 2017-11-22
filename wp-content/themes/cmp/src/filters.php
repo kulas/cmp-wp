@@ -87,6 +87,11 @@ add_filter('the_seo_framework_og_image_args', function($args) {
         if (empty($args['image']) && !empty($image = get_field('header_image', $id))):
             $args['image'] = $image['sizes']['large'];
         endif;
+
+        // try featured image custom field (e.g. on Face Time posts)
+        if (empty($args['image']) && !empty($image = get_field('featured_image', $id))):
+            $args['image'] = $image['sizes']['large'];
+        endif;
     endif;
 
     return $args;

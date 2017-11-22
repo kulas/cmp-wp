@@ -11,7 +11,7 @@
   $featured_image = get_field('featured_image'); //gets full image array
   $featured_image_url = $featured_image['url']; //url of image
   $featured_image_id = $featured_image['id']; //id of image
-  $featured_image_credit = get_media_credit_html($featured_image_id, false); //media credit for image
+  $featured_image_credit = App\get_media_credit_html($featured_image_id, false); //media credit for image
 @endphp
 
 <div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})">

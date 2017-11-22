@@ -6,7 +6,7 @@
   // $image = get_field('header_image');
   // $image_id = $image['id'];
   // $image_url = $image['url'];
-  // $image_credit = get_media_credit_html($image_id);
+  // $image_credit = App\get_media_credit_html($image_id);
 
 @endphp
 

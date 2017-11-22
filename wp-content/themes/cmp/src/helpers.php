@@ -135,3 +135,14 @@ function title()
     }
     return get_the_title();
 }
+
+/**
+ * Media credit
+ */
+function get_media_credit_html($id, $include_default_credit = false) {
+    if (!is_numeric($id)):
+        return false;
+    endif;
+
+    return get_field('_media_credit', $id, false);
+}

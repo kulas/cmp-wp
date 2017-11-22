@@ -16,7 +16,7 @@
     $image = $exhibit['exhibit_image']; //gets full image array
     $image_url = $image['url']; //url of image
     $image_id = $image['id']; //id of image
-    $image_credit = get_media_credit_html($image_id, false); //media credit for image
+    $image_credit = App\get_media_credit_html($image_id, false); //media credit for image
   @endphp
 
     <div class="hero-header" role="img">

@@ -8,7 +8,7 @@
   $inside_museums_image = get_field('inside_museums_image'); //gets full image array
   $inside_museums_image_url = $inside_museums_image['url']; //url of image
   $inside_museums_image_id = $inside_museums_image['id']; //id of image
-  $inside_museums_image_credit = get_media_credit_html($inside_museums_image_id, false); //media credit for image
+  $inside_museums_image_credit = App\get_media_credit_html($inside_museums_image_id, false); //media credit for image
 @endphp
 
   <div class="carnegie-magazine-section-3">

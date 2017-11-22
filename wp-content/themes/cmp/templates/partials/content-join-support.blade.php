@@ -14,7 +14,7 @@
     $header_image = $row['image']; //gets full image array
     $header_image_url = $header_image['url']; //url of image
     $header_image_id = $header_image['id']; //id of image
-    $header_image_credit = get_media_credit_html($header_image_id, false); //media credit for image
+    $header_image_credit = App\get_media_credit_html($header_image_id, false); //media credit for image
   @endphp
 
   <div class="hero-header" role="img" aria-label="Carnegie Museums members sitting on a couch" style="background-image:url('{{ $header_image_url }}')">

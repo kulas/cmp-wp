@@ -21,9 +21,7 @@ function create_experts() {
         'not_found_in_trash' => __( 'No experts found in Trash.' ),
       ),
       'public' => true,
-      'menu_icon' => 'dashicons-businessman',
-      'exclude_from_search' => true,
-      'publicly_queryable' => false
+      'menu_icon' => 'dashicons-businessman'
     )
   );
 

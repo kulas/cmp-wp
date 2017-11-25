@@ -9,6 +9,11 @@ export default {
     // object fit polyfill
     objectFitImages();
 
+    // no me gusta
+    if($('body').is('.tag')) {
+      $('.desktop-nav li.carnegie-magazine').addClass('current-menu-item');
+    }
+
   // main navigation
   ////////////////////////////////////////////////////////////////////////////////
   var quickviewState = false;

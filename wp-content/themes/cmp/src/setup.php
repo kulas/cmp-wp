@@ -148,6 +148,24 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= App\\asset_path({$asset}); ?>";
     });
+
+    /**
+     * Hide Media Credit plugin field on attachments so it doesn't interfere with ACF field
+     */
+    add_action('admin_footer', function () { ?>
+        <style type="text/css">
+            [data-setting="mediaCreditText"] {
+                display: none !important;
+            }
+        </style>
+
+        <script type="text/javascript">
+            (function($) {
+                $('.compat-field-media-credit').remove();
+            })(jQuery);
+        </script>
+    <?php });
+
 });
 
 /**

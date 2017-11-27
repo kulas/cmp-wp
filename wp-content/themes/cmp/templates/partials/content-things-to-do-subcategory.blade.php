@@ -49,7 +49,7 @@
   </div>
 </div>
 
-@include('partials.content-more-things-to-do');
+@include('partials.content-more-things-to-do')
 
 @php
   endwhile; else : endif;

@@ -1,10 +1,10 @@
 {
     "key": "group_5937005f6699c",
-    "title": "Activities",
+    "title": "Events List",
     "fields": [
         {
             "key": "field_5937006521d16",
-            "label": "Activity",
+            "label": "Event",
             "name": "activity",
             "type": "repeater",
             "instructions": "",
@@ -18,15 +18,15 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "layout": "block",
+            "button_label": "Add Event",
             "sub_fields": [
                 {
                     "key": "field_5937009b21d18",
                     "label": "Image",
                     "name": "image",
                     "type": "image",
-                    "instructions": "Please upload a high-quality image representing the activity.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -65,11 +65,11 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5937016e21d1a",
-                    "label": "Date & Time",
-                    "name": "date",
+                    "key": "field_5a1c4d67ede09",
+                    "label": "Location",
+                    "name": "location",
                     "type": "text",
-                    "instructions": "Enter the date and time or time-range for the activity.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -84,10 +84,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5937017a21d1b",
-                    "label": "Museum",
-                    "name": "museum",
-                    "type": "select",
+                    "key": "field_593700af21d19",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -96,26 +96,18 @@
                         "class": "",
                         "id": ""
                     },
-                    "choices": {
-                        "Carnegie Museum of Art": "Carnegie Museum of Art",
-                        "Carnegie Museum of Natural History": "Carnegie Museum of Natural History",
-                        "Carnegie Science Center": "Carnegie Science Center",
-                        "The Andy Warhol Museum": "The Andy Warhol Museum"
-                    },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
-                    "key": "field_593700af21d19",
-                    "label": "Description",
-                    "name": "description",
+                    "key": "field_5a1c4e107c113",
+                    "label": "Link",
+                    "name": "link",
                     "type": "text",
-                    "instructions": "Description of the activity.",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -149,5 +141,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510947291
+    "modified": 1511804452
 }

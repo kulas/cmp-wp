@@ -140,9 +140,9 @@
         ],
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "413"
+                "value": "templates\/template-things-to-do-category.blade.php"
             }
         ]
     ],
@@ -154,5 +154,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510947396
+    "modified": 1511798239
 }

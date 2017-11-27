@@ -12,11 +12,14 @@
   grid-template-rows: auto 1fr;
   grid-column-gap: $small-spacing;
   padding-top: $small-spacing;
-  border-top: 1px solid $light-gray;
 
   @include grid-media($medium) {
     grid-template-columns: 1fr 100px; 
   }
+}
+
+body:not(.single-expert) .expert {
+  border-top: 1px solid $light-gray;
 }
 
 .expert__photo {

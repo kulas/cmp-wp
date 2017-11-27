@@ -29,7 +29,7 @@ Template Name: More Things to Do
         <div class="activity__main-image" role="img" style="background-image: url('{{the_sub_field("image")}}') "></div>
       </a>
       <div class="activity__text-box">
-        <h4>{{ the_sub_field('title') }}</h4>
+        <h4><a href="{{ the_sub_field('link') }}" class="black-link">{{ the_sub_field('title') }}</a></h4>
         <p>{{ the_sub_field('description') }}</p>
       </div>
     </div>

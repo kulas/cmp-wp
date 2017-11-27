@@ -137,6 +137,7 @@
 
     @include grid-media($medium) {
       margin-left: $small-spacing;
+      margin-right: $small-spacing;
 
       i {
         display: inline;

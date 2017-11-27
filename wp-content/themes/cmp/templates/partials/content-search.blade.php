@@ -1,6 +1,6 @@
 {{-- Auto-generated search function --}}
 
-<article @php(post_class())>
+<article class="search-result">
   <header>
     <h2 class="entry-title"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h2>
     @if (get_post_type() === 'post')

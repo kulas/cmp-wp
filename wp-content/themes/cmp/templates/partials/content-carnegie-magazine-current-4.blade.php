@@ -16,19 +16,23 @@
 <div class="carnegie-magazine__big-picture">
   <a href="{{ the_field('big_picture_link') }}" aria-label="{{ the_field('big_picture_title') }}">
     <div class="hero-header" role="img" style="background-image:url('{{ $bigpicture_url }}')"></div>
-    <div class="content-container">
-      <h1 class="hero-header__words-box green-robot-link">{{ the_field('big_picture_title') }}</h1>
-      <div class="media-details">
-        <p class="media-details__caption">@php echo $bigpicture_image['caption']; @endphp</p>
-        <p class="media-details__credit">@php echo $bigpicture_credit; @endphp</p>
-      </div>
   </a>
-    <p>{{ the_field('big_picture_text') }}</p>
-    <div class="magazine-signup">
-      <p class="uppercase-robot">Sign up to receive more stories in your email</h3><br>
-      <button class="grey-button">Enter Your Email</button>
-    </div>
+  <div class="media-details">
+    <p class="media-details__caption">@php echo $bigpicture_image['caption']; @endphp</p>
+    <p class="media-details__credit">@php echo $bigpicture_credit; @endphp</p>
   </div>
+  <div class="content-container">
+    <h1 class="hero-header__words-box green-robot-link">{{ the_field('big_picture_title') }}</h1>
+    <p>{{ the_field('big_picture_text') }}</p>
+    <hr />
+  </div>
+
+  <article>
+    <div class="magazine-subscribe">
+      <p class="serif label"><strong>Sign up to receive more stories in your email</strong></p>
+      @include('partials/magazine-signup-form')
+    </div>
+  </article>
 </div>
 
 @php

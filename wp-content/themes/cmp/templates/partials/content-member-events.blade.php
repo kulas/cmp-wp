@@ -32,7 +32,7 @@
     </div>
     <hr class="breadcrumb-hr">
     <div class="content-wrapper">
-      <div class="l-long">
+      <div class="l-long event-list">
         {{ the_content() }}
 
         @php
@@ -42,11 +42,27 @@
         @endphp
           <div class="event">
             <div class="activity__image">
+              @if(get_sub_field('link'))
+                <a href="{{ the_sub_field('link') }}">
+              @endif
               <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('title') }}" />
+              @if(get_sub_field('link'))
+                </a>
+              @endif
             </div>
             <div class="activity__content">
-              <h3>{{ the_sub_field('title') }}</h3>
-              <p><span class="activity__location">{{ the_sub_field('museum') }}</span></p>
+              <h3>
+                @if(get_sub_field('link'))
+                  <a href="{{ the_sub_field('link') }}" class="black-link">
+                @endif
+                {{ the_sub_field('title') }}
+                @if(get_sub_field('link'))
+                  </a>
+                @endif
+              </h3>
+              @if(get_sub_field('location'))
+                <p><span class="activity__location">{{ the_sub_field('location') }}</span></p>
+              @endif
               {{ the_sub_field('description') }}
             </div>
           </div>

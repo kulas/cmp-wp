@@ -13,7 +13,7 @@
   <div class="expert__details">
     <h5>{{ the_field('position')}}</h5>
     <p>
-      <strong>Area of focus:</strong>
+      <strong>Areas of focus:</strong>
       <span class="expert__focus">{{ the_field('area_of_focus') }}</span>
     </p>
     {{ the_content() }}

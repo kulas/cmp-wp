@@ -169,6 +169,16 @@ add_action('after_setup_theme', function () {
 });
 
 /**
+ * Customize query for Expert archives
+ */
+add_action('pre_get_posts', function($query) {
+    if ($query->is_main_query() && $query->is_tax(['museums', 'specialties'])):
+        $query->set('order', 'ASC');
+        $query->set('orderby', 'title');
+    endif;
+});
+
+/**
  * Init config
  */
 sage()->bindIf('config', Config::class, true);

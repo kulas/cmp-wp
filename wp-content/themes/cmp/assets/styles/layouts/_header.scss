@@ -8,6 +8,7 @@
   background: #eaeaea;
   z-index: 1001;
   width: 100%;
+  overflow: hidden;
 
   @include grid-media($nav-break) {
     background: $base-color;
@@ -44,6 +45,12 @@
     justify-content: flex-end;
     padding: 0;
     height:auto;
+  }
+
+  nav {
+    @include grid-media($nav-break) {
+      width: 100%;
+    }
   }
 }
 
@@ -102,17 +109,11 @@
 .top-bar__form {
   position: relative;
   display: flex;
+  margin-right: 5px;
   overflow: hidden;
-  width: 275px;
-  position: relative;
 
   @include grid-media($nav-break) {
     display: none;
-  }
-
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE Fix
-    width:505px;
-    margin-right: 5px;
   }
 
   input[type="email"] {
@@ -125,6 +126,7 @@
     position: relative;
     top:7px;
     width:200px;
+    display: inline-block;
   }
 
   input[type="submit"] {
@@ -133,19 +135,10 @@
     border-radius:0;
     margin: 0 !important;
     top: 7px;
+    width: 80px;
     // font-size: .75em !important;
     font-weight: 600;
-
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE Fix
-      padding-right: 4.6em;
-      width: 150px !important;
-      // padding: 0;
-    }
   }
-}
-
-nav {
-  width: 100%;
 }
 
 ul.top-bar-nav {

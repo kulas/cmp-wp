@@ -241,6 +241,10 @@ ul.tab-content {
   @include grid-media($medium) {
     grid-template-columns: 1fr;
   }
+
+  .tab__body {
+    position: relative;
+  }
 }
 
 .tabbed-content hr {

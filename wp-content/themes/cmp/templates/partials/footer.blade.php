@@ -117,11 +117,10 @@
       </div>
      </div>
     </div>
-  </div>
 
-  <div class="sticky-join-donate">
-    <a href="/join-support/membership/joinrenew" class="sticky-join-donate__join">Join</a>
-    <a href="https://secure2.convio.net/cmp/site/Donation2;jsessionid=ECDA1B790F2D30313CA854DEFD21A947.app274b?df_id=14000&14000.donation=form1" class="sticky-join-donate__donate">Donate</a>
-  </div>
+    <div class="sticky-join-donate">
+      <a href="/join-support/membership/joinrenew" class="sticky-join-donate__join">Join</a>
+      <a href="https://secure2.convio.net/cmp/site/Donation2;jsessionid=ECDA1B790F2D30313CA854DEFD21A947.app274b?df_id=14000&14000.donation=form1" class="sticky-join-donate__donate">Donate</a>
+    </div>
 
 </footer>

@@ -1,4 +1,6 @@
 /** import external dependencies */
+require('es5-shim');
+require('es6-shim');
 import 'jquery';
 
 /** import local dependencies */

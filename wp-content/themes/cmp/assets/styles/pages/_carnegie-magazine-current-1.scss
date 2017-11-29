@@ -2,7 +2,7 @@
 
 .carnegie-magazine-current-1 {
   display: flex;
-  padding-top: $base-spacing;
+  padding-top: 0;
   padding-bottom: $base-spacing;
 
   @include grid-media($nav-break) {

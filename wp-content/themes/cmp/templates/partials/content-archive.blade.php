@@ -21,18 +21,19 @@
 
       {{-- Obtains list of recently Archived magazine issues, loops through these issues to show cover story + blurb --}}
       @php
-        $child_pages = new WP_Query( array(
-          'post_type'      => 'page', // set the post type to page
-          'posts_per_page' => 10, // number of posts (pages) to show
+        $issues = new WP_Query(array(
+          'post_type'      => 'issue', // set the post type to issue
+          'posts_per_page' => 10, // number of posts to show
           'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
-          'cat'  => 33 // ensures only archive issues show up
+          'orderby'        => 'meta_value',
+          'meta_key'       => 'issue_number'
         ));
 
-        if ( $child_pages->have_posts() ) : while ( $child_pages->have_posts() ) : $child_pages->the_post();
+        if ( $issues->have_posts() ) : while ( $issues->have_posts() ) : $issues->the_post();
       @endphp
 
       <div class="issue__cover">
-        <img src="{{ the_field('current_issue_cover') }}" alt="{{ the_field('current_issue_title') }}">
+        {{ the_post_thumbnail('large') }}
       </div>
 
       <div class="issue__content">
@@ -48,12 +49,11 @@
             setup_postdata( $post );
           @endphp
 
-            <div class="tags">@php(the_tags( '', ' | ', '' ))</div>
-              <a href="{{ the_permalink() }}">
-                <h2 class="black-link robot">{{ the_title() }}</h2>
-              </a>
-              <p>{{ the_excerpt() }}</p>
-              <p class="author">{{ the_field('author') }}</p>
+            <a href="{{ the_permalink() }}">
+              <h2 class="black-link robot">{{ the_title() }}</h2>
+            </a>
+            <p>{{ the_excerpt() }}</p>
+            <p class="author">{{ the_field('author') }}</p>
 
           {{-- Resets postdata on the cover story for the issue --}}
           @php wp_reset_postdata(); endif; @endphp
@@ -74,13 +74,7 @@
 
           @php
             // Loops through recent issues for the sidebar
-            $child_pages = new WP_Query( array(
-              'post_type'      => 'page', // set the post type to page
-              'posts_per_page' => 10, // number of posts (pages) to show
-              'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop3
-              'cat'  => 33 //ensures only archive issues show up
-            ));
-            if ( $child_pages->have_posts() ) : while ( $child_pages->have_posts() ) : $child_pages->the_post();
+            if ( $issues->have_posts() ) : while ( $issues->have_posts() ) : $issues->the_post();
           @endphp
 
             <li>
@@ -96,8 +90,8 @@
 
         </ul>
 
-        <a href="#">For earlier archives, click here.</a>
-
+        <!-- Eventually, this will link to the static HTML archives of older issues -->
+        <!-- <a href="#">For earlier archives, click here.</a> -->
       </div>
     </div>
   </div>

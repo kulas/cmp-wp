@@ -1111,11 +1111,19 @@ ul#menu-magazine-nav
 
 //Magazine nav stuff
 nav.magazine-nav-container.desktop-nav-container {
-  position: relative;
-  top: 0em;
-  z-index: 500;
-  background: transparent;
-  height: 0;
+  li.menu-item {
+    margin-bottom: 0;
+  }
+}
+
+body:not(.single-issue) {
+  nav.magazine-nav-container.desktop-nav-container {
+    position: relative;
+    top: 0em;
+    z-index: 500;
+    background: transparent;
+    height: 0;
+  }
 }
 
 .menu-magazine-nav-container {

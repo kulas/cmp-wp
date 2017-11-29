@@ -173,8 +173,8 @@ add_action('after_setup_theme', function () {
  */
 add_action('pre_get_posts', function($query) {
     if ($query->is_main_query() && $query->is_tax(['museums', 'specialties'])):
-        $query->set('order', 'ASC');
-        $query->set('orderby', 'title');
+        $query->set('meta_key', 'last_name' );
+        $query->set('orderby', array('meta_value' => 'ASC', 'title' => 'ASC'));
     endif;
 });
 

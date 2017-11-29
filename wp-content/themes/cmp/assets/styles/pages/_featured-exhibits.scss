@@ -1,5 +1,9 @@
 // Featured Exhibits section on the homepage, under 'Now Showing.'
 
+[data-exhibit-id] {
+  transition: opacity .5s .5s;
+}
+
 .exhibit-container {
   display: flex;
   flex-wrap: wrap;

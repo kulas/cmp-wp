@@ -23,13 +23,18 @@ body:not(.single-expert) .expert {
 }
 
 .expert__photo {
-  grid-row-start: span 2;
+  grid-row-start: 2;
   grid-column-start: 2;
   margin-bottom: $small-spacing;
 }
 
 .expert__name {
   grid-row-start: 1;
+  grid-column-start: span 2;
+}
+
+.expert__details {
+  grid-row-start: 2;
 }
 
 @supports not (grid-gap: $base-spacing) {
@@ -38,6 +43,7 @@ body:not(.single-expert) .expert {
   }
 
   .expert__details {
+    grid-row: 2;
     -ms-grid-row: 2;
   }
 }

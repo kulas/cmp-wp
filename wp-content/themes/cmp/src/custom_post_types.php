@@ -20,6 +20,7 @@ function create_cpts() {
             'not_found_in_trash' => __( 'No issues found in Trash.' ),
         ),
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'rewrite' => array('with_front' => 'false', 'slug' => 'carnegie-magazine/issue'),
         'public' => true,
         'menu_icon' => 'dashicons-book'
     ));

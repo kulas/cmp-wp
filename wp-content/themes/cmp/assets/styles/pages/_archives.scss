@@ -20,7 +20,7 @@ body.carnegie-magazine-archive {
   }
 
   .issue {
-    flex-basis: 80%;
+    flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: $small-spacing 0;
@@ -37,7 +37,7 @@ body.carnegie-magazine-archive {
 
   .issue__cover {
     flex-basis: 20%;
-    padding-bottom: $small-spacing;
+    padding-bottom: $base-spacing;
 
     @include grid-media($nav-break) {
       flex-basis:30%;
@@ -49,9 +49,8 @@ body.carnegie-magazine-archive {
   }
 
   .issue__content {
-    flex-basis: 75%;
-    padding: 0 $small-spacing;
-    padding-bottom: $small-spacing;
+    flex-basis: 30%;
+    padding: 0 $base-spacing $base-spacing $small-spacing;
 
     @include grid-media($nav-break) {
       flex-basis: 70%;
@@ -64,33 +63,5 @@ body.carnegie-magazine-archive {
     .black-link.robot {
       margin: 0;
     }
-  }
-
-  .archive__sidebar {
-    padding-top: $small-spacing;
-    flex-basis: 20%;
-
-    h3 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-    }
-
-    li {
-      padding: 0;
-    }
-
-    @include grid-media($nav-break) {
-      display: none;
-    }
-
-    @include grid-media($small) {
-      display: none;
-    }
-  }
-
-  .archive__sidebar__container {
-    padding: $small-spacing;
-    border-left: 1px solid #CCC;
-    border-bottom: 1px solid #CCC;
   }
 }

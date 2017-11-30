@@ -44,7 +44,7 @@
 
         $index = 0;
         if ( $issues->have_posts() ) : while ( $issues->have_posts() ):
-          if ($index > 1):
+          if ($index > 9):
             break;
           else:
             $issues->the_post();
@@ -86,34 +86,6 @@
         $issues->rewind_posts();
       @endphp
 
-    </div>
-
-    <div class="archive__sidebar">
-      <div class="archive__sidebar__container">
-        <h3 class="uppercase">Past Issues</h3>
-        <ul>
-
-          @php
-            // Loops through recent issues for the sidebar
-            if ( $issues->have_posts() ) : while ( $issues->have_posts() ) : $issues->the_post();
-          @endphp
-
-            <li>
-              <a href="{{ the_permalink() }}">
-                {{ the_title() }}
-              </a>
-            </li>
-
-          @php
-            endwhile; endif;
-            wp_reset_postdata(); // Resets postdata for issue
-          @endphp
-
-        </ul>
-
-        <!-- Eventually, this will link to the static HTML archives of older issues -->
-        <!-- <a href="#">For earlier archives, click here.</a> -->
-      </div>
     </div>
   </div>
 </div>

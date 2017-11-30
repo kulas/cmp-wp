@@ -3,13 +3,75 @@
     "title": "Carnegie Magazine Issue",
     "fields": [
         {
+            "key": "field_5a20379c9557c",
+            "label": "Issue Type",
+            "name": "issue_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "full": "Full issue",
+                "archived": "Archived issue"
+            },
+            "default_value": [
+                "full"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5a20389fbbf08",
+            "label": "Issue URL",
+            "name": "issue_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a20379c9557c",
+                        "operator": "==",
+                        "value": "archived"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5a1f11652334e",
             "label": "Articles",
             "name": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a20379c9557c",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -133,7 +195,15 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a20379c9557c",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -241,5 +311,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1511989201
+    "modified": 1512061126
 }

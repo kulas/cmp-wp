@@ -1,6 +1,6 @@
 {
     "key": "group_5a1f187ad5e6d",
-    "title": "Issue Number",
+    "title": "Issue Details",
     "fields": [
         {
             "key": "field_5a1f188434651",
@@ -22,6 +22,44 @@
             "min": "",
             "max": "",
             "step": ".01"
+        },
+        {
+            "key": "field_5a206c022d4fd",
+            "label": "Issue Year",
+            "name": "issue_year",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a206c2a2d4fe",
+            "label": "Issue Season",
+            "name": "issue_season",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -41,5 +79,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511987400
+    "modified": 1512074440
 }

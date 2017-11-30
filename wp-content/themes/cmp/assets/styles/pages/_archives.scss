@@ -64,4 +64,34 @@ body.carnegie-magazine-archive {
       margin: 0;
     }
   }
+
+  .past-issues-heading {
+    margin: 0 0 $base-spacing 0;
+    width: 100%;
+  }
+
+  .past-issues-list {
+    width: 100%;
+
+    .post-issues-year {
+      font-size: 1.25rem;
+      margin-right: $base-spacing;
+      min-width: 55px;
+    }
+
+    & > li {
+      display: flex;
+
+      @include grid-media($large) {
+        flex-direction: column;
+
+        & > ol {
+          & > li {
+            display: block;
+            margin-left: $small-spacing;
+          }
+        }
+      }
+    }
+  }
 }

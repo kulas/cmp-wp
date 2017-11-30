@@ -57,11 +57,6 @@
             {
                 "param": "page_template",
                 "operator": "!=",
-                "value": "templates\/template-archive.blade.php"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
                 "value": "templates\/template-magazine-subpage.blade.php"
             }
         ]
@@ -74,5 +69,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1511298543
+    "modified": 1512053110
 }

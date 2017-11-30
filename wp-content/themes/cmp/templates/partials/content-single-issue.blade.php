@@ -8,6 +8,7 @@
 
         @php
           global $post;
+          $issue_title = get_the_title();
           $post_object = get_field('cover_story');
           if( $post_object ):
           $post = $post_object;
@@ -15,7 +16,7 @@
         @endphp
 
         <div class="current-issue__cover-story">
-          <h2 class="issue-title">{{ the_field('current_issue_title') }}</h2>
+          <h2 class="issue-title">{{ $issue_title }}</h2>
           <p class="small-uppercase--bold">Cover Story</p>
           <h3 class="sans-serif"><a href="{{ the_permalink() }}">{{ the_title() }}</a></h3>
           <p>{{ the_field('quote') }}</p>
@@ -72,26 +73,29 @@
           @php
             the_row();
             $post_object = get_sub_field('article');
-            if( $post_object):
-              $post = $post_object;
-              setup_postdata($post);
-            endif;
           @endphp
 
-          <div class="article">
-            <div class="categories">@php(the_tags( '', '', '' ))</div>
-            <a href="{{ the_permalink() }}">
-            <div class="article__image-container">
-              <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
-            </div>
-              <h3 class="green-robot-link">{{ the_title() }}</h3>
-            </a>
-            <p>{{ the_excerpt() }}</p>
-            <p class="author">{{ the_field('author') }}</p>
-          </div>
+          @if ($post_object)
+            @php
+              $post = $post_object;
+              setup_postdata($post);
+            @endphp
 
-          @endwhile
-          @php(wp_reset_postdata())
+            <div class="article">
+              <div class="categories">@php(the_tags( '', '', '' ))</div>
+              <a href="{{ the_permalink() }}">
+              <div class="article__image-container">
+                <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
+              </div>
+                <h3 class="green-robot-link">{{ the_title() }}</h3>
+              </a>
+              <p>{{ the_excerpt() }}</p>
+              <p class="author">{{ the_field('author') }}</p>
+            </div>
+
+            @php(wp_reset_postdata())
+          @endif
+        @endwhile
 
       </div>
     </div>
@@ -109,33 +113,36 @@
           @php
             the_row();
             $post_object = get_sub_field('article');
-            if( $post_object):
-              $post = $post_object;
-              setup_postdata($post);
-            endif;
           @endphp
 
-          <div class="also-article">
-            <div class="also-article__left">
-              <div class="article__image-container">
-                <a href="{{ the_permalink() }}">
-                  <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
-                </a>
-              </div>
-              <p class="feature-type">{{ the_field('feature_type') }}</p>
-            </div>
-            <div class="also-article__right">
-              <div class="categories">@php(the_tags( '', '', '' ))</div>
-              <a href="{{ the_permalink() }}">
-                <h3 class="green-robot-link">{{ the_title() }}</h3>
-              </a>
-              <p>{{ the_excerpt() }}</p>
-              <p class="author">{{ the_field('author') }}</p>
-            </div>
-          </div>
+          @if ($post_object)
+            @php
+              $post = $post_object;
+              setup_postdata($post);
+            @endphp
 
+            <div class="also-article">
+              <div class="also-article__left">
+                <div class="article__image-container">
+                  <a href="{{ the_permalink() }}">
+                    <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
+                  </a>
+                </div>
+                <p class="feature-type">{{ the_field('feature_type') }}</p>
+              </div>
+              <div class="also-article__right">
+                <div class="categories">@php(the_tags( '', '', '' ))</div>
+                <a href="{{ the_permalink() }}">
+                  <h3 class="green-robot-link">{{ the_title() }}</h3>
+                </a>
+                <p>{{ the_excerpt() }}</p>
+                <p class="author">{{ the_field('author') }}</p>
+              </div>
+            </div>
+
+            @php(wp_reset_postdata())
+          @endif
         @endwhile
-        @php(wp_reset_postdata())
 
       </div>
     </div>

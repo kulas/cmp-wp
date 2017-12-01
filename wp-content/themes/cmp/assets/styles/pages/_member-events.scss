@@ -34,6 +34,7 @@
 
   .activity__image > img {
     @include object-fit(cover);
+    max-height: 200px;
   }
 
   .activity__content {

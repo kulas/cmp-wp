@@ -7,6 +7,19 @@
   padding: 0;
 }
 
+.list--inline {
+  @extend .list--blank;
+
+  & > li {
+    display: inline-block;
+    margin-left: $base-spacing;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
 ol {
   list-style-type: decimal;
   margin:  0 0 $small-spacing ;

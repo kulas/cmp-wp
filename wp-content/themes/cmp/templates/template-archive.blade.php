@@ -1,5 +1,5 @@
 {{--
-  Template Name: Archive
+  Template Name: Magazine Archive
 --}}
 
 @extends('layouts.base')

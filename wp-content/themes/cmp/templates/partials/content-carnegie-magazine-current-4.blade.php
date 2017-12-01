@@ -1,12 +1,6 @@
 {{-- Carnegie Magazine Current Issue page "Big Picture" & Magazine subscription section --}}
 
 @php
-  if (have_posts()) :
-  while (have_posts()) :
-  the_post();
-@endphp
-
-@php
   $bigpicture_image = get_field('big_picture_image'); //gets full image array
   $bigpicture_id = $bigpicture_image['id']; //id of image
   $bigpicture_url = $bigpicture_image['url']; //url of image
@@ -34,7 +28,3 @@
     </div>
   </article>
 </div>
-
-@php
-  endwhile; else: endif;
-@endphp

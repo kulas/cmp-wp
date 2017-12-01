@@ -2,7 +2,7 @@
 
 .carnegie-magazine-current-1 {
   display: flex;
-  padding-top: $base-spacing;
+  padding-top: 0;
   padding-bottom: $base-spacing;
 
   @include grid-media($nav-break) {
@@ -59,10 +59,7 @@
   }
 
   .issue-title {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.5em;
+    margin-bottom: (1.5 * $small-spacing);
   }
 
   ul {

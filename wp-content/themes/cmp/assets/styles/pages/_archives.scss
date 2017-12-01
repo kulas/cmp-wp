@@ -1,7 +1,16 @@
+body.carnegie-magazine-archive {
+  .content-container {
+    padding-top: $large-spacing;
+  }
+
+  .basic-header + .content-container {
+    padding-top: 0;
+  }
+}
+
 .magazine-archive {
-  padding-top: $large-spacing;
   display: flex;
-  // flex-wrap: wrap;
+
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { //IE fix
     min-width: 100%;
   }
@@ -10,20 +19,8 @@
     padding: 0;
   }
 
-  .content-container {
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      // min-width: 100%;
-      min-width: $max-width;
-      margin: auto;
-
-      @include grid-media($extra-large) {
-        min-width: 1136px;
-      }
-    }
-  }
-
   .issue {
-    flex-basis: 80%;
+    flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: $small-spacing 0;
@@ -40,7 +37,7 @@
 
   .issue__cover {
     flex-basis: 20%;
-    padding-bottom: $small-spacing;
+    padding-bottom: $base-spacing;
 
     @include grid-media($nav-break) {
       flex-basis:30%;
@@ -52,9 +49,8 @@
   }
 
   .issue__content {
-    flex-basis: 75%;
-    padding: 0 $small-spacing;
-    padding-bottom: $small-spacing;
+    flex-basis: 30%;
+    padding: 0 $base-spacing $base-spacing $small-spacing;
 
     @include grid-media($nav-break) {
       flex-basis: 70%;
@@ -69,31 +65,33 @@
     }
   }
 
-  .archive__sidebar {
-    padding-top: $small-spacing;
-    flex-basis: 20%;
-
-    h3 {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-    }
-
-    li {
-      padding: 0;
-    }
-
-    @include grid-media($nav-break) {
-      display: none;
-    }
-
-    @include grid-media($small) {
-      display: none;
-    }
+  .past-issues-heading {
+    margin: 0 0 $base-spacing 0;
+    width: 100%;
   }
 
-  .archive__sidebar__container {
-    padding: $small-spacing;
-    border-left: 1px solid #CCC;
-    border-bottom: 1px solid #CCC;
+  .past-issues-list {
+    width: 100%;
+
+    .post-issues-year {
+      font-size: 1.25rem;
+      margin-right: $base-spacing;
+      min-width: 55px;
+    }
+
+    & > li {
+      display: flex;
+
+      @include grid-media($large) {
+        flex-direction: column;
+
+        & > ol {
+          & > li {
+            display: block;
+            margin-left: $small-spacing;
+          }
+        }
+      }
+    }
   }
 }

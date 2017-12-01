@@ -1,13 +1,13 @@
 {
-    "key": "group_595e5490cb77d",
-    "title": "Carnegie Magazine Current Issue",
+    "key": "group_5a1f0edbd7d30",
+    "title": "Carnegie Magazine Issue",
     "fields": [
         {
-            "key": "field_595e54abea908",
-            "label": "Current Issue Cover",
-            "name": "current_issue_cover",
-            "type": "image",
-            "instructions": "Upload a high-quality image of the cover for the most recent magazine issue.",
+            "key": "field_5a20379c9557c",
+            "label": "Issue Type",
+            "name": "issue_type",
+            "type": "select",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,25 +15,36 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "choices": {
+                "full": "Full issue",
+                "archived": "Archived issue"
+            },
+            "default_value": [
+                "full"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         },
         {
-            "key": "field_595e55edbb221",
-            "label": "Current Issue Title",
-            "name": "current_issue_title",
+            "key": "field_5a20389fbbf08",
+            "label": "Issue URL",
+            "name": "issue_url",
             "type": "text",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a20379c9557c",
+                        "operator": "==",
+                        "value": "archived"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -46,7 +57,31 @@
             "maxlength": ""
         },
         {
-            "key": "field_595e56ddb415e",
+            "key": "field_5a1f11652334e",
+            "label": "Articles",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a20379c9557c",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a1f0edbdcbc8",
             "label": "Cover Story",
             "name": "cover_story",
             "type": "post_object",
@@ -58,7 +93,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
+            "post_type": [
+                "post"
+            ],
             "taxonomy": [],
             "allow_null": 0,
             "multiple": 0,
@@ -66,90 +103,7 @@
             "ui": 1
         },
         {
-            "key": "field_595e588b57846",
-            "label": "Recent Issues",
-            "name": "recent_issues",
-            "type": "repeater",
-            "instructions": "Select 2 recent issues in the archives.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 3,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_595e58a757847",
-                    "label": "Issue Title",
-                    "name": "issue_title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_595e58ae57848",
-                    "label": "Cover Photo",
-                    "name": "cover_photo",
-                    "type": "image",
-                    "instructions": "Upload an image of the magazine cover.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_596fa741d77d4",
-                    "label": "Issue Link",
-                    "name": "issue_link",
-                    "type": "page_link",
-                    "instructions": "Select the link to this issue in the archives.",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [],
-                    "taxonomy": [],
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
-                }
-            ]
-        },
-        {
-            "key": "field_595f9744fcdb0",
+            "key": "field_5a1f0edbdcd67",
             "label": "Featured Articles",
             "name": "featured_articles",
             "type": "repeater",
@@ -168,7 +122,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_595f9750fcdb1",
+                    "key": "field_5a1f0ede5e3b4",
                     "label": "Article",
                     "name": "article",
                     "type": "post_object",
@@ -180,7 +134,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [],
+                    "post_type": [
+                        "post"
+                    ],
                     "taxonomy": [],
                     "allow_null": 0,
                     "multiple": 0,
@@ -190,7 +146,7 @@
             ]
         },
         {
-            "key": "field_595fc86642b1c",
+            "key": "field_5a1f0edbdce17",
             "label": "Also in this Issue",
             "name": "also_in_issue",
             "type": "repeater",
@@ -209,8 +165,8 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_595fc87b42b1d",
-                    "label": "article",
+                    "key": "field_5a1f0ede62c12",
+                    "label": "Article",
                     "name": "article",
                     "type": "post_object",
                     "instructions": "",
@@ -221,7 +177,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [],
+                    "post_type": [
+                        "post"
+                    ],
                     "taxonomy": [],
                     "allow_null": 0,
                     "multiple": 0,
@@ -231,7 +189,31 @@
             ]
         },
         {
-            "key": "field_596fb2ac55260",
+            "key": "field_5a1f11712334f",
+            "label": "Big Picture",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a20379c9557c",
+                        "operator": "==",
+                        "value": "full"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5a1f0edbdced7",
             "label": "Big Picture Title",
             "name": "big_picture_title",
             "type": "text",
@@ -250,7 +232,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_595fded4d00ea",
+            "key": "field_5a1f0edbdcf7b",
             "label": "Big Picture Image",
             "name": "big_picture_image",
             "type": "image",
@@ -274,7 +256,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_595fdf011b98e",
+            "key": "field_5a1f0edbdd01f",
             "label": "Big Picture Text",
             "name": "big_picture_text",
             "type": "textarea",
@@ -293,7 +275,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_596fb2ba55261",
+            "key": "field_5a1f0edbdd0c4",
             "label": "Big Picture Link",
             "name": "big_picture_link",
             "type": "url",
@@ -312,9 +294,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "templates\/template-carnegie-magazine-current.blade.php"
+                "value": "issue"
             }
         ]
     ],
@@ -323,8 +305,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1510947295
+    "modified": 1512061126
 }

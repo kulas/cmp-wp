@@ -38,6 +38,12 @@ function museums_list($atts) {
     return $output;
 }
 
+function magazine_signup_form($atts) {
+    ob_start();
+    include get_template_directory() . '/templates/partials/magazine-signup-form.blade.php';
+    return ob_get_clean();
+}
+
 /**
 * Fixes empty <p> and <br> tags showing before and after shortcodes in the
 * output content.
@@ -68,6 +74,7 @@ add_filter('acf/format_value/name=trip_copy', 'App\\acf_content', 10, 3);
 function register_shortcodes() {
     add_shortcode('specialties_list', 'App\\specialties_list');
     add_shortcode('museums_list', 'App\\museums_list');
+    add_shortcode('magazine_signup_form', 'App\\magazine_signup_form');
 }
 add_action('init', 'App\\register_shortcodes');
 

@@ -36,10 +36,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-     display: block;
-   }
+    width: 100%;
   }
 
   #article__button {

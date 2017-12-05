@@ -3,6 +3,8 @@
 --}}
 
 @php
+  global $post;
+
   if (have_posts()) : while (have_posts()) : the_post();
 
   $image = get_field('header_image');
@@ -52,7 +54,7 @@
         @endphp
 
         <div class="issue__cover">
-          <a href="{{ the_permalink() }}">
+          <a href="{{ get_permalink() }}">
             <h2 class="black-link">{{ the_title() }}</h2>
             {{ the_post_thumbnail('large') }}
           </a>
@@ -107,7 +109,7 @@
                 @foreach ($posts as $post)
                   @php(setup_postdata($post))
                   <li>
-                    <a href="{{ the_permalink() }}">
+                    <a href="{{ get_permalink() }}">
                       {{ $post->issue_season }}
                     </a>
                   </li>

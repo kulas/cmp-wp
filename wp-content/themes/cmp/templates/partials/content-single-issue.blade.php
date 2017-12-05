@@ -9,6 +9,10 @@
     <div class="content-container">
       <h2 class="issue-title">{{ the_title() }}</h2>
       @if ($issue_url)
+        <div class="open-issue">
+          <p>Click below to open this issue in a new window.</p>
+          <a href="{{ $issue_url }}" class="button" target="carnegie-magazine">Open Issue</a>
+        </div>
         <div class="iframe-wrap">
           <iframe class="carnegie-magazine-archived-issue-iframe" src="{{ $issue_url }}" frameborder="0"></iframe>
         </div>

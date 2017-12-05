@@ -32,56 +32,39 @@
         {{ the_content() }}
       </div>
 
-      @php
-        $issues = new WP_Query(array(
-          'post_type'      => 'issue', // set the post type to issue
-          'posts_per_page' => -1, // include all issues
-          'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
-          'orderby'        => 'meta_value',
-          'meta_key'       => 'issue_number',
-          'meta_query'     => array(
-            array(
-              'key'   => 'issue_type',
-              'value' => 'full'
+      <div class="issues-row">
+        @php
+          $issues = new WP_Query(array(
+            'post_type'      => 'issue', // set the post type to issue
+            'posts_per_page' => -1, // include all issues
+            'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+            'orderby'        => 'meta_value',
+            'meta_key'       => 'issue_number',
+            'meta_query'     => array(
+              array(
+                'key'   => 'issue_type',
+                'value' => 'full'
+              )
             )
-          )
-        ));
+          ));
 
-        if ($issues->have_posts()) : while ($issues->have_posts()): $issues->the_post();
-      @endphp
+          if ($issues->have_posts()) : while ($issues->have_posts()): $issues->the_post();
+        @endphp
 
-      <div class="issue__cover">
-        <a href="{{ the_permalink() }}">{{ the_post_thumbnail('large') }}</a>
-      </div>
+        <div class="issue__cover">
+          <a href="{{ the_permalink() }}">
+            <h2 class="black-link">{{ the_title() }}</h2>
+            {{ the_post_thumbnail('large') }}
+          </a>
+        </div>
 
-      <div class="issue__content">
-        <a href="{{ the_permalink() }}"><h2 class="black-link">{{ the_title() }}</h2></a>
-        <p class="small-uppercase--bold">Cover Story</p>
-
-        {{-- Finds the information on the 'cover story' post for the relevant issue --}}
-          @php
-            global $post;
-            $post_object = get_field('cover_story');
-            if( $post_object ):
-            $post = $post_object;
-            setup_postdata( $post );
-          @endphp
-
-            <a href="{{ the_permalink() }}">
-              <h3 class="sans-serif">{{ the_title() }}</h2>
-            </a>
-            <p>{{ the_excerpt() }}</p>
-            <p class="author">{{ the_field('author') }}</p>
-
-          {{-- Resets postdata on the cover story for the issue --}}
-          @php wp_reset_postdata(); endif; @endphp
-
+        @php
+          endwhile; endif; //resets postdata for the issue.
+          wp_reset_postdata();
+        @endphp
       </div>
 
       @php
-        endwhile; endif; //resets postdata for the issue.
-        wp_reset_postdata();
-
         $issues = get_posts(array(
           'post_type'      => 'issue', // set the post type to issue
           'posts_per_page' => -1, // include all issues

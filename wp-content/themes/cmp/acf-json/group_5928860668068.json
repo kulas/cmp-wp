@@ -8,7 +8,7 @@
             "name": "header_image",
             "type": "image",
             "instructions": "Upload a high quality, large banner\/hero image.",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -69,5 +69,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1512053110
+    "modified": 1512496199
 }

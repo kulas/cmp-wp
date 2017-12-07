@@ -1,2 +1,93 @@
 // PRINT STYLES
 ////////////////////////////////////////////////////////////////
+
+@media print {
+  .top-bar-container {
+    display: none;
+  }
+
+  .hero-header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .media-details {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // magazine articles
+  body.single-post {
+    article {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .article-meta {
+      .article-meta__issue {
+        + .article-meta__divider {
+          display: none;
+        }
+      }
+
+      .print,
+      .font-resizer {
+        display: none;
+      }
+    }
+
+    .article__related {
+      display: none;
+    }
+
+    .entry-content {
+      padding-left: 0;
+      padding-right: 0;
+
+      p {
+        font-size: 1rem;
+        line-height: 23px;
+        padding-bottom: .91rem;
+        margin-bottom: .91rem;
+      }
+    }
+
+    .magazine-subscribe {
+      display: none;
+    }
+  }
+
+  // site footer
+  .footer {
+    height: 3em;
+    min-height: 0;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+
+    * {
+      visibility: hidden;
+    }
+
+    .footer-links {
+      .copyright {
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 1rem;
+
+        * {
+          visibility: visible;
+        }
+
+        a {
+          display: none;
+        }
+      }
+    }
+  }
+}

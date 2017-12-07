@@ -198,8 +198,6 @@ img.alignright {
   width: 100%;
   padding: 0 $base-spacing;
   padding-bottom: 0;
-  color: black;
-  font-size: 0.7em;
   z-index: 1;
   margin-bottom: ($small-spacing / 2);
 
@@ -213,12 +211,19 @@ img.alignright {
 }
 
 .media-details__caption,
-.media-details__credit {
+.wp-caption-text,
+.media-details__credit,
+.media-credit {
   width: 100%;
-  margin-bottom: ($small-spacing / 2);
+  margin: 0 0 ($small-spacing / 2) 0;
+  text-align: left;
+  font-family: 'Roboto';
+  color: black;
+  font-size: 0.7em;
 }
 
-.media-details__caption {
+.media-details__caption,
+.wp-caption-text {
   font-weight: 400;
   order: 2;
 
@@ -227,7 +232,8 @@ img.alignright {
   }
 }
 
-.media-details__credit {
+.media-details__credit,
+.media-credit {
   font-weight: lighter;
   order: 1;
 

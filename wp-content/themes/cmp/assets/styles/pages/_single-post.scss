@@ -9,11 +9,38 @@ article {
     p {
       padding-bottom: 0 !important;
     }
+
+    @include grid-media($medium) {
+      flex-direction: column;
+
+      .article-meta__issue {
+        margin-right: auto;
+
+        + .article-meta__divider {
+          display: none;
+        }
+      }
+    }
   }
 
   .article-meta__main,
-  .font-resizer {
+  .font-resizer,
+  .font-resizer__wrap {
     display: flex;
+  }
+
+  .font-resizer {
+    justify-content: space-between;
+
+    @include grid-media($medium) {
+      .article-meta__divider {
+        display: none;
+      }
+
+      .hidden-mobile {
+        display: none;
+      }
+    }
   }
 
   li.fontResizer.ct-font-resizer-element {
@@ -266,15 +293,6 @@ article {
     }
   }
 
-  .font-resizer,
-  .social-share,
-  a.print,
-  p.article-meta__divider {
-    @include grid-media($medium) {
-      display: none;
-    }
-  }
-
   .article__main {
     figure {
       max-width: 100% !important;
@@ -397,7 +415,7 @@ article {
     @include grid-media($small) {
       flex-wrap: wrap;
     }
-    
+
     input {
       width: auto;
 

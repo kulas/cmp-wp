@@ -60,13 +60,14 @@
 
         </div>
         <p class="article-meta__divider">|</p>
-        <p class="small-uppercase--bold">Text Size:</p>
-
+        <div class="font-resizer__wrap">
+          <p class="small-uppercase--bold"><span class="hidden-mobile">Text</span> Size:</p>
           @php
             if (function_exists('fontResizer_place')) { // font resizer plugin
               fontResizer_place();
             }
           @endphp
+        </div>
 
       </div>
     </div>

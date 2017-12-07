@@ -114,12 +114,6 @@ article {
       font-family: 'Roboto', sans-serif;
     }
 
-    .wp-caption-text {
-      // @extend h5;
-      font-family: 'Lora';
-      padding: 0;
-    }
-
     .alignright {
       float: right;
     }
@@ -133,11 +127,6 @@ article {
       max-width: 100%;
       height: auto;
       padding-bottom: 0;
-    }
-
-    figcaption.wp-caption-text {
-      // max-width: 100% !important;
-      max-width: 1300px;
     }
 
     img.alignleft {
@@ -299,25 +288,7 @@ article {
       padding-bottom: $base-spacing;
     }
 
-    figcaption.wp-caption-text,
-    span.media-credit {
-      font-size: 0.8em;
-      font-family: 'Roboto';
-    }
-
-    span.media-credit {
-      float: right;
-      padding-bottom: 0;
-      color: black;
-      font-size: 0.7em;
-      font-weight: lighter;
-      position: relative;
-      bottom: 0;
-      max-width: 40%;
-    }
-
     blockquote,
-    figcaption,
     h1,
     h2,
     h3,

@@ -1,25 +1,7 @@
-@php
-  $issue_type = get_field('issue_type');
-@endphp
-
+@php($issue_type = get_field('issue_type'))
 @if ('archived' === $issue_type)
   @php($issue_url = get_field('issue_url'))
-
-  <div class="carnegie-magazine-archived-issue">
-    <div class="content-container">
-      <h2 class="issue-title">{{ the_title() }}</h2>
-      @if ($issue_url)
-        <div class="open-issue">
-          <p>Click below to open this issue in a new window.</p>
-          <a href="{{ $issue_url }}" class="button" target="carnegie-magazine">Open Issue</a>
-        </div>
-        <div class="iframe-wrap">
-          <iframe class="carnegie-magazine-archived-issue-iframe" src="{{ $issue_url }}" frameborder="0"></iframe>
-        </div>
-      @endif
-    </div>
-  </div>
-
+  @php(header("Location: $issue_url". true, 301))
 @else
 
   <div class="carnegie-magazine-current-1">

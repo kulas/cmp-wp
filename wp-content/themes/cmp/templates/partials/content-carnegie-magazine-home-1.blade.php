@@ -4,6 +4,7 @@
 @php
   global $post;
   $post_object = get_field('main_featured_article');
+  $main_featured_article_description = get_field('main_featured_article_description');
   if( $post_object ):
   $post = $post_object;
   setup_postdata( $post );
@@ -26,6 +27,7 @@
       <div class="main-article-content">
         <h1 class="sans-serif"><a href="{{ the_permalink() }}" class="black-link">{{ the_title() }}</a></h1>
         {{ the_excerpt() }}
+        {!! $main_featured_article_description !!}
         <p class="author">{{ the_field('author') }}</p>
 
         @php

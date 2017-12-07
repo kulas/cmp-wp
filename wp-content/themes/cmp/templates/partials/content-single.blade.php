@@ -12,7 +12,9 @@
 @endphp
 
 @if (!empty($header_image) && empty($hide_hero_header))
-  <div class="hero-header" role="img" style="background-image: url('{{ $header_image_url }}')"></div>
+  <div class="hero-header">
+    {!! wp_get_attachment_image($header_image_id, 'full') !!}
+  </div>
   <div class="media-details">
     <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
     <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>

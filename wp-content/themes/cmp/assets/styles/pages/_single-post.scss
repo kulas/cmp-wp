@@ -1,4 +1,15 @@
 // Formatting for inidividual blog posts. It's a long one.
+body.single-post {
+  .media-details {
+    + article {
+      margin-top: 0;
+    }
+  }
+
+  article {
+    margin-top: 55px;
+  }
+}
 
 article {
   // The bar of info about the article with issue, categories, etc.

@@ -77,58 +77,61 @@
     <div class="content-sidebar-container">
 
     <div class="article__content">
-        <div class="article__main">
+      <div class="article__main">
+
+        @php // This gets 3 related posts by the first tag of an article.
+          $tags = wp_get_post_tags($post->ID);
+          if ($tags) {
+              $first_tag = $tags[0]->term_id;
+              $args=array(
+                'tag__in' => array($first_tag),
+                'post__not_in' => array($post->ID),
+                'posts_per_page'=>3,
+                'caller_get_posts'=>3
+              );
+            $my_query = new WP_Query($args);
+          }
+        @endphp
+
+        @if ($my_query && $my_query->have_posts())
           <div class="article__related">
             <h4 class="center">You May Also Like</h4>
 
-              {{-- This is the related/'you may also like' post sidebar --}}
+            {{-- This is the related/'you may also like' post sidebar --}}
 
-              @php // This gets 3 related posts by the first tag of an article.
-                $tags = wp_get_post_tags($post->ID);
-                if ($tags) {
-                    $first_tag = $tags[0]->term_id;
-                    $args=array(
-                      'tag__in' => array($first_tag),
-                      'post__not_in' => array($post->ID),
-                      'posts_per_page'=>3,
-                      'caller_get_posts'=>3
-                    );
-                $my_query = new WP_Query($args);
-                if ($my_query->have_posts()) {
-                while ($my_query->have_posts()) :
-                $my_query->the_post();
-              @endphp
+            @php
+              while ($my_query->have_posts()): $my_query->the_post();
+            @endphp
 
-              @php
-                $featured_image = get_field('featured_image'); //gets full image array
-                $featured_image_url = $featured_image['url']; //url of image
-                $featured_image_id = $featured_image['id']; //id of image
-                $featured_image_credit = App\get_media_credit_html($featured_image_id); //media credit for image
-              @endphp
+            @php
+              $featured_image = get_field('featured_image'); //gets full image array
+              $featured_image_url = $featured_image['url']; //url of image
+              $featured_image_id = $featured_image['id']; //id of image
+              $featured_image_credit = App\get_media_credit_html($featured_image_id); //media credit for image
+            @endphp
 
-              {{-- Related Posts --}}
-              <div class="tags">
-
-                @php(the_tags( '', ' | ', '' ))
-
-              </div>
-              @if ($featured_image_url)
-                <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
-              @endif
-              <a href="{{ the_permalink() }}">{{ the_title() }} </a>
-              <div class="excerpt">{{ the_excerpt() }}</div>
-              <p class="author">{{ the_field('author') }}</p>
-
-              @php endwhile;
-                }
-                  wp_reset_query(); // End related posts.
-                }
-              @endphp
-
+            {{-- Related Posts --}}
+            <div class="tags">
+              @php(the_tags( '', ' | ', '' ))
             </div>
 
-          {{ the_content() }}
-        </div>
+            @if ($featured_image_url)
+              <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
+            @endif
+            <a href="{{ the_permalink() }}">{{ the_title() }} </a>
+            <div class="excerpt">{{ the_excerpt() }}</div>
+            <p class="author">{{ the_field('author') }}</p>
+
+            @php
+              endwhile;
+              wp_reset_query(); // End related posts.
+            @endphp
+
+          </div>
+        @endif
+
+        {{ the_content() }}
+      </div>
     </div>
   </div>
 
@@ -137,8 +140,16 @@
     @include('partials/magazine-signup-form')
   </div>
 
-  <div class="bottom-tags">
-    <p>Tags:</p>
-    @php(the_tags( '', ' ', '' ))
-  </div>
+  @php
+    ob_start();
+    the_tags( '', ' ', '' );
+    $tags = ob_get_clean();
+  @endphp
+
+  @if ($tags)
+    <div class="bottom-tags">
+      <p>Tags:</p>
+      {!! $tags !!}
+    </div>
+  @endif
 </article>

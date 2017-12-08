@@ -19,8 +19,6 @@
     <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
     <p class="media-details__credit">@php echo $header_image_credit; @endphp</p>
   </div>
-@else
-  <div class="hero-header" style="height: 50px;"></div>
 @endif
 
   <article @php(post_class())>

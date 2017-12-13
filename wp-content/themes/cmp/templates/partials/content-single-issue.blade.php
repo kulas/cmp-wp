@@ -1,7 +1,7 @@
 @php($issue_type = get_field('issue_type'))
 @if ('archived' === $issue_type)
   @php($issue_url = get_field('issue_url'))
-  @php(header("Location: $issue_url". true, 301))
+  @php(header("Location: $issue_url". false, 301))
 @else
 
   <div class="carnegie-magazine-current-1">

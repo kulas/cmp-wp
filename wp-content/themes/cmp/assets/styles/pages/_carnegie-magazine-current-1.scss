@@ -9,52 +9,55 @@
     padding-top: 0;
   }
 
+  .content-container {
+    width: 100%;
+    display: flex;
+  }
+
   .current-issue {
     display: flex;
-    align-content: space-between;
+    width: 100%;
     padding-bottom: $base-spacing;
+    flex-shrink: 0;
+
     @include grid-media($medium) {
       display: block;
     }
   }
 
+  .cover {
+    .cover__inner {
+      position: relative;
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+
   .current-issue__left {
-    flex-basis: 60%;
-    padding: 0 $small-spacing 0 0;
+    width: 60%;
     overflow: hidden;
+    padding-right: $small-spacing;
 
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      min-width: 700px;
-      overflow: hidden;
-      padding-right: $base-spacing;
-
-      @include grid-media($extra-large) {
-        min-width: 500px;
-      }
-      @include grid-media($nav-break) {
-        min-width: 300px;
-      }
+    @include grid-media($medium) {
+      padding: 0;
+      width: 100%;
     }
   }
 
   .current-issue__right {
-    flex-basis: 40%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: $small-spacing $small-spacing 0;
-    overflow: hidden;
-    @include grid-media($medium) {
-      padding: 0;
+    padding-left: $small-spacing;
+
+    .green-button {
+      margin-bottom: 0;
     }
 
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      min-width: 40%;
-
-      .magazine-archives {
-        position: relative;
-        top: 3em;
-      }
+    @include grid-media($medium) {
+      padding: 0;
+      width: 100%;
     }
   }
 

@@ -1,14 +1,25 @@
 @php($issue_type = get_field('issue_type'))
 @if ('archived' === $issue_type)
   @php($issue_url = get_field('issue_url'))
-  @php(header("Location: $issue_url". true, 301))
+  @php(header("Location: $issue_url". false, 301))
 @else
 
   <div class="carnegie-magazine-current-1">
     <div class="content-container">
       <div class="current-issue">
         <div class="current-issue__left">
-          <?= the_post_thumbnail('full'); ?>
+          @if (has_post_thumbnail())
+            @php
+              $cover_image_id = get_post_thumbnail_id(get_the_ID());
+              $cover_sizes = wp_get_attachment_metadata($cover_image_id);
+              $cover_ratio = $cover_sizes['height'] / $cover_sizes['width'] * 100;
+            @endphp
+            <div class="cover">
+              <div class="cover__inner"
+                   style="padding-top: {{ $cover_ratio }}%; background-image: url('{{ the_post_thumbnail_url('large') }}')"
+              ></div>
+            </div>
+          @endif
         </div>
         <div class="current-issue__right">
 
@@ -51,7 +62,18 @@
 
                   <div class="archive">
                     <a href="{{ the_permalink() }}">
-                      {{ the_post_thumbnail('large') }}
+                      @if (has_post_thumbnail())
+                        @php
+                          $cover_image_id = get_post_thumbnail_id(get_the_ID());
+                          $cover_sizes = wp_get_attachment_metadata($cover_image_id);
+                          $cover_ratio = $cover_sizes['height'] / $cover_sizes['width'] * 100;
+                        @endphp
+                        <div class="cover">
+                          <div class="cover__inner"
+                              style="padding-top: {{ $cover_ratio }}%; background-image: url('{{ the_post_thumbnail_url('medium') }}');"
+                          ></div>
+                        </div>
+                      @endif
                       <p class="small-uppercase--bold center">{{ the_title() }}</p>
                     </a>
                   </div>

@@ -179,6 +179,27 @@ add_action('pre_get_posts', function($query) {
 });
 
 /**
+ * Customize body class for magazine issues
+ */
+add_filter('body_class', function($classes) {
+    global $post;
+
+    if (is_singular('issue')):
+        $issue = get_posts(array(
+          'post_type'      => 'issue', // set the post type to issue
+          'posts_per_page' => 1, // include all issues
+          'no_found_rows'  => true, // no pagination necessary so improve efficiency of loop
+          'orderby'        => 'meta_value',
+          'meta_key'       => 'issue_number'
+        ));
+
+        $classes[] = $issue[0]->ID === $post->ID ? 'current-issue' : 'archived-issue' ;
+    endif;
+
+    return $classes;
+});
+
+/**
  * Init config
  */
 sage()->bindIf('config', Config::class, true);

@@ -1116,6 +1116,20 @@ nav.magazine-nav-container.desktop-nav-container {
   }
 }
 
+body.single-post,
+body.single-issue {
+  ul#menu-primary-navigation-1,
+  ul#menu-magazine-nav {
+    > li.carnegie-magazine {
+      background: $nav-dropdown;
+
+      > a {
+        color: white;
+      }
+    }
+  }
+}
+
 body:not(.single-issue) {
   nav.magazine-nav-container.desktop-nav-container {
     position: relative;
@@ -1143,6 +1157,22 @@ ul#menu-magazine-nav {
 
   li.current-menu-item {
     background-color: rgba(0,0,0,.9);
+  }
+}
+
+body.current-issue {
+  ul#menu-magazine-nav {
+    li.current-issue {
+      background-color: rgba(0,0,0,.9);
+    }
+  }
+}
+
+body.archived-issue {
+  ul#menu-magazine-nav {
+    li.archive {
+      background-color: rgba(0,0,0,.9);
+    }
   }
 }
 

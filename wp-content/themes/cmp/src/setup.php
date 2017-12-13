@@ -199,6 +199,14 @@ add_filter('body_class', function($classes) {
     return $classes;
 });
 
+add_filter('do_shortcode_tag', function($output, $tag, $attr, $m) {
+    if ('caption' == $tag || 'wp_caption' == $tag) {
+        $output = preg_replace("/(<span class=\"media-credit\">.*?<\/span>)<\/div>(<figcaption .*?<\/figcaption>)/", "</div>$2$1", $output);
+    }
+
+    return $output;
+}, 10, 4);
+
 /**
  * Init config
  */

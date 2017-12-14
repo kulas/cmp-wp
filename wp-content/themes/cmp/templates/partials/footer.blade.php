@@ -106,6 +106,7 @@
             <div class="copyright">
               <p>©{{ date("Y") }} Carnegie Museums of Pittsburgh</p>
               <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/terms-of-use">Terms of Use</a>
             </div>
           </div>
           <div class="rad-container">

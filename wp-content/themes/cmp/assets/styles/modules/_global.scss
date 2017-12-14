@@ -219,13 +219,13 @@ img.alignright {
   text-align: left;
   font-family: 'Roboto';
   color: black;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 .media-details__caption,
 .wp-caption-text {
   font-weight: 400;
-  order: 2;
+  font-size: 1em;
 
   &:empty {
     display: none;

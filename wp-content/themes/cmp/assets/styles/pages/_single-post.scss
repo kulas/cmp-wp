@@ -348,15 +348,24 @@ article {
       margin: 0;
     }
 
-    .image-container {
-      height: 125px;
-      // min-width: 300px;
-      background-size: cover;
-      background-position: center;
+    .permalink {
+      display: block;
     }
 
-    .tags a {
-      color: grey;
+    .image-container {
+      height: 125px;
+      background-size: cover;
+      background-position: center;
+      margin: ($small-spacing/2) 0;
+    }
+
+    .tags {
+      line-height: .8em;
+      margin-top: (2/3 * $base-spacing);
+
+      a {
+        color: grey;
+      }
     }
 
     p {

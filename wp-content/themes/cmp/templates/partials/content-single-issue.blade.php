@@ -26,6 +26,7 @@
           @php
             global $post;
             $issue_title = get_the_title();
+            $cover_story_description = get_field('cover_story_description');
             $post_object = get_field('cover_story');
             if( $post_object ):
             $post = $post_object;
@@ -36,7 +37,8 @@
             <h2 class="issue-title">{{ $issue_title }}</h2>
             <p class="small-uppercase--bold">Cover Story</p>
             <h3 class="sans-serif"><a href="{{ the_permalink() }}">{{ the_title() }}</a></h3>
-            <p>{{ the_field('quote') }}</p>
+            {!! the_field('quote') !!}
+            {!! $cover_story_description !!}
             <p class="author">{{ the_field('author') }}</p>
           </div>
 

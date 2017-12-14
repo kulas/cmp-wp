@@ -103,6 +103,25 @@
             "ui": 1
         },
         {
+            "key": "field_5a319190a2701",
+            "label": "Cover Story Description",
+            "name": "cover_story_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_5a1f0edbdcd67",
             "label": "Featured Articles",
             "name": "featured_articles",
@@ -310,5 +329,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1512513599
+    "modified": 1513198075
 }

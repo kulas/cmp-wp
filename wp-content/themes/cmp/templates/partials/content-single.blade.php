@@ -113,12 +113,13 @@
               @php(the_tags( '', ' | ', '' ))
             </div>
 
-            @if ($featured_image_url)
-              <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
-            @endif
-            <a href="{{ the_permalink() }}">{{ the_title() }} </a>
-            <div class="excerpt">{{ the_excerpt() }}</div>
-            <p class="author">{{ the_field('author') }}</p>
+            <a href="{{ the_permalink() }}" class="permalink">
+              @if ($featured_image_url)
+                <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
+              @endif
+
+              {{ the_title() }}
+            </a>
 
             @php
               endwhile;

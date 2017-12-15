@@ -144,5 +144,5 @@ function get_media_credit_html($id, $include_default_credit = false) {
         return false;
     endif;
 
-    return get_field('_media_credit', $id, false);
+    return function_exists('the_media_credit_html') ? the_media_credit_html($id) : '';
 }

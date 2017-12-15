@@ -26,7 +26,7 @@
     <div class="content-container">
       <div class="main-article-content">
         <h1 class="sans-serif"><a href="{{ the_permalink() }}" class="black-link">{{ the_title() }}</a></h1>
-        {{ the_excerpt() }}
+        <p><strong>{{ get_the_excerpt() }}</strong></p>
         {!! $main_featured_article_description !!}
         <p class="author">{{ the_field('author') }}</p>
 

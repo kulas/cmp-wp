@@ -219,7 +219,7 @@ img.alignright {
   text-align: left;
   font-family: 'Roboto';
   color: black;
-  font-size: 0.875em;
+  font-size: 0.875rem !important;
 }
 
 .media-details__caption,
@@ -235,7 +235,7 @@ img.alignright {
 .acf-media-credit {
   font-weight: lighter;
   order: 1;
-  padding: 0;
+  padding: 0 !important;
   color: inherit;
   display: block;
 
@@ -244,7 +244,7 @@ img.alignright {
   }
 
   .acf-media-credit {
-    font-size: inherit;
+    margin: 0;
   }
 }
 

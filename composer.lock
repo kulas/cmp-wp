@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2207c481f93269509d1cb6ebcfd8f8ca",
+    "content-hash": "5f7703783c9be7c7c92b192d590b3457",
     "packages": [
         {
             "name": "composer/installers",
@@ -326,6 +326,26 @@
             "homepage": "https://wordpress.org/plugins/accordion-shortcodes/"
         },
         {
+            "name": "wpackagist-plugin/acf-media-credit",
+            "version": "2.3.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/acf-media-credit/",
+                "reference": "tags/2.3.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/acf-media-credit.2.3.6.zip",
+                "reference": "tags/2.3.6",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/acf-media-credit/"
+        },
+        {
             "name": "wpackagist-plugin/add-category-to-pages",
             "version": "1.0",
             "source": {
@@ -356,7 +376,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/autodescription.3.0.2.zip",
-                "reference": null,
+                "reference": "tags/3.0.2",
                 "shasum": null
             },
             "require": {
@@ -396,7 +416,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/cms-tree-page-view.1.4.zip",
-                "reference": null,
+                "reference": "tags/1.4",
                 "shasum": null
             },
             "require": {
@@ -416,7 +436,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.9.1.zip",
-                "reference": null,
+                "reference": "tags/4.9.1",
                 "shasum": null
             },
             "require": {
@@ -436,7 +456,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/custom-twitter-feeds.1.2.7.zip",
-                "reference": null,
+                "reference": "tags/1.2.7",
                 "shasum": null
             },
             "require": {
@@ -476,7 +496,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.1.zip",
-                "reference": null,
+                "reference": "tags/3.2.1",
                 "shasum": null
             },
             "require": {
@@ -516,7 +536,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/filter-page-by-template.1.1.zip",
-                "reference": null,
+                "reference": "tags/1.1",
                 "shasum": null
             },
             "require": {
@@ -556,7 +576,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/iframe.4.3.zip",
-                "reference": null,
+                "reference": "tags/4.3",
                 "shasum": null
             },
             "require": {
@@ -606,26 +626,6 @@
             "homepage": "https://wordpress.org/plugins/jquery-font-resizer/"
         },
         {
-            "name": "wpackagist-plugin/media-credit",
-            "version": "3.1.7",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/media-credit/",
-                "reference": "tags/3.1.7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/media-credit.3.1.7.zip",
-                "reference": "tags/3.1.7",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/media-credit/"
-        },
-        {
             "name": "wpackagist-plugin/ml-slider",
             "version": "3.6.6",
             "source": {
@@ -636,7 +636,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ml-slider.3.6.6.zip",
-                "reference": null,
+                "reference": "tags/3.6.6",
                 "shasum": null
             },
             "require": {
@@ -656,7 +656,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/popup-maker.1.6.6.zip",
-                "reference": null,
+                "reference": "tags/1.6.6",
                 "shasum": null
             },
             "require": {
@@ -696,7 +696,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.3.1.zip",
-                "reference": null,
+                "reference": "tags/2.3.1",
                 "shasum": null
             },
             "require": {
@@ -736,7 +736,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.4.6.7.zip",
-                "reference": null,
+                "reference": "tags/4.6.7",
                 "shasum": null
             },
             "require": {
@@ -756,7 +756,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ultimate-responsive-image-slider.3.1.3.zip",
-                "reference": null,
+                "reference": "tags/3.1.3",
                 "shasum": null
             },
             "require": {

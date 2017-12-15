@@ -148,24 +148,6 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= App\\asset_path({$asset}); ?>";
     });
-
-    /**
-     * Hide Media Credit plugin field on attachments so it doesn't interfere with ACF field
-     */
-    add_action('admin_footer', function () { ?>
-        <style type="text/css">
-            [data-setting="mediaCreditText"] {
-                display: none !important;
-            }
-        </style>
-
-        <script type="text/javascript">
-            (function($) {
-                $('.compat-field-media-credit').remove();
-            })(jQuery);
-        </script>
-    <?php });
-
 });
 
 /**
@@ -198,14 +180,6 @@ add_filter('body_class', function($classes) {
 
     return $classes;
 });
-
-add_filter('do_shortcode_tag', function($output, $tag, $attr, $m) {
-    if ('caption' == $tag || 'wp_caption' == $tag) {
-        $output = preg_replace("/(<span class=\"media-credit\">.*?<\/span>)<\/div>(<figcaption .*?<\/figcaption>)/", "</div>$2$1", $output);
-    }
-
-    return $output;
-}, 10, 4);
 
 /**
  * Init config

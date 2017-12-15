@@ -213,7 +213,7 @@ img.alignright {
 .media-details__caption,
 .wp-caption-text,
 .media-details__credit,
-.media-credit {
+.acf-media-credit {
   width: 100%;
   margin: 0 0 ($small-spacing / 2) 0;
   text-align: left;
@@ -232,12 +232,19 @@ img.alignright {
 }
 
 .media-details__credit,
-.media-credit {
+.acf-media-credit {
   font-weight: lighter;
   order: 1;
+  padding: 0;
+  color: inherit;
+  display: block;
 
   &:empty {
     display: none;
+  }
+
+  .acf-media-credit {
+    font-size: inherit;
   }
 }
 

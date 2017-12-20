@@ -306,7 +306,7 @@ article {
     h4,
     h5,
     h6,
-    p {
+    p:not(.wp-caption-text) {
       max-width: 70%;
       @include grid-media($large) {
         max-width: 100%;

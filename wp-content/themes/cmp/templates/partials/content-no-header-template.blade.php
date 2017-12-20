@@ -2,12 +2,6 @@
 
 @php
   if (have_posts()) : while (have_posts()) : the_post();
-
-  // $image = get_field('header_image');
-  // $image_id = $image['id'];
-  // $image_url = $image['url'];
-  // $image_credit = App\get_media_credit_html($image_id);
-
 @endphp
 
 <div class="no-header">

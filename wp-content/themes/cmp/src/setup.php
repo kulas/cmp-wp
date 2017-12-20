@@ -182,6 +182,37 @@ add_filter('body_class', function($classes) {
 });
 
 /**
+ * Adjust ACF Media Credit styles in admin media modal
+ */
+add_action('admin_footer', function () { ?>
+    <style type="text/css">
+        .media-modal #acf_media_credit_admin > .acf-label {
+            margin-bottom: 10px !important;
+        }
+
+        .media-modal #acf_media_credit_admin .acf-field {
+            padding: 15px !important;
+        }
+
+        .media-modal #acf_media_credit_admin .acf-field::before {
+            display: none !important;
+        }
+
+        .media-modal #acf_media_credit_admin .acf-field .acf-label,
+        .media-modal #acf_media_credit_admin .acf-field .acf-input {
+            float: none !important;
+            width: 100% !important;
+            margin-left: 0 !important;
+            padding: 0 !important;
+        }
+
+        .media-modal #acf_media_credit_admin .acf-field .acf-label label {
+            margin-bottom: 10px !important;
+        }
+    </style>
+<?php });
+
+/**
  * Init config
  */
 sage()->bindIf('config', Config::class, true);

@@ -31,7 +31,7 @@
 
         <div class="media-details">
           <p class="media-details__caption">{{ $featured_image['caption'] }}</p>
-          <p class="media-details__credit">{{ $featured_image_credit }}</p>
+          <p class="media-details__credit">{!! $featured_image_credit !!}</p>
         </div>
 
         <div class="container pad">

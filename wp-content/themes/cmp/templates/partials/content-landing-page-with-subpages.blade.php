@@ -17,7 +17,7 @@
   </div>
   <div class="media-details">
     <p class="media-details__caption">{{ $header_image['caption'] }}</p>
-    <p class="media-details__credit">{{ $header_image_credit }}</p>
+    <p class="media-details__credit">{!! $header_image_credit !!}</p>
   </div>
 
   <div class="content-container">

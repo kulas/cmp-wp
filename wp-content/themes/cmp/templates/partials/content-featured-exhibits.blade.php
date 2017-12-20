@@ -32,7 +32,7 @@
 
       <div class="media-details">
         <p class="media-details__caption">{{ $image['caption'] }}</p>
-        <p class="media-details__credit">{{ $image_credit }}</p>
+        <p class="media-details__credit">{!! $image_credit !!}</p>
       </div>
 
       <div class='exhibit-container exhibit--hero'>

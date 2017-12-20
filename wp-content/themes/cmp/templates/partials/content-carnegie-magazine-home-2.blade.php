@@ -19,7 +19,7 @@
       </a>
       <div class="media-details">
         <p class="media-details__caption">{{ $big_picture_image['caption'] }}</p>
-        <p class="media-details__credit">{{ $big_picture_image_credit }}</p>
+        <p class="media-details__credit">{!! $big_picture_image_credit !!}</p>
       </div>
       <div class="content-container">
         <h1 class="hero-header__words-box sans-serif">{{ the_field('big_picture_title') }}</h1>

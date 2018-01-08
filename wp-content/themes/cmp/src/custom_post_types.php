@@ -67,17 +67,17 @@ function create_cpts() {
 
     register_taxonomy( 'museums', 'expert', array(
         'labels' => array(
-            'name' => __('Musuems'),
-            'singular_name' => __('Musuem'),
-            'search_items' => __('Search Musuems'),
-            'all_items' => __('All Musuems'),
-            'parent_item' => __('Parent Musuems'),
-            'parent_item_colon' => __('Parent Musuems:'),
-            'edit_item' => __('Edit Musuem'),
-            'update_item' => __('Update Musuem'),
-            'add_new_item' => __('Add New Musuem'),
-            'new_item_name' => __('New Musuem Name'),
-            'menu_name' => __('Musuems'),
+            'name' => __('Museums'),
+            'singular_name' => __('Museum'),
+            'search_items' => __('Search Museums'),
+            'all_items' => __('All Museums'),
+            'parent_item' => __('Parent Museums'),
+            'parent_item_colon' => __('Parent Museums:'),
+            'edit_item' => __('Edit Museum'),
+            'update_item' => __('Update Museum'),
+            'add_new_item' => __('Add New Museum'),
+            'new_item_name' => __('New Museum Name'),
+            'menu_name' => __('Museums'),
             'not_found' => __('No museums found.'),
             'not_found_in_trash' => __('No museums found in Trash')
         ),

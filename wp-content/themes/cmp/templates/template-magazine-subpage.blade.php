@@ -4,12 +4,14 @@
 
 @extends('layouts.base')
 
-@section('content')
+@php($minimal_template = get_field('minimal_template'))
 
-  @include('partials.content-carnegie-magazine-nav')
+@section('content')
+  @if (empty($minimal_template))
+    @include('partials.content-carnegie-magazine-nav')
+  @endif
 
   <div class="magazine-sub-page">
     @include('partials.content-no-header-template')
   </div>
-
 @endsection

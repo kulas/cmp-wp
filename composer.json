@@ -45,6 +45,7 @@
     "wpackagist-plugin/autodescription": "^3.0",
     "wpackagist-plugin/iframe": "^4.3",
     "wpackagist-plugin/popup-maker": "^1.6.6",
-    "wpackagist-plugin/acf-media-credit": "^2.3"
+    "wpackagist-plugin/acf-media-credit": "^2.3",
+    "wpackagist-plugin/redirection": "^3.0"
   }
 }

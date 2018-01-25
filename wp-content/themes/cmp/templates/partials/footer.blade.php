@@ -65,25 +65,7 @@
           <div class="middle-row">
             <div class="email-subscribe">
 
-              <label for="email-signup" class="label--hidden">Subscribe to our emails</label>
-              <form name="survey_11603" id="survey_11603" method="POST" action="http://members.carnegiemuseums.org/site/Survey">
-                <p>
-                  <input type="email" name="cons_email" id="cons_email" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" />
-                  <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" id="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button button--small" />
-                  <input type="hidden" name="cons_info_component" id="cons_info_component" value="t" />
-                  <input type="hidden" name="SURVEY_ID" id="SURVEY_ID" value="11603" />
-                  <input type="hidden" name="USER_HAS_TAKEN" id="USER_HAS_TAKEN" value="null" />
-                  <input type="hidden" name="SURVEY_IGNORE_ERRORS" id="SURVEY_IGNORE_ERRORS" value="TRUE" />
-                  <input type="hidden" name="QUESTION_STAG_APP_ID" id="QUESTION_STAG_APP_ID" value="" />
-                  <input type="hidden" name="QUESTION_STAG_APP_REF_ID" id="QUESTION_STAG_APP_REF_ID" value="" />
-                  <input type="hidden" name="QUESTION_STAG_CTX_TYPE" id="QUESTION_STAG_CTX_TYPE" value="" />
-                  <input type="hidden" name="ERRORURL" id="ERRORURL" value="http://www.carnegiemuseums.org/#error"/>
-                  <input type="hidden" name="NEXTURL" id="NEXTURL" value="http://members.carnegiemuseums.org/site/Survey?ACTION_REQUIRED=URI_ACTION_USER_REQUESTS&SURVEY_ID=11860#success" />
-                </p>
-                <div style="display:none">
-                  <input type="text" name="denySubmit" id="denySubmit" value="" alt="This field is used to prevent form submission by scripts." />
-                </div>
-              </form>
+              {!! get_field('subscribe_form', 'options', false) !!}
 
             </div>
               <div class="social-media">

@@ -4,8 +4,9 @@
     <div class="top-bar">
       <div class="top-bar__left">
         <div class="top-bar__form">
+          @php($subscribe_form_action = get_field('subscribe_form_action', 'options') ?: 'http://members.carnegiemuseums.org/site/Survey')
           <label for="128" class="label--hidden">Subscribe to our emails</label>
-          <form name="survey_11603" id="survey_11603" method="POST" action="http://members.carnegiemuseums.org/site/Survey">
+          <form name="survey_11603" id="survey_11603" method="GET" action="{{$subscribe_form_action}}">
             <p>
               <input type="email" name="cons_email" id="cons_email" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" />
               <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" id="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button" />

@@ -1,4 +1,5 @@
-<form name="survey_16543" method="POST" action="http://members.carnegiemuseums.org/site/Survey" >
+@php($subscribe_form_action = get_field('subscribe_form_action', 'options') ?: 'http://members.carnegiemuseums.org/site/Survey')
+<form name="survey_16543" method="GET" action="{{$subscribe_form_action}}">
   <div class="form-items">
     <input type="text" name="cons_email" placeholder="E-mail Address" size="25" maxlength="255" />
     <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button" />

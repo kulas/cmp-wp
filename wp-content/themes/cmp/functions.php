@@ -147,3 +147,10 @@ global $post;
 add_filter('the_seo_framework_metabox_priority', function () {
     return 'low';
 });
+
+/**
+ * Adds ACF options page
+ */
+if(function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+}

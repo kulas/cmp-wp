@@ -1,9 +1,7 @@
 // Member events page.
 
-.member-events, .leadership {
-  .event-list {
-    margin-bottom: $base-spacing;
-  }
+.event-list {
+  margin-bottom: $base-spacing;
 
   .event {
     display: flex;

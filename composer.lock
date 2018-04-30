@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "03271e42eaf8b80b8b2c7dd4d7b7435e",
+    "content-hash": "4e003b311dad49d826ca9295607a2382",
     "packages": [
         {
             "name": "composer/installers",
@@ -339,7 +339,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/acf-media-credit.2.3.7.zip",
-                "reference": null,
+                "reference": "tags/2.3.7",
                 "shasum": null
             },
             "require": {
@@ -347,6 +347,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/acf-media-credit/"
+        },
+        {
+            "name": "wpackagist-plugin/acf-to-rest-api",
+            "version": "3.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/acf-to-rest-api/",
+                "reference": "tags/3.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/acf-to-rest-api.3.1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/acf-to-rest-api/"
         },
         {
             "name": "wpackagist-plugin/add-category-to-pages",
@@ -379,7 +399,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/autodescription.3.0.5.zip",
-                "reference": null,
+                "reference": "tags/3.0.5",
                 "shasum": null
             },
             "require": {
@@ -419,7 +439,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/cms-tree-page-view.1.5.zip",
-                "reference": null,
+                "reference": "tags/1.5",
                 "shasum": null
             },
             "require": {
@@ -439,7 +459,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.9.2.zip",
-                "reference": null,
+                "reference": "tags/4.9.2",
                 "shasum": null
             },
             "require": {
@@ -459,7 +479,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/custom-twitter-feeds.1.2.8.zip",
-                "reference": null,
+                "reference": "tags/1.2.8",
                 "shasum": null
             },
             "require": {
@@ -499,7 +519,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.2.zip",
-                "reference": null,
+                "reference": "tags/3.2.2",
                 "shasum": null
             },
             "require": {
@@ -519,7 +539,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/easy-social-share-buttons.1.4.5.zip",
-                "reference": null,
+                "reference": "tags/1.4.5",
                 "shasum": null
             },
             "require": {
@@ -539,7 +559,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/filter-page-by-template.1.1.zip",
-                "reference": null,
+                "reference": "tags/1.1",
                 "shasum": null
             },
             "require": {
@@ -579,7 +599,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/iframe.4.3.zip",
-                "reference": null,
+                "reference": "tags/4.3",
                 "shasum": null
             },
             "require": {
@@ -639,7 +659,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ml-slider.3.7.2.zip",
-                "reference": null,
+                "reference": "tags/3.7.2",
                 "shasum": null
             },
             "require": {
@@ -659,7 +679,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/popup-maker.1.7.16.zip",
-                "reference": null,
+                "reference": "tags/1.7.16",
                 "shasum": null
             },
             "require": {
@@ -699,7 +719,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/redirection.3.2.1.zip",
-                "reference": null,
+                "reference": "tags/3.2.1",
                 "shasum": null
             },
             "require": {
@@ -719,7 +739,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.3.1.zip",
-                "reference": null,
+                "reference": "tags/2.3.1",
                 "shasum": null
             },
             "require": {
@@ -759,7 +779,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.4.6.7.zip",
-                "reference": null,
+                "reference": "tags/4.6.7",
                 "shasum": null
             },
             "require": {
@@ -779,7 +799,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/ultimate-responsive-image-slider.3.1.4.zip",
-                "reference": null,
+                "reference": "tags/3.1.4",
                 "shasum": null
             },
             "require": {

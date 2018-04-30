@@ -1,0 +1,23 @@
+{
+  "name": "create-archive-articles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx babel-node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carney",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-1": "^6.24.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "dotenv": "^5.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "wpapi": "^1.1.2"
+  }
+}

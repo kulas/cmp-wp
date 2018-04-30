@@ -57,6 +57,36 @@
             "maxlength": ""
         },
         {
+            "key": "field_5ae74363ef834",
+            "label": "Issue Articles",
+            "name": "issue_articles",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a20379c9557c",
+                        "operator": "==",
+                        "value": "archived"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "archive_article"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
             "key": "field_5a1f11652334e",
             "label": "Articles",
             "name": "",
@@ -329,5 +359,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1513198075
+    "modified": 1525105642
 }

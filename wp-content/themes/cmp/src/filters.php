@@ -96,3 +96,39 @@ add_filter('the_seo_framework_og_image_args', function($args) {
 
     return $args;
 });
+
+// REST API: Allow orderby meta_value on issue posts
+// https://github.com/WP-API/WP-API/issues/2308#issuecomment-266214066
+add_filter('rest_endpoints', function ($routes) {
+    foreach (array('issue') as $type) {
+      if (!($route =& $routes['/wp/v2/' . $type])) {
+        continue;
+      }
+
+      // Allow ordering by meta values
+      $route[0]['args']['orderby']['enum'][] = 'meta_value';
+
+      // Allow only specific meta keys
+      $route[0]['args']['meta_key'] = array(
+          'description'       => 'The meta key to query.',
+          'type'              => 'string',
+          'enum'              => ['issue_number'],
+          'validate_callback' => 'rest_validate_request_arg',
+      );
+    }
+
+    return $routes;
+  }, 10, 1);
+
+// Manipulate query
+add_filter('rest_issue_query', function ($args, $request) {
+    $orderby = $request->get_param('orderby');
+    if (!empty($orderby) && $orderby === 'meta_value') {
+        $meta_key = $request->get_param('meta_key');
+        if (!empty($meta_key) && $meta_key === 'issue_number') {
+            $args['meta_key'] = $meta_key;
+        }
+    }
+
+    return $args;
+}, 10, 2);

@@ -22,7 +22,30 @@ function create_cpts() {
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'rewrite' => array('with_front' => 'false', 'slug' => 'carnegie-magazine/issue'),
         'public' => true,
+        'show_in_rest' => true,
         'menu_icon' => 'dashicons-book'
+    ));
+
+    register_post_type( 'archive_article', array(
+        'labels' => array(
+            'name' => __( 'Archive Articles' ),
+            'singular_name' => __( 'Archive Article' ),
+            'add_new' => __( 'Add New' ),
+            'add_new_item' => __( 'Add New Archive Article' ),
+            'edit' => __( 'Edit' ),
+            'edit_item' => __( 'Edit Archive Article' ),
+            'view' => __( 'View' ),
+            'view_item' => __( 'View Archive Article' ),
+            'search_items' => __( 'Search Archive Articles' ),
+            'all_items' => __( 'All Archive Articles' ),
+            'not_found' => __( 'No Archive Articles found.' ),
+            'not_found_in_trash' => __( 'No Archive Articles found in Trash.' ),
+        ),
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
+        'rewrite' => array('with_front' => 'false', 'slug' => 'carnegie-magazine/archive-article'),
+        'public' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-media-document'
     ));
 
     register_post_type( 'expert', array(

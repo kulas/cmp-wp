@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e003b311dad49d826ca9295607a2382",
+    "content-hash": "5fd303b22ad95ec9af3d3b6a7da7d461",
     "packages": [
         {
             "name": "composer/installers",
@@ -359,7 +359,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/acf-to-rest-api.3.1.0.zip",
-                "reference": null,
+                "reference": "tags/3.1.0",
                 "shasum": null
             },
             "require": {
@@ -747,6 +747,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/relevanssi",
+            "version": "4.0.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/relevanssi/",
+                "reference": "tags/4.0.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/relevanssi.4.0.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/relevanssi/"
         },
         {
             "name": "wpackagist-plugin/simple-page-tester",

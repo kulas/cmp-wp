@@ -2,9 +2,17 @@ import WPAPI from 'wpapi';
 import cheerio from 'cheerio';
 import dotenv from 'dotenv';
 import fetch from 'isomorphic-fetch';
+import queue from 'queue';
 
 dotenv.config();
 const { WP_USER, WP_PASS } = process.env;
+
+// init queue
+let q = queue({
+  concurrency: 5,
+  autostart: true,
+  timeout: 30000
+});
 
 // connect to WP
 const wp = new WPAPI({
@@ -35,12 +43,14 @@ const getAll = async request => {
 
 const getIssues = async () => {
   try {
-    return wp
-      .issues()
-      .perPage(1)
-      .order('asc')
-      .orderby('meta_value')
-      .param('meta_key', 'issue_number');
+    return getAll(
+      wp
+        .issues()
+        .perPage(100)
+        .order('asc')
+        .orderby('meta_value')
+        .param('meta_key', 'issue_number')
+    );
   } catch (error) {
     console.error(error);
   }
@@ -61,81 +71,187 @@ const getArticleLinks = (html, issue) => {
   const n = parseFloat(issue_number);
   const $ = cheerio.load(html);
 
-  // ignore: calendar, mailto
-
   let selector = 'body';
-  if (issue_number > 1997.06) {
-    // if (issue_number < )
-  }
 
-  const $links = $(selector).find('a:not([href^="mailto:"]):not([href^="#"])');
-  return [...new Set($links.get().map((link, index) => $(link).attr('href')))];
+  // ignore: calendar, mailto
+  const $links = $(selector).find(
+    'a:not([href^="mailto:"]):not([href^="#"]):not([href^="http"]):not([href="index.html"]):not([href$=".pdf"])'
+  );
+  return [
+    ...new Set(
+      Object.values(
+        $links
+          .get()
+          .filter(link => $(link).attr('href'))
+          .map((link, index) => ({
+            title: $(link)
+              .text()
+              .replace(/\n/, ' ')
+              .trim(),
+            href: $(link).attr('href')
+          }))
+          // remove duplicate links, keeping the one with the longer title
+          .reduce((validLinks, link) => {
+            const { [link.href]: existingLink } = validLinks;
+            if (existingLink) {
+              if (link.title.length < existingLink.title.length) {
+                return validLinks;
+              }
+            }
+
+            validLinks[link.href] = link;
+            return validLinks;
+          }, {})
+      )
+    )
+  ];
 };
 
-const extractArticle = (html, issue) => {
+const extractContent = (html, issue) => {
   const { acf } = issue;
   const { issue_url, issue_type, issue_number } = acf;
   const n = parseFloat(issue_number);
   const $ = cheerio.load(html);
 
-  const titleSelector = 'h1, h2, h3';
-  if (issue_number > 1997.06) {
-    // if (issue_number < )
-  }
+  const titleSelector = 'h1, h2, h3, .feature-page-title';
+  const contentSelector = 'body';
+
   const title = $(titleSelector)
     .first()
     .text()
     .trim();
 
-  const contentSelector = 'body';
-  if (issue_number > 1997.06) {
-    // if (issue_number < )
-  }
-  const regex = new RegExp(title);
+  const regex = title ? new RegExp(`.*?${title}`) : '';
   const content = $(contentSelector)
     .first()
     .text()
     .replace(regex, '')
     .trim();
 
-  return {
-    title,
-    content
-  };
+  return { content, title: title.replace(/\n/, ' ').trim() };
 };
 
 const init = async () => {
   const issues = await getIssues();
 
-  issues.forEach(async issue => {
+  issues.forEach(issue => {
     // get issue URL
-    const { acf } = issue;
-    const { issue_url: issueUrl, issue_type: issueType, issue_number } = acf;
+    const { acf, id } = issue;
+    const {
+      issue_url: issueUrl,
+      issue_type: issueType,
+      issue_season: issueSeason,
+      issue_year: issueYear
+    } = acf;
+    let { issue_articles: issueArticles = [] } = acf;
+    if (issueArticles === null) {
+      issueArticles = [];
+    }
 
     if (issueType === 'archived') {
-      let archive_articles = [];
+      q.push(async issueCb => {
+        // fetch issue homepage
+        const issueHtml = await fetchUrl(issueUrl);
+        let articleIds = [];
 
-      // fetch issue homepage
-      const issueHtml = await fetchUrl(issueUrl);
+        // extract table of contents links
+        let links = getArticleLinks(issueHtml, issue);
+        links.forEach((link, index) => {
+          const { title, href } = link;
 
-      // extract table of contents links
-      let links = getArticleLinks(issueHtml, issue);
-      links.forEach(async link => {
-        const articleUrl = link.match(/^(https?:)?\/\//) ? link : `${issueUrl}${link}`;
-        const articleHtml = await fetchUrl(articleUrl);
+          q.push(async linkCb => {
+            const articleUrl = href.match(/^(https?:)?\/\//) ? href : `${issueUrl}${href}`;
+            const articleHtml = await fetchUrl(articleUrl);
 
-        // for each TOC link, try to scrape 1) article title, and 2) article text
-        if (articleHtml) {
-          const { title, content } = extractArticle(articleHtml, issue);
-          console.log('\n\n', articleUrl, '\n', title, '\n', content.substring(0, 20));
+            // for each TOC link, try to scrape 1) article title, and 2) article text
+            if (articleHtml) {
+              const { content, title: extractedTitle } = extractContent(
+                articleHtml,
+                issue,
+                articleUrl
+              );
 
-          // create archive_article post
-          // add "From Issue" meta value to archive_article post
-          // update issue "Archive Articles" meta value
-        }
+              let newTitle = title ? title : extractedTitle;
+              if (!newTitle) {
+                if (articleUrl.match(/editor_note.html$/)) {
+                  if (articleUrl.match(/\/2005\/summer\//)) {
+                    newTitle = "President's Note";
+                  } else {
+                    newTitle = "Editor's Note";
+                  }
+                } else {
+                  console.log(link, `No title for: ${articleUrl}`);
+                }
+              }
+
+              // create archive_article post
+              q.push(articleCb => {
+                try {
+                  wp
+                    .articles()
+                    .create({
+                      title: `${newTitle} (${issueSeason} ${issueYear})`,
+                      content,
+                      status: 'publish',
+                      fields: {
+                        from_issue: id,
+                        article_url: articleUrl
+                      }
+                    })
+                    .then(response => {
+                      const { id: articleId } = response;
+                      if (!articleId) {
+                        console.warn(`Post not created for: ${articleUrl}`);
+                      } else {
+                        articleIds.push(articleId);
+                      }
+
+                      // if this is the last link/article, update issue "Issue Articles" meta value
+                      if (index === links.length - 1) {
+                        q.push(metaCb => {
+                          try {
+                            wp
+                              .issues()
+                              .id(id)
+                              .update({
+                                fields: {
+                                  ...acf,
+                                  issue_articles: articleIds
+                                }
+                              })
+                              .then(metaResponse => {
+                                // queue callback
+                                metaCb();
+                              });
+                          } catch (error) {
+                            console.error(error);
+
+                            // queue callback
+                            metaCb();
+                          }
+                        });
+                      }
+
+                      // queue callback
+                      articleCb();
+                    });
+                } catch (error) {
+                  console.error(error);
+
+                  // queue callback
+                  articleCb();
+                }
+              });
+            }
+
+            // queue callback
+            linkCb();
+          });
+        });
+
+        // queue callback
+        issueCb();
       });
-
-      // update issue "Archive Articles" meta value
     }
   });
 };

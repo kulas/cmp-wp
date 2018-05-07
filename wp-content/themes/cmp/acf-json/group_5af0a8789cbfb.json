@@ -1,0 +1,43 @@
+{
+    "key": "group_5af0a8789cbfb",
+    "title": "Careers",
+    "fields": [
+        {
+            "key": "field_5af0a87e48c40",
+            "label": "Iframe Shortcode",
+            "name": "iframe_url",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "[iframe src=\"https:\/\/www.website.com\" width=\"100%\" height=\"750\"]",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/template-careers.blade.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1525721277
+}

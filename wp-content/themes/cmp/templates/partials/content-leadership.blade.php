@@ -32,7 +32,7 @@
     </div>
     <hr class="breadcrumb-hr">
     <div class="content-wrapper">
-      <div class="l-long">
+      <div class="l-long event-list">
         {{ the_content() }}
 
         @php

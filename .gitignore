@@ -121,6 +121,7 @@ wp-content/plugins/*
 !wp-content/plugins/wp-migrate-db-pro
 !wp-content/plugins/wp-migrate-db-pro-media-files
 !wp-content/plugins/wp-migrate-db-pro-multisite-tools
+!wp-content/plugins/cmp-omnilert
 
 # Sage
 dist

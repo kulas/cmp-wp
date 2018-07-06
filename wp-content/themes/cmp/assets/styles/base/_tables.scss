@@ -2,12 +2,10 @@
 ////////////////////////////////////////////////////////////////
 
 table {
-  // border-collapse: collapse;
   margin: $small-spacing 0;
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  // width:60% !important;
 }
 
 th {
@@ -18,7 +16,7 @@ th {
 }
 
 td {
-  padding: 1em !important;
+  padding: 1em;
 
   > p {
     max-width: 100% !important;
@@ -29,25 +27,23 @@ tr,
 td,
 th {
   vertical-align: middle;
-  border: solid 1px #CCCCCC;
+  border: solid 1px #cccccc;
 }
 
 td {
-  // border-bottom:none;
-  width: 33%;
-  padding:0;
+  padding: 0;
 
   @include grid-media($medium) {
-    padding-right: .5em;
-    font-size: .8em;
+    padding-right: 0.5em;
+    font-size: 0.8em;
 
     h4 {
       font-size: 1em;
     }
   }
 
-  >h3,
-  >h4 {
+  > h3,
+  > h4 {
     padding: 0;
     margin: 0;
   }
@@ -58,32 +54,49 @@ td {
 }
 
 tr:nth-child(1) {
-  border-bottom:1px;
+  border-bottom: 1px;
 }
 
-  // table {
-  //   width:100% !important;
-  // }
-  //
-  // td {
-  //   padding:1em 1em 1em 0em;
-  //   vertical-align: top;
-  //
-  //   > p {
-  //     font-size:.9em;
-  //   }
-  //
-  //   > h3 {
-  //     @include grid-media($medium) {
-  //       font-size: 1.2em;
-  //     }
-  //
-  //   img {
-  //     height:auto;
-  //     width: auto;
-  //   }
-  //
-  //   @include grid-media($medium) {
-  //     padding:0;
-  //   }
-  // }
+.SmartBoard_Table {
+  font-family: $base-font-family;
+  background-color: #eaeaea;
+  border-collapse: initial;
+
+  @include grid-media($large) {
+    padding: 10px 0;
+  }
+}
+
+.SmartBoard_Table td {
+  padding: 10px 50px;
+
+  @include grid-media($large) {
+    padding: 5px 20px;
+  }
+}
+
+.SmartBoard_Subject {
+  font-size: 2rem;
+  color: $base-color;
+
+  @include grid-media($large) {
+    font-size: 1.5rem;
+    line-height: 1.33;
+  }
+}
+
+.SmartBoard_DateTime {
+  font-size: 1.25rem;
+
+  @include grid-media($large) {
+    font-size: 1rem;
+  }
+}
+
+.SmartBoard_Message {
+  font-size: 1.5rem;
+
+  @include grid-media($large) {
+    font-size: 1rem;
+  }
+}

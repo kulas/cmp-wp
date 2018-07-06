@@ -6,22 +6,22 @@
         <div class="top-bar__form">
           @php($subscribe_form_action = get_field('subscribe_form_action', 'options') ?: 'http://members.carnegiemuseums.org/site/Survey')
           <label for="128" class="label--hidden">Subscribe to our emails</label>
-          <form name="survey_11603" id="survey_11603" method="GET" action="{{$subscribe_form_action}}">
+          <form name="survey_11603" method="POST" action="{{$subscribe_form_action}}">
             <p>
-              <input type="email" name="cons_email" id="cons_email" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" />
-              <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" id="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button" />
-              <input type="hidden" name="cons_info_component" id="cons_info_component" value="t" />
-              <input type="hidden" name="SURVEY_ID" id="SURVEY_ID" value="11603" />
-              <input type="hidden" name="USER_HAS_TAKEN" id="USER_HAS_TAKEN" value="null" />
-              <input type="hidden" name="SURVEY_IGNORE_ERRORS" id="SURVEY_IGNORE_ERRORS" value="TRUE" />
-              <input type="hidden" name="QUESTION_STAG_APP_ID" id="QUESTION_STAG_APP_ID" value="" />
-              <input type="hidden" name="QUESTION_STAG_APP_REF_ID" id="QUESTION_STAG_APP_REF_ID" value="" />
-              <input type="hidden" name="QUESTION_STAG_CTX_TYPE" id="QUESTION_STAG_CTX_TYPE" value="" />
-              <input type="hidden" name="ERRORURL" id="ERRORURL" value="http://www.carnegiemuseums.org/#error"/>
-              <input type="hidden" name="NEXTURL" id="NEXTURL" value="http://members.carnegiemuseums.org/site/Survey?ACTION_REQUIRED=URI_ACTION_USER_REQUESTS&SURVEY_ID=11860#success" />
+              <input type="email" name="cons_email" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" />
+              <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button" />
+              <input type="hidden" name="cons_info_component" value="t" />
+              <input type="hidden" name="SURVEY_ID" value="11603" />
+              <input type="hidden" name="USER_HAS_TAKEN" value="null" />
+              <input type="hidden" name="SURVEY_IGNORE_ERRORS" value="TRUE" />
+              <input type="hidden" name="QUESTION_STAG_APP_ID" value="" />
+              <input type="hidden" name="QUESTION_STAG_APP_REF_ID" value="" />
+              <input type="hidden" name="QUESTION_STAG_CTX_TYPE" value="" />
+              <input type="hidden" name="ERRORURL" value="http://www.carnegiemuseums.org/#error"  /><!--local page for error redirect-->
+              <input type="hidden" name="NEXTURL" value="http://members.carnegiemuseums.org/site/PageNavigator/CMP_email_signup_box_preferences.html#success" /><!--local page for successful submission redirect-->
             </p>
             <div style="display:none">
-              <input type="text" name="denySubmit" id="denySubmit" value="" alt="This field is used to prevent form submission by scripts." />
+              <input type="text" name="denySubmit" value="" alt="This field is used to prevent form submission by scripts." />
             </div>
           </form>
         </div>

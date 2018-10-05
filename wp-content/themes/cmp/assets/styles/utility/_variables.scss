@@ -2,7 +2,7 @@
 ////////////////////////////////////////////////////////////////
 
 // Typography
-$base-font-family:'Roboto', sans-serif;
+$base-font-family: 'Roboto', sans-serif;
 $alt-font-family: 'Lora', serif;
 $base-font-size: 1em;
 
@@ -17,14 +17,14 @@ $extra-large-spacing: $base-spacing * 3;
 // Colors
 $dark-gray: #333;
 $medium-dark-gray: #666;
-$medium-gray: #999;
+$medium-gray: #767676;
 $light-gray: #ccc;
 $base-color: #d73b23;
 $dark-color: darken($base-color, 15);
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $base-color ;
+$action-color: $base-color;
 $inverse-font-color: #fff;
 $inverse-action-color: $base-color;
 

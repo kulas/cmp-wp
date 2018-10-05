@@ -5,10 +5,9 @@
       <div class="top-bar__left">
         <div class="top-bar__form">
           @php($subscribe_form_action = get_field('subscribe_form_action', 'options') ?: 'http://members.carnegiemuseums.org/site/Survey')
-          <label for="128" class="label--hidden">Subscribe to our emails</label>
           <form name="survey_11603" method="POST" action="{{$subscribe_form_action}}">
             <p>
-              <input type="email" name="cons_email" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" />
+              <input type="email" name="cons_email" id="cons_email_header" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" aria-label="Email address" />
               <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button" />
               <input type="hidden" name="cons_info_component" value="t" />
               <input type="hidden" name="SURVEY_ID" value="11603" />
@@ -31,14 +30,14 @@
       </div>
       <nav>
 
-        <ul class="top-bar-nav">
+        <div class="top-bar-nav">
 
           {{-- Plan a Visit link --}}
-          <div class="top-bar__plan-visit">
-            <a href="/plan-a-visit">Plan Your Visit</a>
-          </div>
+          <ul class="top-bar__plan-visit">
+            <li><a href="/plan-a-visit">Plan Your Visit</a></li>
+          </ul>
 
-          <div class="nav-buttons">
+          <ul class="nav-buttons">
 
             <!-- visit callout btn-->
             <li>
@@ -64,9 +63,9 @@
               </button>
             </li>
 
-          </div>
+          </ul>
 
-        </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -89,7 +88,7 @@
 
         {{-- <legend class="screen-reader-text">Search form</legend> --}}
         <fieldset>
-          <label for="search-field" class="label--hidden">Search site</label>
+          <label for="search-field" class="screen-reader-text focusable">Search site</label>
           <input type="text" id="search-field" placeholder="search" name="s" value="">
 
           {{-- <label for="search-field"> Search</label> --}}

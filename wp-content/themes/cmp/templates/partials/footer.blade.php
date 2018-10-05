@@ -65,10 +65,9 @@
           <div class="middle-row">
             <div class="email-subscribe">
               @php($subscribe_form_action = get_field('subscribe_form_action', 'options') ?: 'http://members.carnegiemuseums.org/site/Survey')
-              <label for="email-signup" class="label--hidden">Subscribe to our emails</label>
               <form name="survey_11603" method="POST" action="{{$subscribe_form_action}}">
                 <p>
-                  <input type="email" name="cons_email" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" />
+                  <input type="email" name="cons_email" id="cons_email_footer" size="25" maxlength="255" placeholder="SIGN UP FOR EMAIL" aria-label="Email address" />
                   <input type="submit" name="ACTION_SUBMIT_SURVEY_RESPONSE" value="Sign Up" class="button button--small" />
                   <input type="hidden" name="cons_info_component" value="t" />
                   <input type="hidden" name="SURVEY_ID" value="11603" />

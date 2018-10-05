@@ -3,40 +3,40 @@
 
 // This is the HR with a text overlay that serves as a break/section header.
 .section-hr {
-    display:block;
+  display: block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: $max-width;
+  margin: auto;
+  margin-bottom: $medium-spacing;
+  padding: 0 $base-spacing;
+  text-align: center;
+
+  @include grid-media($medium) {
+    margin-bottom: $medium-spacing;
+    padding: 0;
+  }
+
+  hr {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: black;
+  }
+
+  .section-hr__h5 {
+    width: 100%;
+    height: 0;
     position: relative;
     text-align: center;
-    width: 100%;
-    max-width: $max-width;
-    margin: auto;
-    margin-bottom: $medium-spacing;
-    padding: 0 $base-spacing;
-    text-align: center;
-
-    @include grid-media($medium) {
-      margin-bottom: $medium-spacing;
-      padding:0;
-    }
-
-    hr {
-      position:relative;
-      margin: 0;
-      padding: 0;
-      color:black;
-    }
-
-    .section-hr__h5 {
-      width: 100%;
-      height: 0;
-      position: relative;
-      text-align: center;
-      top: -.875em;
+    top: -0.875em;
 
     h5 {
       display: inline;
       text-transform: uppercase;
       padding: 0 1em;
-      background-color:white;
+      background-color: white;
       color: $base-color;
       font-family: $base-font-family;
     }
@@ -46,46 +46,47 @@
 // For anything you want to hide on mobile.
 .mobile-hide {
   @include grid-media($medium) {
-    display:none !important;
+    display: none !important;
   }
 }
 
 // An hr that only appears on mobile.
 .mobile-hr {
-  display:none;
+  display: none;
 
   @include grid-media($medium) {
-    display:block;
-    width:100%;
+    display: block;
+    width: 100%;
   }
 }
 
 // These ensure all images aligned left or right in the content editor function correctly.
 img.alignleft {
-  float:left;
+  float: left;
   padding: 0 0.5em 0.5em 0;
 }
 
 img.alignright {
-  float:right;
+  float: right;
   padding: 0 0em 0.5em 0.5em;
 }
 
 // Appears on the mobile versions of the more things to do section on the homepage & things to do section.
-.more-things, .activity__hr {
-  display:none;
+.more-things,
+.activity__hr {
+  display: none;
 }
 
 // Little arrow that appears next to some links.
-.learn-more-arrow  {
-  height:20px;
+.learn-more-arrow {
+  height: 20px;
   position: relative;
-  top:3px;
+  top: 3px;
 
   @include grid-media($medium) {
-    height:25px;
-    left:10px;
-    top:-12px;
+    height: 25px;
+    left: 10px;
+    top: -12px;
   }
 }
 
@@ -110,7 +111,7 @@ img.alignright {
 
   p {
     @include grid-media($large) {
-      max-width:100%;
+      max-width: 100%;
     }
   }
 }
@@ -133,7 +134,7 @@ img.alignright {
       display: block;
       width: 100%;
       height: 1px;
-      background-color: #CCC;
+      background-color: #ccc;
     }
 
     .more-things {
@@ -148,7 +149,8 @@ img.alignright {
       display: flex;
     }
 
-    a h3, a h4 {
+    a h3,
+    a h4 {
       color: $dark-gray;
       &:hover {
         color: $action-color;
@@ -300,7 +302,7 @@ form.search-form {
 
 //Added to prevent stray fixed-width elements from overflowing on mobile.
 .content {
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 .magazine-sub-page {
@@ -312,5 +314,28 @@ form.search-form {
 
   .nav-breadcrumb {
     display: none;
+  }
+}
+
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+
+  &.focusable {
+    &:active,
+    &:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
   }
 }

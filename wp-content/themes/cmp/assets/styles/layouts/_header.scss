@@ -27,7 +27,7 @@
 // slide the bar down when visible
 .top-bar-container.is-visible {
   transform: translateY(0);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .top-bar {
@@ -44,7 +44,7 @@
   @include grid-media($nav-break) {
     justify-content: flex-end;
     padding: 0;
-    height:auto;
+    height: auto;
   }
 
   nav {
@@ -59,12 +59,11 @@
 
   @include grid-media($nav-break) {
     display: inline;
-    padding: $small-spacing;
-    > a {
+    > li a {
+      padding: $small-spacing $base-spacing;
       color: white;
       font-family: serif;
       text-transform: uppercase;
-      font-size: 1.2em;
       font-weight: 300 !important;
     }
   }
@@ -83,12 +82,12 @@
   }
 
   a.green-button {
-    margin-right:5px;
-    height:30px;
+    margin-right: 5px;
+    height: 30px;
     padding-top: 9px;
     position: relative;
-    top:2px;
-    border-radius:0;
+    top: 2px;
+    border-radius: 0;
     background-color: $nav-dropdown;
     font-weight: bold;
     transition: background-color 0.2s;
@@ -116,23 +115,23 @@
     display: none;
   }
 
-  input[type="email"] {
+  input[type='email'] {
     margin: 0 !important;
-    padding: .5em;
+    padding: 0.5em;
     border: 0;
     border-radius: 0;
-    font-size: .9em;
-    height:30px;
+    font-size: 0.9em;
+    height: 30px;
     position: relative;
-    top:7px;
-    width:200px;
+    top: 7px;
+    width: 200px;
     display: inline-block;
   }
 
-  input[type="submit"] {
+  input[type='submit'] {
     @extend .green-button;
     position: relative;
-    border-radius:0;
+    border-radius: 0;
     margin: 0 !important;
     top: 7px;
     width: 80px;
@@ -141,7 +140,7 @@
   }
 }
 
-ul.top-bar-nav {
+.top-bar-nav {
   position: relative;
   margin: 0;
   padding: 0;
@@ -198,6 +197,7 @@ ul.top-bar-nav {
 // Nav Icons
 ////////////////////////////////////////////////////////////////
 .nav-buttons {
+  list-style: none;
   display: flex;
   justify-content: flex-end;
   width: 100px;
@@ -223,7 +223,7 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
   position: relative;
   display: inline-block;
   height: 100%;
-  transition: all .3s;
+  transition: all 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -250,12 +250,10 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
     line-height: 1;
     &:before {
       position: relative;
-      top: -.25em;
+      top: -0.25em;
     }
-
   }
 }
-
 
 .nav-icon-hamburger {
   display: none;
@@ -285,31 +283,28 @@ button.nav-icon.nav-icon-hamburger.quickview-btn {
   }
 }
 
-
 // nav icon active states
 .nav-icon:active {
   outline: none;
 }
 
 .nav-icon:active i,
-.quickview-btn:active i
-{
-  transform: scale(.8);
+.quickview-btn:active i {
+  transform: scale(0.8);
   outline: none;
 }
 
 .nav-icon.is-active i,
-.is-active .nav-icon i{
+.is-active .nav-icon i {
   @include icon--close;
   animation: pop-in 1s ease-in 0s 1 normal none;
   color: #fff;
 }
 
 .nav-icon.is-deactivated i,
-.is-deactivated .nav-icon i{
+.is-deactivated .nav-icon i {
   animation: pop-out 1s ease-in 0s 1 normal none;
 }
-
 
 a.nav-visit {
   position: relative;
@@ -323,11 +318,11 @@ a.nav-visit {
   font-weight: 800;
   color: $dark-gray;
   z-index: 99;
-  transition: background .2s;
+  transition: background 0.2s;
 
   .nav-icon {
     padding: 0;
-    padding-left: .6em;
+    padding-left: 0.6em;
   }
   @include grid-media($nav-break) {
     color: #fff;
@@ -337,11 +332,11 @@ a.nav-visit {
 
   li:hover &,
   li:hover & .nav-icon {
-    transition: all .3s;
+    transition: all 0.3s;
     color: #fff;
   }
   li:hover & .nav-icon {
-    transition: all .3s;
+    transition: all 0.3s;
     color: #fff;
     background: none;
   }
@@ -358,7 +353,6 @@ a.nav-visit {
   }
 }
 
-
 // Quickviews
 ////////////////////////////////////////////////////////////////
 
@@ -368,18 +362,18 @@ a.nav-visit {
   max-height: 0;
   background: $dark-gray;
   overflow: hidden;
-  transition: all .6s ease;
+  transition: all 0.6s ease;
   z-index: 1000;
 }
 
 .quickview-overlay {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
   opacity: 0;
 }
 
 .quickview-container.is-active {
   max-height: 3000px;
-  box-shadow: 0 0 $base-spacing 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 $base-spacing 0 rgba(0, 0, 0, 0.5);
 
   .quickview {
     opacity: 1;
@@ -392,7 +386,7 @@ a.nav-visit {
     top: 0;
     left: 0;
     background: #000;
-    opacity: .33;
+    opacity: 0.33;
     z-index: 100;
   }
 }
@@ -405,18 +399,18 @@ a.nav-visit {
   left: 0;
   width: 100%;
   opacity: 0;
-  padding: $extra-large-spacing -$large-spacing  $large-spacing $large-spacing $extra-large-spacing;
+  padding: $extra-large-spacing -$large-spacing $large-spacing $large-spacing $extra-large-spacing;
   text-align: right;
   z-index: 999999;
   overflow: hidden;
-  transition: all .3s;
+  transition: all 0.3s;
 
   @include grid-media($large) {
     padding: $large-spacing $base-spacing;
   }
 
   @include grid-media($small) {
-    padding: $base-spacing
+    padding: $base-spacing;
   }
 
   img {
@@ -427,7 +421,7 @@ a.nav-visit {
   figcaption {
     font-weight: 400;
     font-size: 2em;
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
     border-bottom: solid 1px #fff;
     text-align: left;
     font-family: $alt-font-family;
@@ -436,7 +430,7 @@ a.nav-visit {
 
 .quickview.is-active {
   display: block;
-  animation: quickview-open .15s ease 0s 1 normal none;
+  animation: quickview-open 0.15s ease 0s 1 normal none;
 }
 
 .quickview--close {
@@ -452,7 +446,6 @@ a.nav-visit {
 
   svg {
     width: 1em;
-
   }
   path {
     fill: #fff !important;
@@ -499,26 +492,24 @@ a.quickview-btn.nav-visit {
       color: #fff;
     }
   }
-
 }
 
 // level 1
-.quickview-nav > div > ul{
+.quickview-nav > div > ul {
   > li {
-      margin: 0;
-      padding: 0;
-      border-bottom: solid 1px $medium-dark-gray;
+    margin: 0;
+    padding: 0;
+    border-bottom: solid 1px $medium-dark-gray;
 
     > a {
       font-size: 1.25em;
       font-weight: 600;
-      display: block ;
+      display: block;
       color: #fff;
 
       &:hover {
         background: $medium-dark-gray;
       }
-
     }
   }
 
@@ -527,7 +518,7 @@ a.quickview-btn.nav-visit {
     position: relative;
     max-height: 0;
     overflow: hidden;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 
     li {
       position: relative;
@@ -552,19 +543,19 @@ a.quickview-btn.nav-visit {
   right: 0;
   height: 100%;
   display: block;
-  padding: .7em .63em;
+  padding: 0.7em 0.63em;
   border-top: $inverse-border;
   background: lighten($dark-gray, 5%);
   font-weight: 800;
-  font-size: 2em ;
+  font-size: 2em;
   line-height: 1;
   color: #fff;
   cursor: pointer;
 
   &:before {
     display: block;
-    font-size: .5em;
-    transition: all .3s;
+    font-size: 0.5em;
+    transition: all 0.3s;
     transform: rotate(-180deg);
   }
 
@@ -574,7 +565,6 @@ a.quickview-btn.nav-visit {
 }
 
 .quickview-nav__expand.is-active {
-
   &:before {
     transform: rotate(0);
   }
@@ -583,7 +573,6 @@ a.quickview-btn.nav-visit {
     max-height: 600px;
   }
 }
-
 
 // quickview visit
 ////////////////////////////////////////////////////////////////
@@ -594,20 +583,17 @@ a.quickview-btn.nav-visit {
 
 .quickview-visit--details {
   @include grid-column(3);
-  font-size: .9em;
+  font-size: 0.9em;
 
   @include grid-media($medium) {
     @include grid-column(6);
     padding-bottom: $base-spacing;
-
   }
 
   @include grid-media($small) {
     @include grid-column(12);
     order: 3;
   }
-
-
 }
 
 .quickview-visit--day {
@@ -615,8 +601,8 @@ a.quickview-btn.nav-visit {
   position: relative;
   cursor: pointer;
   text-align: left;
-  transition: all .3s;
-  padding: .1em 0;
+  transition: all 0.3s;
+  padding: 0.1em 0;
 
   h3 {
     display: inline-block;
@@ -633,16 +619,15 @@ a.quickview-btn.nav-visit {
     position: relative;
     line-height: 1.5;
     float: right;
-    padding-right: .25em;
-
+    padding-right: 0.25em;
   }
 
   &:before {
     content: '';
     display: block;
-    width: .4em;
-    height: .4em;
-    margin: .6em .5em 0 .5em;
+    width: 0.4em;
+    height: 0.4em;
+    margin: 0.6em 0.5em 0 0.5em;
     float: left;
     background: $base-color;
   }
@@ -671,10 +656,10 @@ a.quickview-btn.nav-visit {
 .quickview-visit--admission {
   position: relative;
   text-align: left;
-  padding: .25em;
+  padding: 0.25em;
 
-  &:nth-child(even){
-    background: rgba(#fff, .1);
+  &:nth-child(even) {
+    background: rgba(#fff, 0.1);
   }
 
   h3 {
@@ -696,10 +681,9 @@ a.quickview-btn.nav-visit {
     position: absolute;
     line-height: 1.5;
     float: right;
-    padding: .25em;
+    padding: 0.25em;
     bottom: 0;
     right: 0;
-
   }
 
   .featured-price {
@@ -714,10 +698,8 @@ a.quickview-btn.nav-visit {
   }
 }
 
-
 .quickview-visit--callouts {
   @include grid-column(6);
-
 
   @include grid-media($medium) {
     @include grid-column(12);
@@ -749,7 +731,6 @@ a.quickview-btn.nav-visit {
     }
   }
 
-
   h5 {
     text-transform: none;
     margin-bottom: 0;
@@ -766,20 +747,19 @@ a.quickview-btn.nav-visit {
   }
 }
 
-
 // quickview search
 //////////////////////////////////////////////////
 
 .form-search {
   width: 100%;
   display: flex;
-  transition: all .3s;
+  transition: all 0.3s;
 
   i {
     position: relative;
     left: 0;
     font-size: 1.75em;
-    padding: 0 .33em;
+    padding: 0 0.33em;
     background: none;
     border: none;
     @include grid-media($small) {
@@ -792,19 +772,19 @@ a.quickview-btn.nav-visit {
     display: block;
   }
 
-  input[type=text] {
+  input[type='text'] {
     color: $dark-gray;
     display: block;
     background: #fff;
-    padding-left: .5em;
+    padding-left: 0.5em;
     margin-bottom: 0;
     height: 2em;
     border: solid 2px $light-gray;
     border-right: none;
-    font-size: 2em ;
+    font-size: 2em;
 
     &:hover {
-    box-shadow: none;
+      box-shadow: none;
       &:focus {
         box-shadow: none;
       }
@@ -818,7 +798,7 @@ a.quickview-btn.nav-visit {
     text-align: left;
     color: $dark-gray;
     font-size: 2em;
-    padding-left: .5em;
+    padding-left: 0.5em;
     text-transform: none;
     transform: translateY(-110%);
   }
@@ -829,31 +809,29 @@ a.quickview-btn.nav-visit {
     font-size: 1em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: $dark-color;
     }
   }
 
   #search-field {
-    border:0;
+    border: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
   button.btn {
-    border:0;
+    border: 0;
   }
 }
-
-
 
 // carnegie logo
 ////////////////////////////////////////////////////////////////
 .site-header--logo {
   width: 300px;
-  padding-bottom:1em;
+  padding-bottom: 1em;
 }
-
 
 // main header
 ////////////////////////////////////////////////////////////////
@@ -891,13 +869,13 @@ a.quickview-btn.nav-visit {
   position: fixed;
   bottom: 100%;
   background: #fff;
-  transition: transform .3s;
+  transition: transform 0.3s;
   transform: translateY(0);
   border-bottom: $base-border;
 
   &.is-visible {
     transform: translateY(100%);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.25);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
   }
 
   .logo-l {
@@ -914,7 +892,6 @@ a.quickview-btn.nav-visit {
       display: none;
     }
   }
-
 }
 
 .mobile-nav-container {
@@ -923,13 +900,12 @@ a.quickview-btn.nav-visit {
   }
 }
 
-
 // Desktop Nav
 ////////////////////////////////////////////////////////////////
 .desktop-nav-container {
   width: 100%;
   // max-width: $max-width;
-  padding: 0  $base-spacing;
+  padding: 0 $base-spacing;
   margin: auto;
   background: #fff;
   display: block;
@@ -945,7 +921,7 @@ a.quickview-btn.nav-visit {
 
 .menu-primary_navigation-container,
 .menu-magazine-nav-container {
-  padding:0em 3em;
+  padding: 0em 3em;
   font-family: $base-font-family;
   // border-bottom: $base-border;
 }
@@ -958,8 +934,8 @@ a.quickview-btn.nav-visit {
 #menu-primary-navigation li a {
   // color:black;
   font-family: sans-serif;
-  font-size:.8em;
-  font-weight:bold;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 #menu-primary-navigation-1 {
@@ -977,8 +953,7 @@ ul.desktop-nav {
 }
 
 ul#menu-primary-navigation-1,
-ul#menu-magazine-nav
- {
+ul#menu-magazine-nav {
   display: flex;
   position: relative;
   margin: 0;
@@ -986,7 +961,7 @@ ul#menu-magazine-nav
   // max-width: $max-width;
   margin: auto;
   justify-content: space-between;
-  @include grid-media($nav-break){
+  @include grid-media($nav-break) {
     display: none;
   }
 
@@ -1003,18 +978,20 @@ ul#menu-magazine-nav
     flex-grow: 1;
     text-align: center;
 
-    &:active, &:hover, &.active {
+    &:active,
+    &:hover,
+    &.active {
       background: $nav-dropdown;
       outline: none;
     }
 
-    &:hover a{
+    &:hover a {
       color: #fff;
     }
 
     a {
-      width:100%;
-      display:block;
+      width: 100%;
+      display: block;
       padding: 0.7em;
       color: #000;
     }
@@ -1048,28 +1025,25 @@ ul#menu-magazine-nav
     overflow: hidden;
     z-index: 1003;
     width: 100%;
-    height:0;
-    visibility:hidden;
-    opacity:0;
-    filter:alpha(opacity=0);
-    -webkit-transition:400ms ease;
-    -moz-transition:400ms ease;
-    -o-transition:400ms ease;
-    transition:400ms ease;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all 0.4s ease;
     &.active {
       max-height: 1000px;
     }
 
     > li {
-      transition: 0.4s all;
+      transition: all 0.4s;
       background: $nav-dropdown;
       // width: 260px;
-      height:50px;
+      height: 50px;
       color: white;
       text-align: left;
       a {
         padding-left: 1.8em;
-        overflow:hidden;
+        overflow: hidden;
         letter-spacing: 0.5px;
         font-size: 0.8em;
         color: #fff;
@@ -1081,11 +1055,11 @@ ul#menu-magazine-nav
   }
 
   li.menu-item:hover > ul.sub-menu {
-    height:auto;
-    visibility:visible;
-    opacity:1;
-    filter:alpha(opacity=100);
-    overflow:visible;
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    overflow: visible;
     background: $nav-hover;
   }
 
@@ -1098,10 +1072,10 @@ ul#menu-magazine-nav
   }
 
   .sub-menu > li.menu-item > ul.sub-menu:hover {
-    height:auto;
-    visibility:visible;
-    opacity:1;
-    filter:alpha(opacity=100);
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    filter: alpha(opacity=100);
   }
 
   .sub-menu > li.menu-item > ul.sub-menu > li.menu-item > ul.sub-menu {
@@ -1145,25 +1119,24 @@ body:not(.single-issue) {
 }
 
 ul#menu-magazine-nav {
-
   li.menu-item,
   ul.sub-menu > li.menu-item {
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   li.menu-item:hover {
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   li.current-menu-item {
-    background-color: rgba(0,0,0,.9);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 }
 
 body.current-issue {
   ul#menu-magazine-nav {
     li.current-issue {
-      background-color: rgba(0,0,0,.9);
+      background-color: rgba(0, 0, 0, 0.9);
     }
   }
 }
@@ -1171,7 +1144,7 @@ body.current-issue {
 body.archived-issue {
   ul#menu-magazine-nav {
     li.archive {
-      background-color: rgba(0,0,0,.9);
+      background-color: rgba(0, 0, 0, 0.9);
     }
   }
 }
@@ -1185,23 +1158,23 @@ ul#menu-magazine-nav li.menu-item:hover > ul.sub-menu {
   background: black !important;
 }
 
-  // a.is-active,
-  // button.is-active {
-  //   background: $base-color;
-  //   @include grid-media($nav-break) {
-  //     background: $dark-gray;
-  //   }
-  // }
-  //
-  // @include grid-media($nav-break) {
-  //   a {
-  //     background: $base-color;
-  //
-  //     i {
-  //       color: #fff !important;
-  //     }
-  //   }
-  // }
+// a.is-active,
+// button.is-active {
+//   background: $base-color;
+//   @include grid-media($nav-break) {
+//     background: $dark-gray;
+//   }
+// }
+//
+// @include grid-media($nav-break) {
+//   a {
+//     background: $base-color;
+//
+//     i {
+//       color: #fff !important;
+//     }
+//   }
+// }
 
 ul#menu-magazine-nav > li > a {
   color: white !important;
@@ -1209,7 +1182,7 @@ ul#menu-magazine-nav > li > a {
 
 #menu-magazine-nav li:hover {
   > a {
-    color:white;
+    color: white;
   }
 }
 

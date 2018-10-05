@@ -14,7 +14,6 @@
   }
 
   .articles__featured {
-
     @include grid-media($medium) {
       display: none;
     }
@@ -69,9 +68,9 @@
     margin: 0 0 $small-spacing 0;
     padding: 0;
     font-style: italic;
-    color: #7a7a7a;
+    color: $medium-gray;
 
-    @include grid-media($medium)  {
+    @include grid-media($medium) {
       text-align: center;
     }
   }
@@ -81,7 +80,7 @@
     font-size: 1em;
     font-weight: 300;
 
-    @include grid-media($medium)  {
+    @include grid-media($medium) {
       text-align: center;
     }
 
@@ -176,6 +175,6 @@
 
 .articles__featured.content-container {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    display: block
+    display: block;
   }
 }

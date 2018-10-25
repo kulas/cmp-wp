@@ -188,8 +188,8 @@
 
   @if ($bigpicture_image)
     <div class="carnegie-magazine__big-picture">
-      <a href="{{ the_field('big_picture_link') }}" aria-label="{{ the_field('big_picture_title') }}">
-        <div class="hero-header" role="img" style="background-image:url('{{ $bigpicture_url }}')"></div>
+      <a href="{{ the_field('big_picture_link') }}">
+        <div class="hero-header" role="img" aria-label="{{ $bigpicture_image['alt'] }}" style="background-image:url('{{ $bigpicture_url }}')"></div>
       </a>
       <div class="media-details">
         <p class="media-details__caption">@php echo $bigpicture_image['caption']; @endphp</p>

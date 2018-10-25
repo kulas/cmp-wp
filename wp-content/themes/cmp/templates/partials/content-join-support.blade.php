@@ -17,7 +17,7 @@
     $header_image_credit = App\get_media_credit_html($header_image_id, false); //media credit for image
   @endphp
 
-  <div class="hero-header" role="img" aria-label="Carnegie Museums members sitting on a couch" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" aria-label="{{ $header_image['alt'] }}" style="background-image:url('{{ $header_image_url }}')">
   </div>
   <div class="media-details">
     <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
@@ -52,12 +52,12 @@
 
       if( have_rows('sub-pages') ):
       while ( have_rows('sub-pages') ) :
-      the_row()
+      the_row();
     @endphp
 
       <div class="activity">
         <a href="{{ the_sub_field('link') }}">
-          <div class="activity__image" role="img" aria-label="{{ the_sub_field('title') }}" style="background-image:url('{{ $rows[$i]['image']['url'] }}')">
+          <div class="activity__image" role="img" aria-label="{{ $rows[$i]['image']['alt'] }}" style="background-image:url('{{ $rows[$i]['image']['url'] }}')">
             <div class="activity__title">
               <h3>{{ the_sub_field('title') }}</h3>
             </div>

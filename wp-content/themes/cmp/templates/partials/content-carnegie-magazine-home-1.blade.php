@@ -15,7 +15,7 @@
   $featured_image_credit = App\get_media_credit_html($featured_image_id, false); //media credit for image
 @endphp
 
-<div class="hero-header" role="img" aria-label="{{ get_the_title($post_object) }}"  style="background-image:url({{ $featured_image_url }})">
+<div class="hero-header" role="img" aria-label="{{ $featured_image['alt'] }}"  style="background-image:url({{ $featured_image_url }})">
 </div>
 <div class="media-details">
   <p class="media-details__caption">{{ $featured_image['caption'] }}</p>

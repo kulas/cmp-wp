@@ -26,7 +26,7 @@
       @endphp
 
         <a href="{{ get_permalink($article) }}" aria-label="{{ get_sub_field('title') }}">
-          <div class="hero-header" role="img" style="background-image: url('{{ $featured_image_url }}')" ></div>
+          <div class="hero-header" role="img" aria-label="{{ $featured_image['alt'] }}" style="background-image: url('{{ $featured_image_url }}')" ></div>
         </a>
 
         <div class="media-details">

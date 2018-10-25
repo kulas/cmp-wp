@@ -13,8 +13,8 @@
 
   <div class="carnegie-magazine-section-2">
     <div class="carnegie-magazine__big-picture">
-      <a href="{{ the_field('big_picture_link') }}" aria-label="{{get_field('big_picture_title')}}">
-        <div class="hero-header" role="img" style="background-image:url('{{ $big_picture_image_url }}')">
+      <a href="{{ the_field('big_picture_link') }}">
+        <div class="hero-header" role="img" aria-label="{{ $big_picture_image['alt'] }}" style="background-image:url('{{ $big_picture_image_url }}')">
         </div>
       </a>
       <div class="media-details">

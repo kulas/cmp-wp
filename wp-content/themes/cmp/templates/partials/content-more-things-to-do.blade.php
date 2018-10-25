@@ -22,11 +22,15 @@ Template Name: More Things to Do
 
     @php
       while( has_sub_field( 'sub_page', $page_id ) ):
+
+      $image_url = get_sub_field('image');
+      $image_id = App\get_image_from_url($image_url);
+      $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
     @endphp
 
     <div class="activity">
-      <a href="{{ the_sub_field('link') }}" aria-label="{{ the_sub_field('title') }}">
-        <div class="activity__main-image" role="img" style="background-image: url('{{the_sub_field("image")}}') "></div>
+      <a href="{{ the_sub_field('link') }}">
+        <div class="activity__main-image" role="img" aria-label="{{ $image_alt }}" style="background-image: url('{{the_sub_field("image")}}') "></div>
       </a>
       <div class="activity__text-box">
         <h4><a href="{{ the_sub_field('link') }}" class="black-link">{{ the_sub_field('title') }}</a></h4>

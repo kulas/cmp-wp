@@ -12,7 +12,7 @@
 @endphp
 
 <div class="plan-visit">
-  <div class="hero-header" role="img" aria-label="Dinosaur statue in front of Carengie Museum of Natural history" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" aria-label="{{ $header_image['alt'] }}" style="background-image:url('{{ $header_image_url }}')">
   </div>
   <div class="media-details">
     <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>

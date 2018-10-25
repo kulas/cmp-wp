@@ -16,7 +16,7 @@
 
 @if ($image)
   <div class="basic-header">
-    <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $image_url }}')">
+    <div class="hero-header" role="img" aria-label="{{ $image['alt'] }}" style="background-image:url('{{ $image_url }}')">
     </div>
     <div class="media-details">
       <p class="media-details__caption">@php echo $image['caption']; @endphp</p>

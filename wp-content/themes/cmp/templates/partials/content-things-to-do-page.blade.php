@@ -12,7 +12,7 @@
 @endphp
 
 <div class="things-to-do-page">
-  <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" aria-label="{{ $header_image['alt'] }}" style="background-image:url('{{ $header_image_url }}')">
   </div>
   <div class="media-details">
     <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
@@ -45,12 +45,16 @@
 
   @php //activity slash sub-page repeater
     if( have_rows('activity') ):
-    while ( have_rows('activity') ) : the_row()
+    while ( have_rows('activity') ) : the_row();
+
+    $image_url = get_sub_field('image');
+    $image_id = App\get_image_from_url($image_url);
+    $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
   @endphp
 
     <div class="activity">
       <a href="{{ the_sub_field('external_link') }} {{ the_sub_field('internal_link') }}">
-        <div class="activity__image" role="img" aria-label="{{ the_sub_field('title') }}" style="background-image:url('{{ the_sub_field('image') }}')">
+        <div class="activity__image" role="img" aria-label="{{ $image_alt }}" style="background-image:url('{{ $image_url }}')">
           <div class="activity__title">
             <h3>{{ the_sub_field('title') }}</h3>
           </div>

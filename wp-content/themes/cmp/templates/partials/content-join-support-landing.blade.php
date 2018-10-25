@@ -20,7 +20,7 @@
     $header_image_credit = App\get_media_credit_html($header_image_id, false); //media credit for image
   @endphp
 
-  <div class="hero-header" role="img" aria-label="{{ the_title() }}" style="background-image:url('{{ $header_image_url }}')">
+  <div class="hero-header" role="img" aria-label="{{ $header_image['alt'] }}" style="background-image:url('{{ $header_image_url }}')">
   </div>
   <div class="media-details">
     <p class="media-details__caption">@php echo $header_image['caption']; @endphp</p>
@@ -28,7 +28,7 @@
   </div>
   <div class="content-container">
     <h1 class="hero-header__words-box">{{ the_title() }}</h1>
-  
+
     <div class="content-wrapper">
       <div class="l-long">
         {{ the_content() }}
@@ -53,12 +53,16 @@
     @php
       if( have_rows('activity') ): //In this case, it's looping through sub-pages (sorry, uses the same custom field)
       while ( have_rows('activity') ) :
-      the_row()
+      the_row();
+
+      $image_url = get_sub_field('image');
+      $image_id = App\get_image_from_url($image_url);
+      $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
     @endphp
 
       <div class="activity">
         <a href="{{ the_sub_field('external_link') }} {{ the_sub_field('internal_link') }}">
-          <div class="activity__image" role="img" aria-label="{{ the_sub_field('title') }}" style="background-image:url('{{ the_sub_field('image') }}')">
+          <div class="activity__image" role="img" aria-label="{{ $image_alt }}" style="background-image:url('{{ $image_url) }}')">
             <div class="activity__title">
                 <h3>{{ the_sub_field('title') }}</h3>
             </div>

@@ -21,7 +21,7 @@
 
   @endphp
     <div class="featured-exhibit" data-exhibit-id="0">
-      <div class="hero-header" role="img">
+      <div class="hero-header">
         <a href="{{ $exhibit['link'] }}" aria-label="{{$exhibit['title']}}">
           <img src="{{ $image_url }}" alt="{{ $image['alt'] }}" />
           <div class="hero-header__mobile-tag">
@@ -39,7 +39,7 @@
         <div class="exhibit__preview">
           <div class="exhibit-preview__summary">
             <h2 class="hero-header__words-box button--link">
-              <a href="{{ $exhibit['link'] }}" aria-label="{{ $exhibit['title'] }}">
+              <a href="{{ $exhibit['link'] }}">
                 {{ $exhibit['title'] }}
               </a>
             </h2>
@@ -68,8 +68,8 @@
 
     {{-- Callout blocks/4 featutred exhibits --}}
     <div class='exhibit' data-exhibit-id="<?= $count; ?>">
-      <a aria-label="{{$exhibit['title']}}" href="{{ $exhibit['link'] }}" >
-        <div class="exhibit__image" role="img" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})">
+      <a href="{{ $exhibit['link'] }}" >
+        <div class="exhibit__image" role="img" aria-label="{{ $image['alt'] }}" style="background-image: url({{ $exhibit['exhibit_image']['url'] }})">
           <div class="exhibit-preview__dates">
             <p class="start-date">{{ $exhibit['dates'] }}</p>
           </div>

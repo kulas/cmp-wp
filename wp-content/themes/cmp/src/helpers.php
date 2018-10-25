@@ -146,3 +146,15 @@ function get_media_credit_html($id, $include_default_credit = false) {
 
     return function_exists('the_media_credit_html') ? the_media_credit_html($id) : '';
 }
+
+function get_image_from_url($image_url) {
+  global $wpdb;
+  $path = pathinfo($image_url);
+  if(isset($path['basename'])) {
+    $attachment = $wpdb->get_col($wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_value like '%s';", "%{$path['basename']}"));
+    return isset($attachment[0]) ? $attachment[0] : '';
+  }
+  else {
+    return '';
+  }
+}

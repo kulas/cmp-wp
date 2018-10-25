@@ -114,7 +114,7 @@
 
             <a href="{{ the_permalink() }}" class="permalink">
               @if ($featured_image_url)
-                <div class="image-container" role="img" style="background-image:url({{ $featured_image_url }})"></div>
+                <div class="image-container" role="img" aria-label="{{ $featured_image['alt'] }}" style="background-image:url({{ $featured_image_url }})"></div>
               @endif
 
               {{ the_title() }}

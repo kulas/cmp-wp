@@ -1019,7 +1019,7 @@ ul#menu-magazine-nav {
   ul.sub-menu {
     padding-left: 0;
     position: absolute;
-    top: 46px;
+    top: 47px;
     left: 0;
     background-color: $nav-dropdown;
     overflow: hidden;
@@ -1037,8 +1037,7 @@ ul#menu-magazine-nav {
     > li {
       transition: all 0.4s;
       background: $nav-dropdown;
-      // width: 260px;
-      height: 50px;
+      padding: 6px 0;
       color: white;
       text-align: left;
       a {
@@ -1047,9 +1046,6 @@ ul#menu-magazine-nav {
         letter-spacing: 0.5px;
         font-size: 0.8em;
         color: #fff;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
       }
     }
   }

@@ -158,3 +158,13 @@ function get_image_from_url($image_url) {
     return '';
   }
 }
+
+function issue_link($categories = []) {
+    if(count($categories) > 0) {
+        $category = array_shift($categories);
+        return "<a href='/carnegie-magazine/issue/{$category->slug}'>{$category->name}</a>";
+    }
+    else {
+        return "<a href='/carnegie-magazine/carnegie-magazine-archive'>Carnegie Magazine</a>";
+    }
+}

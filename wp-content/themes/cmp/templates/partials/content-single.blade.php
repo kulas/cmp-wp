@@ -1,6 +1,4 @@
 {{-- Oh boy, this is the template for a single Carnegie Magazine article AKA blog post. Sorry. --}}
-
-
 @php
 
   $header_image = get_field('featured_image'); //gets full image array
@@ -45,7 +43,7 @@
         </div>
       <p class="article-meta__divider">|</p>
       <div class="article-meta__issue">
-        {{ the_category(' | ') }}
+        {!! App\issue_link(get_the_category()) !!}
       </div>
       <p class="article-meta__divider">|</p>
       <a class="print" href="#" onClick="window.print();"><i class="fa fa-print" aria-hidden="true"></i>Print</a>

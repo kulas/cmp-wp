@@ -127,7 +127,7 @@
       <h3 class="uppercase-robot--large center">Current Issue</h3>
       <div class="magazine-featured-articles__sidebar__container">
         <a href="/carnegie-magazine/current-issue">
-          <img src="{{ the_field('current_issue') }}" alt="{{ the_field('current_issue_title') }}"/>
+          <img src="{{ the_field('current_issue') }}" alt="Cover of current issue"/>
         </a>
         <h3 class="serif center">Sign up to receive more stories<br /> in your email</h3>
 

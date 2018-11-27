@@ -149,9 +149,9 @@ function get_media_credit_html($id, $include_default_credit = false) {
 
 function get_image_from_url($image_url) {
   global $wpdb;
-  $path = pathinfo($image_url);
-  if(isset($path['basename'])) {
-    $attachment = $wpdb->get_col($wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_value like '%s';", "%{$path['basename']}"));
+  preg_match('/uploads[\d]?\/(.+)/', $image_url, $path);
+  if(isset($path[1])) {
+    $attachment = $wpdb->get_col($wpdb->prepare("SELECT post_id FROM $wpdb->postmeta WHERE meta_value like '%s';", "{$path[1]}"));
     return isset($attachment[0]) ? $attachment[0] : '';
   }
   else {

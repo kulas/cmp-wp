@@ -42,7 +42,13 @@
         @endphp
           <div class="event">
             <div class="activity__image leader">
-              <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }}" />
+              @php
+                if(get_sub_field('email')):
+              @endphp
+                <img src="{{ the_sub_field('image') }}" alt="{{ the_sub_field('name') }}" />
+              @php
+                endif;
+              @endphp
             </div>
             <div class="activity__content">
               <h3>{{ the_sub_field('name') }}</h3>
@@ -50,7 +56,13 @@
                 <span>{{ the_sub_field('title') }}</span><br />
                 <span class="activity__location">{{ the_sub_field('museum') }}</span>
               </p>
-              <p><a href="mailto:{{ the_sub_field('email') }}">{{ the_sub_field('email') }}</a></p>
+              @php
+                if(get_sub_field('email')):
+              @endphp
+                <p><a href="mailto:{{ the_sub_field('email') }}">{{ the_sub_field('email') }}</a></p>
+              @php
+                endif;
+              @endphp
             </div>
           </div>
         @php

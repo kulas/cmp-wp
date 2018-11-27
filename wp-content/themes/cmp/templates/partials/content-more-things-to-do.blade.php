@@ -31,6 +31,7 @@ Template Name: More Things to Do
     <div class="activity">
       <a href="{{ the_sub_field('link') }}">
         <div class="activity__main-image" role="img" aria-label="{{ $image_alt }}" style="background-image: url('{{the_sub_field("image")}}') "></div>
+        <span class="screen-reader-text">{{ the_sub_field('title') }}</span>
       </a>
       <div class="activity__text-box">
         <h4><a href="{{ the_sub_field('link') }}" class="black-link">{{ the_sub_field('title') }}</a></h4>

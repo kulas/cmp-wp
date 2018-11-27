@@ -1,15 +1,14 @@
 // Contact form plugin styling
 
 .wpcf7 {
-  width:50%;
+  width: 50%;
 
   @include grid-media($medium) {
-    width:100%;
+    width: 100%;
   }
 
   form.wpcf7-form {
     // padding: $small-spacing 0;
-
   }
 
   label {
@@ -17,13 +16,13 @@
   }
 
   select.wpcf7-form-control.wpcf7-select.wpcf7-validates-as-required {
-    width:100%;
-    height:40px;
-    margin-bottom:0;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 0;
   }
 
   input {
-    margin-bottom:0;
+    margin-bottom: 0;
   }
 
   span.wpcf7-list-item {
@@ -35,10 +34,10 @@
   }
 
   input.wpcf7-form-control.wpcf7-submit {
-    margin-top:1em;
+    margin-top: 1em;
     height: auto;
-    width:200px;
-    margin-top:$small-spacing;
+    width: 200px;
+    margin-top: $small-spacing;
   }
 
   select.wpcf7-form-control.wpcf7-select {
@@ -49,7 +48,7 @@
   .wpcf7-list-item {
     font-weight: 300;
 
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       position: relative;
       top: 5px;
       height: auto;
@@ -60,12 +59,14 @@
     display: block;
     // margin-bottom: $base-spacing;
 
-    .wpcf7-list-item {
+    .wpcf7-list-item,
+    label {
       // margin-bottom: $small-spacing;
       display: flex;
       align-items: flex-start;
       margin-left: 0;
       margin-bottom: $small-spacing;
+      font-weight: normal;
     }
   }
 }

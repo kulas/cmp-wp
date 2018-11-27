@@ -6,3 +6,5 @@
   ga('create', 'UA-21972310-1', 'auto');
   ga('send', 'pageview');
 </script>
+
+<script async src="https://tag.simpli.fi/sifitag/535c0950-bdd4-0136-43e6-06659b33d47c"></script>

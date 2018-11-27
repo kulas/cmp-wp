@@ -360,11 +360,11 @@ article {
     }
 
     .tags {
-      line-height: .8em;
+      line-height: 0.8em;
       margin-top: (2/3 * $base-spacing);
 
       a {
-        color: grey;
+        color: #737373;
         font-weight: 300;
       }
     }
@@ -415,7 +415,7 @@ article {
         flex-basis: 100%;
       }
 
-      &[type="text"] {
+      &[type='text'] {
         flex-basis: 50%;
 
         @include grid-media($small) {
@@ -439,7 +439,7 @@ p.sp-layer.sp-black.sp-padding.desc-in.desc-in-bg.hide-medium-screen {
   p {
     margin-right: 5px;
     margin-top: 5px;
-    font-size: .8em !important;
+    font-size: 0.8em !important;
     font-weight: bold;
   }
   > a {

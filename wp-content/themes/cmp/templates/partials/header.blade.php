@@ -116,3 +116,9 @@
     </nav>
   @endif
 </header>
+
+@php
+  if(get_field('omnilert_museum', 'option')) {
+    echo do_shortcode('[cmp-omnilert museum="'.get_field('omnilert_museum', 'option').'"]');
+  }
+@endphp

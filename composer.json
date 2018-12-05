@@ -10,11 +10,17 @@
       "homepage": "http://carney.co"
     }
   ],
-  "keywords": ["wordpress"],
+  "keywords": [
+    "wordpress"
+  ],
   "repositories": [
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/carnegie-institute/cmp-omnilert"
     }
   ],
   "require": {
@@ -46,6 +52,7 @@
     "wpackagist-plugin/redirection": "^3.0",
     "wpackagist-plugin/acf-to-rest-api": "^3.1",
     "wpackagist-plugin/relevanssi": "^4.0",
-    "wpackagist-plugin/wordpress-seo": "7.5.3"
+    "wpackagist-plugin/wordpress-seo": "7.5.3",
+    "carnegie-institute/cmp-omnilert": "^1.0.0"
   }
 }

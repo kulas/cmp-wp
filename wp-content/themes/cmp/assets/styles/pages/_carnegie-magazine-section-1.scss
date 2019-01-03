@@ -133,8 +133,13 @@
 
     .magazine-featured-articles__sidebar__container {
       padding: $small-spacing;
-      border-left: 1px solid #CCC;
-      border-bottom: 1px solid #CCC;
+      border-left: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+
+      .button {
+        display: block;
+        width: 100%;
+      }
     }
 
     .most-read-articles {
@@ -151,7 +156,8 @@
     }
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     margin-bottom: 0.5rem;
     // margin-top: .25em;
     font-family: $base-font-family;

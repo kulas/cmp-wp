@@ -23,7 +23,7 @@
 
   <article>
     <div class="magazine-subscribe">
-      <p class="serif label"><strong>Sign up to receive more stories in your email</strong></p>
+      <p class="serif label"><strong>Receive more stories in your email</strong></p>
       @include('partials/magazine-signup-form')
     </div>
   </article>

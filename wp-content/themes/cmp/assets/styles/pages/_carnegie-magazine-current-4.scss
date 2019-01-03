@@ -1,6 +1,10 @@
 // Big Picture & Magazine Signup on Current Issue page
 
 .carnegie-magazine__big-picture {
+  &.-pad-bottom {
+    margin-bottom: $medium-spacing;
+  }
+
   .media-credit {
     max-width: 20%;
     position: relative;

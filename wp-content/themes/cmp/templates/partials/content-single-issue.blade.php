@@ -86,6 +86,11 @@
 
               <a class="green-button" style="display: block; text-align:center;" href="/carnegie-magazine/carnegie-magazine-archive">More Archives</a>
             </div>
+
+            <div class="magazine-subscribe magazine-subscribe--sidebar">
+              <p class="serif label"><strong>Receive more stories in your email</strong></p>
+              @include('partials/magazine-signup-form')
+            </div>
           </div>
         </div>
       </div>
@@ -187,7 +192,7 @@
   @endphp
 
   @if ($bigpicture_image)
-    <div class="carnegie-magazine__big-picture">
+    <div class="carnegie-magazine__big-picture -pad-bottom">
       <a href="{{ the_field('big_picture_link') }}">
         <div class="hero-header" role="img" aria-label="{{ $bigpicture_image['alt'] }}" style="background-image:url('{{ $bigpicture_url }}')"></div>
       </a>
@@ -198,15 +203,7 @@
       <div class="content-container">
         <h1 class="hero-header__words-box green-robot-link">{{ the_field('big_picture_title') }}</h1>
         <p>{{ the_field('big_picture_text') }}</p>
-        <hr />
       </div>
-
-      <article>
-        <div class="magazine-subscribe">
-          <p class="serif label"><strong>Sign up to receive more stories in your email</strong></p>
-          @include('partials/magazine-signup-form')
-        </div>
-      </article>
     </div>
   @endif
 

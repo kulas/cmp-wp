@@ -33,6 +33,13 @@
     }
   }
 
+  .current-issue__cover-story,
+  .magazine-archives {
+    @include grid-media($large) {
+      margin-bottom: $medium-spacing;
+    }
+  }
+
   .current-issue__left {
     width: 60%;
     overflow: hidden;
@@ -59,10 +66,15 @@
       padding: 0;
       width: 100%;
     }
+
+    .magazine-subscribe--sidebar .button {
+      display: block;
+      width: 100%;
+    }
   }
 
   .issue-title {
-    margin-bottom: (1.5 * $small-spacing);
+    margin: 0.5rem 0;
   }
 
   ul {
@@ -72,11 +84,11 @@
 
   .magazine-archives__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .archive {
-    flex-basis: 48%;
+    flex-basis: 40%;
   }
 
   .green-button {

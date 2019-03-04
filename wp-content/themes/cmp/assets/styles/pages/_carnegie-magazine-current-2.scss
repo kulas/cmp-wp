@@ -18,20 +18,16 @@
   }
 
   .features {
-    display: flex;
-    justify-content: space-between;
-    @include grid-media($medium) {
-      display: block;
-    }
+    @include grid-collapse;
 
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      min-width: 100%;
-    }
-  }
+    .article {
+      @include grid-column(4);
 
-  .article {
-    display: block;
-    flex-basis: 32%;
+      @include grid-media($medium) {
+        @include grid-column(12);
+        margin-bottom: 2em;
+      }
+    }
   }
 
   .article__image-container {

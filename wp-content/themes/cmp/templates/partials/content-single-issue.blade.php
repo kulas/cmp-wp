@@ -119,9 +119,9 @@
               <div class="article">
                 <div class="categories">@php(the_tags( '', '', '' ))</div>
                 <a href="{{ the_permalink() }}">
-                <div class="article__image-container">
-                  <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
-                </div>
+                  <div class="article__image-container">
+                    <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
+                  </div>
                   <h3 class="green-robot-link">{{ the_title() }}</h3>
                 </a>
                 <p>{{ the_excerpt() }}</p>
@@ -138,48 +138,42 @@
   @endif
 
   @if (have_rows('also_in_issue'))
-    <div class="carnegie-magazine-current-3">
+    <div class="carnegie-magazine-current-1 carnegie-magazine-current-2">
       <div class="content-container">
-        <div class="also-in-issue also-in-issue__full">
-          <h2 class="robot-uppercase">Also in this Issue</h2>
-          <hr/>
+        <h2 class="robot-uppercase">Also in this Issue</h2>
+        <hr/>
 
-          <div class="article-wrapper">
-            @while (have_rows('also_in_issue'))
+        <div class="features">
+          @while (have_rows('also_in_issue'))
+            @php
+              the_row();
+              $post_object = get_sub_field('article');
+            @endphp
+
+            @if ($post_object)
               @php
-                the_row();
-                $post_object = get_sub_field('article');
+                $post = $post_object;
+                setup_postdata($post);
               @endphp
 
-              @if ($post_object)
-                @php
-                  $post = $post_object;
-                  setup_postdata($post);
-                @endphp
-
-                <div class="also-article">
-                  <div class="also-article__left">
-                    <div class="categories">@php(the_tags( '', '', '' ))&nbsp;</div>
-                    <div class="article__image-container">
-                      <a href="{{ the_permalink() }}">
-                        <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
-                      </a>
-                      <p class="feature-type">{{ the_field('feature_type') }}</p>
-                    </div>
-                  </div>
-                  <div class="also-article__right">
-                    <a href="{{ the_permalink() }}">
-                      <h3 class="green-robot-link">{{ the_title() }}</h3>
-                    </a>
-                    <p>{{ the_excerpt() }}</p>
-                    <p class="author">{{ the_field('author') }}</p>
-                  </div>
+              <div class="article">
+                <div class="categories">@php(the_tags( '', '', '' ))&nbsp;</div>
+                <div class="article__image-container">
+                  <a href="{{ the_permalink() }}">
+                    <img src="{{ the_field('square_image') }}" alt="{{ the_title() }}">
+                  </a>
+                  <p class="feature-type">{{ the_field('feature_type') }}</p>
                 </div>
+                <a href="{{ the_permalink() }}">
+                  <h3 class="green-robot-link">{{ the_title() }}</h3>
+                </a>
+                <p>{{ the_excerpt() }}</p>
+                <p class="author">{{ the_field('author') }}</p>
+              </div>
 
-                @php(wp_reset_postdata())
-              @endif
-            @endwhile
-          </div>
+              @php(wp_reset_postdata())
+            @endif
+          @endwhile
         </div>
       </div>
     </div>

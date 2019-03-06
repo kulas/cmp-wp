@@ -63,42 +63,4 @@
     top: -2em;
     padding: 0.25em 0.5em 0 0;
   }
-
-  .also-in-issue__full {
-    width: 100%;
-
-    .article-wrapper {
-      @include grid-collapse;
-    }
-
-    .also-article {
-      @include grid-column(4);
-      display: block;
-
-      @include grid-media($medium) {
-        @include grid-column(12);
-        margin-bottom: 2em;
-      }
-    }
-
-    .also-article__right {
-      padding: 0;
-    }
-
-    .article__image-container {
-      position: relative;
-      margin-bottom: 1em;
-
-      img {
-        vertical-align: bottom;
-      }
-
-      .feature-type {
-        position: absolute;
-        top: auto;
-        bottom: 0;
-        margin-bottom: 0;
-      }
-    }
-  }
 }

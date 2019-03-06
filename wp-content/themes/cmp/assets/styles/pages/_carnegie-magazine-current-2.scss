@@ -2,7 +2,6 @@
 
 .carnegie-magazine-current-2 {
   display: flex;
-  padding-bottom: $base-spacing;
   margin: auto;
 
   .content-container {
@@ -22,10 +21,14 @@
 
     .article {
       @include grid-column(4);
+      margin-bottom: 2em;
+
+      &:nth-child(3n + 1) {
+        clear: left;
+      }
 
       @include grid-media($medium) {
         @include grid-column(12);
-        margin-bottom: 2em;
       }
     }
   }

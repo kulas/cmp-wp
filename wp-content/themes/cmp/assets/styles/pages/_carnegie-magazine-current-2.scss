@@ -34,12 +34,22 @@
   }
 
   .article__image-container {
+    position: relative;
     height: 225px;
     overflow: hidden;
 
     img {
       height: auto;
       width: auto;
+    }
+
+    .feature-type {
+      @extend .small-uppercase;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 0;
+      padding: 0.25em 0.5em 0 0;
+      background-color: white;
     }
   }
 

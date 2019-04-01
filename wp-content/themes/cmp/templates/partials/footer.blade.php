@@ -79,7 +79,7 @@
                   <input type="hidden" name="ERRORURL" value="http://www.carnegiemuseums.org/#error"  /><!--local page for error redirect-->
                   <input type="hidden" name="NEXTURL" value="http://members.carnegiemuseums.org/site/PageNavigator/CMP_email_signup_box_preferences.html#success" /><!--local page for successful submission redirect-->
                 </p>
-                <div style="display:none"">
+                <div style="display:none">
                   <input type="text" name="denySubmit" value="" alt="This field is used to prevent form submission by scripts." aria-hidden="true" aria-label="For spam bots only" />
                 </div>
               </form>
